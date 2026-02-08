@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Rewş (Grammatical Cases)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .case-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .case-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .case-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Rewş</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Grammatical Cases</h3>
+
+            <!-- INTRODUCTION: UNDERSTANDING VERBS FIRST -->
+            <div style="background: #fff9c4; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #f9a825;">
+                <h3 style="color: #f57f17; margin-bottom: 15px;">⚠️ Before we start: Understanding Verbs</h3>
+                
+                <div style="background: white; padding: 20px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: #2e7d32; margin-bottom: 10px;">🔹 INTRANSITIVE Verb</h4>
+                    <p style="line-height: 1.8; margin-bottom: 10px;">
+                        A verb that <strong>DOES NOT need an object</strong>. The action stops at the subject.
+                    </p>
+                    <div style="background: #f5f5f5; padding: 15px; border-radius: 5px; margin-top: 10px;">
+                        <div style="margin-bottom: 10px;">
+                            <strong style="color: #2e7d32;">English:</strong> I <span style="background: #c8e6c9; padding: 2px 6px; border-radius: 3px;">go</span>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong style="color: #2e7d32;">Kurdish:</strong> Ez <span style="background: #c8e6c9; padding: 2px 6px; border-radius: 3px;">diçim</span>
+                        </div>
+                        <div style="color: #666; font-style: italic; margin-top: 10px;">
+                            → No object! You don't say "I go WHAT". The action is complete.
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; color: #666;">
+                        <strong>Other examples:</strong> sleep, run, come, leave, stay, fall
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 20px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: #2e7d32; margin-bottom: 10px;">🔹 TRANSITIVE Verb</h4>
+                    <p style="line-height: 1.8; margin-bottom: 10px;">
+                        A verb that <strong>NEEDS an object</strong>. The action passes from the subject to something/someone.
+                    </p>
+                    <div style="background: #f5f5f5; padding: 15px; border-radius: 5px; margin-top: 10px;">
+                        <div style="margin-bottom: 10px;">
+                            <strong style="color: #2e7d32;">English:</strong> I <span style="background: #c8e6c9; padding: 2px 6px; border-radius: 3px;">eat</span> <span style="background: #ffecb3; padding: 2px 6px; border-radius: 3px;">bread</span>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong style="color: #2e7d32;">Kurdish:</strong> Ez <span style="background: #ffecb3; padding: 2px 6px; border-radius: 3px;">nan</span> <span style="background: #c8e6c9; padding: 2px 6px; border-radius: 3px;">dixwim</span>
+                        </div>
+                        <div style="color: #666; font-style: italic; margin-top: 10px;">
+                            → There is an object! "I eat WHAT?" → "bread"
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; color: #666;">
+                        <strong>Other examples:</strong> eat, read, write, see, take, make, give
+                    </div>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 15px; border-radius: 5px; border-left: 3px solid #2e7d32; margin-top: 20px;">
+                    <strong style="color: #2e7d32;">💡 Simple test:</strong>
+                    <p style="margin-top: 10px; line-height: 1.8;">
+                        Ask the question "WHAT?" or "WHO?" after the verb.<br>
+                        ✅ If you can answer → TRANSITIVE verb<br>
+                        ❌ If the question doesn't make sense → INTRANSITIVE verb
+                    </p>
+                </div>
+            </div>
+
+            <!-- SIMPLE EXPLANATION OF CASES -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 The 3 Cases in Kurdish: SIMPLE Explanation</h3>
+                
+                <div style="background: white; padding: 20px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: #2e7d32; margin-bottom: 10px;">1️⃣ NOMINATIVE CASE (Rewşa Rasterast)</h4>
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #1976d2; margin-bottom: 10px;">
+                        = The "normal" form of the pronoun
+                    </p>
+                    <div style="background: #f5f5f5; padding: 15px; border-radius: 5px;">
+                        <div style="margin-bottom: 8px;"><strong>Ez</strong> = I</div>
+                        <div style="margin-bottom: 8px;"><strong>Tu</strong> = You</div>
+                        <div style="margin-bottom: 8px;"><strong>Ew</strong> = He/She</div>
+                    </div>
+                    <p style="margin-top: 15px; line-height: 1.8;">
+                        <strong>When to use it?</strong><br>
+                        → In PRESENT and FUTURE tenses (always)<br>
+                        → Example: <span style="background: #c8e6c9; padding: 2px 6px; border-radius: 3px;">Ez</span> diçim (I go)
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 20px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: #2e7d32; margin-bottom: 10px;">2️⃣ OBLIQUE CASE (Rewşa Xwar)</h4>
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #1976d2; margin-bottom: 10px;">
+                        = The "changed" form of the pronoun
+                    </p>
+                    <div style="background: #f5f5f5; padding: 15px; border-radius: 5px;">
+                        <div style="margin-bottom: 8px;"><strong>Min</strong> = Me (instead of Ez)</div>
+                        <div style="margin-bottom: 8px;"><strong>Te</strong> = You (instead of Tu)</div>
+                        <div style="margin-bottom: 8px;"><strong>Wî/Wê</strong> = Him/Her (instead of Ew)</div>
+                    </div>
+                    <p style="margin-top: 15px; line-height: 1.8;">
+                        <strong>When to use it?</strong><br>
+                        → In PAST tense with transitive verbs (verbs that have an object)<br>
+                        → After prepositions (li, ji, bi...)<br>
+                        → Example: <span style="background: #ffecb3; padding: 2px 6px; border-radius: 3px;">Min</span> nan xwar (I ate bread)
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 20px; border-radius: 5px; margin: 15px 0;">
+                    <h4 style="color: #2e7d32; margin-bottom: 10px;">3️⃣ VOCATIVE CASE (Rewşa Bangkirin)</h4>
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #1976d2; margin-bottom: 10px;">
+                        = For calling someone
+                    </p>
+                    <div style="background: #f5f5f5; padding: 15px; border-radius: 5px;">
+                        <div style="margin-bottom: 8px;"><strong>Dayîko!</strong> = Mom! (calling)</div>
+                        <div style="margin-bottom: 8px;"><strong>Hevalê min!</strong> = My friend! (calling)</div>
+                        <div style="margin-bottom: 8px;"><strong>Mamosto!</strong> = Teacher! (calling)</div>
+                    </div>
+                    <p style="margin-top: 15px; line-height: 1.8;">
+                        <strong>When to use it?</strong><br>
+                        → When you call or address someone<br>
+                        → Often adds <strong>-o</strong> or <strong>-ê</strong> at the end
+                    </p>
+                </div>
+            </div>
+
+            <!-- CASE 1: NOMINATIVE (DIRECT) -->
+            <div class="case-section">
+                <div class="case-title">1. Rewşa Rasterast (Nominative Case)</div>
+                <div class="case-subtitle">Direct Case - Subject Form</div>
+
+                <div class="explanation">
+                    <p>
+                        The <strong>nominative case</strong> (also called the <strong>direct case</strong>) is used for:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>The <strong>subject</strong> of intransitive verbs in all tenses</li>
+                        <li>The <strong>subject</strong> of transitive verbs in present and future tenses</li>
+                        <li>The <strong>direct object</strong> of transitive verbs in past tenses (ergative construction)</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with Intransitive Verbs:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez diçim.</div>
+                        <div class="english-text">I go. / I am going.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu diçî.</div>
+                        <div class="english-text">You go. / You are going.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew diçe.</div>
+                        <div class="english-text">He/She goes. / He/She is going.</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with Transitive Verbs (Present):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkê dixwînim.</div>
+                        <div class="english-text">I read the book. / I am reading the book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu nan dixwî.</div>
+                        <div class="english-text">You eat bread. / You are eating bread.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Important Note:</div>
+                    <p>In present and future tenses with transitive verbs, the subject stays in the nominative case, just like in English.</p>
+                </div>
+            </div>
+
+            <!-- CASE 2: OBLIQUE -->
+            <div class="case-section">
+                <div class="case-title">2. Rewşa Xwar (Oblique Case)</div>
+                <div class="case-subtitle">Oblique Case - Object & Prepositional Form</div>
+
+                <div class="explanation">
+                    <p>
+                        The <strong>oblique case</strong> is used for:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>The <strong>agent</strong> (subject) of transitive verbs in past tenses (ergative construction)</li>
+                        <li>After <strong>prepositions</strong> (li, ji, bi, di...de, etc.)</li>
+                        <li>The <strong>indirect object</strong> in sentences</li>
+                        <li>Possessive constructions</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with Past Tense (Ergative):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text"><span class="highlight">Min</span> pirtûk xwend.</div>
+                        <div class="english-text">I read the book. (past)</div>
+                        <div style="color: #999; font-size: 0.9rem; margin-top: 5px;">
+                            Note: "Min" (oblique) is used instead of "Ez" (nominative)
+                        </div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><span class="highlight">Te</span> nan xwar.</div>
+                        <div class="english-text">You ate bread. (past)</div>
+                        <div style="color: #999; font-size: 0.9rem; margin-top: 5px;">
+                            Note: "Te" (oblique) is used instead of "Tu" (nominative)
+                        </div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><span class="highlight">Wî</span> kitêb nivîsand.</div>
+                        <div class="english-text">He wrote a book. (past)</div>
+                        <div style="color: #999; font-size: 0.9rem; margin-top: 5px;">
+                            Note: "Wî" (oblique) is used instead of "Ew" (nominative)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with Prepositions:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Li <span class="highlight">min</span> binêre.</div>
+                        <div class="english-text">Look at me.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ji <span class="highlight">te</span> re spas.</div>
+                        <div class="english-text">Thank you. (Thanks to you)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Bi <span class="highlight">wî</span> re diaxivim.</div>
+                        <div class="english-text">I speak with him.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Important Note:</div>
+                    <p>The oblique case is one of the most distinctive features of Kurdish grammar. It's especially important in past tense constructions with transitive verbs (ergative alignment).</p>
+                </div>
+            </div>
+
+            <!-- CASE 3: VOCATIVE -->
+            <div class="case-section">
+                <div class="case-title">3. Rewşa Bangkirin (Vocative Case)</div>
+                <div class="case-subtitle">Vocative Case - Calling/Addressing Form</div>
+
+                <div class="explanation">
+                    <p>
+                        The <strong>vocative case</strong> is used when:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>Calling</strong> or <strong>addressing</strong> someone directly</li>
+                        <li>Getting someone's <strong>attention</strong></li>
+                        <li>Used with names, titles, and terms of address</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Hevalê min!</div>
+                        <div class="english-text">My friend! (calling)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Dayîko!</div>
+                        <div class="english-text">Mother! (calling)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Birayê min!</div>
+                        <div class="english-text">My brother! (calling)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Xwişko!</div>
+                        <div class="english-text">Sister! (calling)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mamosto!</div>
+                        <div class="english-text">Teacher! (calling)</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Important Note:</div>
+                    <p>The vocative case often adds <strong>-o</strong> or <strong>-ê</strong> to the end of nouns when calling someone. This is similar to "O" in English (e.g., "O brother!").</p>
+                </div>
+            </div>
+
+            <!-- COMPARISON TABLE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Pronoun Case Comparison</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>English</th>
+                        <th>Nominative (Direct)</th>
+                        <th>Oblique</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I / me</td>
+                        <td><strong>Ez</strong></td>
+                        <td><strong>Min</strong></td>
+                        <td>Ez diçim / Min çû (I go / I went)</td>
+                    </tr>
+                    <tr>
+                        <td>You (singular)</td>
+                        <td><strong>Tu</strong></td>
+                        <td><strong>Te</strong></td>
+                        <td>Tu diçî / Te çû (You go / You went)</td>
+                    </tr>
+                    <tr>
+                        <td>He</td>
+                        <td><strong>Ew</strong></td>
+                        <td><strong>Wî</strong></td>
+                        <td>Ew diçe / Wî çû (He goes / He went)</td>
+                    </tr>
+                    <tr>
+                        <td>She</td>
+                        <td><strong>Ew</strong></td>
+                        <td><strong>Wê</strong></td>
+                        <td>Ew diçe / Wê çû (She goes / She went)</td>
+                    </tr>
+                    <tr>
+                        <td>We / us</td>
+                        <td><strong>Em</strong></td>
+                        <td><strong>Me</strong></td>
+                        <td>Em diçin / Me çû (We go / We went)</td>
+                    </tr>
+                    <tr>
+                        <td>You (plural)</td>
+                        <td><strong>Hûn</strong></td>
+                        <td><strong>We</strong></td>
+                        <td>Hûn diçin / We çû (You go / You went)</td>
+                    </tr>
+                    <tr>
+                        <td>They</td>
+                        <td><strong>Ew</strong></td>
+                        <td><strong>Wan</strong></td>
+                        <td>Ew diçin / Wan çû (They go / They went)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Nominative (Rewşa Rasterast):</strong> Used for subjects in present/future and objects in past tenses</li>
+                    <li><strong>Oblique (Rewşa Xwar):</strong> Used for subjects in past tenses (with transitive verbs) and after prepositions</li>
+                    <li><strong>Vocative (Rewşa Bangkirin):</strong> Used when calling or addressing someone directly</li>
+                    <li>The case system is most visible with <strong>pronouns</strong> but also affects nouns in certain contexts</li>
+                    <li>Understanding cases is crucial for mastering Kurdish <strong>ergative alignment</strong> in past tenses</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

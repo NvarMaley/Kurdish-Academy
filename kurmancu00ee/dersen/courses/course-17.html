@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 17 - Tendirustî (Health) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #c62828; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-card { background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 20px; border-radius: 12px; text-align: center; transition: transform 0.3s ease; border: 2px solid #e57373; }
+        .vocab-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(244, 67, 54, 0.2); }
+        .vocab-word { font-size: 1.4rem; font-weight: bold; color: #c62828; margin-bottom: 8px; }
+        .vocab-translation { font-size: 1rem; color: #d32f2f; }
+        .structure-box { background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #4caf50; }
+        .structure-pattern { font-size: 1.2rem; color: #2e7d32; margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .example-dialogue { background: #fff3e0; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .dialogue-line { margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .speaker { font-weight: bold; color: #ff9800; margin-bottom: 8px; }
+        .kurdish-text { font-size: 1.2rem; color: #333; margin: 8px 0; }
+        .translation { font-size: 0.95rem; color: #666; font-style: italic; }
+        .exercise-box { background: #f3e5f5; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #ba68c8; }
+        .exercise-title { font-size: 1.5rem; color: #6a1b9a; margin-bottom: 15px; font-weight: bold; }
+        .exercise-box input[type="text"], .exercise-box textarea { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .exercise-box button { background: #d32f2f; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .exercise-box button:hover { background: #b71c1c; transform: scale(1.05); }
+        .symptom-card { background: #ffebee; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935; }
+        .intensity-box { background: #fff9c4; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #fbc02d; }
+        .scenario-box { background: #ffebee; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #e53935; }
+        .role-btn { transition: all 0.3s ease; }
+        .role-btn:hover { background: #f5f5f5 !important; transform: translateX(5px); }
+        .role-btn.correct { background: #c8e6c9 !important; border-color: #4caf50 !important; color: #2e7d32 !important; }
+        .role-btn.incorrect { background: #ffcdd2 !important; border-color: #f44336 !important; color: #c62828 !important; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>🏥 Course 17: Tendirustî (Health)</h1>
+            <div class="course-meta">Simple Symptoms & Pain | A1 Level</div>
+        </div>
+        <div class="course-content">
+            
+            <!-- Section 1: Vocabulary -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧩</span>1. Peyvên (Vocabulary): Tendirustî</h2>
+                
+                <h3 style="color: #c62828; margin: 20px 0;">🩺 Laşê Mirov (Body Parts)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Serî</div><div class="vocab-translation">Head</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Zik</div><div class="vocab-translation">Stomach/Belly</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Mil</div><div class="vocab-translation">Neck</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pişt</div><div class="vocab-translation">Back</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Çav</div><div class="vocab-translation">Eye</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Guh</div><div class="vocab-translation">Ear</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Difn</div><div class="vocab-translation">Tooth</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Germ</div><div class="vocab-translation">Throat</div></div>
+                </div>
+
+                <h3 style="color: #c62828; margin: 20px 0;">🤒 Nexweşî û Nîşan (Illness & Symptoms)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Êş</div><div class="vocab-translation">Pain</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Ta</div><div class="vocab-translation">Fever</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Kuxik</div><div class="vocab-translation">Cough</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pizik</div><div class="vocab-translation">Sneeze</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Serêşe</div><div class="vocab-translation">Headache</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Zikêşe</div><div class="vocab-translation">Stomachache</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Westiyayî</div><div class="vocab-translation">Tiredness</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sarsam</div><div class="vocab-translation">Dizziness</div></div>
+                </div>
+
+                <h3 style="color: #c62828; margin: 20px 0;">💊 Li Nexweşxaneyê (At the Hospital)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Bijîşk</div><div class="vocab-translation">Doctor</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Hemşîre</div><div class="vocab-translation">Nurse</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Derman</div><div class="vocab-translation">Medicine</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Îlac</div><div class="vocab-translation">Treatment</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Nexweş</div><div class="vocab-translation">Sick/Patient</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Tendirustî</div><div class="vocab-translation">Health</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Çareserî</div><div class="vocab-translation">Cure/Solution</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Muayene</div><div class="vocab-translation">Examination</div></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Grammar - Pain Structures -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧠</span>2. Rêziman (Grammar): Êş û Nexweşî (Pain & Illness)</h2>
+                
+                <div style="background: #ffebee; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #d32f2f;">
+                    <h4 style="color: #c62828; margin-bottom: 10px;">💡 Expressing Pain</h4>
+                    <p style="line-height: 1.8;">
+                        To say "I have pain" or "I'm in pain", use <strong>Ez êş dibînim</strong> or <strong>Ez nexweş im</strong> (I'm sick).
+                    </p>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Basic Pain Expressions</h3>
+                    <div class="structure-pattern">
+                        <strong>Ez êş dibînim</strong> = I feel pain / I'm in pain<br>
+                        <strong>Ez nexweş im</strong> = I'm sick<br>
+                        <strong>Ez baş nînim</strong> = I'm not well<br><br>
+                        
+                        <strong>Specific Pain:</strong><br>
+                        • <strong>Serê min diêşe</strong> = My head hurts<br>
+                        • <strong>Zikê min diêşe</strong> = My stomach hurts<br>
+                        • <strong>Pişta min diêşe</strong> = My back hurts<br>
+                        • <strong>Difna min diêşe</strong> = My tooth hurts
+                    </div>
+                </div>
+
+                <div class="intensity-box">
+                    <h3 style="color: #f57f17; margin-bottom: 15px;">📌 Pain Intensity</h3>
+                    <div style="font-size: 1.1rem; line-height: 2;">
+                        <strong>Kêm</strong> = A little / Mild<br>
+                        <strong>Hindik</strong> = Slightly<br>
+                        <strong>Gelek</strong> = A lot / Very much<br>
+                        <strong>Pir</strong> = Very / Too much<br>
+                        <strong>Zêde</strong> = Excessive<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • Serê min <strong>kêm</strong> diêşe. = My head hurts a little.<br>
+                        • Zikê min <strong>gelek</strong> diêşe. = My stomach hurts a lot.<br>
+                        • Ez <strong>pir</strong> nexweş im. = I'm very sick.
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Describing Symptoms</h3>
+                    <div class="structure-pattern">
+                        <strong>Pattern:</strong> Ez + [symptom] + heye/hebûn<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • Ez <strong>ta</strong> heye. = I have a fever.<br>
+                        • Ez <strong>kuxik</strong> dikim. = I'm coughing.<br>
+                        • Ez <strong>westiyayî</strong> me. = I'm tired.<br>
+                        • Ez <strong>sarsam</strong> im. = I'm dizzy.<br>
+                        • Min <strong>serêşe</strong> heye. = I have a headache.
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #ff9800; margin-bottom: 15px;">💬 Example Sentences:</h4>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        • Ez nexweş im, serê min gelek diêşe.<br>
+                        • Min ta heye û ez westiyayî me.<br>
+                        • Zikê min diêşe, ez baş nînim.<br>
+                        • Ez kuxik dikim û germê min diêşe.<br>
+                        • Difna min pir diêşe, divê ez biçim bijîşkî.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening - Doctor Dialogue -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎧</span>3. Guhdarîkirin (Listening): Li Bijîşkî</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Listen to this dialogue between a patient and a doctor:
+                </p>
+
+                <div class="example-dialogue">
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍⚕️ Bijîşk:</div>
+                        <div class="kurdish-text">Silav, çi pirsgirêka te heye?</div>
+                        <div class="translation">Hello, what's your problem?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">🤒 Nexweş:</div>
+                        <div class="kurdish-text">Ez nexweş im. Serê min gelek diêşe û min ta heye.</div>
+                        <div class="translation">I'm sick. My head hurts a lot and I have a fever.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍⚕️ Bijîşk:</div>
+                        <div class="kurdish-text">Ji çend rojan ve tu nexweş î?</div>
+                        <div class="translation">How many days have you been sick?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">🤒 Nexweş:</div>
+                        <div class="kurdish-text">Ji sê rojan ve. Ez kuxik jî dikim.</div>
+                        <div class="translation">For three days. I'm also coughing.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍⚕️ Bijîşk:</div>
+                        <div class="kurdish-text">Baş e. Ez dê te muayene bikim. Devê xwe veke, ji kerema xwe.</div>
+                        <div class="translation">Okay. I will examine you. Open your mouth, please.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">🤒 Nexweş:</div>
+                        <div class="kurdish-text">Baş e.</div>
+                        <div class="translation">Okay.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍⚕️ Bijîşk:</div>
+                        <div class="kurdish-text">Germê te sor e. Ez dê dermanek binivîsim. Tu divê vê dermanê bi rojê sê caran bixwî.</div>
+                        <div class="translation">Your throat is red. I will prescribe medicine. You should take this medicine three times a day.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">🤒 Nexweş:</div>
+                        <div class="kurdish-text">Spas dikim, bijîşk.</div>
+                        <div class="translation">Thank you, doctor.</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Comprehension Questions</div>
+                    <p style="margin-bottom: 15px;">Answer these questions based on the dialogue:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What are the patient's symptoms?</label>
+                        <input type="text" id="listen-q1" placeholder="Type in Kurdish...">
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. How many days has the patient been sick?</label>
+                        <input type="text" id="listen-q2" placeholder="Type in Kurdish...">
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. How many times a day should the patient take the medicine?</label>
+                        <input type="text" id="listen-q3" placeholder="Type in Kurdish...">
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading - Symptom Sheet -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📖</span>4. Xwendin (Reading): Fîşa Nîşanan</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Read this symptom sheet from a medical visit:
+                </p>
+
+                <div style="background: white; border: 3px solid #d32f2f; padding: 30px; margin: 20px 0; border-radius: 12px;">
+                    <h3 style="color: #c62828; text-align: center; margin-bottom: 20px;">📋 Fîşa Nexweşî</h3>
+                    
+                    <div class="symptom-card">
+                        <strong>Navê Nexweş:</strong> Leyla Hasan
+                    </div>
+                    
+                    <div class="symptom-card">
+                        <strong>Dîrok:</strong> 15 Sibat 2025
+                    </div>
+                    
+                    <div class="symptom-card">
+                        <strong>Nîşan:</strong><br>
+                        • Serêşe (gelek)<br>
+                        • Ta (38.5°C)<br>
+                        • Kuxik<br>
+                        • Westiyayî<br>
+                        • Germê sor
+                    </div>
+                    
+                    <div class="symptom-card">
+                        <strong>Teşhîs:</strong> Germêşe (Sore throat / Pharyngitis)
+                    </div>
+                    
+                    <div class="symptom-card">
+                        <strong>Derman:</strong><br>
+                        • Paracetamol - 3 caran bi rojê<br>
+                        • Antibiyotîk - 2 caran bi rojê<br>
+                        • Avê gelek vexwe
+                    </div>
+                    
+                    <div class="symptom-card">
+                        <strong>Şîret:</strong><br>
+                        • Razê<br>
+                        • Xwarinên germ bixwe<br>
+                        • Piştî 3 rojan vegerî
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Reading Comprehension</div>
+                    <p style="margin-bottom: 15px;">Answer these questions about the symptom sheet:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What is the patient's temperature?</label>
+                        <input type="text" id="read-q1" placeholder="Type the number...">
+                        <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What is the diagnosis?</label>
+                        <input type="text" id="read-q2" placeholder="Type in Kurdish...">
+                        <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. How many times a day should Paracetamol be taken?</label>
+                        <input type="text" id="read-q3" placeholder="Type in Kurdish...">
+                        <div id="read-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReading()">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing - Describe a Health Problem -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>5. Nivîsandin (Writing): Pirsgirêka Tendirustiyê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Describe a health problem you or someone you know has experienced:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise: My Health Problem</div>
+                    <p style="margin-bottom: 15px; color: #666;">
+                        Write 5-6 sentences describing a health problem. Include:<br>
+                        • What symptoms you have<br>
+                        • How intense the pain is<br>
+                        • How long you've been sick<br>
+                        • What you need (doctor, medicine, rest)
+                    </p>
+
+                    <div style="background: #ffebee; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <strong>Example:</strong><br>
+                        Ez nexweş im. Serê min gelek diêşe û min ta heye. Ji du rojan ve ez baş nînim. Ez kuxik dikim û ez westiyayî me. Ez dixwazim biçim bijîşkî. Divê ez derman bixwim.
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">Your Health Problem Description (5-6 sentences):</label>
+                        <textarea id="write-health" rows="6" placeholder="Ez nexweş im..."></textarea>
+                        <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkWriting()">✓ Submit Description</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking - Simulated Consultation -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>6. Axaftin (Speaking): Konsultasyona Bijîşkî</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice a medical consultation in different situations:
+                </p>
+
+                <div class="scenario-box">
+                    <h4 style="color: #c62828; margin-bottom: 15px;">Scenario 1: Describing Your Pain</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> The doctor asks what's wrong.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkConsultation(1, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Serê min diêşe.
+                        </button>
+                        <button class="role-btn" onclick="checkConsultation(1, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez baş im.
+                        </button>
+                        <button class="role-btn" onclick="checkConsultation(1, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Ez bijîşk im.
+                        </button>
+                    </div>
+                    <div id="consult-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #c62828; margin-bottom: 15px;">Scenario 2: Saying You Have a Fever</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to tell the doctor you have a fever.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkConsultation(2, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Ez sarsam im.
+                        </button>
+                        <button class="role-btn" onclick="checkConsultation(2, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Min ta heye.
+                        </button>
+                        <button class="role-btn" onclick="checkConsultation(2, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Ez kuxik dikim.
+                        </button>
+                    </div>
+                    <div id="consult-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #c62828; margin-bottom: 15px;">Scenario 3: Describing Intensity</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> The doctor asks how much it hurts. You want to say "a lot".</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkConsultation(3, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Kêm diêşe.
+                        </button>
+                        <button class="role-btn" onclick="checkConsultation(3, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Gelek diêşe.
+                        </button>
+                        <button class="role-btn" onclick="checkConsultation(3, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Naêşe.
+                        </button>
+                    </div>
+                    <div id="consult-feedback-3" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #c62828; margin-bottom: 15px;">Scenario 4: Asking for Medicine</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to ask the doctor for medicine.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkConsultation(4, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Ez derman dixwazim.
+                        </button>
+                        <button class="role-btn" onclick="checkConsultation(4, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez bijîşk im.
+                        </button>
+                        <button class="role-btn" onclick="checkConsultation(4, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Ez nexweşxane me.
+                        </button>
+                    </div>
+                    <div id="consult-feedback-4" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: #e8f5e9; border-radius: 10px;">
+                    <h4 style="color: #2e7d32;">🎯 Your Score: <span id="consult-correct">0</span> / 4</h4>
+                </div>
+            </div>
+
+            <!-- Section 7: Culture -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>7. Çand (Culture): Kurdish Health Traditions</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Discover traditional Kurdish approaches to health and healing:</p>
+                
+                <div style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #ef5350;">
+                    <h3 style="color: #c62828; text-align: center; margin-bottom: 25px;">🌿 Dermanên Kevneşopî (Traditional Medicine)</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🍵 Herbal Remedies</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdish traditional medicine relies heavily on herbs and natural remedies. <strong>Çay</strong> (tea) is not just a beverage but a medicine - different herbal teas are used for various ailments. <strong>Çaya kekûkê</strong> (thyme tea) is used for coughs and sore throats, <strong>çaya naneyê</strong> (mint tea) for stomach problems, and <strong>çaya babûneyê</strong> (chamomile tea) for relaxation and sleep. Honey (<strong>hingiv</strong>) is considered a cure-all and is mixed with various herbs.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">👵 The Role of Elders</h4>
+                        <p style="line-height: 1.8;">
+                            In Kurdish culture, elderly women (<strong>pîrejinan</strong>) are often the keepers of traditional medical knowledge. They know which herbs to use for which ailments, how to prepare poultices and ointments, and traditional healing practices passed down through generations. Before going to a doctor, many families first consult with their grandmother or an elder in the community.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🔥 Traditional Treatments</h4>
+                        <p style="line-height: 1.8;">
+                            <strong>Kêşan</strong> (cupping therapy) is a traditional practice still used in Kurdish communities. Small cups are heated and placed on the skin to draw out toxins and improve blood circulation. <strong>Masaj</strong> (massage) with olive oil or special herbal oils is used for muscle pain. For colds and flu, steam inhalation with herbs is common, and patients are encouraged to stay warm and drink hot liquids.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🍯 Food as Medicine</h4>
+                        <p style="line-height: 1.8;">
+                            Kurds believe in the healing power of food. <strong>Şorba</strong> (soup), especially chicken soup with vegetables, is the go-to remedy for illness. <strong>Hingiv û şîr</strong> (honey and milk) is given for sore throats. Garlic (<strong>sîr</strong>) is considered a natural antibiotic. When someone is sick, the family prepares special nutritious foods and ensures the patient eats well to regain strength.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🤝 Community Care</h4>
+                        <p style="line-height: 1.8;">
+                            When someone falls ill in a Kurdish community, it's not just the family's responsibility - neighbors and friends also play a role. Visitors bring food, help with household chores, and provide emotional support. The phrase <strong>"Xwedê dermanê te bike"</strong> (May God heal you) is commonly used. This strong sense of community support is considered essential for recovery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Review Exercises -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🔄</span>8. Dubare (Review): Health & Symptoms</h2>
+                
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Final Review Exercise</div>
+                    <p style="margin-bottom: 20px;">Complete these sentences about health and symptoms:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. I'm sick. → Ez _____ im.</label>
+                        <input type="text" id="rev-q1" placeholder="Type the word...">
+                        <div id="rev-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. My head hurts. → _____ min diêşe.</label>
+                        <input type="text" id="rev-q2" placeholder="Type the word...">
+                        <div id="rev-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. I have a fever. → Min _____ heye.</label>
+                        <input type="text" id="rev-q3" placeholder="Type the word...">
+                        <div id="rev-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. It hurts a lot. → _____ diêşe.</label>
+                        <input type="text" id="rev-q4" placeholder="Type the word...">
+                        <div id="rev-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">5. I'm coughing. → Ez _____ dikim.</label>
+                        <input type="text" id="rev-q5" placeholder="Type the word...">
+                        <div id="rev-q5-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">6. I need medicine. → Ez _____ dixwazim.</label>
+                        <input type="text" id="rev-q6" placeholder="Type the word...">
+                        <div id="rev-q6-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReview()">✓ Check Answers</button>
+                    <div id="rev-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Completion Section -->
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);">
+                <h2 style="color: #1b5e20; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    You've completed Course 17: Health!<br>
+                    You can now talk about symptoms, describe pain, and communicate with doctors in Kurdish!
+                </p>
+                <a href="../level-a1.html" class="back-link" style="background: #1b5e20;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Listening comprehension validation
+        function checkListening() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('listen-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if ((q1.includes('serêşe') || q1.includes('serê')) && q1.includes('ta') && q1.includes('kuxik')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Serêşe, ta, û kuxik';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Serêşe, ta, û kuxik</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('listen-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if (q2.includes('sê') || q2.includes('3')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Sê rojan';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Sê rojan</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('listen-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3.includes('sê') || q3.includes('3')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Sê caran';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Sê caran</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Reading comprehension validation
+        function checkReading() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('read-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1.includes('38.5') || q1.includes('38,5')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! 38.5°C';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>38.5°C</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('read-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2.includes('germêşe')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Germêşe';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Germêşe</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('read-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('read-q3-feedback');
+            if (q3.includes('sê') || q3.includes('3')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Sê caran';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Sê caran</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Writing validation
+        function checkWriting() {
+            const health = document.getElementById('write-health').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            
+            if (health.length < 30) {
+                feedback.innerHTML = '❌ Please write at least 5-6 sentences.';
+                feedback.style.color = '#d32f2f';
+                return;
+            }
+
+            const hasSymptom = /êş|ta|kuxik|serêşe|zikêşe|westiyayî|sarsam/i.test(health);
+            const hasPain = /diêşe|nexweş|baş nînim/i.test(health);
+            const hasIntensity = /gelek|pir|kêm|hindik/i.test(health);
+            
+            if (hasSymptom && hasPain && hasIntensity) {
+                feedback.innerHTML = '✅ Excellent description! You included symptoms, pain expressions, and intensity!';
+                feedback.style.color = '#2e7d32';
+            } else if ((hasSymptom && hasPain) || (hasSymptom && hasIntensity)) {
+                feedback.innerHTML = '👍 Good effort! Try to include symptoms, pain, and intensity words.';
+                feedback.style.color = '#f57f17';
+            } else {
+                feedback.innerHTML = '💪 Keep practicing! Include symptoms, pain expressions, and intensity.';
+                feedback.style.color = '#f57f17';
+            }
+        }
+
+        // Consultation validation
+        let consultCorrect = 0;
+        let consultAnswered = [false, false, false, false];
+
+        function checkConsultation(scenario, answer) {
+            if (consultAnswered[scenario - 1]) return;
+            
+            const feedback = document.getElementById(`consult-feedback-${scenario}`);
+            const correctAnswers = {1: 'a', 2: 'b', 3: 'b', 4: 'a'};
+            
+            consultAnswered[scenario - 1] = true;
+            
+            // Get all buttons in this scenario
+            const buttons = event.target.parentElement.querySelectorAll('.role-btn');
+            
+            if (answer === correctAnswers[scenario]) {
+                consultCorrect++;
+                // Mark clicked button as correct
+                event.target.classList.add('correct');
+                if (scenario === 1) {
+                    feedback.innerHTML = '✅ Perfect! "Serê min diêşe" = My head hurts';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '✅ Excellent! "Min ta heye" = I have a fever';
+                } else if (scenario === 3) {
+                    feedback.innerHTML = '✅ Great! "Gelek diêşe" = It hurts a lot';
+                } else {
+                    feedback.innerHTML = '✅ Perfect! "Ez derman dixwazim" = I want medicine';
+                }
+                feedback.style.color = '#2e7d32';
+            } else {
+                // Mark clicked button as incorrect
+                event.target.classList.add('incorrect');
+                // Show correct answer in green
+                buttons.forEach((btn, index) => {
+                    const btnAnswer = String.fromCharCode(97 + index); // 'a', 'b', 'c'
+                    if (btnAnswer === correctAnswers[scenario]) {
+                        btn.classList.add('correct');
+                    }
+                });
+                if (scenario === 1) {
+                    feedback.innerHTML = '❌ Not quite. Say "Serê min diêşe" to describe your pain.';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '❌ Not quite. Say "Min ta heye" to say you have a fever.';
+                } else if (scenario === 3) {
+                    feedback.innerHTML = '❌ Not quite. Say "Gelek diêşe" to say it hurts a lot.';
+                } else {
+                    feedback.innerHTML = '❌ Not quite. Say "Ez derman dixwazim" to ask for medicine.';
+                }
+                feedback.style.color = '#d32f2f';
+            }
+            
+            // Disable all buttons in this scenario
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            
+            document.getElementById('consult-correct').textContent = consultCorrect;
+        }
+
+        // Review exercise validation
+        function checkReview() {
+            let correct = 0;
+            const total = 6;
+
+            const q1 = document.getElementById('rev-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('rev-q1-feedback');
+            if (q1.includes('nexweş')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! nexweş';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>nexweş</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('rev-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('rev-q2-feedback');
+            if (q2.includes('serê')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Serê';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Serê</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('rev-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('rev-q3-feedback');
+            if (q3.includes('ta')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! ta';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>ta</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const q4 = document.getElementById('rev-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('rev-q4-feedback');
+            if (q4.includes('gelek')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! Gelek';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Gelek</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+
+            const q5 = document.getElementById('rev-q5').value.toLowerCase().trim();
+            const q5Feedback = document.getElementById('rev-q5-feedback');
+            if (q5.includes('kuxik')) {
+                correct++;
+                q5Feedback.innerHTML = '✅ Correct! kuxik';
+                q5Feedback.style.color = '#2e7d32';
+            } else {
+                q5Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>kuxik</strong>';
+                q5Feedback.style.color = '#d32f2f';
+            }
+
+            const q6 = document.getElementById('rev-q6').value.toLowerCase().trim();
+            const q6Feedback = document.getElementById('rev-q6-feedback');
+            if (q6.includes('derman')) {
+                correct++;
+                q6Feedback.innerHTML = '✅ Correct! derman';
+                q6Feedback.style.color = '#2e7d32';
+            } else {
+                q6Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>derman</strong>';
+                q6Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('rev-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+            
+            if (correct === total) {
+                scoreDiv.textContent += ' 🎉 Perfect!';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Cînav (Pronouns)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .pronoun-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .pronoun-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .pronoun-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Cînav</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Pronouns</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What are Pronouns?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    Pronouns are words that <strong>replace nouns</strong> to avoid repetition. Instead of saying "Ahmad, Ahmad's book" 
+                    we can say "Ahmad, his book."
+                </p>
+                <div style="background: white; padding: 20px; border-radius: 5px; margin-top: 15px;">
+                    <p style="line-height: 1.8;">
+                        <strong>Kurdish has four main types of pronouns:</strong>
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        <li><strong>Personal Pronouns:</strong> I, you, he, she, we, they</li>
+                        <li><strong>Possessive Pronouns:</strong> my, your, his, her, our, their</li>
+                        <li><strong>Demonstrative Pronouns:</strong> this, that, these, those</li>
+                        <li><strong>Interrogative Pronouns:</strong> who, what, which</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECTION 1: PERSONAL PRONOUNS -->
+            <div class="pronoun-section">
+                <div class="pronoun-title">1. Personal Pronouns (Cînavên Kesî)</div>
+                <div class="pronoun-subtitle">Subject Pronouns</div>
+
+                <div class="explanation">
+                    <p>
+                        Personal pronouns are used as the <strong>subject</strong> of a sentence. Remember that Kurdish has 
+                        <strong>two cases</strong>: nominative (direct) and oblique. The form changes based on the case!
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Personal Pronouns - Both Cases:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>English</th>
+                            <th>Nominative (Direct)</th>
+                            <th>Oblique</th>
+                            <th>Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I / me</td>
+                            <td><strong>Ez</strong></td>
+                            <td><strong>Min</strong></td>
+                            <td>Ez diçim / Min çû</td>
+                        </tr>
+                        <tr>
+                            <td>You (singular)</td>
+                            <td><strong>Tu</strong></td>
+                            <td><strong>Te</strong></td>
+                            <td>Tu diçî / Te çû</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td><strong>Ew</strong></td>
+                            <td><strong>Wî</strong></td>
+                            <td>Ew diçe / Wî çû</td>
+                        </tr>
+                        <tr>
+                            <td>She</td>
+                            <td><strong>Ew</strong></td>
+                            <td><strong>Wê</strong></td>
+                            <td>Ew diçe / Wê çû</td>
+                        </tr>
+                        <tr>
+                            <td>We / us</td>
+                            <td><strong>Em</strong></td>
+                            <td><strong>Me</strong></td>
+                            <td>Em diçin / Me çû</td>
+                        </tr>
+                        <tr>
+                            <td>You (plural/formal)</td>
+                            <td><strong>Hûn</strong></td>
+                            <td><strong>We</strong></td>
+                            <td>Hûn diçin / We çû</td>
+                        </tr>
+                        <tr>
+                            <td>They / them</td>
+                            <td><strong>Ew</strong></td>
+                            <td><strong>Wan</strong></td>
+                            <td>Ew diçin / Wan çû</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples - Nominative Case (Present Tense):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkê dixwînim.</div>
+                        <div class="english-text">I read the book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu nan dixwî.</div>
+                        <div class="english-text">You eat bread.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew diçe malê.</div>
+                        <div class="english-text">He/She goes home.</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples - Oblique Case (Past Tense):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Min pirtûk xwend.</div>
+                        <div class="english-text">I read a book. (past)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Te nan xwar.</div>
+                        <div class="english-text">You ate bread. (past)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Wî çû malê.</div>
+                        <div class="english-text">He went home. (past)</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Remember!</div>
+                    <p style="line-height: 1.8;">
+                        Use <strong>nominative</strong> in present/future tenses.<br>
+                        Use <strong>oblique</strong> in past tenses with transitive verbs and after prepositions.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: POSSESSIVE PRONOUNS -->
+            <div class="pronoun-section">
+                <div class="pronoun-title">2. Possessive Pronouns (Cînavên Xwedîtiyê)</div>
+                <div class="pronoun-subtitle">My, Your, His, Her, Our, Their</div>
+
+                <div class="explanation">
+                    <p>
+                        Possessive pronouns show <strong>ownership</strong> or <strong>belonging</strong>. In Kurdish, they are 
+                        <strong>suffixes</strong> (endings) added to nouns, not separate words like in English.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Possessive Suffixes:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>English</th>
+                            <th>Kurdish Suffix</th>
+                            <th>Example with "pirtûk" (book)</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>my</td>
+                            <td><strong>-a min / -ê min</strong></td>
+                            <td>pirtûk<strong>a min</strong></td>
+                            <td>my book</td>
+                        </tr>
+                        <tr>
+                            <td>your (singular)</td>
+                            <td><strong>-a te / -ê te</strong></td>
+                            <td>pirtûk<strong>a te</strong></td>
+                            <td>your book</td>
+                        </tr>
+                        <tr>
+                            <td>his</td>
+                            <td><strong>-a wî / -ê wî</strong></td>
+                            <td>pirtûk<strong>a wî</strong></td>
+                            <td>his book</td>
+                        </tr>
+                        <tr>
+                            <td>her</td>
+                            <td><strong>-a wê / -ê wê</strong></td>
+                            <td>pirtûk<strong>a wê</strong></td>
+                            <td>her book</td>
+                        </tr>
+                        <tr>
+                            <td>our</td>
+                            <td><strong>-a me / -ê me</strong></td>
+                            <td>pirtûk<strong>a me</strong></td>
+                            <td>our book</td>
+                        </tr>
+                        <tr>
+                            <td>your (plural)</td>
+                            <td><strong>-a we / -ê we</strong></td>
+                            <td>pirtûk<strong>a we</strong></td>
+                            <td>your book</td>
+                        </tr>
+                        <tr>
+                            <td>their</td>
+                            <td><strong>-a wan / -ê wan</strong></td>
+                            <td>pirtûk<strong>a wan</strong></td>
+                            <td>their book</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">⚠️ Important Pattern!</div>
+                    <p style="line-height: 1.8;">
+                        The possessive construction uses the <strong>oblique form</strong> of personal pronouns:<br>
+                        • Ez → min (my)<br>
+                        • Tu → te (your)<br>
+                        • Ew → wî/wê (his/her)<br>
+                        • Em → me (our)<br>
+                        • Hûn → we (your plural)<br>
+                        • Ew → wan (their)
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with Different Nouns:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">mala min</div>
+                        <div class="english-text">my house</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">bavê te</div>
+                        <div class="english-text">your father</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">hevalê wî</div>
+                        <div class="english-text">his friend</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">dayîka wê</div>
+                        <div class="english-text">her mother</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">zarokên me</div>
+                        <div class="english-text">our children</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">malên wan</div>
+                        <div class="english-text">their houses</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples in Sentences:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûka min dixwînim.</div>
+                        <div class="english-text">I read my book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu hevalê xwe dibînî.</div>
+                        <div class="english-text">You see your friend.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew mala wî mezin e.</div>
+                        <div class="english-text">His house is big.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: DEMONSTRATIVE PRONOUNS -->
+            <div class="pronoun-section">
+                <div class="pronoun-title">3. Demonstrative Pronouns (Cînavên Nîşanker)</div>
+                <div class="pronoun-subtitle">This, That, These, Those</div>
+
+                <div class="explanation">
+                    <p>
+                        Demonstrative pronouns <strong>point to</strong> specific things or people. They show distance (near or far) 
+                        and number (singular or plural).
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Distance</th>
+                            <th>Singular</th>
+                            <th>Plural</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Near</strong></td>
+                            <td><strong>ev</strong></td>
+                            <td><strong>van</strong></td>
+                            <td>this / these</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Far</strong></td>
+                            <td><strong>ew</strong></td>
+                            <td><strong>wan</strong></td>
+                            <td>that / those</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 As Pronouns (standing alone):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ev çi ye?</div>
+                        <div class="english-text">What is this?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew kî ye?</div>
+                        <div class="english-text">Who is that?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Van pirtûk in.</div>
+                        <div class="english-text">These are books.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Wan hevalên min in.</div>
+                        <div class="english-text">Those are my friends.</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 With Nouns (as determiners):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez ev pirtûk dixwînim.</div>
+                        <div class="english-text">I read this book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu ew mal dibînî?</div>
+                        <div class="english-text">Do you see that house?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Van keçan çawa ne?</div>
+                        <div class="english-text">How are these boys?</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Note!</div>
+                    <p style="line-height: 1.8;">
+                        <strong>"Ew"</strong> can mean both "he/she/they" (personal pronoun) AND "that" (demonstrative). 
+                        The meaning is clear from context!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 4: INTERROGATIVE PRONOUNS -->
+            <div class="pronoun-section">
+                <div class="pronoun-title">4. Interrogative Pronouns (Cînavên Pirsyarê)</div>
+                <div class="pronoun-subtitle">Who, What, Which</div>
+
+                <div class="explanation">
+                    <p>
+                        Interrogative pronouns are used to <strong>ask questions</strong> about people, things, or choices.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                            <th>Used For</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Kî</strong></td>
+                            <td>Who</td>
+                            <td>Asking about people</td>
+                            <td>Kî ye? (Who is it?)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Çi</strong></td>
+                            <td>What</td>
+                            <td>Asking about things</td>
+                            <td>Çi ye? (What is it?)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kîjan</strong></td>
+                            <td>Which / Which one</td>
+                            <td>Asking about choice</td>
+                            <td>Kîjan dixwazî? (Which one do you want?)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Çawa</strong></td>
+                            <td>How</td>
+                            <td>Asking about manner</td>
+                            <td>Çawa yî? (How are you?)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Çend</strong></td>
+                            <td>How many / How much</td>
+                            <td>Asking about quantity</td>
+                            <td>Çend pirtûk? (How many books?)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kengî</strong></td>
+                            <td>When</td>
+                            <td>Asking about time</td>
+                            <td>Kengî tê? (When are you coming?)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ku / Li ku</strong></td>
+                            <td>Where</td>
+                            <td>Asking about place</td>
+                            <td>Tu li ku yî? (Where are you?)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Çima</strong></td>
+                            <td>Why</td>
+                            <td>Asking about reason</td>
+                            <td>Çima? (Why?)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Question Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Kî ye?</div>
+                        <div class="english-text">Who is it? / Who is he/she?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ev çi ye?</div>
+                        <div class="english-text">What is this?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Kîjan pirtûk dixwazî?</div>
+                        <div class="english-text">Which book do you want?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu çawa yî?</div>
+                        <div class="english-text">How are you?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çend pirtûk hene?</div>
+                        <div class="english-text">How many books are there?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu kengî diçî malê?</div>
+                        <div class="english-text">When are you going home?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu li ku yî?</div>
+                        <div class="english-text">Where are you?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çima tu nayê?</div>
+                        <div class="english-text">Why aren't you coming?</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Answers to Questions:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Kî ye? → A: Ew Ahmad e.</div>
+                        <div class="english-text">Q: Who is it? → A: It's Ahmad.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Ev çi ye? → A: Ev pirtûk e.</div>
+                        <div class="english-text">Q: What is this? → A: This is a book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Tu li ku yî? → A: Ez li malê me.</div>
+                        <div class="english-text">Q: Where are you? → A: I'm at home.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: All Pronouns</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Kurdish</th>
+                        <th>English</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Personal (Nom.)</strong></td>
+                        <td>Ez, Tu, Ew, Em, Hûn</td>
+                        <td>I, You, He/She, We, You (pl)</td>
+                        <td>Ez diçim</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Personal (Obl.)</strong></td>
+                        <td>Min, Te, Wî/Wê, Me, We, Wan</td>
+                        <td>Me, You, Him/Her, Us, You (pl), Them</td>
+                        <td>Min çû</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Possessive</strong></td>
+                        <td>-a min, -ê te, -a wî...</td>
+                        <td>my, your, his...</td>
+                        <td>pirtûka min</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Demonstrative</strong></td>
+                        <td>ev, ew, van, wan</td>
+                        <td>this, that, these, those</td>
+                        <td>ev pirtûk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interrogative</strong></td>
+                        <td>kî, çi, kîjan, çawa...</td>
+                        <td>who, what, which, how...</td>
+                        <td>Kî ye?</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Personal pronouns</strong> have two forms: nominative (present/future) and oblique (past/prepositions)</li>
+                    <li><strong>Possessive pronouns</strong> are suffixes using the oblique form: -a min, -ê te, -a wî, etc.</li>
+                    <li><strong>Demonstrative pronouns</strong> show distance: ev/van (near), ew/wan (far)</li>
+                    <li><strong>Interrogative pronouns</strong> ask questions: kî (who), çi (what), kîjan (which), etc.</li>
+                    <li>The oblique forms are crucial for past tense and possessive constructions</li>
+                    <li>Context usually makes the meaning of "ew" clear (he/she/they vs that)</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

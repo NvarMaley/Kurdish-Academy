@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 10 - Dem û Roj (Time & Days) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #2e7d32; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-card { background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); padding: 20px; border-radius: 12px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid #fbc02d; }
+        .vocab-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(249, 168, 37, 0.2); }
+        .vocab-word { font-size: 1.4rem; font-weight: bold; color: #f57f17; margin-bottom: 8px; }
+        .vocab-translation { font-size: 1rem; color: #f9a825; }
+        .structure-box { background: #fffde7; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #fbc02d; }
+        .structure-pattern { font-size: 1.2rem; color: #f57f17; margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .example-dialogue { background: #fff9c4; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .dialogue-line { margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .speaker { font-weight: bold; color: #f9a825; margin-bottom: 8px; }
+        .kurdish-text { font-size: 1.2rem; color: #333; margin: 8px 0; }
+        .translation { font-size: 0.95rem; color: #666; font-style: italic; }
+        .exercise-box { background: #f9fbe7; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #cddc39; }
+        .exercise-title { font-size: 1.5rem; color: #827717; margin-bottom: 15px; font-weight: bold; }
+        .exercise-box input[type="text"], .exercise-box textarea { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .exercise-box button { background: #fbc02d; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .exercise-box button:hover { background: #f9a825; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>📅 Course 10: Dem û Roj</h1>
+            <div class="course-meta">Time & Days | A1 Level</div>
+        </div>
+        <div class="course-content">
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧩</span>1. Peyvên (Vocabulary): Time & Days</h2>
+                
+                <h3 style="color: #f9a825; margin: 20px 0;">Days of the Week (Rojên Hefteyê)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Duşem</div><div class="vocab-translation">Monday</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sêşem</div><div class="vocab-translation">Tuesday</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Çarşem</div><div class="vocab-translation">Wednesday</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pêncşem</div><div class="vocab-translation">Thursday</div></div>
+                    <div class="vocab-card"><div class="vocab-word">În</div><div class="vocab-translation">Friday</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şemî</div><div class="vocab-translation">Saturday</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Yekşem</div><div class="vocab-translation">Sunday</div></div>
+                </div>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Months (Meh)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Rêbendan</div><div class="vocab-translation">January</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Reşemî</div><div class="vocab-translation">February</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Adar</div><div class="vocab-translation">March</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Avrêl</div><div class="vocab-translation">April</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Gulan</div><div class="vocab-translation">May</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pûşper</div><div class="vocab-translation">June</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Tîrmeh</div><div class="vocab-translation">July</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Tebax</div><div class="vocab-translation">August</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Îlon</div><div class="vocab-translation">September</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Cotmeh</div><div class="vocab-translation">October</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Mijdar</div><div class="vocab-translation">November</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Berfanbar</div><div class="vocab-translation">December</div></div>
+                </div>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Time Words (Demên)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Îro</div><div class="vocab-translation">Today</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sibe</div><div class="vocab-translation">Tomorrow</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Duh</div><div class="vocab-translation">Yesterday</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Niha</div><div class="vocab-translation">Now</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Paşê</div><div class="vocab-translation">Later / After</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Berê</div><div class="vocab-translation">Before / Earlier</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Hefte</div><div class="vocab-translation">Week</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Meh</div><div class="vocab-translation">Month</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sal</div><div class="vocab-translation">Year</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dem</div><div class="vocab-translation">Time</div></div>
+                </div>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Time Adverbs (Zarfên Demê)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Her dem</div><div class="vocab-translation">Always</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pir caran</div><div class="vocab-translation">Often</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Carinan</div><div class="vocab-translation">Sometimes</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Kêm caran</div><div class="vocab-translation">Rarely</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Tu car</div><div class="vocab-translation">Never</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Her roj</div><div class="vocab-translation">Every day</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Her hefte</div><div class="vocab-translation">Every week</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Her sal</div><div class="vocab-translation">Every year</div></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Structure -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧠</span>2. Struktur: Dates & Time Expressions</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Learn how to express dates and time in Kurdish:</p>
+                
+                <div class="structure-box">
+                    <h3 style="color: #f9a825; margin-bottom: 15px;">💡 Saying Dates</h3>
+                    <div class="structure-pattern">
+                        <strong style="color: #f57f17;">Pattern:</strong> [Day number] + [Month name]<br><br>
+                        <strong>Examples:</strong><br>
+                        • <strong style="color: #1976d2;">21 Adar</strong> = March 21 (Newroz!)<br>
+                        • <strong style="color: #1976d2;">1 Rêbendan</strong> = January 1<br>
+                        • <strong style="color: #1976d2;">15 Gulan</strong> = May 15
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #f9a825; margin-bottom: 15px;">💡 Time Expressions</h3>
+                    <div class="structure-pattern">
+                        <strong>Îro:</strong> Today<br>
+                        • <strong style="color: #388e3c;">Îro</strong> Duşem e. = Today is Monday.<br><br>
+                        
+                        <strong>Sibe:</strong> Tomorrow<br>
+                        • <strong style="color: #388e3c;">Sibe</strong> ez diçim dibistanê. = Tomorrow I go to school.<br><br>
+                        
+                        <strong>Duh:</strong> Yesterday<br>
+                        • <strong style="color: #388e3c;">Duh</strong> ez li malê bûm. = Yesterday I was at home.
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Practice: Complete the Sentences</div>
+                    <p style="margin-bottom: 15px; color: #666;">Fill in with the correct time word:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. ___ Duşem e. (Today is Monday)</label>
+                        <input type="text" id="time-q1" placeholder="Type îro, sibe, or duh...">
+                        <div id="time-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. ___ ez diçim malê. (Tomorrow I go home)</label>
+                        <input type="text" id="time-q2" placeholder="Type îro, sibe, or duh...">
+                        <div id="time-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. ___ em li parkan bûn. (Yesterday we were at the park)</label>
+                        <input type="text" id="time-q3" placeholder="Type îro, sibe, or duh...">
+                        <div id="time-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkTimeWords()">✓ Check Answers</button>
+                    <div id="time-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎧</span>3. Guhdarîkirin (Listening): Making Plans</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Listen to people talking about their schedules:</p>
+                
+                <div class="example-dialogue">
+                    <h4 style="color: #f9a825; margin-bottom: 15px;">🎙️ Dialogue 1: Weekly Schedule</h4>
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Dîlan:</div>
+                        <div class="kurdish-text"><strong style="color: #388e3c;">Îro</strong> çi roj e?<br>
+                        <strong style="color: #388e3c;">Îro</strong> <strong style="color: #f9a825;">Duşem</strong> e.<br>
+                        Ez <strong style="color: #1976d2;">her Duşem</strong> û <strong style="color: #1976d2;">Çarşem</strong> diçim zanîngehê.<br>
+                        <strong style="color: #388e3c;">Sibe</strong> <strong style="color: #f9a825;">Sêşem</strong> e, ez li malê dimînim.<br>
+                        <strong style="color: #f9a825;">Pêncşem</strong> û <strong style="color: #f9a825;">În</strong> ez dixebitim.<br>
+                        <strong style="color: #f9a825;">Şemî</strong> û <strong style="color: #f9a825;">Yekşem</strong> ez bi hevalên xwe re derdikevim.</div>
+                        <div class="translation">What day is today? Today is Monday. I go to university every Monday and Wednesday. Tomorrow is Tuesday, I stay at home. Thursday and Friday I work. Saturday and Sunday I go out with my friends.</div>
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #f9a825; margin-bottom: 15px;">🎙️ Dialogue 2: Birthday Plans</h4>
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Rojîn:</div>
+                        <div class="kurdish-text">Rojbûna min <strong style="color: #f9a825;">15 Gulan</strong> e.<br>
+                        <strong style="color: #388e3c;">Îro</strong> <strong style="color: #f9a825;">10 Gulan</strong> e.<br>
+                        <strong style="color: #388e3c;">Sibe</strong> ez diçim bazarê.<br>
+                        Ez <strong style="color: #1976d2;">pir caran</strong> li mala xwe cejn dikim.<br>
+                        Ez <strong style="color: #1976d2;">her sal</strong> bi malbata xwe re pîroz dikim.</div>
+                        <div class="translation">My birthday is May 15. Today is May 10. Tomorrow I go to the market. I often celebrate at my house. I celebrate every year with my family.</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Comprehension Questions</div>
+                    <p style="margin-bottom: 15px;">Answer in Kurdish:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What day is today in Dialogue 1? (Îro çi roj e?)</label>
+                        <input type="text" id="listen-q1" placeholder="Answer in Kurdish...">
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. When does Dîlan go to university? (Dîlan kengî diçe zanîngehê?)</label>
+                        <input type="text" id="listen-q2" placeholder="Answer in Kurdish...">
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What does Dîlan do on Saturday and Sunday? (Dîlan Şemî û Yekşem çi dike?)</label>
+                        <input type="text" id="listen-q3" placeholder="Answer in Kurdish...">
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. When is Rojîn's birthday? (Rojbûna Rojîn kengî ye?)</label>
+                        <input type="text" id="listen-q4" placeholder="Answer in Kurdish...">
+                        <div id="listen-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">5. What day is today in Dialogue 2? (Îro çi roj e?)</label>
+                        <input type="text" id="listen-q5" placeholder="Answer in Kurdish...">
+                        <div id="listen-q5-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">6. What will Rojîn do tomorrow? (Rojîn sibe çi dike?)</label>
+                        <input type="text" id="listen-q6" placeholder="Answer in Kurdish...">
+                        <div id="listen-q6-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📖</span>4. Xwendin (Reading): Kurdish Calendar & All Months</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Read about the Kurdish calendar and all 12 months:</p>
+                
+                <div style="background: #fff9c4; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #f9a825;">
+                    <h4 style="color: #f57f17; margin-bottom: 15px;">📅 Salnameyê Kurdî (Kurdish Calendar)</h4>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        Kurdan salnameyeke taybet heye.<br>
+                        Sala Kurdî <span style="color: #f57f17; font-weight: bold;">21 Adar</span> dest pê dike.<br>
+                        Ev roj <span style="color: #f57f17; font-weight: bold;">Newroz</span> e - cejna biharê ye.<br>
+                        Newroz <span style="color: #1976d2; font-weight: bold;">her sal</span> <span style="color: #f57f17; font-weight: bold;">21 Adar</span> tê pîrozkirin.<br>
+                        Ev cejna herî mezin a Kurdan e.
+                    </p>
+                </div>
+
+                <div style="background: #fff9c4; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #f9a825;">
+                    <h4 style="color: #f57f17; margin-bottom: 15px;">🗓️ Mehên Salê (Months of the Year)</h4>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        <strong style="color: #2196f3;">❄️ Zivistan (Winter):</strong><br>
+                        <span style="color: #f57f17; font-weight: bold;">Rêbendan</span> (January), <span style="color: #f57f17; font-weight: bold;">Reşemî</span> (February), <span style="color: #f57f17; font-weight: bold;">Adar</span> (March)<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">Rêbendan</span> û <span style="color: #f57f17; font-weight: bold;">Reşemî</span> sar e û berf dikeve.<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">Adar</span> bihar dest pê dike.<br><br>
+                        
+                        <strong style="color: #4caf50;">🌸 Bihar (Spring):</strong><br>
+                        <span style="color: #f57f17; font-weight: bold;">Adar</span> (March), <span style="color: #f57f17; font-weight: bold;">Avrêl</span> (April), <span style="color: #f57f17; font-weight: bold;">Gulan</span> (May)<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">Adar</span> em Newrozê pîroz dikin.<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">Avrêl</span> û <span style="color: #f57f17; font-weight: bold;">Gulan</span> gul û kulîlk vedikeve.<br><br>
+                        
+                        <strong style="color: #ff9800;">☀️ Havîn (Summer):</strong><br>
+                        <span style="color: #f57f17; font-weight: bold;">Pûşper</span> (June), <span style="color: #f57f17; font-weight: bold;">Tîrmeh</span> (July), <span style="color: #f57f17; font-weight: bold;">Tebax</span> (August)<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">Pûşper</span>, <span style="color: #f57f17; font-weight: bold;">Tîrmeh</span> û <span style="color: #f57f17; font-weight: bold;">Tebax</span> gelek germ e.<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">15 Tebax</span> Roja Zimanê Kurdî ye.<br><br>
+                        
+                        <strong style="color: #795548;">🍂 Payîz (Autumn):</strong><br>
+                        <span style="color: #f57f17; font-weight: bold;">Îlon</span> (September), <span style="color: #f57f17; font-weight: bold;">Cotmeh</span> (October), <span style="color: #f57f17; font-weight: bold;">Mijdar</span> (November)<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">Îlon</span> û <span style="color: #f57f17; font-weight: bold;">Cotmeh</span> pel dikeve.<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">Mijdar</span> hewa sar dibe.<br><br>
+                        
+                        <strong style="color: #2196f3;">❄️ Destpêka Zivistanê:</strong><br>
+                        <span style="color: #f57f17; font-weight: bold;">Berfanbar</span> (December)<br>
+                        Li <span style="color: #f57f17; font-weight: bold;">Berfanbar</span> zivistan dest pê dike û berf dikeve.
+                    </p>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Reading Comprehension</div>
+                    <p style="margin-bottom: 20px; color: #666;">Answer these questions about the months:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. When does the Kurdish year begin? (Sala Kurdî kengî dest pê dike?)</label>
+                        <input type="text" id="read-q1" placeholder="Answer in Kurdish...">
+                        <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. Which month is Kurdish Language Day? (Roja Zimanê Kurdî li kîjan mehê ye?)</label>
+                        <input type="text" id="read-q2" placeholder="Answer in Kurdish...">
+                        <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. Name the three winter months. (Sê mehên zivistanê binivîse.)</label>
+                        <input type="text" id="read-q3" placeholder="Answer in Kurdish...">
+                        <div id="read-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. Which month does winter start? (Zivistan li kîjan mehê dest pê dike?)</label>
+                        <input type="text" id="read-q4" placeholder="Answer in Kurdish...">
+                        <div id="read-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">5. Name the three summer months. (Sê mehên havînê binivîse.)</label>
+                        <input type="text" id="read-q5" placeholder="Answer in Kurdish...">
+                        <div id="read-q5-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReading()">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+
+                <!-- Months Matching Exercise -->
+                <div class="exercise-box" style="margin-top: 30px;">
+                    <div class="exercise-title">🎯 Match All 12 Months</div>
+                    <p style="margin-bottom: 20px; color: #666;">Match the Kurdish month names with their English translations:</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+                        <div>
+                            <h4 style="color: #f9a825; margin-bottom: 15px;">Kurdish Months</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; max-height: 500px; overflow-y: auto;">
+                                <button class="match-btn-months" data-word="rêbendan" onclick="selectMonthWord('rêbendan')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Rêbendan</button>
+                                <button class="match-btn-months" data-word="reşemî" onclick="selectMonthWord('reşemî')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Reşemî</button>
+                                <button class="match-btn-months" data-word="adar" onclick="selectMonthWord('adar')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Adar</button>
+                                <button class="match-btn-months" data-word="avrêl" onclick="selectMonthWord('avrêl')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Avrêl</button>
+                                <button class="match-btn-months" data-word="gulan" onclick="selectMonthWord('gulan')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Gulan</button>
+                                <button class="match-btn-months" data-word="pûşper" onclick="selectMonthWord('pûşper')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Pûşper</button>
+                                <button class="match-btn-months" data-word="tîrmeh" onclick="selectMonthWord('tîrmeh')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Tîrmeh</button>
+                                <button class="match-btn-months" data-word="tebax" onclick="selectMonthWord('tebax')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Tebax</button>
+                                <button class="match-btn-months" data-word="îlon" onclick="selectMonthWord('îlon')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Îlon</button>
+                                <button class="match-btn-months" data-word="cotmeh" onclick="selectMonthWord('cotmeh')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Cotmeh</button>
+                                <button class="match-btn-months" data-word="mijdar" onclick="selectMonthWord('mijdar')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Mijdar</button>
+                                <button class="match-btn-months" data-word="berfanbar" onclick="selectMonthWord('berfanbar')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Berfanbar</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #f57f17; margin-bottom: 15px;">English Months</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; max-height: 500px; overflow-y: auto;">
+                                <button class="match-trans-months" data-trans="january" onclick="selectMonthTrans('january')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• January</button>
+                                <button class="match-trans-months" data-trans="february" onclick="selectMonthTrans('february')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• February</button>
+                                <button class="match-trans-months" data-trans="march" onclick="selectMonthTrans('march')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• March</button>
+                                <button class="match-trans-months" data-trans="april" onclick="selectMonthTrans('april')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• April</button>
+                                <button class="match-trans-months" data-trans="may" onclick="selectMonthTrans('may')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• May</button>
+                                <button class="match-trans-months" data-trans="june" onclick="selectMonthTrans('june')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• June</button>
+                                <button class="match-trans-months" data-trans="july" onclick="selectMonthTrans('july')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• July</button>
+                                <button class="match-trans-months" data-trans="august" onclick="selectMonthTrans('august')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• August</button>
+                                <button class="match-trans-months" data-trans="september" onclick="selectMonthTrans('september')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• September</button>
+                                <button class="match-trans-months" data-trans="october" onclick="selectMonthTrans('october')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• October</button>
+                                <button class="match-trans-months" data-trans="november" onclick="selectMonthTrans('november')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• November</button>
+                                <button class="match-trans-months" data-trans="december" onclick="selectMonthTrans('december')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• December</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <button onclick="resetMonthsMatch()" style="background: #ff9800; padding: 10px 20px; border: none; border-radius: 8px; color: white; cursor: pointer;">🔄 Reset</button>
+                    </div>
+                    <div id="months-match-feedback" style="margin-top: 20px; font-size: 1.2rem; font-weight: bold; text-align: center;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>5. Nivîsandin (Writing): Your Schedule</h2>
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise: Your Complete Week</div>
+                    <p style="margin-bottom: 15px; color: #666;">Write about your weekly schedule. Describe what you do on each day of the week!</p>
+                    
+                    <div style="background: #fff9c4; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">💡 Example: My Week</h4>
+                        <p style="line-height: 2; margin: 0;">
+                            <strong style="color: #388e3c;">Îro</strong> <strong style="color: #f9a825;">Çarşem</strong> e. <span style="color: #666; font-style: italic;">(Today is Wednesday.)</span><br><br>
+                            
+                            <strong style="color: #f9a825;">Duşem:</strong> Ez diçim dibistanê. <span style="color: #666; font-style: italic;">(I go to school.)</span><br>
+                            <strong style="color: #f9a825;">Sêşem:</strong> Ez diçim dibistanê. <span style="color: #666; font-style: italic;">(I go to school.)</span><br>
+                            <strong style="color: #f9a825;">Çarşem:</strong> Ez diçim dibistanê. <span style="color: #666; font-style: italic;">(I go to school.)</span><br>
+                            <strong style="color: #f9a825;">Pêncşem:</strong> Ez diçim dibistanê. <span style="color: #666; font-style: italic;">(I go to school.)</span><br>
+                            <strong style="color: #f9a825;">În:</strong> Ez diçim dibistanê. <span style="color: #666; font-style: italic;">(I go to school.)</span><br>
+                            <strong style="color: #f9a825;">Şemî:</strong> Ez li malê me. <span style="color: #666; font-style: italic;">(I am at home.)</span><br>
+                            <strong style="color: #f9a825;">Yekşem:</strong> Ez bi hevalên xwe re lîzim. <span style="color: #666; font-style: italic;">(I play with my friends.)</span><br><br>
+                            
+                            <strong style="color: #388e3c;">Sibe</strong> <strong style="color: #f9a825;">Pêncşem</strong> e. <span style="color: #666; font-style: italic;">(Tomorrow is Thursday.)</span>
+                        </p>
+                    </div>
+                    
+                    <textarea id="write-schedule" rows="10" placeholder="Write your complete weekly schedule here. Describe what you do on each day: Duşem, Sêşem, Çarşem, Pêncşem, În, Şemî, Yekşem..."></textarea>
+                    <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    <button onclick="checkWriting()">✓ Submit</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>6. Axaftin (Speaking): Today & Tomorrow</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Practice talking about today and tomorrow:</p>
+                <div class="exercise-box">
+                    <div class="exercise-title">🎭 Speaking Scenarios</div>
+                    
+                    <div style="margin: 25px 0; padding: 20px; background: #fff9c4; border-radius: 10px;">
+                        <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 1: Someone asks "Îro çi roj e?"</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(1, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Îro Duşem e.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(1, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Sibe Duşem e.
+                            </button>
+                        </div>
+                        <div id="speak-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff9c4; border-radius: 10px;">
+                        <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 2: Someone asks "Sibe tu çi dikî?"</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(2, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Duh ez çûm dibistanê.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(2, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Sibe ez diçim dibistanê.
+                            </button>
+                        </div>
+                        <div id="speak-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div id="speak-score" style="margin-top: 25px; font-size: 1.3rem; font-weight: bold; text-align: center;">
+                        Score: <span id="speak-correct">0</span> / 2
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Culture - Newroz -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>7. Çand (Culture): Newroz - Kurdish New Year</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Learn about Newroz, the most important Kurdish celebration:</p>
+                
+                <div style="background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #fbc02d;">
+                    <h3 style="color: #f57f17; text-align: center; margin-bottom: 25px;">🔥 Newroz - 21 Adar</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">🔥 What is Newroz?</h4>
+                        <p style="line-height: 1.8;">
+                            <strong>Newroz</strong> is the Kurdish New Year, celebrated on <strong>March 21</strong>. It marks the beginning of spring and symbolizes renewal, freedom, and resistance. For Kurds, Newroz is the most important celebration of the year.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">📖 The Legend of Kawa</h4>
+                        <p style="line-height: 1.8;">
+                            The story tells of <strong>Kawa the Blacksmith</strong> who defeated the tyrant king Dehak. Kawa lit a fire on the mountain to signal victory. This fire became the symbol of Newroz - the victory of light over darkness.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">🎉 How Kurds Celebrate</h4>
+                        <p style="line-height: 1.8;">
+                            • <strong>Lighting fires (Agir)</strong> - Bonfires symbolizing Kawa's fire<br>
+                            • <strong>Dancing (Govend)</strong> - Traditional Kurdish circle dances<br>
+                            • <strong>Wearing traditional clothes</strong><br>
+                            • <strong>Picnics in nature</strong><br>
+                            • <strong>Special foods and music</strong>
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">💡 Newroz Greeting</h4>
+                        <p style="line-height: 1.8; font-size: 1.2rem; color: #f57f17; font-weight: bold;">
+                            Newroza we pîroz be! 🔥<br>
+                            <span style="font-size: 1rem; color: #666; font-weight: normal; font-style: italic;">(Happy Newroz!)</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Review -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🔤</span>8. Dubare (Review): Vocabulary Practice</h2>
+                
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Exercise A: Complete Vocabulary Matching (20 pairs)</div>
+                    <p style="margin-bottom: 20px; color: #666;">Match all the Kurdish time vocabulary with English translations:</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+                        <div>
+                            <h4 style="color: #f9a825; margin-bottom: 15px;">Kurdish Words</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; max-height: 600px; overflow-y: auto;">
+                                <button class="match-btn-c10" data-word="duşem" onclick="selectWordC10('duşem')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Duşem</button>
+                                <button class="match-btn-c10" data-word="sêşem" onclick="selectWordC10('sêşem')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Sêşem</button>
+                                <button class="match-btn-c10" data-word="çarşem" onclick="selectWordC10('çarşem')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Çarşem</button>
+                                <button class="match-btn-c10" data-word="pêncşem" onclick="selectWordC10('pêncşem')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Pêncşem</button>
+                                <button class="match-btn-c10" data-word="în" onclick="selectWordC10('în')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• În</button>
+                                <button class="match-btn-c10" data-word="şemî" onclick="selectWordC10('şemî')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Şemî</button>
+                                <button class="match-btn-c10" data-word="yekşem" onclick="selectWordC10('yekşem')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Yekşem</button>
+                                <button class="match-btn-c10" data-word="adar" onclick="selectWordC10('adar')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Adar</button>
+                                <button class="match-btn-c10" data-word="gulan" onclick="selectWordC10('gulan')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Gulan</button>
+                                <button class="match-btn-c10" data-word="tebax" onclick="selectWordC10('tebax')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Tebax</button>
+                                <button class="match-btn-c10" data-word="rêbendan" onclick="selectWordC10('rêbendan')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Rêbendan</button>
+                                <button class="match-btn-c10" data-word="berfanbar" onclick="selectWordC10('berfanbar')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Berfanbar</button>
+                                <button class="match-btn-c10" data-word="îro" onclick="selectWordC10('îro')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Îro</button>
+                                <button class="match-btn-c10" data-word="sibe" onclick="selectWordC10('sibe')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Sibe</button>
+                                <button class="match-btn-c10" data-word="duh" onclick="selectWordC10('duh')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Duh</button>
+                                <button class="match-btn-c10" data-word="niha" onclick="selectWordC10('niha')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Niha</button>
+                                <button class="match-btn-c10" data-word="hefte" onclick="selectWordC10('hefte')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Hefte</button>
+                                <button class="match-btn-c10" data-word="meh" onclick="selectWordC10('meh')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Meh</button>
+                                <button class="match-btn-c10" data-word="sal" onclick="selectWordC10('sal')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Sal</button>
+                                <button class="match-btn-c10" data-word="herdem" onclick="selectWordC10('herdem')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Her dem</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #f57f17; margin-bottom: 15px;">English Translations</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; max-height: 600px; overflow-y: auto;">
+                                <button class="match-trans-c10" data-trans="monday" onclick="selectTransC10('monday')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Monday</button>
+                                <button class="match-trans-c10" data-trans="tuesday" onclick="selectTransC10('tuesday')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Tuesday</button>
+                                <button class="match-trans-c10" data-trans="wednesday" onclick="selectTransC10('wednesday')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Wednesday</button>
+                                <button class="match-trans-c10" data-trans="thursday" onclick="selectTransC10('thursday')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Thursday</button>
+                                <button class="match-trans-c10" data-trans="friday" onclick="selectTransC10('friday')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Friday</button>
+                                <button class="match-trans-c10" data-trans="saturday" onclick="selectTransC10('saturday')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Saturday</button>
+                                <button class="match-trans-c10" data-trans="sunday" onclick="selectTransC10('sunday')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Sunday</button>
+                                <button class="match-trans-c10" data-trans="march" onclick="selectTransC10('march')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• March</button>
+                                <button class="match-trans-c10" data-trans="may" onclick="selectTransC10('may')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• May</button>
+                                <button class="match-trans-c10" data-trans="august" onclick="selectTransC10('august')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• August</button>
+                                <button class="match-trans-c10" data-trans="january" onclick="selectTransC10('january')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• January</button>
+                                <button class="match-trans-c10" data-trans="december" onclick="selectTransC10('december')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• December</button>
+                                <button class="match-trans-c10" data-trans="today" onclick="selectTransC10('today')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Today</button>
+                                <button class="match-trans-c10" data-trans="tomorrow" onclick="selectTransC10('tomorrow')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Tomorrow</button>
+                                <button class="match-trans-c10" data-trans="yesterday" onclick="selectTransC10('yesterday')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Yesterday</button>
+                                <button class="match-trans-c10" data-trans="now" onclick="selectTransC10('now')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Now</button>
+                                <button class="match-trans-c10" data-trans="week" onclick="selectTransC10('week')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Week</button>
+                                <button class="match-trans-c10" data-trans="month" onclick="selectTransC10('month')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Month</button>
+                                <button class="match-trans-c10" data-trans="year" onclick="selectTransC10('year')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Year</button>
+                                <button class="match-trans-c10" data-trans="always" onclick="selectTransC10('always')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Always</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <button onclick="resetVocabC10()" style="background: #ff9800; padding: 10px 20px; border: none; border-radius: 8px; color: white; cursor: pointer;">🔄 Reset</button>
+                    </div>
+                    <div id="vocab-match-feedback" style="margin-top: 20px; font-size: 1.2rem; font-weight: bold; text-align: center;"></div>
+                </div>
+
+                <div class="exercise-box" style="margin-top: 30px;">
+                    <div class="exercise-title">🎯 Exercise B: Important Dates</div>
+                    <p style="margin-bottom: 20px; color: #666;">Complete with the correct month:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. Newroz 21 ___ e. (Newroz is March 21)</label>
+                        <input type="text" id="month-q1" placeholder="Type the month...">
+                        <div id="month-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. Roja Zimanê Kurdî 15 ___ e. (Kurdish Language Day is August 15)</label>
+                        <input type="text" id="month-q2" placeholder="Type the month...">
+                        <div id="month-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkMonths()">✓ Check Answers</button>
+                    <div id="month-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);">
+                <h2 style="color: #f57f17; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">You've completed Course 10: Time & Days!<br>You can now talk about dates and time in Kurdish.</p>
+                <a href="../level-a1.html" class="back-link" style="background: #f9a825;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+    <footer><p>&copy; 2025 Kurdish Academy. All rights reserved.</p></footer>
+    <script>
+        function checkTimeWords() {
+            let correct = 0;
+            const total = 3;
+            
+            const q1 = document.getElementById('time-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('time-q1-feedback');
+            if (q1.includes('îro') || q1.includes('iro')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Îro Duşem e.';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>îro</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('time-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('time-q2-feedback');
+            if (q2.includes('sibe')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Sibe ez diçim malê.';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>sibe</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('time-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('time-q3-feedback');
+            if (q3.includes('duh')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Duh em li parkan bûn.';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>duh</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('time-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkListening() {
+            let correct = 0;
+            const total = 6;
+            
+            const q1 = document.getElementById('listen-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if (q1.includes('duşem') || q1.includes('dusem') || q1.includes('monday')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Îro Duşem e.';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Duşem</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('listen-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if ((q2.includes('duşem') || q2.includes('dusem') || q2.includes('monday')) && (q2.includes('çarşem') || q2.includes('carsem') || q2.includes('wednesday'))) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Her Duşem û Çarşem.';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Her Duşem û Çarşem</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('listen-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3.includes('derdikev') || q3.includes('heval') || q3.includes('friends')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Bi hevalên xwe re derdikevim.';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Bi hevalên xwe re derdikevim</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const q4 = document.getElementById('listen-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('listen-q4-feedback');
+            if (q4.includes('15') && (q4.includes('gulan') || q4.includes('may'))) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! 15 Gulan.';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>15 Gulan</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+            
+            const q5 = document.getElementById('listen-q5').value.toLowerCase().trim();
+            const q5Feedback = document.getElementById('listen-q5-feedback');
+            if (q5.includes('10') && (q5.includes('gulan') || q5.includes('may'))) {
+                correct++;
+                q5Feedback.innerHTML = '✅ Correct! Îro 10 Gulan e.';
+                q5Feedback.style.color = '#2e7d32';
+            } else {
+                q5Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>10 Gulan</strong>';
+                q5Feedback.style.color = '#d32f2f';
+            }
+            
+            const q6 = document.getElementById('listen-q6').value.toLowerCase().trim();
+            const q6Feedback = document.getElementById('listen-q6-feedback');
+            if (q6.includes('bazar') || q6.includes('diçim') || q6.includes('market')) {
+                correct++;
+                q6Feedback.innerHTML = '✅ Correct! Sibe ez diçim bazarê.';
+                q6Feedback.style.color = '#2e7d32';
+            } else {
+                q6Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Sibe ez diçim bazarê</strong>';
+                q6Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkReading() {
+            let correct = 0;
+            const total = 5;
+            
+            const q1 = document.getElementById('read-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1.includes('21') && (q1.includes('adar') || q1.includes('march'))) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! 21 Adar.';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>21 Adar</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('read-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2.includes('tebax') || q2.includes('august')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Tebax (15 Tebax).';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Tebax</strong> (August)';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('read-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('read-q3-feedback');
+            if ((q3.includes('rêbendan') || q3.includes('rebendan') || q3.includes('january')) && 
+                (q3.includes('reşemî') || q3.includes('resemi') || q3.includes('february')) && 
+                (q3.includes('adar') || q3.includes('march'))) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Rêbendan, Reşemî, Adar.';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Rêbendan, Reşemî, Adar</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const q4 = document.getElementById('read-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('read-q4-feedback');
+            if (q4.includes('berfanbar') || q4.includes('december')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! Berfanbar (December).';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Berfanbar</strong> (December)';
+                q4Feedback.style.color = '#d32f2f';
+            }
+            
+            const q5 = document.getElementById('read-q5').value.toLowerCase().trim();
+            const q5Feedback = document.getElementById('read-q5-feedback');
+            if ((q5.includes('pûşper') || q5.includes('pusper') || q5.includes('june')) && 
+                (q5.includes('tîrmeh') || q5.includes('tirmeh') || q5.includes('july')) && 
+                (q5.includes('tebax') || q5.includes('august'))) {
+                correct++;
+                q5Feedback.innerHTML = '✅ Correct! Pûşper, Tîrmeh, Tebax.';
+                q5Feedback.style.color = '#2e7d32';
+            } else {
+                q5Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Pûşper, Tîrmeh, Tebax</strong>';
+                q5Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkWriting() {
+            const schedule = document.getElementById('write-schedule').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            if (schedule.length < 30) {
+                feedback.innerHTML = '❌ Please write at least 4-5 sentences.';
+                feedback.style.color = '#d32f2f';
+            } else {
+                feedback.innerHTML = '✅ Great! Your schedule has been submitted.';
+                feedback.style.color = '#2e7d32';
+            }
+        }
+
+        let speakCorrect = 0;
+        function checkSpeaking(scenario, answer) {
+            const feedback = document.getElementById(`speak-feedback-${scenario}`);
+            if (scenario === 1 && answer === 'a') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Îro Duşem e.';
+                feedback.style.color = '#2e7d32';
+            } else if (scenario === 2 && answer === 'b') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Sibe ez diçim dibistanê.';
+                feedback.style.color = '#2e7d32';
+            } else {
+                feedback.innerHTML = '❌ Try again.';
+                feedback.style.color = '#d32f2f';
+            }
+            document.getElementById('speak-correct').textContent = speakCorrect;
+        }
+
+        const vocabPairs = {
+            'duşem': 'monday',
+            'sêşem': 'tuesday',
+            'çarşem': 'wednesday',
+            'pêncşem': 'thursday',
+            'în': 'friday',
+            'şemî': 'saturday',
+            'yekşem': 'sunday',
+            'adar': 'march',
+            'gulan': 'may',
+            'tebax': 'august',
+            'rêbendan': 'january',
+            'berfanbar': 'december',
+            'îro': 'today',
+            'sibe': 'tomorrow',
+            'duh': 'yesterday',
+            'niha': 'now',
+            'hefte': 'week',
+            'meh': 'month',
+            'sal': 'year',
+            'herdem': 'always'
+        };
+        let selectedWord = null;
+        let selectedTrans = null;
+        let matchedPairs = 0;
+
+        function selectWordC10(word) {
+            if (document.querySelector(`[data-word="${word}"]`).classList.contains('matched')) return;
+            document.querySelectorAll('.match-btn-c10').forEach(btn => {
+                if (!btn.classList.contains('matched')) {
+                    btn.style.background = 'white';
+                }
+            });
+            document.querySelector(`[data-word="${word}"]`).style.background = '#fff9c4';
+            selectedWord = word;
+            checkMatch();
+        }
+
+        function selectTransC10(trans) {
+            if (document.querySelector(`[data-trans="${trans}"]`).classList.contains('matched')) return;
+            document.querySelectorAll('.match-trans-c10').forEach(btn => {
+                if (!btn.classList.contains('matched')) {
+                    btn.style.background = 'white';
+                }
+            });
+            document.querySelector(`[data-trans="${trans}"]`).style.background = '#fff9c4';
+            selectedTrans = trans;
+            checkMatch();
+        }
+
+        function checkMatch() {
+            if (selectedWord && selectedTrans) {
+                if (vocabPairs[selectedWord] === selectedTrans) {
+                    document.querySelector(`[data-word="${selectedWord}"]`).style.background = '#c8e6c9';
+                    document.querySelector(`[data-trans="${selectedTrans}"]`).style.background = '#c8e6c9';
+                    document.querySelector(`[data-word="${selectedWord}"]`).classList.add('matched');
+                    document.querySelector(`[data-trans="${selectedTrans}"]`).classList.add('matched');
+                    matchedPairs++;
+                    if (matchedPairs === 20) {
+                        document.getElementById('vocab-match-feedback').innerHTML = '🎉 Perfect! All 20 pairs matched!';
+                        document.getElementById('vocab-match-feedback').style.color = '#2e7d32';
+                    } else {
+                        document.getElementById('vocab-match-feedback').innerHTML = `✅ ${matchedPairs} / 20 matched`;
+                        document.getElementById('vocab-match-feedback').style.color = '#f9a825';
+                    }
+                } else {
+                    document.querySelector(`[data-word="${selectedWord}"]`).style.background = '#ffcdd2';
+                    document.querySelector(`[data-trans="${selectedTrans}"]`).style.background = '#ffcdd2';
+                    setTimeout(() => {
+                        document.querySelector(`[data-word="${selectedWord}"]`).style.background = 'white';
+                        document.querySelector(`[data-trans="${selectedTrans}"]`).style.background = 'white';
+                    }, 1000);
+                }
+                selectedWord = null;
+                selectedTrans = null;
+            }
+        }
+
+        function resetVocabC10() {
+            // Reset states
+            selectedWord = null;
+            selectedTrans = null;
+            matchedPairs = 0;
+            document.getElementById('vocab-match-feedback').innerHTML = '';
+            
+            // Get containers
+            const wordsContainer = document.querySelector('.match-btn-c10').parentElement;
+            const transContainer = document.querySelector('.match-trans-c10').parentElement;
+            
+            // Get all buttons
+            const wordButtons = Array.from(document.querySelectorAll('.match-btn-c10'));
+            const transButtons = Array.from(document.querySelectorAll('.match-trans-c10'));
+            
+            // Reset and shuffle
+            wordButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.classList.remove('matched');
+            });
+            transButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.classList.remove('matched');
+            });
+            
+            // Shuffle arrays
+            shuffleArray(wordButtons);
+            shuffleArray(transButtons);
+            
+            // Clear containers
+            wordsContainer.innerHTML = '';
+            transContainer.innerHTML = '';
+            
+            // Re-append in shuffled order
+            wordButtons.forEach(btn => wordsContainer.appendChild(btn));
+            transButtons.forEach(btn => transContainer.appendChild(btn));
+        }
+
+        // Months matching exercise
+        const monthsPairs = {
+            'rêbendan': 'january',
+            'reşemî': 'february',
+            'adar': 'march',
+            'avrêl': 'april',
+            'gulan': 'may',
+            'pûşper': 'june',
+            'tîrmeh': 'july',
+            'tebax': 'august',
+            'îlon': 'september',
+            'cotmeh': 'october',
+            'mijdar': 'november',
+            'berfanbar': 'december'
+        };
+        let selectedMonthWord = null;
+        let selectedMonthTrans = null;
+        let matchedMonths = 0;
+
+        function selectMonthWord(word) {
+            if (document.querySelector(`[data-word="${word}"]`).classList.contains('matched')) return;
+            document.querySelectorAll('.match-btn-months').forEach(btn => {
+                if (!btn.classList.contains('matched')) {
+                    btn.style.background = 'white';
+                }
+            });
+            document.querySelector(`[data-word="${word}"]`).style.background = '#fff9c4';
+            selectedMonthWord = word;
+            checkMonthMatch();
+        }
+
+        function selectMonthTrans(trans) {
+            if (document.querySelector(`[data-trans="${trans}"]`).classList.contains('matched')) return;
+            document.querySelectorAll('.match-trans-months').forEach(btn => {
+                if (!btn.classList.contains('matched')) {
+                    btn.style.background = 'white';
+                }
+            });
+            document.querySelector(`[data-trans="${trans}"]`).style.background = '#fff9c4';
+            selectedMonthTrans = trans;
+            checkMonthMatch();
+        }
+
+        function checkMonthMatch() {
+            if (selectedMonthWord && selectedMonthTrans) {
+                if (monthsPairs[selectedMonthWord] === selectedMonthTrans) {
+                    document.querySelector(`[data-word="${selectedMonthWord}"]`).style.background = '#c8e6c9';
+                    document.querySelector(`[data-trans="${selectedMonthTrans}"]`).style.background = '#c8e6c9';
+                    document.querySelector(`[data-word="${selectedMonthWord}"]`).classList.add('matched');
+                    document.querySelector(`[data-trans="${selectedMonthTrans}"]`).classList.add('matched');
+                    matchedMonths++;
+                    if (matchedMonths === 12) {
+                        document.getElementById('months-match-feedback').innerHTML = '🎉 Perfect! All 12 months matched!';
+                        document.getElementById('months-match-feedback').style.color = '#2e7d32';
+                    } else {
+                        document.getElementById('months-match-feedback').innerHTML = `✅ ${matchedMonths} / 12 matched`;
+                        document.getElementById('months-match-feedback').style.color = '#f9a825';
+                    }
+                } else {
+                    document.querySelector(`[data-word="${selectedMonthWord}"]`).style.background = '#ffcdd2';
+                    document.querySelector(`[data-trans="${selectedMonthTrans}"]`).style.background = '#ffcdd2';
+                    setTimeout(() => {
+                        document.querySelector(`[data-word="${selectedMonthWord}"]`).style.background = 'white';
+                        document.querySelector(`[data-trans="${selectedMonthTrans}"]`).style.background = 'white';
+                    }, 1000);
+                }
+                selectedMonthWord = null;
+                selectedMonthTrans = null;
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function resetMonthsMatch() {
+            // Reset states
+            selectedMonthWord = null;
+            selectedMonthTrans = null;
+            matchedMonths = 0;
+            document.getElementById('months-match-feedback').innerHTML = '';
+            
+            // Get containers
+            const wordsContainer = document.querySelector('.match-btn-months').parentElement;
+            const transContainer = document.querySelector('.match-trans-months').parentElement;
+            
+            // Get all buttons
+            const wordButtons = Array.from(document.querySelectorAll('.match-btn-months'));
+            const transButtons = Array.from(document.querySelectorAll('.match-trans-months'));
+            
+            // Reset and shuffle
+            wordButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.classList.remove('matched');
+            });
+            transButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.classList.remove('matched');
+            });
+            
+            // Shuffle arrays
+            shuffleArray(wordButtons);
+            shuffleArray(transButtons);
+            
+            // Clear containers
+            wordsContainer.innerHTML = '';
+            transContainer.innerHTML = '';
+            
+            // Re-append in shuffled order
+            wordButtons.forEach(btn => wordsContainer.appendChild(btn));
+            transButtons.forEach(btn => transContainer.appendChild(btn));
+        }
+
+        function checkMonths() {
+            let correct = 0;
+            const total = 2;
+            
+            const q1 = document.getElementById('month-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('month-q1-feedback');
+            if (q1.includes('adar') || q1.includes('march')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Adar (March).';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Adar</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('month-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('month-q2-feedback');
+            if (q2.includes('tebax') || q2.includes('august')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Tebax (August).';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Tebax</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('month-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 16 - Bajar (City) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #d32f2f; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-card { background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 20px; border-radius: 12px; text-align: center; transition: transform 0.3s ease; border: 2px solid #ef5350; }
+        .vocab-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(244, 67, 54, 0.2); }
+        .vocab-word { font-size: 1.4rem; font-weight: bold; color: #c62828; margin-bottom: 8px; }
+        .vocab-translation { font-size: 1rem; color: #d32f2f; }
+        .structure-box { background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #4caf50; }
+        .structure-pattern { font-size: 1.2rem; color: #2e7d32; margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .example-dialogue { background: #fff3e0; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .dialogue-line { margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .speaker { font-weight: bold; color: #ff9800; margin-bottom: 8px; }
+        .kurdish-text { font-size: 1.2rem; color: #333; margin: 8px 0; }
+        .translation { font-size: 0.95rem; color: #666; font-style: italic; }
+        .exercise-box { background: #f3e5f5; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #ba68c8; }
+        .exercise-title { font-size: 1.5rem; color: #6a1b9a; margin-bottom: 15px; font-weight: bold; }
+        .exercise-box input[type="text"], .exercise-box textarea { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .exercise-box button { background: #e53935; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .exercise-box button:hover { background: #c62828; transform: scale(1.05); }
+        .map-box { background: #fff; border: 3px solid #e53935; padding: 30px; margin: 20px 0; border-radius: 12px; }
+        .location-item { background: #ffebee; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #e53935; }
+        .preposition-box { background: #fff9c4; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #fbc02d; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>🏙️ Course 16: Bajar (City)</h1>
+            <div class="course-meta">City Places & Locations | A1 Level</div>
+        </div>
+        <div class="course-content">
+            
+            <!-- Section 1: Vocabulary -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧩</span>1. Peyvên (Vocabulary): Cihên Bajêr</h2>
+                
+                <h3 style="color: #d32f2f; margin: 20px 0;">🏛️ Cihên Girîng (Important Places)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Bank</div><div class="vocab-translation">Bank</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dibistan</div><div class="vocab-translation">School</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Nexweşxane</div><div class="vocab-translation">Hospital</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Posta</div><div class="vocab-translation">Post Office</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Polîs</div><div class="vocab-translation">Police Station</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dadgeh</div><div class="vocab-translation">Court</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şaredarî</div><div class="vocab-translation">City Hall</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pirtûkxane</div><div class="vocab-translation">Library</div></div>
+                </div>
+
+                <h3 style="color: #d32f2f; margin: 20px 0;">🛍️ Kirîn û Xwarin (Shopping & Eating)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Bazar</div><div class="vocab-translation">Market</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Firoşgeh</div><div class="vocab-translation">Shop</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Supermarket</div><div class="vocab-translation">Supermarket</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Xwaringeh</div><div class="vocab-translation">Restaurant</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Qehwexane</div><div class="vocab-translation">Café</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Firin</div><div class="vocab-translation">Bakery</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Eczaxane</div><div class="vocab-translation">Pharmacy</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Berberxane</div><div class="vocab-translation">Barber Shop</div></div>
+                </div>
+
+                <h3 style="color: #d32f2f; margin: 20px 0;">🌳 Cihên Din (Other Places)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Park</div><div class="vocab-translation">Park</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Muzexane</div><div class="vocab-translation">Museum</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sînema</div><div class="vocab-translation">Cinema</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Stadyûm</div><div class="vocab-translation">Stadium</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Mizgeft</div><div class="vocab-translation">Mosque</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dêr</div><div class="vocab-translation">Church</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Hotel</div><div class="vocab-translation">Hotel</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Wêdergeh</div><div class="vocab-translation">Station</div></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Grammar - Li ku ye? + Prepositions -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧠</span>2. Rêziman (Grammar): Li ku ye? (Where is it?)</h2>
+                
+                <div style="background: #ffebee; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #e53935;">
+                    <h4 style="color: #c62828; margin-bottom: 10px;">💡 Asking "Where?"</h4>
+                    <p style="line-height: 1.8;">
+                        To ask where something is located, use <strong>Li ku ye?</strong> (Where is it?)
+                    </p>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Basic Question Pattern</h3>
+                    <div class="structure-pattern">
+                        <strong>Li ku ye?</strong> = Where is it?<br>
+                        <strong>Li ku ne?</strong> = Where are they?<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • Bank <strong>li ku ye?</strong> = Where is the bank?<br>
+                        • Dibistan <strong>li ku ye?</strong> = Where is the school?<br>
+                        • Nexweşxane <strong>li ku ye?</strong> = Where is the hospital?
+                    </div>
+                </div>
+
+                <div class="preposition-box">
+                    <h3 style="color: #f57f17; margin-bottom: 15px;">📌 Prepositions of Place</h3>
+                    <div style="font-size: 1.1rem; line-height: 2;">
+                        <strong>Li nêzî</strong> = Near / Close to<br>
+                        <strong>Li dûr</strong> = Far from<br>
+                        <strong>Li ber</strong> = In front of<br>
+                        <strong>Li pişt</strong> = Behind<br>
+                        <strong>Li rex</strong> = Next to / Beside<br>
+                        <strong>Li navbera</strong> = Between<br>
+                        <strong>Li ber</strong> = Opposite<br>
+                        <strong>Li hundurê</strong> = Inside
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Using Prepositions</h3>
+                    <div class="structure-pattern">
+                        <strong>Pattern:</strong> [Place] + li + [preposition] + [reference point]<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • Bank <strong>li nêzî</strong> parkê ye. = The bank is near the park.<br>
+                        • Dibistan <strong>li dûr</strong> e. = The school is far.<br>
+                        • Posta <strong>li rex</strong> bankê ye. = The post office is next to the bank.<br>
+                        • Qehwexane <strong>li ber</strong> dibistanê ye. = The café is in front of the school.<br>
+                        • Muzexane <strong>li navbera</strong> parkê û bankê ye. = The museum is between the park and the bank.
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #ff9800; margin-bottom: 15px;">💬 Example Conversations:</h4>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        <strong>Q:</strong> Bank li ku ye?<br>
+                        <strong>A:</strong> Bank li nêzî parkê ye.<br><br>
+                        
+                        <strong>Q:</strong> Nexweşxane dûr e?<br>
+                        <strong>A:</strong> Na, ew nêzî ye. Li rex postayê ye.<br><br>
+                        
+                        <strong>Q:</strong> Dibistan li ku ye?<br>
+                        <strong>A:</strong> Li ber qehwexaneyê, li çep.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening - Directions in the City -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎧</span>3. Guhdarîkirin (Listening): Asking About Places</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Listen to these dialogues about finding places in the city:
+                </p>
+
+                <div class="example-dialogue">
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Sara:</div>
+                        <div class="kurdish-text">Bibore, bank li ku ye?</div>
+                        <div class="translation">Excuse me, where is the bank?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨 Mêvan:</div>
+                        <div class="kurdish-text">Bank li nêzî parkê ye. Biçe rast, paşê li rex parkê ye.</div>
+                        <div class="translation">The bank is near the park. Go straight, then it's next to the park.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Sara:</div>
+                        <div class="kurdish-text">Spas dikim! Dûr e?</div>
+                        <div class="translation">Thank you! Is it far?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨 Mêvan:</div>
+                        <div class="kurdish-text">Na, nêzî ye. Deh deqe piya.</div>
+                        <div class="translation">No, it's near. Ten minutes on foot.</div>
+                    </div>
+                </div>
+
+                <div class="example-dialogue" style="margin-top: 30px;">
+                    <div class="dialogue-line">
+                        <div class="speaker">👨 Aram:</div>
+                        <div class="kurdish-text">Eczaxane li vir heye?</div>
+                        <div class="translation">Is there a pharmacy here?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Jin:</div>
+                        <div class="kurdish-text">Erê, eczaxane li ber supermarketê ye.</div>
+                        <div class="translation">Yes, the pharmacy is in front of the supermarket.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨 Aram:</div>
+                        <div class="kurdish-text">Û supermarket li ku ye?</div>
+                        <div class="translation">And where is the supermarket?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Jin:</div>
+                        <div class="kurdish-text">Li navbera postayê û dibistanê. Li çep.</div>
+                        <div class="translation">Between the post office and the school. On the left.</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Comprehension Questions</div>
+                    <p style="margin-bottom: 15px;">Answer these questions based on the dialogues:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. Where is the bank located?</label>
+                        <input type="text" id="listen-q1" placeholder="Type in Kurdish...">
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. How long does it take to walk to the bank?</label>
+                        <input type="text" id="listen-q2" placeholder="Type in Kurdish...">
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. Where is the pharmacy?</label>
+                        <input type="text" id="listen-q3" placeholder="Type in Kurdish...">
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading - Mini City Map -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📖</span>4. Xwendin (Reading): Nexşeya Bajêr</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Read this mini city map and the location descriptions:
+                </p>
+
+                <div class="map-box">
+                    <h3 style="color: #c62828; margin-bottom: 20px;">Nexşeya Navçeyê</h3>
+                    
+                    <div style="max-width: 700px; margin: 0 auto;">
+                        <div class="location-item">
+                            <strong>Park:</strong> Li navenda bajêr
+                        </div>
+                        <div class="location-item">
+                            <strong>Bank:</strong> Li rex parkê, li rastê
+                        </div>
+                        <div class="location-item">
+                            <strong>Dibistan:</strong> Li ber parkê
+                        </div>
+                        <div class="location-item">
+                            <strong>Posta:</strong> Li navbera bankê û supermarketê
+                        </div>
+                        <div class="location-item">
+                            <strong>Supermarket:</strong> Li çepê postayê
+                        </div>
+                        <div class="location-item">
+                            <strong>Eczaxane:</strong> Li ber supermarketê
+                        </div>
+                        <div class="location-item">
+                            <strong>Qehwexane:</strong> Li pişt parkê
+                        </div>
+                        <div class="location-item">
+                            <strong>Nexweşxane:</strong> Li dûr, li dawiya cadeyê
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Reading Comprehension</div>
+                    <p style="margin-bottom: 15px;">Answer these questions about the map:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What is in the center of the city?</label>
+                        <input type="text" id="read-q1" placeholder="Type in Kurdish...">
+                        <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. Where is the bank located?</label>
+                        <input type="text" id="read-q2" placeholder="Type in Kurdish...">
+                        <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What is between the bank and the supermarket?</label>
+                        <input type="text" id="read-q3" placeholder="Type in Kurdish...">
+                        <div id="read-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReading()">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing - Describe Your Neighborhood -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>5. Nivîsandin (Writing): Navçeya Te</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Describe your neighborhood and the places around you:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise: My Neighborhood</div>
+                    <p style="margin-bottom: 15px; color: #666;">
+                        Write 5-6 sentences describing your neighborhood. Include:<br>
+                        • What places are near your home<br>
+                        • Where they are located (using prepositions)<br>
+                        • Which places are far or close
+                    </p>
+
+                    <div style="background: #ffebee; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <strong>Example:</strong><br>
+                        Ez li navçeyek xweş dijîm. Li nêzî malê min park heye. Bank li rex parkê ye. Dibistan li dûr e. Supermarket li ber malê min e. Qehwexane li pişt parkê ye.
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">Your Neighborhood Description (5-6 sentences):</label>
+                        <textarea id="write-neighborhood" rows="6" placeholder="Ez li navçeyek..."></textarea>
+                        <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkWriting()">✓ Submit Description</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking - Asking for Directions -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>6. Axaftin (Speaking): Rê Pirsîn</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice asking for directions in different situations:
+                </p>
+
+                <div class="preposition-box">
+                    <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 1: Looking for a Bank</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You need to find a bank.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you ask?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkDirection(1, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Bank li ku ye?
+                        </button>
+                        <button class="role-btn" onclick="checkDirection(1, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez dixwazim biçim bankê.
+                        </button>
+                        <button class="role-btn" onclick="checkDirection(1, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Bank nêzî ye?
+                        </button>
+                    </div>
+                    <div id="dir-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="preposition-box">
+                    <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 2: Asking if Something is Near</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to know if the pharmacy is close.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you ask?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkDirection(2, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Eczaxane li ku ye?
+                        </button>
+                        <button class="role-btn" onclick="checkDirection(2, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Eczaxane nêzî ye?
+                        </button>
+                        <button class="role-btn" onclick="checkDirection(2, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Eczaxane li vir e.
+                        </button>
+                    </div>
+                    <div id="dir-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="preposition-box">
+                    <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 3: Asking About Location</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> Someone tells you the school is near. You want to know exactly where.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you ask?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkDirection(3, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Spas dikim!
+                        </button>
+                        <button class="role-btn" onclick="checkDirection(3, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Li ku ye?
+                        </button>
+                        <button class="role-btn" onclick="checkDirection(3, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Dibistan mezin e.
+                        </button>
+                    </div>
+                    <div id="dir-feedback-3" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: #e8f5e9; border-radius: 10px;">
+                    <h4 style="color: #2e7d32;">🎯 Your Score: <span id="dir-correct">0</span> / 3</h4>
+                </div>
+            </div>
+
+            <!-- Section 7: Culture -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>7. Çand (Culture): Kurdish Cities & Architecture</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Discover the rich urban heritage of Kurdish cities:</p>
+                
+                <div style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #ef5350;">
+                    <h3 style="color: #c62828; text-align: center; margin-bottom: 25px;">🏛️ Bajêrên Kurdî (Kurdish Cities)</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🏙️ Historic Cities</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdish cities have a rich history spanning thousands of years. <strong>Hewlêr (Erbil)</strong> is one of the oldest continuously inhabited cities in the world, with its famous citadel dating back over 6,000 years. <strong>Diyarbekir (Amed)</strong> is known for its ancient black basalt walls, which are among the longest city walls in the world. <strong>Silêmanî (Sulaymaniyah)</strong> is a cultural center known for its museums, libraries, and vibrant intellectual life.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🕌 Traditional Architecture</h4>
+                        <p style="line-height: 1.8;">
+                            Traditional Kurdish architecture reflects the mountainous geography and climate. Houses are typically built with stone and have flat roofs. The <strong>qelay</strong> (citadel) is a common feature in Kurdish cities, serving as a fortified center. Many cities feature beautiful <strong>mizgeft</strong> (mosques) with distinctive minarets, <strong>bazar</strong> (covered markets) with vaulted ceilings, and <strong>han</strong> (caravanserais) that once served traveling merchants.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🛍️ The Bazaar Culture</h4>
+                        <p style="line-height: 1.8;">
+                            The <strong>bazar</strong> is the heart of every Kurdish city. Traditional bazaars are covered markets where you can find everything from spices and textiles to jewelry and handicrafts. Each section of the bazaar specializes in different goods - the <strong>bazara zeran</strong> (goldsmiths' bazaar), <strong>bazara qumașan</strong> (fabric bazaar), and <strong>bazara baharan</strong> (spice bazaar). The bazaar is not just a place for shopping, but also a social center where people meet, drink tea, and exchange news.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🌳 Parks & Public Spaces</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdish cities value green spaces and public parks. <strong>Park</strong> (parks) and <strong>baxçe</strong> (gardens) are important gathering places for families, especially in the evenings. The tradition of <strong>şanî</strong> (evening stroll) is popular, where people walk in parks and along main streets to socialize. Tea gardens (<strong>baxçeyên çayê</strong>) are common in parks, where families gather to enjoy tea and conversation in the shade of trees.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #e53935;">
+                        <h4 style="color: #c62828; margin-bottom: 10px;">🏘️ Neighborhood Life</h4>
+                        <p style="line-height: 1.8;">
+                            Traditional Kurdish neighborhoods (<strong>navçe</strong>) are close-knit communities where everyone knows each other. Neighbors share a strong sense of mutual support and hospitality. The <strong>qehwexane</strong> (café) serves as a social hub where men gather to play dominoes, backgammon, and discuss current events. Women often gather in homes for <strong>mehfil</strong> (social gatherings) to share tea, sweets, and conversation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Review Exercises -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🔄</span>8. Dubare (Review): City Places</h2>
+                
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Final Review Exercise</div>
+                    <p style="margin-bottom: 20px;">Complete these sentences about city places and locations:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. Where is the bank? → Bank _____ ye?</label>
+                        <input type="text" id="rev-q1" placeholder="Type the words...">
+                        <div id="rev-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. The school is near the park. → Dibistan li _____ parkê ye.</label>
+                        <input type="text" id="rev-q2" placeholder="Type the word...">
+                        <div id="rev-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. The café is in front of the hospital. → Qehwexane li _____ nexweşxaneyê ye.</label>
+                        <input type="text" id="rev-q3" placeholder="Type the word...">
+                        <div id="rev-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. The post office is next to the bank. → Posta li _____ bankê ye.</label>
+                        <input type="text" id="rev-q4" placeholder="Type the word...">
+                        <div id="rev-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">5. The museum is between the park and the bank. → Muzexane li _____ parkê û bankê ye.</label>
+                        <input type="text" id="rev-q5" placeholder="Type the word...">
+                        <div id="rev-q5-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">6. Is it far? → _____ e?</label>
+                        <input type="text" id="rev-q6" placeholder="Type the word...">
+                        <div id="rev-q6-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReview()">✓ Check Answers</button>
+                    <div id="rev-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Completion Section -->
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);">
+                <h2 style="color: #1b5e20; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    You've completed Course 16: City Places!<br>
+                    You can now talk about city locations and ask for directions in Kurdish!
+                </p>
+                <a href="../level-a1.html" class="back-link" style="background: #1b5e20;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Listening comprehension validation
+        function checkListening() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('listen-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if (q1.includes('nêzî') && q1.includes('park')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Li nêzî parkê';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Li nêzî parkê</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('listen-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if (q2.includes('deh') || q2.includes('10')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Deh deqe';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Deh deqe</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('listen-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3.includes('ber') && q3.includes('supermarket')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Li ber supermarketê';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Li ber supermarketê</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Reading comprehension validation
+        function checkReading() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('read-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1.includes('park')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Park';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Park</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('read-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2.includes('rex') && q2.includes('park')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Li rex parkê';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Li rex parkê</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('read-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('read-q3-feedback');
+            if (q3.includes('posta')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Posta';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Posta</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Writing validation
+        function checkWriting() {
+            const neighborhood = document.getElementById('write-neighborhood').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            
+            if (neighborhood.length < 30) {
+                feedback.innerHTML = '❌ Please write at least 5-6 sentences.';
+                feedback.style.color = '#d32f2f';
+                return;
+            }
+
+            const hasPlace = /bank|dibistan|park|posta|supermarket|qehwexane|nexweşxane/i.test(neighborhood);
+            const hasPreposition = /nêzî|dûr|rex|ber|pişt|navbera/i.test(neighborhood);
+            const hasLocation = /li|ye|heye/i.test(neighborhood);
+            
+            if (hasPlace && hasPreposition && hasLocation) {
+                feedback.innerHTML = '✅ Excellent description! You included places, prepositions, and locations!';
+                feedback.style.color = '#2e7d32';
+            } else if ((hasPlace && hasPreposition) || (hasPlace && hasLocation)) {
+                feedback.innerHTML = '👍 Good effort! Try to include more prepositions and location words.';
+                feedback.style.color = '#f57f17';
+            } else {
+                feedback.innerHTML = '💪 Keep practicing! Include places, prepositions (nêzî, dûr, rex), and locations.';
+                feedback.style.color = '#f57f17';
+            }
+        }
+
+        // Direction asking validation
+        let dirCorrect = 0;
+        let dirAnswered = [false, false, false];
+
+        function checkDirection(scenario, answer) {
+            if (dirAnswered[scenario - 1]) return;
+            
+            const feedback = document.getElementById(`dir-feedback-${scenario}`);
+            const correctAnswers = {1: 'a', 2: 'b', 3: 'b'};
+            
+            dirAnswered[scenario - 1] = true;
+            
+            if (answer === correctAnswers[scenario]) {
+                dirCorrect++;
+                if (scenario === 1) {
+                    feedback.innerHTML = '✅ Perfect! "Bank li ku ye?" = Where is the bank?';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '✅ Excellent! "Eczaxane nêzî ye?" = Is the pharmacy near?';
+                } else {
+                    feedback.innerHTML = '✅ Great! "Li ku ye?" = Where is it?';
+                }
+                feedback.style.color = '#2e7d32';
+            } else {
+                if (scenario === 1) {
+                    feedback.innerHTML = '❌ Not quite. Say "Bank li ku ye?" to ask where the bank is.';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '❌ Not quite. Say "Eczaxane nêzî ye?" to ask if it\'s near.';
+                } else {
+                    feedback.innerHTML = '❌ Not quite. Say "Li ku ye?" to ask where exactly.';
+                }
+                feedback.style.color = '#d32f2f';
+            }
+            
+            document.getElementById('dir-correct').textContent = dirCorrect;
+        }
+
+        // Review exercise validation
+        function checkReview() {
+            let correct = 0;
+            const total = 6;
+
+            const q1 = document.getElementById('rev-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('rev-q1-feedback');
+            if (q1.includes('li ku')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! li ku';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>li ku</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('rev-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('rev-q2-feedback');
+            if (q2.includes('nêzî')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! nêzî';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>nêzî</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('rev-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('rev-q3-feedback');
+            if (q3.includes('ber')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! ber';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>ber</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const q4 = document.getElementById('rev-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('rev-q4-feedback');
+            if (q4.includes('rex')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! rex';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>rex</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+
+            const q5 = document.getElementById('rev-q5').value.toLowerCase().trim();
+            const q5Feedback = document.getElementById('rev-q5-feedback');
+            if (q5.includes('navbera')) {
+                correct++;
+                q5Feedback.innerHTML = '✅ Correct! navbera';
+                q5Feedback.style.color = '#2e7d32';
+            } else {
+                q5Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>navbera</strong>';
+                q5Feedback.style.color = '#d32f2f';
+            }
+
+            const q6 = document.getElementById('rev-q6').value.toLowerCase().trim();
+            const q6Feedback = document.getElementById('rev-q6-feedback');
+            if (q6.includes('dûr')) {
+                correct++;
+                q6Feedback.innerHTML = '✅ Correct! Dûr';
+                q6Feedback.style.color = '#2e7d32';
+            } else {
+                q6Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Dûr</strong>';
+                q6Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('rev-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+            
+            if (correct === total) {
+                scoreDiv.textContent += ' 🎉 Perfect!';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Forma Bingehîn (Infinitive & Gerund)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .infinitive-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .infinitive-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .infinitive-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .infinitive-badge {
+            background: #2196f3;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .gerund-badge {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .verbal-noun-badge {
+            background: #9c27b0;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .formula-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2196f3;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Forma Bingehîn</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Infinitive & Gerund</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What are Infinitives and Gerunds?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    The <strong>infinitive</strong> is the basic, unconjugated form of a verb (like "to read" in English). 
+                    In Kurdish, infinitives typically end in <strong>-in</strong> or <strong>-an</strong>.
+                </p>
+                <p style="line-height: 1.8; font-size: 1.05rem; margin-top: 15px;">
+                    The <strong>gerund</strong> (or verbal noun) is a verb form that functions as a noun, describing the action itself 
+                    (like "reading" in "Reading is fun"). In Kurdish, gerunds are formed by adding <strong>-în</strong> or <strong>-an</strong> to the verb stem.
+                </p>
+            </div>
+
+            <!-- SECTION 1: THE INFINITIVE -->
+            <div class="infinitive-section">
+                <div class="infinitive-title">1. The Infinitive (Forma Bingehîn)</div>
+                <div class="infinitive-subtitle">The basic form of verbs</div>
+
+                <div class="explanation">
+                    <p>
+                        The <strong>infinitive</strong> is the dictionary form of verbs in Kurdish. It is the form you find in dictionaries 
+                        and is used as the base for all conjugations.
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Common Infinitive Endings:</strong><br>
+                    • <strong>-in</strong>: xwendin (to read), dîtin (to see), kirin (to do)<br>
+                    • <strong>-în</strong>: xebitîn (to work), lîstîn (to play)<br>
+                    • <strong>-an</strong>: razan (to sleep), dan (to give)<br>
+                    • <strong>Irregular</strong>: çûn (to go), hatin (to come)
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Common Infinitives:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Infinitive</th>
+                            <th>Type</th>
+                            <th>English</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="infinitive-badge">xwendin</span></td>
+                            <td>-in</td>
+                            <td>to read</td>
+                            <td>Ez dixwazim xwendin.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">nivîsandin</span></td>
+                            <td>-in</td>
+                            <td>to write</td>
+                            <td>Ez dikarim nivîsandin.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">dîtin</span></td>
+                            <td>-in</td>
+                            <td>to see</td>
+                            <td>Ez dixwazim te dîtin.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">gotin</span></td>
+                            <td>-in</td>
+                            <td>to say</td>
+                            <td>Ez dikarim gotin.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">kirin</span></td>
+                            <td>-in</td>
+                            <td>to do, to make</td>
+                            <td>Ez divê kirin.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">xwarin</span></td>
+                            <td>-in</td>
+                            <td>to eat</td>
+                            <td>Ez dixwazim xwarin.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">vexwarin</span></td>
+                            <td>-in</td>
+                            <td>to drink</td>
+                            <td>Ez dixwazim vexwarin.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">xebitîn</span></td>
+                            <td>-în</td>
+                            <td>to work</td>
+                            <td>Ez divê xebitîn.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">lîstîn</span></td>
+                            <td>-în</td>
+                            <td>to play</td>
+                            <td>Zarok dixwazin lîstîn.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">razan</span></td>
+                            <td>-an</td>
+                            <td>to sleep</td>
+                            <td>Ez dixwazim razan.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">dan</span></td>
+                            <td>-an</td>
+                            <td>to give</td>
+                            <td>Ez dikarim dan.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">çûn</span></td>
+                            <td>irregular</td>
+                            <td>to go</td>
+                            <td>Ez dixwazim çûn.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="infinitive-badge">hatin</span></td>
+                            <td>irregular</td>
+                            <td>to come</td>
+                            <td>Ez dixwazim hatin.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Infinitive Note!</div>
+                    <p style="line-height: 1.8;">
+                        The infinitive is used:<br>
+                        • After modal verbs: <strong>dixwazim</strong> (I want), <strong>dikarim</strong> (I can), <strong>divê</strong> (must)<br>
+                        • After certain verbs: <strong>dest pê kirin</strong> (to begin), <strong>berdewam kirin</strong> (to continue)<br>
+                        • As the subject or object of a sentence
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: USES OF THE INFINITIVE -->
+            <div class="infinitive-section">
+                <div class="infinitive-title">2. Uses of the Infinitive</div>
+                <div class="infinitive-subtitle">When to use the infinitive form</div>
+
+                <h4 style="color: #2e7d32; margin-top: 20px; margin-bottom: 15px;">A. After Modal Verbs</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez dixwazim xwendin.</div>
+                        <div class="english-text">I want to read.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu dikarî nivîsandin.</div>
+                        <div class="english-text">You can write.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em divê herin dibistanê.</div>
+                        <div class="english-text">We must go to school.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew nikare dîtin.</div>
+                        <div class="english-text">He/She cannot see.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">B. After Verbs of Beginning, Continuing, Finishing</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez dest bi xwendinê dikim.</div>
+                        <div class="english-text">I begin to read / I start reading.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em berdewam dikin xebitîn.</div>
+                        <div class="english-text">We continue to work / We continue working.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew qedand nivîsandin.</div>
+                        <div class="english-text">He/She finished writing.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">C. After Prepositions (with -ê)</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez diçim ji bo xwendinê.</div>
+                        <div class="english-text">I go for reading / I go to read.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Berî çûnê, ez xwarim.</div>
+                        <div class="english-text">Before going, I eat.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Piştî xwarinê, em ê herin.</div>
+                        <div class="english-text">After eating, we will go.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">D. As Subject or Object</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Xwendin pir girîng e.</div>
+                        <div class="english-text">Reading is very important.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez xwendinê hez dikim.</div>
+                        <div class="english-text">I like reading.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Xebitîn zehmet e.</div>
+                        <div class="english-text">Working is difficult.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: THE GERUND / VERBAL NOUN -->
+            <div class="infinitive-section">
+                <div class="infinitive-title">3. The Gerund / Verbal Noun (Navê Lêkerî)</div>
+                <div class="infinitive-subtitle">Verbs functioning as nouns</div>
+
+                <div class="explanation">
+                    <p>
+                        The <strong>gerund</strong> or <strong>verbal noun</strong> is a form that turns a verb into a noun. 
+                        In Kurdish, it is often identical to the infinitive but functions grammatically as a noun.
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Formation:</strong><br>
+                    The gerund is typically the same as the infinitive:<br>
+                    • xwendin → <strong>xwendin</strong> (reading, the act of reading)<br>
+                    • çûn → <strong>çûn</strong> (going, the act of going)<br>
+                    • xebitîn → <strong>xebitîn</strong> (working, the act of working)
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Common Gerunds:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Gerund</th>
+                            <th>English</th>
+                            <th>Example (Kurdish)</th>
+                            <th>Example (English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="gerund-badge">xwendin</span></td>
+                            <td>reading</td>
+                            <td>Xwendin pir girîng e.</td>
+                            <td>Reading is very important.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">nivîsandin</span></td>
+                            <td>writing</td>
+                            <td>Nivîsandin huner e.</td>
+                            <td>Writing is an art.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">çûn</span></td>
+                            <td>going</td>
+                            <td>Çûn hêsan e.</td>
+                            <td>Going is easy.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">hatin</span></td>
+                            <td>coming</td>
+                            <td>Hatin zehmet e.</td>
+                            <td>Coming is difficult.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">xwarin</span></td>
+                            <td>eating</td>
+                            <td>Xwarin hewce ye.</td>
+                            <td>Eating is necessary.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">vexwarin</span></td>
+                            <td>drinking</td>
+                            <td>Vexwarina avê baş e.</td>
+                            <td>Drinking water is good.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">xebitîn</span></td>
+                            <td>working</td>
+                            <td>Xebitîn pir zehmet e.</td>
+                            <td>Working is very difficult.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">lîstin</span></td>
+                            <td>playing</td>
+                            <td>Lîstin ji bo zarokan girîng e.</td>
+                            <td>Playing is important for children.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">razan</span></td>
+                            <td>sleeping</td>
+                            <td>Razan hewce ye.</td>
+                            <td>Sleeping is necessary.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gerund-badge">axaftin</span></td>
+                            <td>speaking</td>
+                            <td>Axaftin hêsan e.</td>
+                            <td>Speaking is easy.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Gerund as Subject:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Xwendin pir girîng e.</div>
+                        <div class="english-text">Reading is very important.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Xebitîn ji bo jiyanê hewce ye.</div>
+                        <div class="english-text">Working is necessary for life.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Razan ji bo tenduristiyê baş e.</div>
+                        <div class="english-text">Sleeping is good for health.</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Gerund as Object:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez xwendinê hez dikim.</div>
+                        <div class="english-text">I like reading.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em lîstinê dixwazin.</div>
+                        <div class="english-text">We want playing / We want to play.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu axaftinê fêr dibî.</div>
+                        <div class="english-text">You learn speaking / You learn to speak.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: VERBAL NOUNS WITH SUFFIXES -->
+            <div class="infinitive-section">
+                <div class="infinitive-title">4. Verbal Nouns with Suffixes</div>
+                <div class="infinitive-subtitle">Creating nouns from verbs</div>
+
+                <div class="explanation">
+                    <p>
+                        Kurdish can create specific <strong>verbal nouns</strong> by adding suffixes to verb stems. 
+                        These forms emphasize the action as a concrete noun.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 20px; margin-bottom: 15px;">A. With -în suffix</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Verb</th>
+                            <th>Verbal Noun</th>
+                            <th>English</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>xwendin</td>
+                            <td><span class="verbal-noun-badge">xwendin</span></td>
+                            <td>reading, study</td>
+                            <td>Xwendina min baş e.</td>
+                        </tr>
+                        <tr>
+                            <td>nivîsandin</td>
+                            <td><span class="verbal-noun-badge">nivîsandin</span></td>
+                            <td>writing</td>
+                            <td>Nivîsandina wî xweş e.</td>
+                        </tr>
+                        <tr>
+                            <td>axaftin</td>
+                            <td><span class="verbal-noun-badge">axaftin</span></td>
+                            <td>speech, speaking</td>
+                            <td>Axaftina te baş e.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">B. With -iş/-îş suffix</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Verb</th>
+                            <th>Verbal Noun</th>
+                            <th>English</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>kirin</td>
+                            <td><span class="verbal-noun-badge">kiriş</span></td>
+                            <td>doing, action</td>
+                            <td>Kirişa wî baş e.</td>
+                        </tr>
+                        <tr>
+                            <td>dîtin</td>
+                            <td><span class="verbal-noun-badge">dîtin</span></td>
+                            <td>seeing, sight</td>
+                            <td>Dîtina te kêfxweş kir.</td>
+                        </tr>
+                        <tr>
+                            <td>bîstin</td>
+                            <td><span class="verbal-noun-badge">bîstin</span></td>
+                            <td>hearing</td>
+                            <td>Bîstina vê baş e.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with Possessive:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Xwendina min baş e.</div>
+                        <div class="english-text">My reading is good.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Nivîsandina te xweş e.</div>
+                        <div class="english-text">Your writing is nice.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Axaftina wî pir baş e.</div>
+                        <div class="english-text">His speaking is very good.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 5: INFINITIVE VS GERUND -->
+            <div class="infinitive-section">
+                <div class="infinitive-title">5. Infinitive vs Gerund: When to Use Which?</div>
+                <div class="infinitive-subtitle">Understanding the difference</div>
+
+                <div class="explanation">
+                    <p>
+                        In Kurdish, the infinitive and gerund are often the same form, but their usage differs based on context.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Context</th>
+                            <th>Form Used</th>
+                            <th>Example (Kurdish)</th>
+                            <th>Example (English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>After modal verbs</td>
+                            <td>Infinitive</td>
+                            <td>Ez dixwazim xwendin.</td>
+                            <td>I want to read.</td>
+                        </tr>
+                        <tr>
+                            <td>As subject of sentence</td>
+                            <td>Gerund</td>
+                            <td>Xwendin girîng e.</td>
+                            <td>Reading is important.</td>
+                        </tr>
+                        <tr>
+                            <td>As object of verb</td>
+                            <td>Gerund (with -ê)</td>
+                            <td>Ez xwendinê hez dikim.</td>
+                            <td>I like reading.</td>
+                        </tr>
+                        <tr>
+                            <td>After prepositions</td>
+                            <td>Gerund (with -ê)</td>
+                            <td>Berî xwendinê, ez xwarim.</td>
+                            <td>Before reading, I eat.</td>
+                        </tr>
+                        <tr>
+                            <td>With possessive</td>
+                            <td>Verbal Noun</td>
+                            <td>Xwendina min baş e.</td>
+                            <td>My reading is good.</td>
+                        </tr>
+                        <tr>
+                            <td>After "to begin"</td>
+                            <td>Infinitive (with dest pê)</td>
+                            <td>Ez dest bi xwendinê dikim.</td>
+                            <td>I begin to read.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Usage Tip!</div>
+                    <p style="line-height: 1.8;">
+                        <strong>General Rule:</strong><br>
+                        • Use the <strong>infinitive</strong> after modal verbs (dixwazim, dikarim, divê)<br>
+                        • Use the <strong>gerund</strong> as a noun (subject, object, after prepositions)<br>
+                        • Add <strong>-ê</strong> when the gerund is the object or follows a preposition<br>
+                        • Add possessive suffixes to create specific verbal nouns
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 6: COMMON EXPRESSIONS -->
+            <div class="infinitive-section">
+                <div class="infinitive-title">6. Common Expressions with Infinitives & Gerunds</div>
+                <div class="infinitive-subtitle">Useful phrases and patterns</div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Expression</th>
+                            <th>Pattern</th>
+                            <th>Example (Kurdish)</th>
+                            <th>Example (English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I want to...</td>
+                            <td>Ez dixwazim + infinitive</td>
+                            <td>Ez dixwazim xwendin.</td>
+                            <td>I want to read.</td>
+                        </tr>
+                        <tr>
+                            <td>I can...</td>
+                            <td>Ez dikarim + infinitive</td>
+                            <td>Ez dikarim nivîsandin.</td>
+                            <td>I can write.</td>
+                        </tr>
+                        <tr>
+                            <td>I must...</td>
+                            <td>Ez divê + infinitive</td>
+                            <td>Ez divê herin.</td>
+                            <td>I must go.</td>
+                        </tr>
+                        <tr>
+                            <td>I like...</td>
+                            <td>Ez ... hez dikim</td>
+                            <td>Ez xwendinê hez dikim.</td>
+                            <td>I like reading.</td>
+                        </tr>
+                        <tr>
+                            <td>I begin to...</td>
+                            <td>Ez dest bi ... dikim</td>
+                            <td>Ez dest bi xwendinê dikim.</td>
+                            <td>I begin to read.</td>
+                        </tr>
+                        <tr>
+                            <td>I continue to...</td>
+                            <td>Ez berdewam dikim</td>
+                            <td>Ez berdewam dikim xebitîn.</td>
+                            <td>I continue to work.</td>
+                        </tr>
+                        <tr>
+                            <td>I finish...</td>
+                            <td>Ez qedandim</td>
+                            <td>Ez qedandim xwendin.</td>
+                            <td>I finished reading.</td>
+                        </tr>
+                        <tr>
+                            <td>Before...</td>
+                            <td>Berî + gerund-ê</td>
+                            <td>Berî çûnê, ez xwarim.</td>
+                            <td>Before going, I eat.</td>
+                        </tr>
+                        <tr>
+                            <td>After...</td>
+                            <td>Piştî + gerund-ê</td>
+                            <td>Piştî xwarinê, em herin.</td>
+                            <td>After eating, we go.</td>
+                        </tr>
+                        <tr>
+                            <td>For the purpose of...</td>
+                            <td>Ji bo + gerund-ê</td>
+                            <td>Ez diçim ji bo xwendinê.</td>
+                            <td>I go for reading.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 More Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez dixwazim fêrbûna kurdî.</div>
+                        <div class="english-text">I want to learn Kurdish / I want the learning of Kurdish.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em dikarîn axaftinê fêr bibin.</div>
+                        <div class="english-text">We can learn speaking / We can learn to speak.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Zarok dest bi lîstinê dikin.</div>
+                        <div class="english-text">The children begin to play.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Berî razanê, ez pirtûkek dixwînim.</div>
+                        <div class="english-text">Before sleeping, I read a book.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: Infinitive & Gerund Forms</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Verb</th>
+                        <th>Infinitive</th>
+                        <th>Gerund</th>
+                        <th>With Preposition</th>
+                        <th>English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>to read</td>
+                        <td>xwendin</td>
+                        <td>xwendin</td>
+                        <td>xwendinê</td>
+                        <td>reading</td>
+                    </tr>
+                    <tr>
+                        <td>to write</td>
+                        <td>nivîsandin</td>
+                        <td>nivîsandin</td>
+                        <td>nivîsandinê</td>
+                        <td>writing</td>
+                    </tr>
+                    <tr>
+                        <td>to go</td>
+                        <td>çûn</td>
+                        <td>çûn</td>
+                        <td>çûnê</td>
+                        <td>going</td>
+                    </tr>
+                    <tr>
+                        <td>to come</td>
+                        <td>hatin</td>
+                        <td>hatin</td>
+                        <td>hatinê</td>
+                        <td>coming</td>
+                    </tr>
+                    <tr>
+                        <td>to eat</td>
+                        <td>xwarin</td>
+                        <td>xwarin</td>
+                        <td>xwarinê</td>
+                        <td>eating</td>
+                    </tr>
+                    <tr>
+                        <td>to work</td>
+                        <td>xebitîn</td>
+                        <td>xebitîn</td>
+                        <td>xebitînê</td>
+                        <td>working</td>
+                    </tr>
+                    <tr>
+                        <td>to play</td>
+                        <td>lîstin</td>
+                        <td>lîstin</td>
+                        <td>lîstinê</td>
+                        <td>playing</td>
+                    </tr>
+                    <tr>
+                        <td>to sleep</td>
+                        <td>razan</td>
+                        <td>razan</td>
+                        <td>razanê</td>
+                        <td>sleeping</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Infinitive:</strong> Basic verb form ending in -in, -în, or -an (xwendin, çûn, razan)</li>
+                    <li><strong>After modals:</strong> Use infinitive (dixwazim xwendin, dikarim çûn)</li>
+                    <li><strong>Gerund:</strong> Same form as infinitive but functions as a noun</li>
+                    <li><strong>As subject:</strong> Xwendin girîng e (Reading is important)</li>
+                    <li><strong>As object:</strong> Add -ê → Ez xwendinê hez dikim (I like reading)</li>
+                    <li><strong>After prepositions:</strong> Add -ê → Berî çûnê (Before going)</li>
+                    <li><strong>Verbal nouns:</strong> Can take possessive suffixes (xwendina min = my reading)</li>
+                    <li><strong>Common patterns:</strong> dixwazim + inf., dest bi...ê dikim, berî/piştî...ê</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

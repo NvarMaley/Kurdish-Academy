@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Dersên (Course)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../chatbot.css">
+    <script src="../../scripts.js"></script>
+    <script src="../../chatbot-ai.js"></script>
+    <style>
+        .course-container {
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .course-title {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .course-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .level-bubble {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .level-bubble:hover {
+            transform: scale(1.08) translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .level-bubble::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent);
+            border-radius: 50%;
+        }
+
+        .level-name {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            z-index: 1;
+        }
+
+        .level-code {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        .level-description {
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 0 20px;
+            opacity: 0.95;
+            z-index: 1;
+            line-height: 1.3;
+        }
+
+        .level-count {
+            font-size: 0.75rem;
+            margin-top: 8px;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .yellow-level {
+            background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%);
+        }
+
+        .green-level {
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+        }
+
+        .orange-level {
+            background: linear-gradient(135deg, #e65100 0%, #ff6f00 100%);
+        }
+
+        .red-level {
+            background: linear-gradient(135deg, #c62828 0%, #e53935 100%);
+        }
+
+        .purple-level {
+            background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 100%);
+        }
+
+        .blue-level {
+            background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+            <div class="course-container">
+                <h2 class="course-title">🎓 Dersên Kurdî - Kurdish Course Path</h2>
+                <p class="course-subtitle">Choose your level to start your learning journey</p>
+                
+                <div class="levels-grid">
+                    <!-- Level A1 - Yellow -->
+                    <a href="level-a1.html" class="level-bubble yellow-level">
+                        <div class="level-name">🌟 Destpêk</div>
+                        <div class="level-code">A1</div>
+                        <div class="level-description">Absolute Beginner<br>Alphabet, greetings, basics</div>
+                        <div class="level-count">12 courses</div>
+                    </a>
+                    
+                    <!-- Level A2 - Green -->
+                    <a href="level-a2.html" class="level-bubble green-level">
+                        <div class="level-name">🌱 Bingehîn</div>
+                        <div class="level-code">A2</div>
+                        <div class="level-description">Elementary<br>Simple conversations, routine</div>
+                        <div class="level-count">12 courses</div>
+                    </a>
+                    
+                    <!-- Level B1 - Orange -->
+                    <a href="level-b1.html" class="level-bubble orange-level">
+                        <div class="level-name">🔥 Navîn</div>
+                        <div class="level-code">B1</div>
+                        <div class="level-description">Intermediate<br>Culture, advanced grammar</div>
+                        <div class="level-count">12 courses</div>
+                    </a>
+                    
+                    <!-- Level B2 - Red -->
+                    <a href="level-b2.html" class="level-bubble red-level">
+                        <div class="level-name">💪 Pêşketî</div>
+                        <div class="level-code">B2</div>
+                        <div class="level-description">Upper Intermediate<br>Debates, literature, essays</div>
+                        <div class="level-count">12 courses</div>
+                    </a>
+                    
+                    <!-- Level C1 - Purple -->
+                    <a href="level-c1.html" class="level-bubble purple-level">
+                        <div class="level-name">👑 Bilind</div>
+                        <div class="level-code">C1</div>
+                        <div class="level-description">Advanced<br>Complex texts, academic</div>
+                        <div class="level-count">12 courses</div>
+                    </a>
+                    
+                    <!-- Level C2 - Blue -->
+                    <a href="level-c2.html" class="level-bubble blue-level">
+                        <div class="level-name">🏆 Usta</div>
+                        <div class="level-code">C2</div>
+                        <div class="level-description">Mastery<br>Poetry, translation, eloquence</div>
+                        <div class="level-count">12 courses</div>
+                    </a>
+                </div>
+            </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

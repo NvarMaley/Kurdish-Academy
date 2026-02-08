@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 11 - Rojane (Daily Routine) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #2e7d32; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-card { background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); padding: 20px; border-radius: 12px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid #fbc02d; }
+        .vocab-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(249, 168, 37, 0.2); }
+        .vocab-word { font-size: 1.4rem; font-weight: bold; color: #f57f17; margin-bottom: 8px; }
+        .vocab-translation { font-size: 1rem; color: #f9a825; }
+        .structure-box { background: #fffde7; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #fbc02d; }
+        .structure-pattern { font-size: 1.2rem; color: #f57f17; margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .example-dialogue { background: #fff9c4; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .dialogue-line { margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .speaker { font-weight: bold; color: #f9a825; margin-bottom: 8px; }
+        .kurdish-text { font-size: 1.2rem; color: #333; margin: 8px 0; }
+        .translation { font-size: 0.95rem; color: #666; font-style: italic; }
+        .exercise-box { background: #f9fbe7; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #cddc39; }
+        .exercise-title { font-size: 1.5rem; color: #827717; margin-bottom: 15px; font-weight: bold; }
+        .exercise-box input[type="text"], .exercise-box textarea { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .exercise-box button { background: #fbc02d; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .exercise-box button:hover { background: #f9a825; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>⏰ Course 11: Rojane</h1>
+            <div class="course-meta">Daily Routine | A1 Level</div>
+        </div>
+        <div class="course-content">
+            <!-- Section 1: Vocabulary -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧩</span>1. Peyvên (Vocabulary): Daily Routine</h2>
+                
+                <h3 style="color: #f9a825; margin: 20px 0;">Morning Actions (Kirinên Sibehê)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Raketim</div><div class="vocab-translation">I wake up</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Rabûn</div><div class="vocab-translation">To get up</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şûştin</div><div class="vocab-translation">To wash</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Cilên xwe pêve dikim</div><div class="vocab-translation">I get dressed</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Taştê dixwim</div><div class="vocab-translation">I have breakfast</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Çayê vedixwim</div><div class="vocab-translation">I drink tea</div></div>
+                </div>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Daily Activities (Kirinên Rojane)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Diçim</div><div class="vocab-translation">I go</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dixebitim</div><div class="vocab-translation">I work</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dixwînim</div><div class="vocab-translation">I study</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dixwim</div><div class="vocab-translation">I eat</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Vedixwim</div><div class="vocab-translation">I drink</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dipeyivim</div><div class="vocab-translation">I talk</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Lîzim</div><div class="vocab-translation">I play</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Temaşe dikim</div><div class="vocab-translation">I watch</div></div>
+                </div>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Sports & Exercise (Werzîş)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Werzîş dikim</div><div class="vocab-translation">I exercise / do sports</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Revim</div><div class="vocab-translation">I run</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Bi dûçerxeyê diçim</div><div class="vocab-translation">I go by bicycle</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Avjenî dikim</div><div class="vocab-translation">I swim</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Topê lîzim</div><div class="vocab-translation">I play ball</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pîyaderewî dikim</div><div class="vocab-translation">I walk / go for a walk</div></div>
+                </div>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Evening Actions (Kirinên Êvarê)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Vedigere malê</div><div class="vocab-translation">Return home</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şivane dixwim</div><div class="vocab-translation">I have dinner</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Razanim</div><div class="vocab-translation">I sleep / go to bed</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Xew</div><div class="vocab-translation">Sleep</div></div>
+                </div>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Time Expressions (Demên Rojê)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Sibeh</div><div class="vocab-translation">Morning</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Nîvro</div><div class="vocab-translation">Noon</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Piştî nîvro</div><div class="vocab-translation">Afternoon</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Êvar</div><div class="vocab-translation">Evening</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şev</div><div class="vocab-translation">Night</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Di seet ... de</div><div class="vocab-translation">At ... o'clock</div></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Structure -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧠</span>2. Struktur: Present Simple (Dema Niha)</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Learn how to talk about daily routines using present simple tense:</p>
+                
+                <div class="structure-box">
+                    <h3 style="color: #f9a825; margin-bottom: 15px;">�� Present Simple Pattern</h3>
+                    <div class="structure-pattern">
+                        <strong style="color: #f57f17;">Subject + Verb (present form)</strong><br><br>
+                        <strong>Examples:</strong><br>
+                        • Ez <strong style="color: #1976d2;">diçim</strong> dibistanê. <span style="color: #666; font-style: italic;">(I go to school.)</span><br>
+                        • Tu <strong style="color: #1976d2;">dixebitî</strong>? <span style="color: #666; font-style: italic;">(Do you work?)</span><br>
+                        • Ew <strong style="color: #1976d2;">dixwîne</strong>. <span style="color: #666; font-style: italic;">(He/She studies.)</span>
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #f9a825; margin-bottom: 15px;">💡 Common Daily Verbs</h3>
+                    <div class="structure-pattern">
+                        <strong>Ez (I):</strong><br>
+                        • Ez <strong style="color: #388e3c;">diçim</strong> = I go<br>
+                        • Ez <strong style="color: #388e3c;">dixwim</strong> = I eat<br>
+                        • Ez <strong style="color: #388e3c;">dixebitim</strong> = I work<br>
+                        • Ez <strong style="color: #388e3c;">razanim</strong> = I sleep<br><br>
+                        
+                        <strong>Her roj (Every day):</strong><br>
+                        • Ez <strong style="color: #1976d2;">her roj</strong> di seet 7:00an de raketim. <span style="color: #666; font-style: italic;">(I wake up every day at 7:00.)</span>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Practice: Complete with Verbs</div>
+                    <p style="margin-bottom: 15px; color: #666;">Fill in with the correct verb form:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. Ez her sibeh taştê ___. (I have breakfast every morning)</label>
+                        <input type="text" id="verb-q1" placeholder="Type the verb...">
+                        <div id="verb-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. Ez di seet 6:00an de ___ malê. (I return home at 6:00)</label>
+                        <input type="text" id="verb-q2" placeholder="Type the verb...">
+                        <div id="verb-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. Ez di êvarê de ___. (I sleep in the evening)</label>
+                        <input type="text" id="verb-q3" placeholder="Type the verb...">
+                        <div id="verb-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. Ez her roj ___. (I study every day)</label>
+                        <input type="text" id="verb-q4" placeholder="Type the verb...">
+                        <div id="verb-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">5. Ez di sibehê de ___. (I run in the morning)</label>
+                        <input type="text" id="verb-q5" placeholder="Type the verb...">
+                        <div id="verb-q5-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">6. Ez çayê ___. (I drink tea)</label>
+                        <input type="text" id="verb-q6" placeholder="Type the verb...">
+                        <div id="verb-q6-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">7. Ez di nîvro de bi hevalên xwe re ___. (I talk with my friends at noon)</label>
+                        <input type="text" id="verb-q7" placeholder="Type the verb...">
+                        <div id="verb-q7-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkVerbs()">✓ Check Answers</button>
+                    <div id="verb-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎧</span>3. Guhdarîkirin (Listening): A Typical Day</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Listen to people describing their daily routines:</p>
+                
+                <div class="example-dialogue">
+                    <h4 style="color: #f9a825; margin-bottom: 15px;">🎙️ Dialogue 1: Aram's Day</h4>
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Aram:</div>
+                        <div class="kurdish-text">Ez <strong style="color: #388e3c;">her roj</strong> di <strong style="color: #f9a825;">seet 7:00an</strong> de <strong style="color: #1976d2;">raketim</strong>.<br>
+                        Ez <strong style="color: #1976d2;">rabûn</strong> û <strong style="color: #1976d2;">şûştin</strong>.<br>
+                        Di <strong style="color: #f9a825;">seet 7:30an</strong> de ez <strong style="color: #1976d2;">taştê dixwim</strong>.<br>
+                        Ez <strong style="color: #1976d2;">çayê vedixwim</strong> û nan dixwim.<br>
+                        Di <strong style="color: #f9a825;">seet 8:00an</strong> de ez <strong style="color: #1976d2;">diçim</strong> kar.<br>
+                        Ez di <strong style="color: #f9a825;">êvarê</strong> de <strong style="color: #1976d2;">vedigere</strong> malê.</div>
+                        <div class="translation">I wake up every day at 7:00. I get up and wash. At 7:30 I have breakfast. I drink tea and eat bread. At 8:00 I go to work. I return home in the evening.</div>
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #f9a825; margin-bottom: 15px;">🎙️ Dialogue 2: Leyla's Routine</h4>
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Leyla:</div>
+                        <div class="kurdish-text">Ez xwendekarekî me.<br>
+                        Ez <strong style="color: #388e3c;">her roj</strong> di <strong style="color: #f9a825;">sibehê</strong> de <strong style="color: #1976d2;">diçim</strong> zanîngehê.<br>
+                        Di <strong style="color: #f9a825;">nîvro</strong> de ez bi hevalên xwe re <strong style="color: #1976d2;">dixwim</strong>.<br>
+                        Di <strong style="color: #f9a825;">piştî nîvro</strong> de ez <strong style="color: #1976d2;">dixwînim</strong>.<br>
+                        Di <strong style="color: #f9a825;">êvarê</strong> de ez <strong style="color: #1976d2;">vedigere</strong> malê û <strong style="color: #1976d2;">şivane dixwim</strong>.<br>
+                        Ez di <strong style="color: #f9a825;">seet 11:00an</strong> de <strong style="color: #1976d2;">razanim</strong>.</div>
+                        <div class="translation">I am a student. Every day in the morning I go to university. At noon I eat with my friends. In the afternoon I study. In the evening I return home and have dinner. I sleep at 11:00.</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">�� Comprehension Questions</div>
+                    <p style="margin-bottom: 15px;">Answer in Kurdish:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What time does Aram wake up?</label>
+                        <input type="text" id="listen-q1" placeholder="Answer in Kurdish...">
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What does Aram drink for breakfast?</label>
+                        <input type="text" id="listen-q2" placeholder="Answer in Kurdish...">
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. Where does Leyla go in the morning?</label>
+                        <input type="text" id="listen-q3" placeholder="Answer in Kurdish...">
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. What time does Leyla go to sleep?</label>
+                        <input type="text" id="listen-q4" placeholder="Answer in Kurdish...">
+                        <div id="listen-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📖</span>4. Xwendin (Reading): My Daily Routine</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Read about a typical Kurdish daily routine:</p>
+                
+                <div style="background: #fff9c4; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #f9a825;">
+                    <h4 style="color: #f57f17; margin-bottom: 15px;">📅 Rojaneya Min (My Daily Routine)</h4>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        Ez <strong style="color: #388e3c;">her roj</strong> di <strong style="color: #f9a825;">seet 6:30an</strong> de <strong style="color: #1976d2;">raketim</strong>.<br>
+                        Ez <strong style="color: #1976d2;">rabûn</strong>, <strong style="color: #1976d2;">şûştin</strong> û <strong style="color: #1976d2;">cilên xwe pêve dikim</strong>.<br>
+                        Di <strong style="color: #f9a825;">seet 7:00an</strong> de ez bi malbata xwe re <strong style="color: #1976d2;">taştê dixwim</strong>.<br>
+                        Em <strong style="color: #1976d2;">çayê vedixwin</strong>, nan û penîr dixwin.<br><br>
+                        
+                        Di <strong style="color: #f9a825;">seet 8:00an</strong> de ez <strong style="color: #1976d2;">diçim</strong> kar.<br>
+                        Ez di qehwexaneyekê de <strong style="color: #1976d2;">dixebitim</strong>.<br>
+                        Ez <strong style="color: #388e3c;">pir caran</strong> bi xerîban re <strong style="color: #1976d2;">dipeyivim</strong>.<br><br>
+                        
+                        Di <strong style="color: #f9a825;">nîvro</strong> de ez <strong style="color: #1976d2;">dixwim</strong>.<br>
+                        Di <strong style="color: #f9a825;">piştî nîvro</strong> de ez dîsa <strong style="color: #1976d2;">dixebitim</strong>.<br><br>
+                        
+                        Di <strong style="color: #f9a825;">seet 5:00an</strong> de ez <strong style="color: #1976d2;">werzîş dikim</strong>.<br>
+                        Ez <strong style="color: #1976d2;">revim</strong> an <strong style="color: #1976d2;">bi dûçerxeyê diçim</strong>.<br><br>
+                        
+                        Di <strong style="color: #f9a825;">seet 6:00an</strong> de ez <strong style="color: #1976d2;">vedigere</strong> malê.<br>
+                        Di <strong style="color: #f9a825;">êvarê</strong> de em <strong style="color: #1976d2;">şivane dixwin</strong>.<br>
+                        Piştî şivanê ez <strong style="color: #1976d2;">temaşe dikim</strong> televîzyonê an pirtûkan <strong style="color: #1976d2;">dixwînim</strong>.<br>
+                        Ez di <strong style="color: #f9a825;">seet 10:30an</strong> de <strong style="color: #1976d2;">razanim</strong>.
+                    </p>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Reading Comprehension</div>
+                    <p style="margin-bottom: 20px; color: #666;">Answer these questions:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What time does the person wake up?</label>
+                        <input type="text" id="read-q1" placeholder="Answer in Kurdish...">
+                        <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. Where does the person work?</label>
+                        <input type="text" id="read-q2" placeholder="Answer in Kurdish...">
+                        <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What does the person do at 5:00?</label>
+                        <input type="text" id="read-q3" placeholder="Answer in Kurdish...">
+                        <div id="read-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. What time does the person return home?</label>
+                        <input type="text" id="read-q4" placeholder="Answer in Kurdish...">
+                        <div id="read-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReading()">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>5. Nivîsandin (Writing): My Day</h2>
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise: Describe Your Day</div>
+                    <p style="margin-bottom: 15px; color: #666;">Write about your daily routine. What do you do every day?</p>
+                    
+                    <div style="background: #fff9c4; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">💡 Example:</h4>
+                        <p style="line-height: 2; margin: 0;">
+                            Ez <strong style="color: #388e3c;">her roj</strong> di <strong style="color: #f9a825;">seet 7:00an</strong> de <strong style="color: #1976d2;">raketim</strong>. <span style="color: #666; font-style: italic;">(I wake up every day at 7:00.)</span><br>
+                            Ez <strong style="color: #1976d2;">taştê dixwim</strong>. <span style="color: #666; font-style: italic;">(I have breakfast.)</span><br>
+                            Ez <strong style="color: #1976d2;">diçim</strong> dibistanê. <span style="color: #666; font-style: italic;">(I go to school.)</span><br>
+                            Di <strong style="color: #f9a825;">êvarê</strong> de ez <strong style="color: #1976d2;">vedigere</strong> malê. <span style="color: #666; font-style: italic;">(In the evening I return home.)</span><br>
+                            Ez di <strong style="color: #f9a825;">seet 10:00an</strong> de <strong style="color: #1976d2;">razanim</strong>. <span style="color: #666; font-style: italic;">(I sleep at 10:00.)</span>
+                        </p>
+                    </div>
+                    
+                    <textarea id="write-routine" rows="8" placeholder="Write about your daily routine here..."></textarea>
+                    <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    <button onclick="checkWriting()">✓ Submit</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>6. Axaftin (Speaking): Describe Your Routine</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Practice describing daily activities:</p>
+                <div class="exercise-box">
+                    <div class="exercise-title">🎭 Speaking Scenarios</div>
+                    
+                    <div style="margin: 25px 0; padding: 20px; background: #fff9c4; border-radius: 10px;">
+                        <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 1: Someone asks "Tu çi demê raketî?"</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(1, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Ez di seet 7:00an de raketim.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(1, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Ez di êvarê de raketim.
+                            </button>
+                        </div>
+                        <div id="speak-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff9c4; border-radius: 10px;">
+                        <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 2: Someone asks "Tu di êvarê de çi dikî?"</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(2, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Ez taştê dixwim.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(2, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Ez vedigere malê û şivane dixwim.
+                            </button>
+                        </div>
+                        <div id="speak-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div id="speak-score" style="margin-top: 25px; font-size: 1.3rem; font-weight: bold; text-align: center;">
+                        Score: <span id="speak-correct">0</span> / 2
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Culture -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>7. Çand (Culture): Kurdish Daily Life Rhythm</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Learn about the rhythm of daily life in Kurdish culture:</p>
+                
+                <div style="background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #fbc02d;">
+                    <h3 style="color: #f57f17; text-align: center; margin-bottom: 25px;">☕ Rîtma Jiyana Kurdî</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">☕ Çay û Mêvandarî (Tea & Hospitality)</h4>
+                        <p style="line-height: 1.8;">
+                            Tea is central to Kurdish daily life. Kurds drink tea throughout the day - in the morning, after meals, and when welcoming guests. Offering tea is a sign of hospitality and respect. The phrase <strong>"Çayê te pîroz be!"</strong> (May your tea be blessed!) is commonly used.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">🍽️ Xwarinên Rojane (Daily Meals)</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdish families typically have three main meals:<br>
+                            • <strong>Taşt (Breakfast)</strong> - Usually includes tea, bread, cheese, honey, and eggs<br>
+                            • <strong>Nîvro (Lunch)</strong> - The main meal, often eaten together as a family<br>
+                            • <strong>Şivane (Dinner)</strong> - A lighter meal in the evening
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">👨‍👩‍👧‍👦 Malbat û Civak (Family & Community)</h4>
+                        <p style="line-height: 1.8;">
+                            Family is very important in Kurdish culture. Multiple generations often live together or nearby. It's common to visit family members daily and share meals together. Evenings are often spent with family, drinking tea and talking.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #f9a825;">
+                        <h4 style="color: #f57f17; margin-bottom: 10px;">🎵 Êvar (Evening Time)</h4>
+                        <p style="line-height: 1.8;">
+                            Evenings are social time. People gather in homes, cafés, or parks. Traditional music, storytelling, and conversation are important parts of Kurdish evening culture. The concept of <strong>"sohbet"</strong> (pleasant conversation) is highly valued.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Review -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🔤</span>8. Dubare (Review): Vocabulary Matching</h2>
+                
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Match Daily Routine Verbs (18 pairs)</div>
+                    <p style="margin-bottom: 20px; color: #666;">Match the Kurdish verbs with their English translations:</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+                        <div>
+                            <h4 style="color: #f9a825; margin-bottom: 15px;">Kurdish Verbs</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; max-height: 500px; overflow-y: auto;">
+                                <button class="match-btn-c11" data-word="raketim" onclick="selectWordC11('raketim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Raketim</button>
+                                <button class="match-btn-c11" data-word="rabûn" onclick="selectWordC11('rabûn')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Rabûn</button>
+                                <button class="match-btn-c11" data-word="şûştin" onclick="selectWordC11('şûştin')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Şûştin</button>
+                                <button class="match-btn-c11" data-word="dixwim" onclick="selectWordC11('dixwim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Dixwim</button>
+                                <button class="match-btn-c11" data-word="vedixwim" onclick="selectWordC11('vedixwim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Vedixwim</button>
+                                <button class="match-btn-c11" data-word="diçim" onclick="selectWordC11('diçim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Diçim</button>
+                                <button class="match-btn-c11" data-word="dixebitim" onclick="selectWordC11('dixebitim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Dixebitim</button>
+                                <button class="match-btn-c11" data-word="dixwînim" onclick="selectWordC11('dixwînim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Dixwînim</button>
+                                <button class="match-btn-c11" data-word="dipeyivim" onclick="selectWordC11('dipeyivim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Dipeyivim</button>
+                                <button class="match-btn-c11" data-word="lîzim" onclick="selectWordC11('lîzim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Lîzim</button>
+                                <button class="match-btn-c11" data-word="vedigere" onclick="selectWordC11('vedigere')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Vedigere</button>
+                                <button class="match-btn-c11" data-word="razanim" onclick="selectWordC11('razanim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Razanim</button>
+                                <button class="match-btn-c11" data-word="werzîş" onclick="selectWordC11('werzîş')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Werzîş dikim</button>
+                                <button class="match-btn-c11" data-word="revim" onclick="selectWordC11('revim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Revim</button>
+                                <button class="match-btn-c11" data-word="avjenî" onclick="selectWordC11('avjenî')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Avjenî dikim</button>
+                                <button class="match-btn-c11" data-word="sibeh" onclick="selectWordC11('sibeh')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Sibeh</button>
+                                <button class="match-btn-c11" data-word="nîvro" onclick="selectWordC11('nîvro')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Nîvro</button>
+                                <button class="match-btn-c11" data-word="êvar" onclick="selectWordC11('êvar')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Êvar</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #f57f17; margin-bottom: 15px;">English Translations</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; max-height: 500px; overflow-y: auto;">
+                                <button class="match-trans-c11" data-trans="wake" onclick="selectTransC11('wake')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I wake up</button>
+                                <button class="match-trans-c11" data-trans="getup" onclick="selectTransC11('getup')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• To get up</button>
+                                <button class="match-trans-c11" data-trans="wash" onclick="selectTransC11('wash')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• To wash</button>
+                                <button class="match-trans-c11" data-trans="eat" onclick="selectTransC11('eat')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I eat</button>
+                                <button class="match-trans-c11" data-trans="drink" onclick="selectTransC11('drink')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I drink</button>
+                                <button class="match-trans-c11" data-trans="go" onclick="selectTransC11('go')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I go</button>
+                                <button class="match-trans-c11" data-trans="work" onclick="selectTransC11('work')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I work</button>
+                                <button class="match-trans-c11" data-trans="study" onclick="selectTransC11('study')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I study</button>
+                                <button class="match-trans-c11" data-trans="talk" onclick="selectTransC11('talk')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I talk</button>
+                                <button class="match-trans-c11" data-trans="play" onclick="selectTransC11('play')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I play</button>
+                                <button class="match-trans-c11" data-trans="return" onclick="selectTransC11('return')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Return</button>
+                                <button class="match-trans-c11" data-trans="sleep" onclick="selectTransC11('sleep')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I sleep</button>
+                                <button class="match-trans-c11" data-trans="sport" onclick="selectTransC11('sport')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I exercise / do sports</button>
+                                <button class="match-trans-c11" data-trans="run" onclick="selectTransC11('run')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I run</button>
+                                <button class="match-trans-c11" data-trans="swim" onclick="selectTransC11('swim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I swim</button>
+                                <button class="match-trans-c11" data-trans="morning" onclick="selectTransC11('morning')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Morning</button>
+                                <button class="match-trans-c11" data-trans="noon" onclick="selectTransC11('noon')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Noon</button>
+                                <button class="match-trans-c11" data-trans="evening" onclick="selectTransC11('evening')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Evening</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <button onclick="resetVocabC11()" style="background: #ff9800; padding: 10px 20px; border: none; border-radius: 8px; color: white; cursor: pointer;">🔄 Reset</button>
+                    </div>
+                    <div id="vocab-match-feedback-c11" style="margin-top: 20px; font-size: 1.2rem; font-weight: bold; text-align: center;"></div>
+                </div>
+            </div>
+
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);">
+                <h2 style="color: #f57f17; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">You've completed Course 11: Daily Routine!<br>You can now describe your daily activities in Kurdish.</p>
+                <a href="../level-a1.html" class="back-link" style="background: #f9a825;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+    <footer><p>&copy; 2025 Kurdish Academy. All rights reserved.</p></footer>
+    <script>
+        function checkVerbs() {
+            let correct = 0;
+            const total = 7;
+            
+            const q1 = document.getElementById('verb-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('verb-q1-feedback');
+            if (q1.includes('dixwim')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! dixwim';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dixwim</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('verb-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('verb-q2-feedback');
+            if (q2.includes('vedigere')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! vedigere';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>vedigere</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('verb-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('verb-q3-feedback');
+            if (q3.includes('razanim')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! razanim';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>razanim</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const q4 = document.getElementById('verb-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('verb-q4-feedback');
+            if (q4.includes('dixwînim') || q4.includes('dixwinim')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! dixwînim';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dixwînim</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+            
+            const q5 = document.getElementById('verb-q5').value.toLowerCase().trim();
+            const q5Feedback = document.getElementById('verb-q5-feedback');
+            if (q5.includes('revim')) {
+                correct++;
+                q5Feedback.innerHTML = '✅ Correct! revim';
+                q5Feedback.style.color = '#2e7d32';
+            } else {
+                q5Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>revim</strong>';
+                q5Feedback.style.color = '#d32f2f';
+            }
+            
+            const q6 = document.getElementById('verb-q6').value.toLowerCase().trim();
+            const q6Feedback = document.getElementById('verb-q6-feedback');
+            if (q6.includes('vedixwim')) {
+                correct++;
+                q6Feedback.innerHTML = '✅ Correct! vedixwim';
+                q6Feedback.style.color = '#2e7d32';
+            } else {
+                q6Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>vedixwim</strong>';
+                q6Feedback.style.color = '#d32f2f';
+            }
+            
+            const q7 = document.getElementById('verb-q7').value.toLowerCase().trim();
+            const q7Feedback = document.getElementById('verb-q7-feedback');
+            if (q7.includes('dipeyivim')) {
+                correct++;
+                q7Feedback.innerHTML = '✅ Correct! dipeyivim';
+                q7Feedback.style.color = '#2e7d32';
+            } else {
+                q7Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dipeyivim</strong>';
+                q7Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('verb-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkListening() {
+            let correct = 0;
+            const total = 4;
+            
+            const q1 = document.getElementById('listen-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if (q1.includes('7') || q1.includes('seet 7')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Seet 7:00';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Seet 7:00</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('listen-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if (q2.includes('çay') || q2.includes('cay') || q2.includes('tea')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Çayê';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Çayê</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('listen-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3.includes('zanînge') || q3.includes('zaninge') || q3.includes('university')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Zanîngehê';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Zanîngehê</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const q4 = document.getElementById('listen-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('listen-q4-feedback');
+            if (q4.includes('11') || q4.includes('seet 11')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! Seet 11:00';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Seet 11:00</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkReading() {
+            let correct = 0;
+            const total = 4;
+            
+            const q1 = document.getElementById('read-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1.includes('6:30') || q1.includes('seet 6:30')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Seet 6:30';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Seet 6:30</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('read-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2.includes('qehwexane') || q2.includes('café') || q2.includes('cafe')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Qehwexaneyekê';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Qehwexaneyekê</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('read-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('read-q3-feedback');
+            if (q3.includes('werzîş') || q3.includes('werzis') || q3.includes('revim') || q3.includes('dûçerxe') || q3.includes('sport') || q3.includes('exercise')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Werzîş dikim';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Werzîş dikim</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const q4 = document.getElementById('read-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('read-q4-feedback');
+            if (q4.includes('6') || q4.includes('seet 6')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! Seet 6:00';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Seet 6:00</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkWriting() {
+            const routine = document.getElementById('write-routine').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            if (routine.length < 30) {
+                feedback.innerHTML = '❌ Please write at least 4-5 sentences about your routine.';
+                feedback.style.color = '#d32f2f';
+            } else {
+                feedback.innerHTML = '✅ Great! Your routine has been submitted.';
+                feedback.style.color = '#2e7d32';
+            }
+        }
+
+        let speakCorrect = 0;
+        function checkSpeaking(scenario, answer) {
+            const feedback = document.getElementById(`speak-feedback-${scenario}`);
+            if (scenario === 1 && answer === 'a') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Ez di seet 7:00an de raketim.';
+                feedback.style.color = '#2e7d32';
+            } else if (scenario === 2 && answer === 'b') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Ez vedigere malê û şivane dixwim.';
+                feedback.style.color = '#2e7d32';
+            } else {
+                feedback.innerHTML = '❌ Try again.';
+                feedback.style.color = '#d32f2f';
+            }
+            document.getElementById('speak-correct').textContent = speakCorrect;
+        }
+
+        const vocabPairsC11 = {
+            'raketim': 'wake',
+            'rabûn': 'getup',
+            'şûştin': 'wash',
+            'dixwim': 'eat',
+            'vedixwim': 'drink',
+            'diçim': 'go',
+            'dixebitim': 'work',
+            'dixwînim': 'study',
+            'dipeyivim': 'talk',
+            'lîzim': 'play',
+            'vedigere': 'return',
+            'razanim': 'sleep',
+            'werzîş': 'sport',
+            'revim': 'run',
+            'avjenî': 'swim',
+            'sibeh': 'morning',
+            'nîvro': 'noon',
+            'êvar': 'evening'
+        };
+        let selectedWordC11 = null;
+        let selectedTransC11 = null;
+        let matchedPairsC11 = 0;
+
+        function selectWordC11(word) {
+            if (document.querySelector(`[data-word="${word}"]`).classList.contains('matched')) return;
+            document.querySelectorAll('.match-btn-c11').forEach(btn => {
+                if (!btn.classList.contains('matched')) {
+                    btn.style.background = 'white';
+                }
+            });
+            document.querySelector(`[data-word="${word}"]`).style.background = '#fff9c4';
+            selectedWordC11 = word;
+            checkMatchC11();
+        }
+
+        function selectTransC11(trans) {
+            if (document.querySelector(`[data-trans="${trans}"]`).classList.contains('matched')) return;
+            document.querySelectorAll('.match-trans-c11').forEach(btn => {
+                if (!btn.classList.contains('matched')) {
+                    btn.style.background = 'white';
+                }
+            });
+            document.querySelector(`[data-trans="${trans}"]`).style.background = '#fff9c4';
+            selectedTransC11 = trans;
+            checkMatchC11();
+        }
+
+        function checkMatchC11() {
+            if (selectedWordC11 && selectedTransC11) {
+                if (vocabPairsC11[selectedWordC11] === selectedTransC11) {
+                    document.querySelector(`[data-word="${selectedWordC11}"]`).style.background = '#c8e6c9';
+                    document.querySelector(`[data-trans="${selectedTransC11}"]`).style.background = '#c8e6c9';
+                    document.querySelector(`[data-word="${selectedWordC11}"]`).classList.add('matched');
+                    document.querySelector(`[data-trans="${selectedTransC11}"]`).classList.add('matched');
+                    matchedPairsC11++;
+                    if (matchedPairsC11 === 18) {
+                        document.getElementById('vocab-match-feedback-c11').innerHTML = '🎉 Perfect! All 18 pairs matched!';
+                        document.getElementById('vocab-match-feedback-c11').style.color = '#2e7d32';
+                    } else {
+                        document.getElementById('vocab-match-feedback-c11').innerHTML = `✅ ${matchedPairsC11} / 18 matched`;
+                        document.getElementById('vocab-match-feedback-c11').style.color = '#f9a825';
+                    }
+                } else {
+                    document.querySelector(`[data-word="${selectedWordC11}"]`).style.background = '#ffcdd2';
+                    document.querySelector(`[data-trans="${selectedTransC11}"]`).style.background = '#ffcdd2';
+                    setTimeout(() => {
+                        document.querySelector(`[data-word="${selectedWordC11}"]`).style.background = 'white';
+                        document.querySelector(`[data-trans="${selectedTransC11}"]`).style.background = 'white';
+                    }, 1000);
+                }
+                selectedWordC11 = null;
+                selectedTransC11 = null;
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function resetVocabC11() {
+            selectedWordC11 = null;
+            selectedTransC11 = null;
+            matchedPairsC11 = 0;
+            document.getElementById('vocab-match-feedback-c11').innerHTML = '';
+            
+            const wordsContainer = document.querySelector('.match-btn-c11').parentElement;
+            const transContainer = document.querySelector('.match-trans-c11').parentElement;
+            
+            const wordButtons = Array.from(document.querySelectorAll('.match-btn-c11'));
+            const transButtons = Array.from(document.querySelectorAll('.match-trans-c11'));
+            
+            wordButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.classList.remove('matched');
+            });
+            transButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.classList.remove('matched');
+            });
+            
+            shuffleArray(wordButtons);
+            shuffleArray(transButtons);
+            
+            wordsContainer.innerHTML = '';
+            transContainer.innerHTML = '';
+            
+            wordButtons.forEach(btn => wordsContainer.appendChild(btn));
+            transButtons.forEach(btn => transContainer.appendChild(btn));
+        }
+    </script>
+</body>
+</html>

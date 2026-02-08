@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Alfabê (Alphabet)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        /* Style pour l'alphabet kurde */
+        .alphabet-container {
+            margin: 30px 0;
+        }
+        
+        .alphabet-title {
+            color: #2e7d32;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .alphabet-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .letter-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            width: 120px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .letter-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .letter-image {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 10px;
+            border-radius: 8px;
+            object-fit: cover;
+            background-color: #f9f9f9;
+        }
+        
+        .letter-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .letter-text {
+            color: #2e7d32;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .audio-button {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            margin-bottom: 5px;
+        }
+        
+        .audio-button:hover {
+            transform: scale(1.2);
+        }
+        
+        .audio-progress {
+            width: 100%;
+            height: 4px;
+            background-color: #e0e0e0;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-top: 5px;
+            position: relative;
+        }
+        
+        .audio-progress-bar {
+            height: 100%;
+            background-color: #2e7d32;
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+        
+        .audio-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <!-- Logo à gauche -->
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <!-- Logo à droite -->
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="alfabe.html" class="active">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal du site (fond blanc sur arrière-plan beige clair) -->
+    <main>
+        <div class="alphabet-container">
+            <h2 class="alphabet-title">Alfabê Kurmancî</h2>
+            
+            <div class="alphabet-grid">
+                <!-- Lettre A -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #2e7d32; font-weight: bold; font-size: 0.8rem;">[Image A manquante]</div>
+                    </div>
+                    <div class="letter-text">A/a</div>
+                    <div class="audio-controls">
+                            <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /a.mov', this)">🔊</button>
+                        <div class="audio-progress" onclick="seekAudio(event, this)">
+                            <div class="audio-progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lettre B -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #2e7d32; font-weight: bold; font-size: 0.8rem;">[Image B manquante]</div>
+                    </div>
+                    <div class="letter-text">B/b</div>
+                    <div class="audio-controls">
+                            <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /b.mov', this)">🔊</button>
+                        <div class="audio-progress" onclick="seekAudio(event, this)">
+                            <div class="audio-progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lettre C -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /c.png" alt="Lettre C">
+                    </div>
+                    <div class="letter-text">C/c</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /c.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre Ç -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /ç.png" alt="Lettre Ç">
+                    </div>
+                    <div class="letter-text">Ç/ç</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /ç.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre D -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /d.png" alt="Lettre D">
+                    </div>
+                    <div class="letter-text">D/d</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /d.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre E -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /e.png" alt="Lettre E">
+                    </div>
+                    <div class="letter-text">E/e</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /e.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre Ê -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /ê.png" alt="Lettre Ê">
+                    </div>
+                    <div class="letter-text">Ê/ê</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /ê.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre F -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /f.png" alt="Lettre F">
+                    </div>
+                    <div class="letter-text">F/f</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /f.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre G -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /g.png" alt="Lettre G">
+                    </div>
+                    <div class="letter-text">G/g</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /g.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre H -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /h.png" alt="Lettre H">
+                    </div>
+                    <div class="letter-text">H/h</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /h.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre I -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /i.png" alt="Lettre I">
+                    </div>
+                    <div class="letter-text">I/ı</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /i.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre Î -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /î.png" alt="Lettre Î">
+                    </div>
+                    <div class="letter-text">Î/î</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /î.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre J -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /j.png" alt="Lettre J">
+                    </div>
+                    <div class="letter-text">J/j</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /j.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre K -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /k.png" alt="Lettre K">
+                    </div>
+                    <div class="letter-text">K/k</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /k.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre L -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /L.png" alt="Lettre L">
+                    </div>
+                    <div class="letter-text">L/l</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /l.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre M -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /m.png" alt="Lettre M">
+                    </div>
+                    <div class="letter-text">M/m</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /m.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre N -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /n.png" alt="Lettre N">
+                    </div>
+                    <div class="letter-text">N/n</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /n.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre O -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /o.png" alt="Lettre O">
+                    </div>
+                    <div class="letter-text">O/o</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /o.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre P -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /p.png" alt="Lettre P">
+                    </div>
+                    <div class="letter-text">P/p</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /p.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre Q -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /q.png" alt="Lettre Q">
+                    </div>
+                    <div class="letter-text">Q/q</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /q.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre R -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /r.png" alt="Lettre R">
+                    </div>
+                    <div class="letter-text">R/r</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /r.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre S -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /s.png" alt="Lettre S">
+                    </div>
+                    <div class="letter-text">S/s</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /s.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre Ş -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /ss.png" alt="Lettre Ş">
+                    </div>
+                    <div class="letter-text">Ş/ş</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /ş.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre T -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /t.png" alt="Lettre T">
+                    </div>
+                    <div class="letter-text">T/t</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /t.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre U -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /u.png" alt="Lettre U">
+                    </div>
+                    <div class="letter-text">U/u</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /u.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre Û -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /ü.png" alt="Lettre Û">
+                    </div>
+                    <div class="letter-text">Û/û</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /û.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre V -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /v.png" alt="Lettre V">
+                    </div>
+                    <div class="letter-text">V/v</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /v.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre W -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /w.png" alt="Lettre W">
+                    </div>
+                    <div class="letter-text">W/w</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /w.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre X -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /x.png" alt="Lettre X">
+                    </div>
+                    <div class="letter-text">X/x</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /x.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre Y -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <img src="image /y.png" alt="Lettre Y">
+                    </div>
+                    <div class="letter-text">Y/y</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /y.mov', this)">🔊</button>
+                </div>
+                
+                <!-- Lettre Z -->
+                <div class="letter-card">
+                    <div class="letter-image">
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #2e7d32; font-weight: bold; font-size: 0.8rem;">[Image Z manquante]</div>
+                    </div>
+                    <div class="letter-text">Z/z</div>
+                        <div class="audio-controls">
+        <button class="audio-button" onclick="playAudio('audio /z.mov', this)">🔊</button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            let currentAudio = null;
+            let currentProgressBar = null;
+            let progressInterval = null;
+            
+            function playAudio(audioFile, buttonElement) {
+                // Arrêter l'audio précédent s'il y en a un
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    clearInterval(progressInterval);
+                    if (currentProgressBar) {
+                        currentProgressBar.style.width = '0%';
+                    }
+                }
+                
+                // Trouver la barre de progression associée
+                const audioControls = buttonElement.parentElement;
+                const progressBar = audioControls.querySelector('.audio-progress-bar');
+                currentProgressBar = progressBar;
+                
+                // Créer et jouer le nouveau audio
+                currentAudio = new Audio(audioFile);
+                
+                currentAudio.addEventListener('loadedmetadata', function() {
+                    // Démarrer la mise à jour de la progression
+                    progressInterval = setInterval(function() {
+                        if (currentAudio && !currentAudio.paused) {
+                            const progress = (currentAudio.currentTime / currentAudio.duration) * 100;
+                            progressBar.style.width = progress + '%';
+                        }
+                    }, 100);
+                });
+                
+                currentAudio.addEventListener('ended', function() {
+                    clearInterval(progressInterval);
+                    progressBar.style.width = '0%';
+                });
+                
+                currentAudio.play().catch(function(error) {
+                    console.log('Erreur lors de la lecture audio:', error);
+                });
+            }
+            
+            function seekAudio(event, progressElement) {
+                if (!currentAudio) return;
+                
+                const rect = progressElement.getBoundingClientRect();
+                const clickX = event.clientX - rect.left;
+                const width = rect.width;
+                const percentage = clickX / width;
+                
+                if (currentAudio.duration) {
+                    currentAudio.currentTime = percentage * currentAudio.duration;
+                    const progressBar = progressElement.querySelector('.audio-progress-bar');
+                    progressBar.style.width = (percentage * 100) + '%';
+                }
+            }
+        </script>
+    </main>
+    
+    <!-- Pied de page du site (fond gris foncé avec texte blanc) -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

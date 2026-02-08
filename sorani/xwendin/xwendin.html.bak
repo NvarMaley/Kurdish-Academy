@@ -1,0 +1,119 @@
+<!-- Déclaration du type de document (HTML5) -->
+<!DOCTYPE html>
+<!-- Début du document HTML avec la langue anglaise définie -->
+<html lang="en">
+<!-- En-tête du document contenant les métadonnées et liens vers les ressources -->
+<head>
+    <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères internationaux -->
+    <meta charset="UTF-8">
+    <!-- Configure la vue pour les appareils mobiles (responsive design) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
+    <title>Xwendin - Kurdish Academy</title>
+    <!-- Lien vers la feuille de style CSS externe -->
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+</head>
+<!-- Corps du document contenant tout le contenu visible -->
+<body>
+    <!-- En-tête du site avec bande verte foncée (#2e7d32) -->
+    <header>
+        <!-- Conteneur pour le logo situé à gauche de l'en-tête -->
+        <div class="logo-left">
+            <!-- Image du logo gauche (à placer dans le dossier 'images') -->
+            <img src="../../images/logo-left.png" alt="Logo gauche" class="logo">
+        </div>
+        
+        <!-- Conteneur pour le titre centré -->
+        <div class="title">
+            <!-- Titre principal du site en grande taille (3.5rem) -->
+            <h1>Kurdish Academy</h1>
+        </div>
+        
+        <!-- Conteneur pour le logo situé à droite de l'en-tête -->
+        <div class="logo-right">
+            <!-- Image du logo droit (à placer dans le dossier 'images') -->
+            <img src="../../images/logo-right.png" alt="Logo droite" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale avec les sections demandées -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link" class="active">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation pour les sous-sections de Home (masquée par défaut) -->
+    <nav class="sub-nav" id="home-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../index.html">Academy</a></li>
+            <li><a href="../../home/event/event.html">Event</a></li>
+            <li><a href="../../home/partner/partner.html">Partner</a></li>
+            <li><a href="../../home/contact/contact.html">Contact</a></li>
+            <li><a href="../../home/donation/donation.html">Donation</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî (masquée par défaut) -->
+    <nav class="sub-nav" id="kurmanci-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../kurmancu00ee/dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../../kurmancu00ee/alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../kurmancu00ee/peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../kurmancu00ee/leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../kurmancu00ee/reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../kurmancu00ee/guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../kurmancu00ee/xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../kurmancu00ee/nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../kurmancu00ee/axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (visible car page active) -->
+    <nav class="sub-nav" id="sorani-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="xwendin.html" class="active">خوێندن (Reading)</a></li>
+            <li><a href="../nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main content of the site (white on light beige background) -->
+    <main>
+        <!-- "Under construction" message in a white rectangle -->
+        <div class="construction-message">
+            <h2>خوێندن (Reading) - Under Construction</h2>
+            <p>This section will be available soon.</p>
+            <p>We are currently working on the content for this page.</p>
+        </div>
+    </main>
+    
+    <!-- Pied de page du site (fond gris foncé avec texte blanc) -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Rêza Peyvan (Word Order & Syntax)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .syntax-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .syntax-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .syntax-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .word-label {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .subject-label {
+            background: #bbdefb;
+            color: #1565c0;
+        }
+
+        .object-label {
+            background: #ffccbc;
+            color: #bf360c;
+        }
+
+        .verb-label {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+
+        .structure-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #2196f3;
+            text-align: center;
+        }
+
+        .structure-formula {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1976d2;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Rêza Peyvan</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Word Order & Syntax</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What is Word Order?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    Word order refers to the <strong>arrangement of words</strong> in a sentence. Different languages have different 
+                    word orders. Kurdish uses a <strong>Subject-Object-Verb (SOV)</strong> structure, which is different from English's 
+                    Subject-Verb-Object (SVO) structure.
+                </p>
+            </div>
+
+            <!-- SECTION 1: BASIC WORD ORDER (SOV) -->
+            <div class="syntax-section">
+                <div class="syntax-title">1. Basic Word Order: SOV</div>
+                <div class="syntax-subtitle">Subject - Object - Verb</div>
+
+                <div class="structure-box">
+                    <div style="font-size: 1.2rem; color: #1976d2; margin-bottom: 10px;">Kurdish Word Order:</div>
+                    <div class="structure-formula">
+                        <span class="word-label subject-label">SUBJECT</span> + 
+                        <span class="word-label object-label">OBJECT</span> + 
+                        <span class="word-label verb-label">VERB</span>
+                    </div>
+                </div>
+
+                <div class="explanation">
+                    <p>
+                        In Kurdish, the <strong>verb comes at the end</strong> of the sentence. This is very important to remember!
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish (SOV)</th>
+                            <th>Word-by-word</th>
+                            <th>English (SVO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ez nan dixwim.</strong></td>
+                            <td>I + bread + eat</td>
+                            <td>I eat bread.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tu pirtûk dixwînî.</strong></td>
+                            <td>You + book + read</td>
+                            <td>You read a book.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ew film dibîne.</strong></td>
+                            <td>He/She + film + watches</td>
+                            <td>He/She watches a film.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Em muzîk guhdarî dikin.</strong></td>
+                            <td>We + music + listen to</td>
+                            <td>We listen to music.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hûn Kurdish hîn dibin.</strong></td>
+                            <td>You (pl) + Kurdish + learn</td>
+                            <td>You learn Kurdish.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Breaking Down the Structure:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">
+                            <span class="word-label subject-label">Ez</span> 
+                            <span class="word-label object-label">nan</span> 
+                            <span class="word-label verb-label">dixwim</span>
+                        </div>
+                        <div class="english-text">
+                            <span class="word-label subject-label">I</span> 
+                            <span class="word-label verb-label">eat</span> 
+                            <span class="word-label object-label">bread</span>
+                        </div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">
+                            <span class="word-label subject-label">Zarok</span> 
+                            <span class="word-label object-label">top</span> 
+                            <span class="word-label verb-label">dilîze</span>
+                        </div>
+                        <div class="english-text">
+                            <span class="word-label subject-label">The child</span> 
+                            <span class="word-label verb-label">plays</span> 
+                            <span class="word-label object-label">ball</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Key Difference!</div>
+                    <p style="line-height: 1.8;">
+                        <strong>English:</strong> Subject + <strong>Verb</strong> + Object (SVO)<br>
+                        <strong>Kurdish:</strong> Subject + Object + <strong>Verb</strong> (SOV)<br><br>
+                        The verb always comes <strong>last</strong> in Kurdish!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: INTRANSITIVE VERBS -->
+            <div class="syntax-section">
+                <div class="syntax-title">2. Intransitive Verbs (No Object)</div>
+                <div class="syntax-subtitle">Subject - Verb</div>
+
+                <div class="explanation">
+                    <p>
+                        When there is <strong>no object</strong> (intransitive verbs), the structure is simply Subject + Verb.
+                    </p>
+                </div>
+
+                <div class="structure-box">
+                    <div class="structure-formula">
+                        <span class="word-label subject-label">SUBJECT</span> + 
+                        <span class="word-label verb-label">VERB</span>
+                    </div>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Word-by-word</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ez diçim.</strong></td>
+                            <td>I + go</td>
+                            <td>I go.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tu radizî.</strong></td>
+                            <td>You + sleep</td>
+                            <td>You sleep.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ew dikeve.</strong></td>
+                            <td>He/She + falls</td>
+                            <td>He/She falls.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Em dimirin.</strong></td>
+                            <td>We + die</td>
+                            <td>We die.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hûn direwîn.</strong></td>
+                            <td>You (pl) + run</td>
+                            <td>You run.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- SECTION 3: ADJECTIVE POSITION -->
+            <div class="syntax-section">
+                <div class="syntax-title">3. Adjective Position</div>
+                <div class="syntax-subtitle">Noun + Adjective</div>
+
+                <div class="explanation">
+                    <p>
+                        In Kurdish, adjectives come <strong>after</strong> the noun they describe, which is the opposite of English.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Word-by-word</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>pirtûkek baş</strong></td>
+                            <td>book + good</td>
+                            <td>a good book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>zarokek biçûk</strong></td>
+                            <td>child + small</td>
+                            <td>a small child</td>
+                        </tr>
+                        <tr>
+                            <td><strong>maleke mezin</strong></td>
+                            <td>house + big</td>
+                            <td>a big house</td>
+                        </tr>
+                        <tr>
+                            <td><strong>keçeke xweş</strong></td>
+                            <td>girl + nice</td>
+                            <td>a nice girl</td>
+                        </tr>
+                        <tr>
+                            <td><strong>hevalek nû</strong></td>
+                            <td>friend + new</td>
+                            <td>a new friend</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 In Full Sentences:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkek baş dixwînim.</div>
+                        <div class="english-text">I read a good book. (I + book good + read)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew maleke mezin dixwaze.</div>
+                        <div class="english-text">He/She wants a big house. (He/She + house big + wants)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em zarokên biçûk dibînin.</div>
+                        <div class="english-text">We see small children. (We + children small + see)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: PREPOSITIONAL PHRASES -->
+            <div class="syntax-section">
+                <div class="syntax-title">4. Prepositional Phrases</div>
+                <div class="syntax-subtitle">Position in sentences</div>
+
+                <div class="explanation">
+                    <p>
+                        Prepositional phrases (like "at home", "to school") usually come <strong>before the verb</strong> but 
+                        <strong>after the object</strong> (if there is one).
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Structure</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ez li malê me.</strong></td>
+                            <td>S + Prep.Phrase + V</td>
+                            <td>I am at home.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ez dibistanê diçim.</strong></td>
+                            <td>S + O + V</td>
+                            <td>I go to school.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ez li dibistanê dixwînim.</strong></td>
+                            <td>S + Prep.Phrase + V</td>
+                            <td>I read at school.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ez pirtûk li dibistanê dixwînim.</strong></td>
+                            <td>S + O + Prep.Phrase + V</td>
+                            <td>I read a book at school.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ew bi hevalê xwe re diaxive.</strong></td>
+                            <td>S + Prep.Phrase + V</td>
+                            <td>He/She talks with his/her friend.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 More Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez ji malê têm.</div>
+                        <div class="english-text">I come from home.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu bi otobûsê diçî?</div>
+                        <div class="english-text">Do you go by bus?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em li parkê dilîzin.</div>
+                        <div class="english-text">We play in the park.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 5: QUESTIONS -->
+            <div class="syntax-section">
+                <div class="syntax-title">5. Question Word Order</div>
+                <div class="syntax-subtitle">Interrogative words at the beginning</div>
+
+                <div class="explanation">
+                    <p>
+                        Question words (kî, çi, ku, kengî, etc.) usually come at the <strong>beginning</strong> of the sentence, 
+                        but the verb still stays at the <strong>end</strong>.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Structure</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Kî ye?</strong></td>
+                            <td>Q.Word + V</td>
+                            <td>Who is it?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Çi dixwazî?</strong></td>
+                            <td>Q.Word + V</td>
+                            <td>What do you want?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tu li ku yî?</strong></td>
+                            <td>S + Q.Word + V</td>
+                            <td>Where are you?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tu çi dikî?</strong></td>
+                            <td>S + Q.Word + V</td>
+                            <td>What are you doing?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kengî tê?</strong></td>
+                            <td>Q.Word + V</td>
+                            <td>When are you coming?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Çima tu naçî?</strong></td>
+                            <td>Q.Word + S + V</td>
+                            <td>Why don't you go?</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Complex Questions:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu çi li dibistanê dixwînî?</div>
+                        <div class="english-text">What do you read at school? (You + what + at school + read?)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew kengî bo malê diçe?</div>
+                        <div class="english-text">When does he/she go home? (He/She + when + to home + goes?)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Hûn bi kî re diaxivin?</div>
+                        <div class="english-text">Who are you talking with? (You + with who + talk?)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: NEGATIVE SENTENCES -->
+            <div class="syntax-section">
+                <div class="syntax-title">6. Negative Sentence Structure</div>
+                <div class="syntax-subtitle">Negation prefixes on verbs</div>
+
+                <div class="explanation">
+                    <p>
+                        In negative sentences, the word order remains the same (SOV), but the verb takes a <strong>negative prefix</strong> 
+                        (na-, ne-, nîn-, me-).
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Positive</th>
+                            <th>Negative</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ez diçim.</td>
+                            <td><strong>Ez naçim.</strong></td>
+                            <td>I go. / I don't go.</td>
+                        </tr>
+                        <tr>
+                            <td>Tu dixwînî.</td>
+                            <td><strong>Tu naxwînî.</strong></td>
+                            <td>You read. / You don't read.</td>
+                        </tr>
+                        <tr>
+                            <td>Ez çûm.</td>
+                            <td><strong>Ez neçûm.</strong></td>
+                            <td>I went. / I didn't go.</td>
+                        </tr>
+                        <tr>
+                            <td>Ez im.</td>
+                            <td><strong>Ez nînim.</strong></td>
+                            <td>I am. / I am not.</td>
+                        </tr>
+                        <tr>
+                            <td>Biçe!</td>
+                            <td><strong>Meçe!</strong></td>
+                            <td>Go! / Don't go!</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Important!</div>
+                    <p style="line-height: 1.8;">
+                        The word order doesn't change in negative sentences - only the verb gets a negative prefix!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 7: COMPOUND SENTENCES -->
+            <div class="syntax-section">
+                <div class="syntax-title">7. Compound Sentences</div>
+                <div class="syntax-subtitle">Connecting clauses with conjunctions</div>
+
+                <div class="explanation">
+                    <p>
+                        When connecting two clauses, each clause maintains its own SOV structure. Common conjunctions include 
+                        <strong>û</strong> (and), <strong>yan</strong> (or), <strong>lê/belê</strong> (but), <strong>ji ber ku</strong> (because).
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ez dixwînim û tu dinivîsî.</strong></td>
+                            <td>I read and you write.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ez diçim yan ez dimêm.</strong></td>
+                            <td>I go or I stay.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ez dixwazim, lê ez nakarim.</strong></td>
+                            <td>I want to, but I can't.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ez naçim ji ber ku ez nexweş im.</strong></td>
+                            <td>I don't go because I am sick.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dema ku ez dixwînim, ez hêdî hêdî dixwînim.</strong></td>
+                            <td>When I read, I read slowly.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Complex Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûk dixwînim û hevalê min muzîk guhdarî dike.</div>
+                        <div class="english-text">I read a book and my friend listens to music.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Eger tu bixwazî, em dikarin biçin.</div>
+                        <div class="english-text">If you want, we can go.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez dizanim ku tu baş î.</div>
+                        <div class="english-text">I know that you are good.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 8: TIME EXPRESSIONS POSITION -->
+            <div class="syntax-section">
+                <div class="syntax-title">8. Time Expressions</div>
+                <div class="syntax-subtitle">Position in sentences</div>
+
+                <div class="explanation">
+                    <p>
+                        Time expressions can appear at the <strong>beginning</strong> or <strong>before the verb</strong> in a sentence.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Position</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Îro ez diçim.</strong></td>
+                            <td>Beginning</td>
+                            <td>Today I go.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ez îro diçim.</strong></td>
+                            <td>Before verb</td>
+                            <td>I go today.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sibehê ez dibistanê diçim.</strong></td>
+                            <td>Beginning</td>
+                            <td>In the morning I go to school.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ez her roj pirtûk dixwînim.</strong></td>
+                            <td>Before object</td>
+                            <td>I read a book every day.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Duh ez li malê bûm.</strong></td>
+                            <td>Beginning</td>
+                            <td>Yesterday I was at home.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Flexible Positioning:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Sibe ez dê biçim bazarê. = Ez sibe dê biçim bazarê.</div>
+                        <div class="english-text">Tomorrow I will go to the market. (Both are correct)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Êvarê em li malê ne. = Em êvarê li malê ne.</div>
+                        <div class="english-text">In the evening we are at home. (Both are correct)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: Word Order Rules</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Structure Type</th>
+                        <th>Word Order</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Basic sentence</strong></td>
+                        <td>Subject + Object + Verb</td>
+                        <td>Ez nan dixwim.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intransitive</strong></td>
+                        <td>Subject + Verb</td>
+                        <td>Ez diçim.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adjective</strong></td>
+                        <td>Noun + Adjective</td>
+                        <td>pirtûkek baş</td>
+                    </tr>
+                    <tr>
+                        <td><strong>With preposition</strong></td>
+                        <td>S + O + Prep.Phrase + V</td>
+                        <td>Ez pirtûk li malê dixwînim.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Question</strong></td>
+                        <td>Q.Word + (S) + (O) + V</td>
+                        <td>Çi dixwazî?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Negative</strong></td>
+                        <td>Same as positive (verb has prefix)</td>
+                        <td>Ez naçim.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time expression</strong></td>
+                        <td>Beginning or before verb</td>
+                        <td>Îro ez diçim.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Basic word order:</strong> Subject + Object + Verb (SOV)</li>
+                    <li><strong>Verb position:</strong> Always at the end of the sentence</li>
+                    <li><strong>Adjectives:</strong> Come after the noun (pirtûkek baş = book good)</li>
+                    <li><strong>Questions:</strong> Question word at beginning, verb still at end</li>
+                    <li><strong>Negatives:</strong> Same word order, verb gets negative prefix</li>
+                    <li><strong>Prepositional phrases:</strong> Usually before the verb</li>
+                    <li><strong>Time expressions:</strong> Flexible - beginning or before verb</li>
+                    <li><strong>Compound sentences:</strong> Each clause maintains SOV structure</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

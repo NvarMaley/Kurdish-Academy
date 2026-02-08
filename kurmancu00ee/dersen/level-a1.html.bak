@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Niveau A1 (Destpêk)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../chatbot.css">
+    <script src="../../scripts.js"></script>
+    <script src="../../chatbot-ai.js"></script>
+    <style>
+        .course-container {
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .course-title {
+            text-align: center;
+            color: #f9a825;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .course-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 12px 25px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #1b5e20;
+            transform: translateX(-5px);
+        }
+
+        .course-path {
+            position: relative;
+            padding: 50px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lesson-bubble {
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(249, 168, 37, 0.4);
+            z-index: 10;
+            text-decoration: none;
+        }
+
+        .lesson-bubble:hover {
+            transform: scale(1.15);
+            box-shadow: 0 6px 25px rgba(249, 168, 37, 0.6);
+        }
+
+        .lesson-number {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .lesson-title {
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .wavy-path {
+            fill: none;
+            stroke: #fdd835;
+            stroke-width: 8;
+            stroke-linecap: round;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="course-container">
+            <a href="dersen.html" class="back-button">← Retour aux niveaux</a>
+            
+            <h2 class="course-title">🌟 Niveau A1 - Destpêk (Débutant Absolu)</h2>
+            <p class="course-subtitle">12 cours pour apprendre les bases du kurde</p>
+            
+            <div class="course-path" style="height: 2100px;">
+                <!-- SVG for wavy connecting lines -->
+                <svg width="100%" height="100%">
+                    <path class="wavy-path" d="
+                        M 170,70
+                        Q 370,50 570,70
+                        Q 770,90 970,70
+                        
+                        Q 1070,70 1070,170
+                        
+                        Q 1070,270 970,320
+                        Q 770,350 570,320
+                        Q 370,290 170,320
+                        
+                        Q 70,320 70,420
+                        
+                        Q 70,520 170,570
+                        Q 370,600 570,570
+                        Q 770,540 970,570
+                        
+                        Q 1070,570 1070,670
+                        
+                        Q 1070,770 970,820
+                        Q 770,850 570,820
+                        Q 370,790 170,820
+                        
+                        Q 70,820 70,920
+                        
+                        Q 70,1020 170,1070
+                        Q 370,1100 570,1070
+                        Q 770,1040 970,1070
+                        
+                        Q 1070,1070 1070,1170
+                        
+                        Q 1070,1270 970,1320
+                        Q 770,1350 570,1320
+                        Q 370,1290 170,1320
+                        
+                        Q 70,1320 70,1420
+                        
+                        Q 70,1520 170,1570
+                        Q 370,1600 570,1570
+                        Q 770,1540 970,1570
+                        
+                        Q 1070,1570 1070,1670
+                        
+                        Q 1070,1770 970,1820
+                        Q 770,1850 570,1820
+                        Q 370,1790 170,1820
+                    " />
+                </svg>
+                
+                <!-- Lesson Bubbles A1 -->
+                <a href="courses/course-1.html" class="lesson-bubble" style="left: 100px; top: 0px;">
+                    <div class="lesson-number">1</div>
+                    <div class="lesson-title">Alfabê</div>
+                </a>
+                <a href="courses/course-2.html" class="lesson-bubble" style="left: 500px; top: 0px;">
+                    <div class="lesson-number">2</div>
+                    <div class="lesson-title">Silav</div>
+                </a>
+                <a href="courses/course-3.html" class="lesson-bubble" style="left: 900px; top: 0px;">
+                    <div class="lesson-number">3</div>
+                    <div class="lesson-title">Têkilî</div>
+                </a>
+                
+                <a href="courses/course-4.html" class="lesson-bubble" style="left: 900px; top: 250px;">
+                    <div class="lesson-number">4</div>
+                    <div class="lesson-title">Pere</div>
+                </a>
+                <a href="courses/course-5.html" class="lesson-bubble" style="left: 500px; top: 250px;">
+                    <div class="lesson-number">5</div>
+                    <div class="lesson-title">Silav</div>
+                </a>
+                <a href="courses/course-6.html" class="lesson-bubble" style="left: 100px; top: 250px;">
+                    <div class="lesson-number">6</div>
+                    <div class="lesson-title">Pola</div>
+                </a>
+                
+                <a href="courses/course-7.html" class="lesson-bubble" style="left: 100px; top: 500px;">
+                    <div class="lesson-number">7</div>
+                    <div class="lesson-title">Malbat</div>
+                </a>
+                <a href="courses/course-8.html" class="lesson-bubble" style="left: 500px; top: 500px;">
+                    <div class="lesson-number">8</div>
+                    <div class="lesson-title">Mal</div>
+                </a>
+                <a href="courses/course-9.html" class="lesson-bubble" style="left: 900px; top: 500px;">
+                    <div class="lesson-number">9</div>
+                    <div class="lesson-title">Cih</div>
+                </a>
+                
+                <a href="courses/course-10.html" class="lesson-bubble" style="left: 900px; top: 750px;">
+                    <div class="lesson-number">10</div>
+                    <div class="lesson-title">Dem</div>
+                </a>
+                <a href="courses/course-11.html" class="lesson-bubble" style="left: 500px; top: 750px;">
+                    <div class="lesson-number">11</div>
+                    <div class="lesson-title">Rojane</div>
+                </a>
+                <a href="courses/course-12.html" class="lesson-bubble" style="left: 100px; top: 750px;">
+                    <div class="lesson-number">12</div>
+                    <div class="lesson-title">Pêşkêşkirin</div>
+                </a>
+                <a href="courses/course-13.html" class="lesson-bubble" style="left: 100px; top: 1000px;">
+                    <div class="lesson-number">13</div>
+                    <div class="lesson-title">Xwarin</div>
+                </a>
+                <a href="courses/course-14.html" class="lesson-bubble" style="left: 500px; top: 1000px;">
+                    <div class="lesson-number">14</div>
+                    <div class="lesson-title">Kirîn</div>
+                </a>
+                <a href="courses/course-15.html" class="lesson-bubble" style="left: 900px; top: 1000px;">
+                    <div class="lesson-number">15</div>
+                    <div class="lesson-title">Veguhestin</div>
+                </a>
+                
+                <a href="courses/course-16.html" class="lesson-bubble" style="left: 900px; top: 1250px;">
+                    <div class="lesson-number">16</div>
+                    <div class="lesson-title">Bajar</div>
+                </a>
+                <a href="courses/course-17.html" class="lesson-bubble" style="left: 500px; top: 1250px;">
+                    <div class="lesson-number">17</div>
+                    <div class="lesson-title">Tendirustî</div>
+                </a>
+                <a href="courses/course-18.html" class="lesson-bubble" style="left: 100px; top: 1250px;">
+                    <div class="lesson-number">18</div>
+                    <div class="lesson-title">Serbilindî</div>
+                </a>
+                
+                <a href="courses/course-19.html" class="lesson-bubble" style="left: 100px; top: 1500px;">
+                    <div class="lesson-number">19</div>
+                    <div class="lesson-title">Rêwîtî</div>
+                </a>
+                <a href="courses/course-20.html" class="lesson-bubble" style="left: 500px; top: 1500px;">
+                    <div class="lesson-number">20</div>
+                    <div class="lesson-title">Hewa</div>
+                </a>
+                <a href="courses/course-21.html" class="lesson-bubble" style="left: 900px; top: 1500px;">
+                    <div class="lesson-number">21</div>
+                    <div class="lesson-title">Ragihandin</div>
+                </a>
+                
+                <a href="courses/course-22.html" class="lesson-bubble" style="left: 900px; top: 1750px;">
+                    <div class="lesson-number">22</div>
+                    <div class="lesson-title">Duh</div>
+                </a>
+                <a href="courses/course-23.html" class="lesson-bubble" style="left: 500px; top: 1750px;">
+                    <div class="lesson-number">23</div>
+                    <div class="lesson-title">Dubare</div>
+                </a>
+                <a href="courses/course-24.html" class="lesson-bubble" style="left: 100px; top: 1750px;">
+                    <div class="lesson-number">24</div>
+                    <div class="lesson-title">Testa A1</div>
+                </a>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px; padding: 30px; background: #fff9c4; border-radius: 10px;">
+                <h3 style="color: #f9a825; margin-bottom: 20px;">📚 Contenu du Niveau A1</h3>
+                <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+                    <strong>Vocabulaire:</strong> ~300 mots de base (alphabet, chiffres, couleurs, famille, corps, nourriture, maison, temps, animaux)<br>
+                    <strong>Grammaire:</strong> Pronoms personnels, genre, articles, pluriel, verbes être/avoir, présent simple, phrases affirmatives<br>
+                    <strong>Compétences:</strong> Se présenter, saluer, compter, décrire des objets simples, poser des questions basiques
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

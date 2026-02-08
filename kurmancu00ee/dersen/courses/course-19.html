@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 19 - Rêwîtî (Travel - Hotel) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #d84315; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-card { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 20px; border-radius: 12px; text-align: center; transition: transform 0.3s ease; border: 2px solid #ff9800; }
+        .vocab-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(255, 152, 0, 0.2); }
+        .vocab-word { font-size: 1.4rem; font-weight: bold; color: #e65100; margin-bottom: 8px; }
+        .vocab-translation { font-size: 1rem; color: #ef6c00; }
+        .structure-box { background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #4caf50; }
+        .structure-pattern { font-size: 1.2rem; color: #2e7d32; margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .example-dialogue { background: #fff3e0; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .dialogue-line { margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .speaker { font-weight: bold; color: #ff9800; margin-bottom: 8px; }
+        .kurdish-text { font-size: 1.2rem; color: #333; margin: 8px 0; }
+        .translation { font-size: 0.95rem; color: #666; font-style: italic; }
+        .exercise-box { background: #f3e5f5; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #ba68c8; }
+        .exercise-title { font-size: 1.5rem; color: #6a1b9a; margin-bottom: 15px; font-weight: bold; }
+        .exercise-box input[type="text"], .exercise-box textarea { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .exercise-box button { background: #d84315; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .exercise-box button:hover { background: #bf360c; transform: scale(1.05); }
+        .reservation-card { background: #fff3e0; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800; }
+        .hotel-box { background: #fff9c4; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #fbc02d; }
+        .scenario-box { background: #fff3e0; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #ff9800; }
+        .role-btn { transition: all 0.3s ease; }
+        .role-btn:hover { background: #f5f5f5 !important; transform: translateX(5px); }
+        .role-btn.correct { background: #c8e6c9 !important; border-color: #4caf50 !important; color: #2e7d32 !important; }
+        .role-btn.incorrect { background: #ffcdd2 !important; border-color: #f44336 !important; color: #c62828 !important; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>🏨 Course 19: Rêwîtî - Hotel</h1>
+            <div class="course-meta">Hotel Booking & Check-in | A1 Level</div>
+        </div>
+        <div class="course-content">
+            
+            <!-- Section 1: Vocabulary -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧩</span>1. Peyvên (Vocabulary): Hotel</h2>
+                
+                <h3 style="color: #d84315; margin: 20px 0;">🏨 Li Hotelê (At the Hotel)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Hotel</div><div class="vocab-translation">Hotel</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Oda</div><div class="vocab-translation">Room</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şev</div><div class="vocab-translation">Night</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Mêvan</div><div class="vocab-translation">Guest</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Rezervasyon</div><div class="vocab-translation">Reservation</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Qeydkirin</div><div class="vocab-translation">Check-in</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Derketin</div><div class="vocab-translation">Check-out</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pêşwazî</div><div class="vocab-translation">Reception</div></div>
+                </div>
+
+                <h3 style="color: #d84315; margin: 20px 0;">🛏️ Cureyên Odeyê (Room Types)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Odeya yekî</div><div class="vocab-translation">Single room</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Odeya ducarî</div><div class="vocab-translation">Double room</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Nivîn</div><div class="vocab-translation">Bed</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Hemam</div><div class="vocab-translation">Bathroom</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Balkon</div><div class="vocab-translation">Balcony</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dîmen</div><div class="vocab-translation">View</div></div>
+                    <div class="vocab-card"><div class="vocab-word">WiFi</div><div class="vocab-translation">WiFi</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Televîzyon</div><div class="vocab-translation">Television</div></div>
+                </div>
+
+                <h3 style="color: #d84315; margin: 20px 0;">📋 Belgeyên Girîng (Important Documents)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Pasaport</div><div class="vocab-translation">Passport</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Nasnameya nasnameyê</div><div class="vocab-translation">ID card</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pêşdanîn</div><div class="vocab-translation">Confirmation</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Jimare</div><div class="vocab-translation">Number</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Nav</div><div class="vocab-translation">Name</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Bihayê</div><div class="vocab-translation">Price</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Perdan</div><div class="vocab-translation">Payment</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Mifteya</div><div class="vocab-translation">Key</div></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Grammar - Reservation Phrases -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧠</span>2. Rêziman (Grammar): Rezervasyon û Qeydkirin</h2>
+                
+                <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ff9800;">
+                    <h4 style="color: #e65100; margin-bottom: 10px;">💡 Making and Confirming Reservations</h4>
+                    <p style="line-height: 1.8;">
+                        When checking into a hotel or making a reservation, you need to know key phrases to communicate effectively.
+                    </p>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Key Hotel Phrases</h3>
+                    <div class="structure-pattern">
+                        <strong>Making a Reservation:</strong><br>
+                        • <strong>Ez dixwazim odeyekê rezerve bikim</strong> = I want to reserve a room<br>
+                        • <strong>Odeyek heye?</strong> = Is there a room available?<br>
+                        • <strong>Ez dixwazim ji ... heta ... bimînim</strong> = I want to stay from ... to ...<br>
+                        • <strong>Bihayê çiqas e?</strong> = How much is the price?<br><br>
+                        
+                        <strong>Checking In:</strong><br>
+                        • <strong>Min rezervasyonek heye</strong> = I have a reservation<br>
+                        • <strong>Navê min ... e</strong> = My name is ...<br>
+                        • <strong>Ez li vir im</strong> = I'm here<br>
+                        • <strong>Ev pasaporta min e</strong> = This is my passport<br><br>
+                        
+                        <strong>Asking Questions:</strong><br>
+                        • <strong>WiFi heye?</strong> = Is there WiFi?<br>
+                        • <strong>Taştê heye?</strong> = Is breakfast included?<br>
+                        • <strong>Oda li kîjan qatê ye?</strong> = Which floor is the room on?<br>
+                        • <strong>Saet çend ez divê derkevim?</strong> = What time should I check out?
+                    </div>
+                </div>
+
+                <div class="hotel-box">
+                    <h3 style="color: #f57f17; margin-bottom: 15px;">📌 Talking About Duration</h3>
+                    <div style="font-size: 1.1rem; line-height: 2;">
+                        <strong>Yek şev</strong> = One night<br>
+                        <strong>Du şev</strong> = Two nights<br>
+                        <strong>Sê şev</strong> = Three nights<br>
+                        <strong>Hefteyek</strong> = One week<br>
+                        <strong>Ji ... heta ...</strong> = From ... to ...<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • Ez dê <strong>sê şev</strong> li vir bimînim. = I will stay here three nights.<br>
+                        • Min rezervasyonek ji <strong>15ê Sibatê heta 18ê Sibatê</strong> heye. = I have a reservation from February 15 to February 18.<br>
+                        • Ez dixwazim <strong>yek şev</strong> bimînim. = I want to stay one night.
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Room Preferences</h3>
+                    <div class="structure-pattern">
+                        <strong>Ez dixwazim odeyek bi ...</strong> = I want a room with ...<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • Ez dixwazim odeyek <strong>bi balkonê</strong>. = I want a room with a balcony.<br>
+                        • Ez dixwazim odeyek <strong>bi dîmena deryayê</strong>. = I want a room with a sea view.<br>
+                        • Ez dixwazim <strong>odeya ducarî</strong>. = I want a double room.<br>
+                        • Ez dixwazim odeyek <strong>bi hemamê</strong>. = I want a room with a bathroom.
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #ff9800; margin-bottom: 15px;">💬 Example Sentences:</h4>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        • Min rezervasyonek heye. Navê min Leyla ye.<br>
+                        • Ez dixwazim odeya ducarî ji sê şevan re.<br>
+                        • Odeyek bi WiFi û televîzyonê heye?<br>
+                        • Bihayê çiqas e ji yek şevê re?<br>
+                        • Ez dê saet 10:00ê sibê derkevim.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening - Hotel Reception -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎧</span>3. Guhdarîkirin (Listening): Li Pêşwaziya Hotelê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Listen to this check-in conversation at a hotel reception:
+                </p>
+
+                <div class="example-dialogue">
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍💼 Karker (Receptionist):</div>
+                        <div class="kurdish-text">Silav! Tu çawa yî? Çawa ez dikarim alîkariya te bikim?</div>
+                        <div class="translation">Hello! How are you? How can I help you?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Mêvan (Guest):</div>
+                        <div class="kurdish-text">Silav! Ez baş im, spas. Min rezervasyonek heye. Navê min Dîlan Hasan e.</div>
+                        <div class="translation">Hello! I'm fine, thanks. I have a reservation. My name is Dilan Hasan.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍💼 Karker:</div>
+                        <div class="kurdish-text">Baş e, hêvî dikim. Heke tu dikarî pasaporta xwe bidî min?</div>
+                        <div class="translation">Okay, let me check. Can you give me your passport?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Mêvan:</div>
+                        <div class="kurdish-text">Erê, bi xêr e. Ev e.</div>
+                        <div class="translation">Yes, of course. Here it is.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍💼 Karker:</div>
+                        <div class="kurdish-text">Spas. Erê, tu rezervasyoneke ji sê şevan re yî. Odeya ducarî bi balkonê. Rast e?</div>
+                        <div class="translation">Thanks. Yes, you have a reservation for three nights. Double room with balcony. Is that correct?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Mêvan:</div>
+                        <div class="kurdish-text">Erê, rast e. WiFi heye?</div>
+                        <div class="translation">Yes, that's correct. Is there WiFi?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍💼 Karker:</div>
+                        <div class="kurdish-text">Erê, WiFi belaş e. Taştê jî di bihayê de ye. Ji saet 7:00 heta 10:00 sibê.</div>
+                        <div class="translation">Yes, WiFi is free. Breakfast is also included in the price. From 7:00 to 10:00 in the morning.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Mêvan:</div>
+                        <div class="kurdish-text">Pir baş! Saet çend ez divê derkevim?</div>
+                        <div class="translation">Very good! What time should I check out?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍💼 Karker:</div>
+                        <div class="kurdish-text">Saet 12:00 nîvro. Ev mifteya te ye. Oda li qata sêyem e, jimare 305.</div>
+                        <div class="translation">12:00 noon. This is your key. The room is on the third floor, number 305.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Mêvan:</div>
+                        <div class="kurdish-text">Gelek spas!</div>
+                        <div class="translation">Thank you very much!</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Comprehension Questions</div>
+                    <p style="margin-bottom: 15px;">Answer these questions based on the dialogue:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. How many nights is Dilan's reservation for?</label>
+                        <input type="text" id="listen-q1" placeholder="Type in Kurdish...">
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What time is breakfast served until?</label>
+                        <input type="text" id="listen-q2" placeholder="Type the time...">
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What is the room number?</label>
+                        <input type="text" id="listen-q3" placeholder="Type the number...">
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading - Reservation Confirmation -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📖</span>4. Xwendin (Reading): Pêşdanîna Rezervasyonê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Read this hotel reservation confirmation:
+                </p>
+
+                <div style="background: white; border: 3px solid #ff9800; padding: 30px; margin: 20px 0; border-radius: 12px;">
+                    <h3 style="color: #e65100; text-align: center; margin-bottom: 20px;">📧 Pêşdanîna Rezervasyonê</h3>
+                    
+                    <div class="reservation-card">
+                        <strong style="color: #e65100; font-size: 1.3rem;">Hotel Kurdistan Palace</strong><br>
+                        <p style="margin: 10px 0;">Navenda Hewlêrê, Kurdistan</p>
+                    </div>
+                    
+                    <div class="reservation-card">
+                        <strong>Navê Mêvan:</strong> Rêzan Ahmed<br>
+                        <strong>E-mail:</strong> rezan.ahmed@email.com<br>
+                        <strong>Telefon:</strong> +964 750 123 4567
+                    </div>
+                    
+                    <div class="reservation-card">
+                        <strong>Jimareyê Rezervasyonê:</strong> KRD-2025-00789<br>
+                        <strong>Dîroka Qeydkirinê:</strong> 20 Sibat 2025<br>
+                        <strong>Dîroka Derketinê:</strong> 23 Sibat 2025<br>
+                        <strong>Hejmara Şevan:</strong> 3 şev
+                    </div>
+                    
+                    <div class="reservation-card">
+                        <strong>Cureyê Odeyê:</strong> Odeya Ducarî Deluxe<br>
+                        <strong>Taybetmendî:</strong><br>
+                        • Balkon bi dîmena bajêr<br>
+                        • WiFi belaş<br>
+                        • Televîzyon<br>
+                        • Hemama taybet<br>
+                        • Klîma
+                    </div>
+                    
+                    <div class="reservation-card">
+                        <strong>Bihayê:</strong><br>
+                        • Odeya şevê: 80 USD<br>
+                        • Hejmara şevan: 3<br>
+                        • Bihayê giştî: 240 USD<br>
+                        <strong>Taştê:</strong> Di bihayê de ye (7:00-10:00)
+                    </div>
+                    
+                    <div class="reservation-card">
+                        <strong>Perdan:</strong> Li qeydkirinê<br>
+                        <strong>Saeta Derketinê:</strong> 12:00 nîvro<br>
+                        <strong>Betal kirin:</strong> Belaş heta 24 saet berî qeydkirin
+                    </div>
+
+                    <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                        <strong style="color: #2e7d32;">Em li benda te ne!</strong><br>
+                        Heke tu pirsek hebe, ji kerema xwe bi me re têkilî daynin.
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Reading Comprehension</div>
+                    <p style="margin-bottom: 15px;">Answer these questions about the reservation:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What is the reservation number?</label>
+                        <input type="text" id="read-q1" placeholder="Type the number...">
+                        <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What is the total price?</label>
+                        <input type="text" id="read-q2" placeholder="Type the price...">
+                        <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What time is check-out?</label>
+                        <input type="text" id="read-q3" placeholder="Type the time...">
+                        <div id="read-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReading()">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing - Booking Message -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>5. Nivîsandin (Writing): Peyama Rezervasyonê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Write a hotel reservation message:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise: Hotel Reservation Email</div>
+                    <p style="margin-bottom: 15px; color: #666;">
+                        Write a reservation request email (5-6 sentences). Include:<br>
+                        • Your name<br>
+                        • Dates you want to stay (from ... to ...)<br>
+                        • Type of room you want<br>
+                        • Any special requests (WiFi, breakfast, view, etc.)<br>
+                        • Ask about the price
+                    </p>
+
+                    <div style="background: #fff3e0; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <strong>Example:</strong><br>
+                        Silav, navê min Leyla ye. Ez dixwazim odeyekê ji 15ê Adarê heta 18ê Adarê rezerve bikim. Ez dixwazim odeya ducarî bi balkonê. WiFi û taştê heye? Bihayê çiqas e? Spas dikim.
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">Your Reservation Message (5-6 sentences):</label>
+                        <textarea id="write-reservation" rows="6" placeholder="Silav, navê min..."></textarea>
+                        <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkWriting()">✓ Submit Message</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking - Check-in Roleplay -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>6. Axaftin (Speaking): Qeydkirina Roleplay</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice checking in at a hotel in different situations:
+                </p>
+
+                <div class="scenario-box">
+                    <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 1: Saying You Have a Reservation</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You arrive at the hotel reception.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkCheckin(1, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Min rezervasyonek heye.
+                        </button>
+                        <button class="role-btn" onclick="checkCheckin(1, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez hotel im.
+                        </button>
+                        <button class="role-btn" onclick="checkCheckin(1, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Ez dixwazim biçim.
+                        </button>
+                    </div>
+                    <div id="checkin-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 2: Giving Your Name</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> The receptionist asks for your name.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkCheckin(2, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Navê min Dilan e.
+                        </button>
+                        <button class="role-btn" onclick="checkCheckin(2, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez nav im.
+                        </button>
+                        <button class="role-btn" onclick="checkCheckin(2, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Min nav heye.
+                        </button>
+                    </div>
+                    <div id="checkin-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 3: Asking About WiFi</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to know if there's WiFi.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you ask?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkCheckin(3, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) WiFi heye?
+                        </button>
+                        <button class="role-btn" onclick="checkCheckin(3, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez WiFi im.
+                        </button>
+                        <button class="role-btn" onclick="checkCheckin(3, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) WiFi çawa ye?
+                        </button>
+                    </div>
+                    <div id="checkin-feedback-3" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 4: Asking About Check-out Time</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to know what time to check out.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you ask?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkCheckin(4, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Saet çend ez divê derkevim?
+                        </button>
+                        <button class="role-btn" onclick="checkCheckin(4, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez saet çend im?
+                        </button>
+                        <button class="role-btn" onclick="checkCheckin(4, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Derketin çi ye?
+                        </button>
+                    </div>
+                    <div id="checkin-feedback-4" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: #e8f5e9; border-radius: 10px;">
+                    <h4 style="color: #2e7d32;">🎯 Your Score: <span id="checkin-correct">0</span> / 4</h4>
+                </div>
+            </div>
+
+            <!-- Section 7: Culture -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>7. Çand (Culture): Kurdish Hospitality & Hotels</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Discover Kurdish hospitality traditions and modern tourism:</p>
+                
+                <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #ff9800;">
+                    <h3 style="color: #e65100; text-align: center; margin-bottom: 25px;">🏠 Mêvandarî (Hospitality)</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">🤝 Traditional Hospitality</h4>
+                        <p style="line-height: 1.8;">
+                            Hospitality (<strong>mêvandarî</strong>) is a cornerstone of Kurdish culture. The saying <strong>"Mêvan xwedayê malê ye"</strong> (The guest is the lord of the house) reflects how seriously Kurds take hosting. Traditionally, travelers were welcomed into homes, fed, and given a place to sleep without any expectation of payment. Even strangers passing through villages would be invited in for tea and food. This tradition continues today, though modern hotels have become common in cities.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">🏨 Modern Hotels in Kurdistan</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdistan has seen significant development in tourism infrastructure. Major cities like <strong>Hewlêr (Erbil)</strong>, <strong>Silêmanî (Sulaymaniyah)</strong>, and <strong>Duhok</strong> now have international hotels alongside traditional guesthouses. The <strong>Erbil Citadel</strong>, one of the oldest continuously inhabited settlements, attracts many visitors. Hotels range from luxury five-star establishments to budget-friendly options, but Kurdish hospitality remains a constant - staff often go above and beyond to make guests feel welcome.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">🏔️ Tourism Destinations</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdistan offers diverse tourism experiences. Mountain resorts in areas like <strong>Amadiya</strong> and <strong>Rawanduz</strong> attract visitors seeking nature and cooler climates. The <strong>Gali Ali Beg</strong> waterfall and <strong>Bekhal</strong> waterfall are popular destinations. Historical sites include ancient churches, mosques, and archaeological sites. Eco-tourism and adventure tourism (hiking, skiing, rock climbing) are growing sectors. Hotels and guesthouses in these areas often feature traditional Kurdish architecture and cuisine.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">🍽️ Hotel Breakfast Kurdish Style</h4>
+                        <p style="line-height: 1.8;">
+                            Hotel breakfasts in Kurdistan typically include both international and traditional Kurdish items. You'll find <strong>nan</strong> (fresh bread), <strong>penîr</strong> (white cheese), <strong>hingiv</strong> (honey), <strong>rûn</strong> (butter), <strong>hêk</strong> (eggs prepared various ways), <strong>zeytûn</strong> (olives), and fresh vegetables. Kurdish breakfast also features <strong>qeymaq</strong> (clotted cream) with honey, and plenty of hot <strong>çay</strong> (tea). This generous breakfast reflects the Kurdish value of starting the day well-fed and energized.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">👨‍👩‍👧‍👦 Family-Run Guesthouses</h4>
+                        <p style="line-height: 1.8;">
+                            Beyond hotels, many travelers choose family-run guesthouses (<strong>mêvanxane</strong>) for a more authentic experience. These smaller establishments offer home-cooked meals, personal attention, and insights into local life. Owners often share stories, recommend hidden gems, and may even invite guests to family gatherings. This intimate hospitality experience allows visitors to truly connect with Kurdish culture and traditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Review Exercises -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🔄</span>8. Dubare (Review): Hotel & Travel</h2>
+                
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Matching Exercise</div>
+                    <p style="margin-bottom: 20px;">Match the Kurdish words with their English translations. Click on a Kurdish word, then click on its English translation:</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+                        <!-- Kurdish words column -->
+                        <div>
+                            <h4 style="color: #e65100; margin-bottom: 15px; text-align: center;">Kurdish</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <button class="match-btn kurdish" data-word="rezervasyon" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: all 0.3s ease; color: #e65100;">
+                                    Rezervasyon
+                                </button>
+                                <button class="match-btn kurdish" data-word="oda" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: all 0.3s ease; color: #e65100;">
+                                    Oda
+                                </button>
+                                <button class="match-btn kurdish" data-word="sev" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: all 0.3s ease; color: #e65100;">
+                                    Şev
+                                </button>
+                                <button class="match-btn kurdish" data-word="pasaport" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: all 0.3s ease; color: #e65100;">
+                                    Pasaport
+                                </button>
+                                <button class="match-btn kurdish" data-word="mifteya" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: all 0.3s ease; color: #e65100;">
+                                    Mifteya
+                                </button>
+                                <button class="match-btn kurdish" data-word="mewan" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: all 0.3s ease; color: #e65100;">
+                                    Mêvan
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- English translations column -->
+                        <div>
+                            <h4 style="color: #e65100; margin-bottom: 15px; text-align: center;">English</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <button class="match-btn english" data-word="reservation" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; color: #333;">
+                                    Reservation
+                                </button>
+                                <button class="match-btn english" data-word="room" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; color: #333;">
+                                    Room
+                                </button>
+                                <button class="match-btn english" data-word="night" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; color: #333;">
+                                    Night
+                                </button>
+                                <button class="match-btn english" data-word="passport" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; color: #333;">
+                                    Passport
+                                </button>
+                                <button class="match-btn english" data-word="key" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; color: #333;">
+                                    Key
+                                </button>
+                                <button class="match-btn english" data-word="guest" onclick="selectWord(this)" style="padding: 15px; border: 3px solid #ff9800; border-radius: 8px; background: white; cursor: pointer; font-size: 1.1rem; transition: all 0.3s ease; color: #333;">
+                                    Guest
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin: 20px 0;">
+                        <button onclick="checkMatching()" style="background: #d84315; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer;">✓ Check Matches</button>
+                        <button onclick="resetMatching()" style="background: #757575; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; margin-left: 10px;">↻ Reset</button>
+                    </div>
+                    <div id="match-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold; text-align: center;"></div>
+                </div>
+            </div>
+
+            <!-- Completion Section -->
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);">
+                <h2 style="color: #1b5e20; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    You've completed Course 19: Travel - Hotel!<br>
+                    You can now book hotels, check in, and communicate at hotel receptions in Kurdish!
+                </p>
+                <a href="../level-a1.html" class="back-link" style="background: #1b5e20;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Listening comprehension validation
+        function checkListening() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('listen-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if (q1.includes('sê') || q1.includes('3')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Sê şev';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Sê şev</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('listen-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if (q2.includes('10') || q2.includes('10:00')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Saet 10:00';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Saet 10:00</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('listen-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3.includes('305')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! 305';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>305</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Reading comprehension validation
+        function checkReading() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('read-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1.includes('krd-2025-00789') || q1.includes('00789')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! KRD-2025-00789';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>KRD-2025-00789</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('read-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2.includes('240')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! 240 USD';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>240 USD</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('read-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('read-q3-feedback');
+            if (q3.includes('12') || q3.includes('12:00')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! 12:00 nîvro';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>12:00 nîvro</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Writing validation
+        function checkWriting() {
+            const reservation = document.getElementById('write-reservation').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            
+            if (reservation.length < 40) {
+                feedback.innerHTML = '❌ Please write at least 5-6 sentences.';
+                feedback.style.color = '#d32f2f';
+                return;
+            }
+
+            const hasName = /navê min|nav/i.test(reservation);
+            const hasDates = /ji|heta|sibat|adar|nîsan/i.test(reservation);
+            const hasRoom = /oda|odeya|rezerve|dixwazim/i.test(reservation);
+            
+            if (hasName && hasDates && hasRoom) {
+                feedback.innerHTML = '✅ Excellent reservation message! You included name, dates, and room preferences!';
+                feedback.style.color = '#2e7d32';
+            } else if ((hasName && hasDates) || (hasName && hasRoom)) {
+                feedback.innerHTML = '👍 Good effort! Try to include your name, dates, and room type.';
+                feedback.style.color = '#f57f17';
+            } else {
+                feedback.innerHTML = '💪 Keep practicing! Include your name, stay dates, and room preferences.';
+                feedback.style.color = '#f57f17';
+            }
+        }
+
+        // Check-in validation
+        let checkinCorrect = 0;
+        let checkinAnswered = [false, false, false, false];
+
+        function checkCheckin(scenario, answer) {
+            if (checkinAnswered[scenario - 1]) return;
+            
+            const feedback = document.getElementById(`checkin-feedback-${scenario}`);
+            const correctAnswers = {1: 'a', 2: 'a', 3: 'a', 4: 'a'};
+            
+            checkinAnswered[scenario - 1] = true;
+            
+            // Get all buttons in this scenario
+            const buttons = event.target.parentElement.querySelectorAll('.role-btn');
+            
+            if (answer === correctAnswers[scenario]) {
+                checkinCorrect++;
+                // Mark clicked button as correct
+                event.target.classList.add('correct');
+                if (scenario === 1) {
+                    feedback.innerHTML = '✅ Perfect! "Min rezervasyonek heye" = I have a reservation';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '✅ Excellent! "Navê min ... e" = My name is ...';
+                } else if (scenario === 3) {
+                    feedback.innerHTML = '✅ Great! "WiFi heye?" = Is there WiFi?';
+                } else {
+                    feedback.innerHTML = '✅ Perfect! "Saet çend ez divê derkevim?" = What time should I check out?';
+                }
+                feedback.style.color = '#2e7d32';
+            } else {
+                // Mark clicked button as incorrect
+                event.target.classList.add('incorrect');
+                // Show correct answer in green
+                buttons.forEach((btn, index) => {
+                    const btnAnswer = String.fromCharCode(97 + index); // 'a', 'b', 'c'
+                    if (btnAnswer === correctAnswers[scenario]) {
+                        btn.classList.add('correct');
+                    }
+                });
+                if (scenario === 1) {
+                    feedback.innerHTML = '❌ Not quite. Say "Min rezervasyonek heye" to say you have a reservation.';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '❌ Not quite. Say "Navê min ... e" to give your name.';
+                } else if (scenario === 3) {
+                    feedback.innerHTML = '❌ Not quite. Ask "WiFi heye?" to ask if there\'s WiFi.';
+                } else {
+                    feedback.innerHTML = '❌ Not quite. Ask "Saet çend ez divê derkevim?" for check-out time.';
+                }
+                feedback.style.color = '#d32f2f';
+            }
+            
+            // Disable all buttons in this scenario
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            
+            document.getElementById('checkin-correct').textContent = checkinCorrect;
+        }
+
+        // Matching exercise
+        let selectedKurdish = null;
+        let selectedEnglish = null;
+        let matches = [];
+        
+        const correctMatches = {
+            'rezervasyon': 'reservation',
+            'oda': 'room',
+            'sev': 'night',
+            'pasaport': 'passport',
+            'mifteya': 'key',
+            'mewan': 'guest'
+        };
+
+        function selectWord(button) {
+            const isKurdish = button.classList.contains('kurdish');
+            const word = button.getAttribute('data-word');
+            
+            // Check if already matched
+            const alreadyMatched = matches.some(m => m.kurdish === word || m.english === word);
+            if (alreadyMatched) return;
+            
+            if (isKurdish) {
+                // Deselect previous Kurdish selection
+                if (selectedKurdish) {
+                    selectedKurdish.style.background = 'white';
+                    selectedKurdish.style.borderColor = '#ff9800';
+                }
+                selectedKurdish = button;
+                button.style.background = '#fff3e0';
+                button.style.borderColor = '#e65100';
+            } else {
+                // Deselect previous English selection
+                if (selectedEnglish) {
+                    selectedEnglish.style.background = 'white';
+                    selectedEnglish.style.borderColor = '#ff9800';
+                }
+                selectedEnglish = button;
+                button.style.background = '#fff3e0';
+                button.style.borderColor = '#e65100';
+            }
+            
+            // If both are selected, create a match
+            if (selectedKurdish && selectedEnglish) {
+                const kurdishWord = selectedKurdish.getAttribute('data-word');
+                const englishWord = selectedEnglish.getAttribute('data-word');
+                
+                matches.push({
+                    kurdish: kurdishWord,
+                    english: englishWord
+                });
+                
+                // Mark as matched with gray background
+                selectedKurdish.style.background = '#e0e0e0';
+                selectedKurdish.style.borderColor = '#9e9e9e';
+                selectedKurdish.style.pointerEvents = 'none';
+                
+                selectedEnglish.style.background = '#e0e0e0';
+                selectedEnglish.style.borderColor = '#9e9e9e';
+                selectedEnglish.style.pointerEvents = 'none';
+                
+                // Reset selections
+                selectedKurdish = null;
+                selectedEnglish = null;
+            }
+        }
+
+        function checkMatching() {
+            if (matches.length !== 6) {
+                document.getElementById('match-score').innerHTML = '⚠️ Please match all words before checking!';
+                document.getElementById('match-score').style.color = '#f57f17';
+                return;
+            }
+            
+            let correct = 0;
+            const allButtons = document.querySelectorAll('.match-btn');
+            
+            matches.forEach(match => {
+                const isCorrect = correctMatches[match.kurdish] === match.english;
+                
+                // Find the buttons
+                const kurdishBtn = document.querySelector(`.kurdish[data-word="${match.kurdish}"]`);
+                const englishBtn = document.querySelector(`.english[data-word="${match.english}"]`);
+                
+                if (isCorrect) {
+                    correct++;
+                    kurdishBtn.style.background = '#c8e6c9';
+                    kurdishBtn.style.borderColor = '#4caf50';
+                    englishBtn.style.background = '#c8e6c9';
+                    englishBtn.style.borderColor = '#4caf50';
+                } else {
+                    kurdishBtn.style.background = '#ffcdd2';
+                    kurdishBtn.style.borderColor = '#f44336';
+                    englishBtn.style.background = '#ffcdd2';
+                    englishBtn.style.borderColor = '#f44336';
+                }
+            });
+            
+            const scoreDiv = document.getElementById('match-score');
+            scoreDiv.textContent = `Score: ${correct} / 6`;
+            scoreDiv.style.color = correct === 6 ? '#2e7d32' : '#f57f17';
+            
+            if (correct === 6) {
+                scoreDiv.textContent += ' 🎉 Perfect!';
+            }
+        }
+
+        function resetMatching() {
+            matches = [];
+            selectedKurdish = null;
+            selectedEnglish = null;
+            
+            const allButtons = document.querySelectorAll('.match-btn');
+            allButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.style.borderColor = '#ff9800';
+                btn.style.pointerEvents = 'auto';
+            });
+            
+            document.getElementById('match-score').textContent = '';
+        }
+    </script>
+</body>
+</html>

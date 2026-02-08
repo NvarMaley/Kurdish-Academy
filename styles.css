@@ -1,0 +1,289 @@
+/* ========== RÉINITIALISATION DES STYLES ========== */
+/* Réinitialise tous les éléments HTML pour éliminer les marges et rembourrages par défaut */
+* {
+    margin: 0;      /* Supprime toutes les marges extérieures */
+    padding: 0;     /* Supprime tous les rembourrages intérieurs */
+    box-sizing: border-box;  /* Inclut les bordures et rembourrages dans la largeur/hauteur totale */
+}
+
+/* ========== STYLE GÉNÉRAL DU CORPS ========== */
+body {
+    font-family: Arial, sans-serif;  /* Police principale du site */
+    background-color: #f5f0e1;        /* Couleur de fond beige clair demandée */
+    line-height: 1.6;                /* Espacement des lignes pour une meilleure lisibilité */
+}
+
+/* ========== STYLE DE L'ENTÊTE ========== */
+/* Configuration de la bande verte en haut du site */
+header {
+    background-color: #2e7d32;       /* Couleur verte foncée demandée */
+    color: white;                    /* Texte en blanc pour contraster avec le fond vert */
+    padding: 20px;                   /* Espace intérieur autour du contenu de l'entête */
+    display: flex;                   /* Utilise le modèle de disposition Flexbox */
+    justify-content: space-between;  /* Répartit les éléments sur toute la largeur */
+    align-items: center;             /* Centre verticalement les éléments */
+}
+
+/* Style du conteneur de titre */
+.title {
+    text-align: center;  /* Centre horizontalement le texte du titre */
+    flex-grow: 1;        /* Permet au titre de prendre tout l'espace disponible entre les logos */
+}
+
+/* Style du titre principal "Kurdish Academy" */
+.title h1 {
+    font-size: 3.5rem;    /* Taille de police agrandie comme demandé (1rem = 16px, donc 3.5rem = 56px) */
+    font-weight: bold;    /* Texte en gras pour plus d'impact visuel */
+}
+
+/* ========== STYLE DES CONTENEURS DE LOGO ========== */
+/* Configuration des zones réservées aux logos à gauche et à droite */
+.logo-left, .logo-right {
+    width: 100px;                /* Largeur fixe pour les conteneurs de logo */
+    height: 100px;               /* Hauteur fixe pour les conteneurs de logo */
+    display: flex;               /* Utilise Flexbox pour centrer le contenu */
+    align-items: center;         /* Centre verticalement le logo */
+    justify-content: center;     /* Centre horizontalement le logo */
+}
+
+/* Style des images de logo */
+.logo {
+    max-width: 100px;       /* Limite la largeur maximale du logo */
+    max-height: 100px;      /* Limite la hauteur maximale du logo */
+    object-fit: contain;    /* Assure que l'image s'adapte sans déformation */
+}
+
+/* ========== STYLE DE SECOURS POUR LES LOGOS ========== */
+/* Affiche un cadre en pointillés si l'image du logo ne peut pas être chargée */
+.logo[src=""], .logo:not([src]) {
+    width: 80px;                 /* Légèrement plus petit que le conteneur */
+    height: 80px;                /* Légèrement plus petit que le conteneur */
+    border: 2px dashed white;    /* Bordure en pointillés blancs */
+    display: flex;               /* Utilise Flexbox pour centrer le texte */
+    align-items: center;         /* Centre verticalement le texte */
+    justify-content: center;     /* Centre horizontalement le texte */
+    color: white;                /* Texte en blanc pour contraster avec le fond vert */
+    font-weight: bold;           /* Texte en gras pour plus de visibilité */
+    content: 'Logo';             /* Affiche le mot "Logo" comme contenu de secours */
+}
+
+/* ========== STYLE DE LA BARRE DE NAVIGATION ========== */
+/* Configuration de la barre de navigation principale */
+.main-nav {
+    background-color: #fff9c4;       /* Fond jaune clair pour la barre de navigation */
+    border-bottom: 1px solid #fff176; /* Bordure légère en bas en jaune plus foncé */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Ombre légère pour effet de profondeur */
+    display: flex;                   /* Disposition horizontale des éléments */
+    justify-content: center;         /* Centre les éléments horizontalement */
+    padding: 0;                      /* Supprime le rembourrage par défaut */
+    margin: 0;                       /* Supprime les marges par défaut */
+}
+
+/* Style de la liste de navigation */
+.main-nav ul {
+    display: flex;                   /* Disposition horizontale des éléments */
+    justify-content: center;         /* Centre les éléments horizontalement */
+    list-style: none;                /* Supprime les puces de liste */
+    padding: 0;                      /* Supprime le rembourrage par défaut */
+    margin: 0;                       /* Supprime les marges par défaut */
+}
+
+/* Style des éléments de la liste */
+.main-nav li {
+    margin: 0;                       /* Supprime les marges par défaut */
+    padding: 0;                      /* Supprime le rembourrage par défaut */
+}
+
+/* Style des liens de navigation */
+.main-nav a {
+    display: inline-block;           /* Transforme le lien en bloc inline pour qu'il soit plus petit */
+    padding: 8px 15px;               /* Espace intérieur réduit pour un bouton plus petit */
+    margin: 7px 10px;                /* Marge autour du bouton pour l'espacement */
+    color: #333;                     /* Couleur de texte foncée pour la lisibilité */
+    text-decoration: none;           /* Supprime le soulignement des liens */
+    font-weight: bold;               /* Texte en gras pour plus de visibilité */
+    transition: all 0.3s ease;       /* Animation douce lors du survol */
+    border-radius: 4px;              /* Coins légèrement arrondis pour un effet bouton */
+}
+
+/* Style des liens au survol et liens actifs */
+.main-nav a:hover, .main-nav a.active {
+    background-color: #2e7d32;       /* Même vert que l'entête au survol */
+    color: white;                    /* Texte en blanc au survol */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Légère ombre pour effet de profondeur */
+}
+
+/* ========== STYLE DE LA SOUS-BARRE DE NAVIGATION ========== */
+/* Configuration de la barre de navigation secondaire pour les sous-sections de Home */
+.sub-nav {
+    background-color: #ffffff;       /* Fond blanc pour la sous-navigation */
+    border-bottom: 1px solid #e0e0e0; /* Bordure légère en gris très clair */
+}
+
+/* Style de la liste de sous-navigation */
+.sub-nav ul {
+    display: flex;                   /* Disposition horizontale des éléments */
+    justify-content: center;         /* Centre les éléments horizontalement */
+    list-style: none;                /* Supprime les puces de liste */
+    padding: 0;                      /* Supprime le rembourrage par défaut */
+    margin: 0;                       /* Supprime les marges par défaut */
+}
+
+/* Style des éléments de la liste de sous-navigation */
+.sub-nav li {
+    margin: 0;                       /* Supprime les marges par défaut */
+    padding: 0;                      /* Supprime le rembourrage par défaut */
+}
+
+/* Style des liens de sous-navigation */
+.sub-nav a {
+    display: inline-block;           /* Transforme le lien en bloc inline pour qu'il soit plus petit */
+    padding: 6px 12px;               /* Espace intérieur réduit pour un bouton plus petit */
+    margin: 5px 8px;                 /* Marge autour du bouton pour l'espacement */
+    color: #333;                     /* Couleur noire pour le texte des sections */
+    text-decoration: none;           /* Supprime le soulignement des liens */
+    font-weight: normal;             /* Texte normal pour différencier de la nav principale */
+    transition: all 0.3s ease;       /* Animation douce lors du survol */
+    border-radius: 3px;              /* Coins légèrement arrondis pour un effet bouton */
+}
+
+/* Style des liens de sous-navigation au survol et liens actifs */
+.sub-nav a:hover, .sub-nav a.active {
+    background-color: #2e7d32;        /* Vert foncé au survol (même que l'entête) */
+    color: white;                    /* Texte en blanc au survol */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15); /* Légère ombre pour effet de profondeur */
+}
+
+/* ========== STYLE DU CONTENU PRINCIPAL ========== */
+/* Configuration de la zone principale de contenu */
+main {
+    max-width: 1200px;                    /* Limite la largeur maximale du contenu */
+    margin: 20px auto;                    /* Centre le contenu avec marges de 20px en haut/bas */
+    padding: 20px;                        /* Espace intérieur autour du contenu */
+    background-color: transparent;        /* Fond transparent pour permettre les rectangles blancs */
+}
+
+/* Style des sections de contenu */
+section {
+    margin-bottom: 30px;  /* Espace entre les différentes sections */
+}
+
+/* ========== STYLES SPÉCIFIQUES POUR LA PAGE ACADEMY ========== */
+/* Titre principal de la page aligné à gauche */
+.main-title-left {
+    color: #2e7d32;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* Style pour les titres des rectangles */
+.rectangle-title {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Styles pour les rectangles blancs */
+.white-rectangle {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.white-rectangle p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.white-rectangle ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.white-rectangle ul li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Style pour la grande citation en haut de la page */
+.big-quote {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.big-quote p:first-child {
+    font-size: 1.8rem;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.quote-author {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0;
+}
+
+/* Style pour les autres citations */
+.quote {
+    font-style: italic;
+    text-align: center;
+    color: #2e7d32;
+    font-size: 1.2rem;
+    margin: 25px 0;
+}
+
+/* Style pour le séparateur */
+.separator {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #666;
+    margin: 10px 0 25px 0;
+}
+
+/* Style pour le texte en gras à la fin */
+.white-rectangle strong {
+    color: #2e7d32;
+}
+
+/* Style des titres de section */
+h2 {
+    color: #2e7d32;        /* Même couleur verte que l'entête pour cohérence */
+    margin-bottom: 15px;   /* Espace sous le titre avant le contenu */
+}
+
+/* Style pour les messages "En construction" */
+.construction-message {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.construction-message h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.construction-message p {
+    margin-bottom: 15px;
+}
+
+/* ========== STYLE DU PIED DE PAGE ========== */
+/* Configuration de la bande foncée en bas du site */
+footer {
+    text-align: center;       /* Centre le texte du pied de page */
+    padding: 20px;            /* Espace intérieur autour du contenu */
+    background-color: #333;    /* Fond gris foncé pour contraster avec le reste */
+    color: white;             /* Texte en blanc pour lisibilité sur fond foncé */
+    margin-top: 20px;         /* Espace au-dessus du pied de page */
+}

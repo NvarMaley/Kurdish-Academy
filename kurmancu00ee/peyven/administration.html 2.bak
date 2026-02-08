@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Administration</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .administration-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .administration-title {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background-color: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #1b5e20;
+        }
+        
+        .translations-table {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .table-header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .translation-row {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.2s ease;
+        }
+        
+        .translation-row:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .translation-row:last-child {
+            border-bottom: none;
+        }
+        
+        .english-cell {
+            flex: 1;
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+            border-right: 1px solid #e0e0e0;
+        }
+        
+        .kurdish-cell {
+            flex: 1;
+            padding: 20px;
+            font-size: 1.1rem;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        
+        .search-container {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .search-input {
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            width: 300px;
+            max-width: 100%;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        .search-input:focus {
+            border-color: #2e7d32;
+        }
+        
+        /* Styles pour les modes */
+        .mode-selector {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .mode-btn {
+            padding: 12px 24px;
+            margin: 0 10px;
+            border: 2px solid #2e7d32;
+            background-color: white;
+            color: #2e7d32;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .mode-btn.active {
+            background-color: #2e7d32;
+            color: white;
+        }
+        
+        .mode-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Styles pour les flashcards */
+        .flashcards-container {
+            text-align: center;
+        }
+        
+        .flashcard-progress {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        
+        .flashcard {
+            width: 400px;
+            height: 250px;
+            margin: 0 auto 30px auto;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .flashcard-front {
+            background: linear-gradient(135deg, #2e7d32, #4caf50);
+            color: white;
+        }
+        
+        .flashcard-back {
+            background: linear-gradient(135deg, #1976d2, #2196f3);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .card-content {
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .card-text {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            word-wrap: break-word;
+        }
+        
+        .card-hint {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .control-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #666;
+            color: white;
+        }
+        
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .control-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .next-btn {
+            background-color: #2e7d32;
+        }
+        
+        .completion-message {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        
+        .completion-message h3 {
+            color: #2e7d32;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .completion-message p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #666;
+        }
+        
+        .restart-btn {
+            padding: 15px 30px;
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .restart-btn:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Styles pour le Quiz */
+        .quiz-container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .quiz-progress {
+            margin-bottom: 30px;
+        }
+        
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #2e7d32;
+            transition: width 0.3s ease;
+            width: 5%;
+        }
+        
+        .quiz-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .quiz-question h3 {
+            color: #2e7d32;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        
+        .english-word {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #2e7d32;
+        }
+        
+        .quiz-input-section {
+            margin-bottom: 20px;
+        }
+        
+        .quiz-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-input:focus {
+            border-color: #2e7d32;
+        }
+        
+        .submit-btn {
+            padding: 12px 30px;
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .quiz-feedback {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .quiz-feedback.correct {
+            background-color: #e8f5e8;
+            border: 2px solid #4caf50;
+        }
+        
+        .quiz-feedback.incorrect {
+            background-color: #ffeaea;
+            border: 2px solid #f44336;
+        }
+        
+        .feedback-content {
+            margin-bottom: 20px;
+        }
+        
+        .feedback-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .feedback-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .feedback-text.correct {
+            color: #4caf50;
+        }
+        
+        .feedback-text.incorrect {
+            color: #f44336;
+        }
+        
+        .correct-answer {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .correct-answer strong {
+            color: #2e7d32;
+            font-size: 1.2rem;
+        }
+        
+        .next-question-btn {
+            padding: 12px 25px;
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .next-question-btn:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+        }
+        
+        .quiz-completion {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .quiz-completion h3 {
+            color: #2e7d32;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-score {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .score-message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <!-- Logo à gauche -->
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <!-- Logo à droite -->
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="peyven.html" class="active">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal du site -->
+    <main>
+        <div class="administration-container">
+            <a href="peyven.html" class="back-button">← Back to Vocabulary</a>
+            
+            <h1 class="administration-title">Administration</h1>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search translations..." id="searchInput">
+            </div>
+            
+            <!-- Mode sélecteur -->
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="showMode('table')">📋 Table View</button>
+                <button class="mode-btn" onclick="showMode('flashcards')">🎴 Flashcards</button>
+                <button class="mode-btn" onclick="showMode('quiz')">✏️ Quiz</button>
+            </div>
+
+            <!-- Vue tableau -->
+            <div class="translations-table" id="tableMode">
+                <div class="table-header">
+                    English → Kurmancî
+                </div>
+                <div id="translationsContainer">
+                    <!-- Les traductions seront chargées ici par JavaScript -->
+                </div>
+            </div>
+
+            <!-- Vue cartes recto-verso -->
+            <div class="flashcards-container" id="flashcardsMode" style="display: none;">
+                <div class="flashcard-progress">
+                    <span id="cardCounter">1 / 66</span>
+                </div>
+                
+                <div class="flashcard" id="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <div class="card-content">
+                                <div class="card-text" id="frontText">Hello</div>
+                                <div class="card-hint">Click to reveal translation</div>
+                            </div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="card-content">
+                                <div class="card-text" id="backText">Slav</div>
+                                <div class="card-hint">Click to flip back</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flashcard-controls">
+                    <button class="control-btn" onclick="previousCard()" id="prevBtn">← Previous</button>
+                    <button class="control-btn next-btn" onclick="nextCard()" id="nextBtn">Next →</button>
+                </div>
+                
+                <div class="completion-message" id="completionMessage" style="display: none;">
+                    <h3>🎉 Congratulations!</h3>
+                    <p>You've completed all flashcards!</p>
+                    <button class="restart-btn" onclick="restartFlashcards()">🔄 Restart (Random Order)</button>
+                </div>
+            </div>
+
+            <!-- Vue Quiz -->
+            <div class="quiz-container" id="quizMode" style="display: none;">
+                <div class="quiz-progress">
+                    <div class="progress-info">
+                        <span id="quizCounter">1 / 20</span>
+                        <span id="quizScore">Score: 0/0</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                
+                <div class="quiz-card">
+                    <div class="quiz-question">
+                        <h3>Translate to Kurmancî:</h3>
+                        <div class="english-word" id="quizEnglishWord">Hello</div>
+                    </div>
+                    
+                    <div class="quiz-input-section">
+                        <input type="text" class="quiz-input" id="quizInput" placeholder="Type your answer in Kurmancî..." autocomplete="off">
+                        <button class="submit-btn" onclick="checkAnswer()" id="submitBtn">Check Answer</button>
+                    </div>
+                    
+                    <div class="quiz-feedback" id="quizFeedback" style="display: none;">
+                        <div class="feedback-content">
+                            <div class="feedback-icon" id="feedbackIcon">✅</div>
+                            <div class="feedback-text" id="feedbackText">Correct!</div>
+                            <div class="correct-answer" id="correctAnswer" style="display: none;">
+                                Correct answer: <strong>Slav</strong>
+                            </div>
+                        </div>
+                        <button class="next-question-btn" onclick="nextQuestion()" id="nextQuestionBtn">Next Question →</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-completion" id="quizCompletion" style="display: none;">
+                    <h3>🎯 Quiz Complete!</h3>
+                    <div class="final-score" id="finalScore">Your Score: 15/20 (75%)</div>
+                    <div class="score-message" id="scoreMessage">Great job! Keep practicing!</div>
+                    <button class="restart-btn" onclick="restartQuiz()">🔄 Try Again</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2026 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Administrative data (extracted from CSV)
+        const salutations = [
+            { english: "Passport", kurdish: "Passeport" },
+            { english: "ID card", kurdish: "Karta nasnameyê" },
+            { english: "Visa", kurdish: "Vîza" },
+            { english: "Residence permit", kurdish: "Destûra rûniştinê" },
+            { english: "Work permit", kurdish: "Destûra karî" },
+            { english: "Application", kurdish: "Serlêdan" },
+            { english: "Form", kurdish: "Form" },
+            { english: "Document", kurdish: "Belge" },
+            { english: "Certificate", kurdish: "Belgeya fermî" },
+            { english: "Birth certificate", kurdish: "Belgeya jidayikbûnê" },
+            { english: "Marriage certificate", kurdish: "Belgeya zewacê" },
+            { english: "Death certificate", kurdish: "Belgeya mirinê" },
+            { english: "Diploma", kurdish: "Dîploma" },
+            { english: "License", kurdish: "Lîsans" },
+            { english: "Registration", kurdish: "Tomar" },
+            { english: "Signature", kurdish: "Îmze" },
+            { english: "Stamp", kurdish: "Mohr" },
+            { english: "Notary", kurdish: "Noter" },
+            { english: "Embassy", kurdish: "Balyozxane" },
+            { english: "Consulate", kurdish: "Konsolosxane" },
+            { english: "Immigration office", kurdish: "Nivîsgeha koçberiyê" },
+            { english: "Tax office", kurdish: "Nivîsgeha bacê" },
+            { english: "Social security", kurdish: "Ewlehiya civakî" },
+            { english: "Insurance", kurdish: "Sîgorta" },
+            { english: "Bank", kurdish: "Bank" },
+            { english: "Bank account", kurdish: "Hesabê bankê" },
+            { english: "Credit card", kurdish: "Karta krediyê" },
+            { english: "Debit card", kurdish: "Karta deynê" },
+            { english: "Loan", kurdish: "Deyn" },
+            { english: "Mortgage", kurdish: "Krediya xanî" },
+            { english: "Interest rate", kurdish: "Rêjeya faîzê" },
+            { english: "Tax", kurdish: "Bac" },
+            { english: "Income tax", kurdish: "Baca dahatê" },
+            { english: "VAT", kurdish: "Baca nirxa zêdekirî" },
+            { english: "Receipt", kurdish: "Makbûz" },
+            { english: "Invoice", kurdish: "Fatûre" },
+            { english: "Payment", kurdish: "Dayîn" },
+            { english: "Deadline", kurdish: "Dema dawî" },
+            { english: "Extension", kurdish: "Dirêjkirin" },
+            { english: "Renewal", kurdish: "Nûkirin" },
+            { english: "Expiration date", kurdish: "Dîroka qedandinê" },
+            { english: "Valid", kurdish: "Derbasdar" },
+            { english: "Invalid", kurdish: "Nederbasdar" },
+            { english: "Rejected", kurdish: "Redkirî" },
+            { english: "Approved", kurdish: "Pejirandî" },
+            { english: "Pending", kurdish: "Li bendê" },
+            { english: "Appeal", kurdish: "Îtiraz" },
+            { english: "Complaint", kurdish: "Gilî" },
+            { english: "Request", kurdish: "Daxwaz" },
+            { english: "Authorization", kurdish: "Destûrdan" },
+            { english: "Power of attorney", kurdish: "Hêza parêzeriyê" },
+            { english: "Contract", kurdish: "Peyman" },
+            { english: "Agreement", kurdish: "Lihevkirin" },
+            { english: "Terms and conditions", kurdish: "Şert û merc" },
+            { english: "Witness", kurdish: "Şahid" },
+            { english: "Legal", kurdish: "Qanûnî" },
+            { english: "Illegal", kurdish: "Neqanûnî" },
+            { english: "Judge", kurdish: "Dadwer" },
+            { english: "Court", kurdish: "Dadgeh" },
+            { english: "Bureaucracy", kurdish: "Bûrokrasî" },
+            { english: "Red tape", kurdish: "Astengiyên bûrokrasiyê" },
+            { english: "Appointment", kurdish: "Hevdîtin" },
+            { english: "Queue", kurdish: "Rêz" },
+            { english: "Waiting list", kurdish: "Lîsteya bendewariyê" },
+            { english: "Office hours", kurdish: "Saetên nivîsgehê" }
+        ];
+
+        // Variables pour les flashcards
+        let currentCardIndex = 0;
+        let shuffledCards = [...salutations];
+        let isFlipped = false;
+
+        // Variables pour le quiz
+        let currentQuizIndex = 0;
+        let quizCards = [...salutations];
+        let quizScore = 0;
+        let totalQuizQuestions = 0;
+
+        // Fonction pour mélanger les cartes
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Fonction pour changer de mode
+        function showMode(mode) {
+            const tableMode = document.getElementById('tableMode');
+            const flashcardsMode = document.getElementById('flashcardsMode');
+            const quizMode = document.getElementById('quizMode');
+            const searchContainer = document.querySelector('.search-container');
+            const modeButtons = document.querySelectorAll('.mode-btn');
+            
+            // Réinitialiser les boutons
+            modeButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Cacher tous les modes
+            tableMode.style.display = 'none';
+            flashcardsMode.style.display = 'none';
+            quizMode.style.display = 'none';
+            
+            if (mode === 'table') {
+                tableMode.style.display = 'block';
+                searchContainer.style.display = 'block';
+                document.querySelector('.mode-btn[onclick="showMode(\'table\')"]').classList.add('active');
+            } else if (mode === 'flashcards') {
+                flashcardsMode.style.display = 'block';
+                searchContainer.style.display = 'none';
+                document.querySelector('.mode-btn[onclick="showMode(\'flashcards\')"]').classList.add('active');
+                initializeFlashcards();
+            } else if (mode === 'quiz') {
+                quizMode.style.display = 'block';
+                searchContainer.style.display = 'none';
+                document.querySelector('.mode-btn[onclick="showMode(\'quiz\')"]').classList.add('active');
+                initializeQuiz();
+            }
+        }
+
+        // Initialiser les flashcards
+        function initializeFlashcards() {
+            currentCardIndex = 0;
+            isFlipped = false;
+            document.getElementById('completionMessage').style.display = 'none';
+            document.querySelector('.flashcard').style.display = 'block';
+            document.querySelector('.flashcard-controls').style.display = 'flex';
+            updateCard();
+            updateProgress();
+            updateButtons();
+        }
+
+        // Mettre à jour la carte actuelle
+        function updateCard() {
+            const currentCard = shuffledCards[currentCardIndex];
+            document.getElementById('frontText').textContent = currentCard.english;
+            document.getElementById('backText').textContent = currentCard.kurdish;
+            
+            // Réinitialiser la rotation
+            const flashcard = document.getElementById('flashcard');
+            flashcard.classList.remove('flipped');
+            isFlipped = false;
+        }
+
+        // Retourner la carte
+        function flipCard() {
+            const flashcard = document.getElementById('flashcard');
+            flashcard.classList.toggle('flipped');
+            isFlipped = !isFlipped;
+        }
+
+        // Carte précédente
+        function previousCard() {
+            if (currentCardIndex > 0) {
+                currentCardIndex--;
+                updateCard();
+                updateProgress();
+                updateButtons();
+            }
+        }
+
+        // Carte suivante
+        function nextCard() {
+            if (currentCardIndex < shuffledCards.length - 1) {
+                currentCardIndex++;
+                updateCard();
+                updateProgress();
+                updateButtons();
+            } else {
+                // Fin des cartes
+                showCompletionMessage();
+            }
+        }
+
+        // Mettre à jour le compteur
+        function updateProgress() {
+            const counter = document.getElementById('cardCounter');
+            counter.textContent = `${currentCardIndex + 1} / ${shuffledCards.length}`;
+        }
+
+        // Mettre à jour les boutons
+        function updateButtons() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            prevBtn.disabled = currentCardIndex === 0;
+            
+            if (currentCardIndex === shuffledCards.length - 1) {
+                nextBtn.textContent = 'Finish';
+            } else {
+                nextBtn.textContent = 'Next →';
+            }
+        }
+
+        // Afficher le message de fin
+        function showCompletionMessage() {
+            document.querySelector('.flashcard').style.display = 'none';
+            document.querySelector('.flashcard-controls').style.display = 'none';
+            document.getElementById('completionMessage').style.display = 'block';
+        }
+
+        // Recommencer avec ordre aléatoire
+        function restartFlashcards() {
+            shuffledCards = shuffleArray(salutations);
+            initializeFlashcards();
+        }
+
+        // ===== FONCTIONS QUIZ =====
+
+        // Initialiser le quiz
+        function initializeQuiz() {
+            currentQuizIndex = 0;
+            quizScore = 0;
+            totalQuizQuestions = 0;
+            quizCards = shuffleArray(salutations);
+            
+            document.getElementById('quizCompletion').style.display = 'none';
+            document.querySelector('.quiz-card').style.display = 'block';
+            document.getElementById('quizFeedback').style.display = 'none';
+            
+            updateQuizQuestion();
+            updateQuizProgress();
+        }
+
+        // Mettre à jour la question du quiz
+        function updateQuizQuestion() {
+            const currentQuestion = quizCards[currentQuizIndex];
+            document.getElementById('quizEnglishWord').textContent = currentQuestion.english;
+            document.getElementById('quizInput').value = '';
+            document.getElementById('quizInput').focus();
+            document.getElementById('submitBtn').disabled = false;
+            document.getElementById('quizFeedback').style.display = 'none';
+        }
+
+        // Vérifier la réponse
+        function checkAnswer() {
+            const userAnswer = document.getElementById('quizInput').value.trim();
+            const correctAnswer = quizCards[currentQuizIndex].kurdish;
+            
+            totalQuizQuestions++;
+            
+            // Normaliser les réponses pour la comparaison (ignorer la casse et espaces)
+            const normalizedUserAnswer = userAnswer.toLowerCase().replace(/\s+/g, ' ');
+            const normalizedCorrectAnswer = correctAnswer.toLowerCase().replace(/\s+/g, ' ');
+            
+            const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer;
+            
+            if (isCorrect) {
+                quizScore++;
+                showFeedback(true, correctAnswer);
+            } else {
+                showFeedback(false, correctAnswer, userAnswer);
+            }
+            
+            updateQuizProgress();
+            document.getElementById('submitBtn').disabled = true;
+        }
+
+        // Afficher le feedback
+        function showFeedback(isCorrect, correctAnswer, userAnswer = '') {
+            const feedback = document.getElementById('quizFeedback');
+            const feedbackIcon = document.getElementById('feedbackIcon');
+            const feedbackText = document.getElementById('feedbackText');
+            const correctAnswerDiv = document.getElementById('correctAnswer');
+            
+            feedback.style.display = 'block';
+            feedback.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+            
+            if (isCorrect) {
+                feedbackIcon.textContent = '✅';
+                feedbackText.textContent = 'Correct!';
+                feedbackText.className = 'feedback-text correct';
+                correctAnswerDiv.style.display = 'none';
+            } else {
+                feedbackIcon.textContent = '❌';
+                feedbackText.textContent = 'Incorrect';
+                feedbackText.className = 'feedback-text incorrect';
+                correctAnswerDiv.innerHTML = `Correct answer: <strong>${correctAnswer}</strong>`;
+                correctAnswerDiv.style.display = 'block';
+            }
+        }
+
+        // Question suivante
+        function nextQuestion() {
+            if (currentQuizIndex < quizCards.length - 1) {
+                currentQuizIndex++;
+                updateQuizQuestion();
+            } else {
+                showQuizCompletion();
+            }
+        }
+
+        // Mettre à jour la progression du quiz
+        function updateQuizProgress() {
+            const counter = document.getElementById('quizCounter');
+            const score = document.getElementById('quizScore');
+            const progressFill = document.getElementById('progressFill');
+            
+            counter.textContent = `${currentQuizIndex + 1} / ${quizCards.length}`;
+            score.textContent = `Score: ${quizScore}/${totalQuizQuestions}`;
+            
+            const progressPercent = ((currentQuizIndex + 1) / quizCards.length) * 100;
+            progressFill.style.width = progressPercent + '%';
+        }
+
+        // Afficher la completion du quiz
+        function showQuizCompletion() {
+            document.querySelector('.quiz-card').style.display = 'none';
+            document.getElementById('quizCompletion').style.display = 'block';
+            
+            const percentage = Math.round((quizScore / totalQuizQuestions) * 100);
+            document.getElementById('finalScore').textContent = `Your Score: ${quizScore}/${totalQuizQuestions} (${percentage}%)`;
+            
+            let message = '';
+            if (percentage >= 90) {
+                message = '🏆 Excellent! You\'re a Kurdish master!';
+            } else if (percentage >= 75) {
+                message = '🎉 Great job! Keep up the good work!';
+            } else if (percentage >= 60) {
+                message = '👍 Good effort! Practice makes perfect!';
+            } else {
+                message = '💪 Keep practicing! You\'ll get better!';
+            }
+            
+            document.getElementById('scoreMessage').textContent = message;
+        }
+
+        // Recommencer le quiz
+        function restartQuiz() {
+            initializeQuiz();
+        }
+
+        // Permettre d'appuyer sur Entrée pour soumettre
+        document.addEventListener('DOMContentLoaded', function() {
+            const quizInput = document.getElementById('quizInput');
+            if (quizInput) {
+                quizInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' && !document.getElementById('submitBtn').disabled) {
+                        checkAnswer();
+                    }
+                });
+            }
+        });
+
+        // Fonction pour afficher les traductions
+        function displayTranslations(data) {
+            const container = document.getElementById('translationsContainer');
+            container.innerHTML = '';
+            
+            data.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'translation-row';
+                
+                row.innerHTML = `
+                    <div class="english-cell">${item.english}</div>
+                    <div class="kurdish-cell">${item.kurdish}</div>
+                `;
+                
+                container.appendChild(row);
+            });
+        }
+
+        // Fonction de recherche
+        function filterTranslations(searchTerm) {
+            const filtered = salutations.filter(item => 
+                item.english.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                item.kurdish.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            displayTranslations(filtered);
+        }
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            displayTranslations(salutations);
+            shuffledCards = shuffleArray(salutations);
+            
+            // Ajouter l'événement de recherche
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                filterTranslations(this.value);
+            });
+        });
+    </script>
+</body>
+</html>

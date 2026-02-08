@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma Neyînî (Negative Form) - Kurdish Academy</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="leker.html" class="active">Lêker (Verbs)</a></li>
+            <li><a href="../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="white-rectangle">
+            <a href="leker.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Retour aux Verbes</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 20px;">Forma Neyînî (Negative Form)</h2>
+            
+            <div style="margin-bottom: 30px;">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #333;">
+                    Making negative sentences in Kurdish is straightforward. You add the negative particle <strong>"na"</strong> or <strong>"ne"</strong> 
+                    before the verb, or use specific negative verb forms depending on the tense.
+                </p>
+            </div>
+
+            <h3 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Present Tense Negative</h3>
+            
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 5px solid #2e7d32; margin-bottom: 30px;">
+                <h4 style="color: #2e7d32; margin-top: 0;">Rule:</h4>
+                <p style="line-height: 1.8; color: #333; margin: 10px 0;">
+                    For present tense, change <strong>"di-"</strong> prefix to <strong>"na-"</strong> or use <strong>"ne"</strong> before the verb.
+                </p>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Positive</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Negative</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ez diçim</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ez naçim</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">I don't go</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Tu dixwînî</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Tu naxwînî</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">You don't read</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ew dixwe</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ew naxwe</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">He/She doesn't eat</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Em dikarin</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Em nikarin</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">We can't</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Past Tense Negative</h3>
+            
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 5px solid #2e7d32; margin-bottom: 30px;">
+                <h4 style="color: #2e7d32; margin-top: 0;">Rule:</h4>
+                <p style="line-height: 1.8; color: #333; margin: 10px 0;">
+                    For past tense, add <strong>"ne"</strong> before the verb.
+                </p>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Positive</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Negative</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ez çûm</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ez neçûm</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">I didn't go</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Tu xwar</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Tu nexwar</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">You didn't eat</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ew dît</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ew nedît</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">He/She didn't see</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Em kirin</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Em nekirin</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">We didn't do</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Future Tense Negative</h3>
+            
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 5px solid #2e7d32; margin-bottom: 30px;">
+                <h4 style="color: #2e7d32; margin-top: 0;">Rule:</h4>
+                <p style="line-height: 1.8; color: #333; margin: 10px 0;">
+                    For future tense, add <strong>"ne"</strong> before <strong>"dê"</strong> or the verb.
+                </p>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Positive</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Negative</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ez dê biçim</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ez dê neçim</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">I won't go</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Tu dê bixwînî</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Tu dê nexwînî</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">You won't read</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ew dê bike</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ew dê neke</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">He/She won't do</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Negative with "to be" (bûn)</h3>
+            
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Positive</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Negative</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ez im</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ez ne me</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">I am not</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Tu yî</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Tu ne yî</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">You are not</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ew e</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ew nine</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">He/She is not</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Em in</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Em ne ne</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">We are not</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Hûn in</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Hûn ne ne</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">You are not</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ew in</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ew ne ne</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">They are not</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Practice Sentences</h3>
+            
+            <div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 5px solid #ff9800; margin-bottom: 20px;">
+                <p style="font-size: 1.1rem; margin: 10px 0;"><strong>Ez naçim dibistanê.</strong> → <em>I don't go to school.</em></p>
+                <p style="font-size: 1.1rem; margin: 10px 0;"><strong>Tu naxwînî pirtûk.</strong> → <em>You don't read books.</em></p>
+                <p style="font-size: 1.1rem; margin: 10px 0;"><strong>Ew neçû malê.</strong> → <em>He/She didn't go home.</em></p>
+                <p style="font-size: 1.1rem; margin: 10px 0;"><strong>Em nikarin biçin.</strong> → <em>We can't go.</em></p>
+                <p style="font-size: 1.1rem; margin: 10px 0;"><strong>Hûn dê nexwin.</strong> → <em>You won't eat.</em></p>
+                <p style="font-size: 1.1rem; margin: 10px 0;"><strong>Ew nine mamosta.</strong> → <em>He/She is not a teacher.</em></p>
+            </div>
+
+            <div style="background: #ffebee; padding: 20px; border-radius: 8px; border-left: 5px solid #f44336; margin-bottom: 20px;">
+                <h4 style="color: #c62828; margin-top: 0;">⚠️ Common Mistakes:</h4>
+                <ul style="line-height: 1.8; color: #333;">
+                    <li>Don't forget to change <strong>"di-"</strong> to <strong>"na-"</strong> in present tense</li>
+                    <li>Use <strong>"ne"</strong> (not "na") for past and future tenses</li>
+                    <li>The negative particle always comes before the verb</li>
+                </ul>
+            </div>
+
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 5px solid #2196f3; margin-top: 30px;">
+                <h4 style="color: #1976d2; margin-top: 0;">📚 Learning Tip:</h4>
+                <p style="line-height: 1.8; color: #333; margin: 0;">
+                    The key to mastering negatives is remembering the pattern: <strong>"na-"</strong> for present, 
+                    <strong>"ne"</strong> for past and future. Practice by taking positive sentences and converting them to negative!
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../scripts.js"></script>
+</body>
+</html>

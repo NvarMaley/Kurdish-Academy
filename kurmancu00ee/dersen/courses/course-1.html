@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 1 - Alfabê & Dengên | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .course-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #1b5e20;
+            transform: translateX(-5px);
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #f9a825;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .alphabet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .letter-card {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 3px solid transparent;
+        }
+
+        .letter-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 127, 23, 0.3);
+            border-color: #f9a825;
+        }
+
+        .letter-card.expanded {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #fff59d 0%, #fdd835 100%);
+        }
+
+        .letter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .letter-main {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f57f17;
+        }
+
+        .letter-pronunciation {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .expand-icon {
+            font-size: 1.5rem;
+            color: #f57f17;
+            transition: transform 0.3s ease;
+        }
+
+        .letter-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .word-list {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 3px solid #f9a825;
+        }
+
+        .word-list.show {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .word-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 2px solid #e0e0e0;
+        }
+
+        .word-item:hover {
+            background: #e8f5e9;
+            border-color: #4caf50;
+            transform: translateX(5px);
+        }
+
+        .word-content {
+            flex: 1;
+        }
+
+        .word-text {
+            font-size: 1.2rem;
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .word-meaning {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .play-word-btn {
+            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 45px;
+        }
+
+        .play-word-btn:hover {
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            transform: scale(1.15);
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
+        }
+
+        .tips-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+
+        .progress-indicator {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #f9a825 0%, #fdd835 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .next-course-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .next-course-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left">
+            <img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../../culture/history/history.html">History</a></li>
+            <li><a href="../../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../../culture/music/music.html">Music</a></li>
+            <li><a href="../../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="course-page">
+            <a href="../level-a1.html" class="back-link">← Back to Level A1</a>
+            
+            <div class="course-header">
+                <h1>📚 Course 1: Alfabê & Dengên</h1>
+                <div class="course-meta">
+                    <strong>Level A1 - Destpêk</strong> | Alphabet & Sounds<br>
+                    🎯 Goal: Learn letters and basic words
+                </div>
+            </div>
+
+            <div class="progress-indicator">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="tips-box" style="margin: 30px 0;">
+                <strong>💡 Special Sounds - Kurdish Pronunciation Guide:</strong><br>
+                • <strong>Ê ê</strong> = long "e" (like "ay" in "day")<br>
+                • <strong>Î î</strong> = long "i" (like "ee" in "see")<br>
+                • <strong>Û û</strong> = long "u" (like "oo" in "moon")<br>
+                • <strong>Ç ç</strong> = "ch" sound (like "church")<br>
+                • <strong>Ş ş</strong> = "sh" sound (like "ship")<br>
+                • <strong>X x</strong> = guttural "kh" (like Scottish "loch")<br>
+                • <strong>Q q</strong> = deeper "k" from throat
+            </div>
+
+            <div style="background: #fff3e0; padding: 25px; border-radius: 12px; margin: 30px 0; border-left: 4px solid #ff9800;">
+                <div onclick="toggleKeyboardGuide()" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                    <h3 style="color: #e65100; margin: 0;">⌨️ How to Type Kurdish Letters on Your Keyboard</h3>
+                    <span id="keyboard-toggle-icon" style="font-size: 1.5rem; color: #e65100; transition: transform 0.3s ease;">▼</span>
+                </div>
+                
+                <div id="keyboard-guide-content" style="display: none; margin-top: 15px;">
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: #f57f17; font-size: 1.1rem;">🍎 On Mac:</strong>
+                    <div style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        • <strong>Ê ê</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Option</kbd> + <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">E</kbd>, then press <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">E</kbd><br>
+                        • <strong>Î î</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Option</kbd> + <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">I</kbd>, then press <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">I</kbd><br>
+                        • <strong>Û û</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Option</kbd> + <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">U</kbd>, then press <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">U</kbd><br>
+                        • <strong>Ç ç</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Option</kbd> + <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">C</kbd><br>
+                        • <strong>Ş ş</strong> → Install Kurdish keyboard layout or use Character Viewer (Ctrl+Cmd+Space)
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: #f57f17; font-size: 1.1rem;">🪟 On Windows:</strong>
+                    <div style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        <strong>Method 1 - Alt Codes:</strong><br>
+                        • <strong>Ê</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0202</kbd> (on numpad)<br>
+                        • <strong>ê</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0234</kbd><br>
+                        • <strong>Î</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0206</kbd><br>
+                        • <strong>î</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0238</kbd><br>
+                        • <strong>Û</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0219</kbd><br>
+                        • <strong>û</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0251</kbd><br>
+                        • <strong>Ç</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0199</kbd><br>
+                        • <strong>ç</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0231</kbd><br>
+                        • <strong>Ş</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0350</kbd><br>
+                        • <strong>ş</strong> → Hold <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Alt</kbd> + type <kbd style="background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-family: monospace;">0351</kbd><br><br>
+                        <strong>Method 2 - Kurdish Keyboard:</strong><br>
+                        Install Kurdish keyboard layout from Windows Settings → Time & Language → Language → Add Kurdish
+                    </div>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <strong style="color: #2e7d32;">💡 Tip:</strong> For easier typing, consider installing a Kurdish keyboard layout or using online Kurdish keyboards!
+                </div>
+                </div>
+            </div>
+
+            <!-- Section 1: Interactive Alphabet -->
+            <div class="section" id="section-alphabet">
+                <h2 class="section-title">
+                    <span class="section-icon">🔤</span>
+                    1. Alfabeya Kurdî (Kurdish Alphabet)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    <strong>Click on each letter</strong> to see 10 example words and hear their pronunciation!<br>
+                    <span style="color: #f57f17; font-weight: bold;">🔊 Listen and repeat each word to practice!</span>
+                </p>
+
+                <div class="alphabet-grid" id="alphabet-container">
+                    <!-- Letters will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Section 2: Matching Exercise -->
+            <div class="section" id="section-matching">
+                <h2 class="section-title">
+                    <span class="section-icon">🎯</span>
+                    2. Hevgirtina Peyvan (Word Matching)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Match the Kurdish words with their English meanings by clicking on them:
+                </p>
+
+                <div id="matching-game" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+                    <div id="kurdish-words" style="display: flex; flex-direction: column; gap: 10px;">
+                        <!-- Kurdish words will be generated here -->
+                    </div>
+                    <div id="english-words" style="display: flex; flex-direction: column; gap: 10px;">
+                        <!-- English words will be generated here -->
+                    </div>
+                </div>
+
+                <div id="match-result" style="text-align: center; font-size: 1.3rem; font-weight: bold; margin: 20px 0; min-height: 40px;"></div>
+                
+                <button onclick="resetMatching()" style="display: block; margin: 20px auto; padding: 12px 30px; background: #f9a825; color: white; border: none; border-radius: 25px; font-size: 1.1rem; cursor: pointer; font-weight: bold;">🔄 Reset Game</button>
+            </div>
+
+            <!-- Section 3: Letter Recognition -->
+            <div class="section" id="section-recognition">
+                <h2 class="section-title">
+                    <span class="section-icon">🔍</span>
+                    3. Pratîka Dengên Taybet (Special Sounds Practice)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    <strong>Practice the 7 special Kurdish letters!</strong> Click on words that contain the highlighted letter and listen to their pronunciation:<br>
+                    <span style="color: #f57f17; font-weight: bold;">🔊 Click the audio button, listen carefully, and repeat out loud!</span>
+                </p>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <div style="font-size: 3rem; font-weight: bold; color: #f57f17; margin-bottom: 20px;">
+                        Find words with: <span id="target-letter" style="background: #fdd835; padding: 10px 20px; border-radius: 10px;">Ç</span>
+                    </div>
+                </div>
+
+                <div id="word-buttons" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; margin: 20px 0;">
+                    <!-- Word buttons will be generated here -->
+                </div>
+
+                <div id="recognition-score" style="text-align: center; font-size: 1.5rem; font-weight: bold; color: #2e7d32; margin: 20px 0;"></div>
+                
+                <button onclick="nextLetterRound()" id="next-letter-btn" style="display: block; margin: 20px auto; padding: 12px 30px; background: #4caf50; color: white; border: none; border-radius: 25px; font-size: 1.1rem; cursor: pointer; font-weight: bold;">➡️ Next Letter</button>
+                <button onclick="resetRecognition()" id="restart-recognition-btn" style="display: none; margin: 20px auto; padding: 12px 30px; background: #f9a825; color: white; border: none; border-radius: 25px; font-size: 1.1rem; cursor: pointer; font-weight: bold;">🔄 Practice Again (All 7 Letters)</button>
+            </div>
+
+            <!-- Section 4: Writing Practice -->
+            <div class="section" id="section-writing">
+                <h2 class="section-title">
+                    <span class="section-icon">✍️</span>
+                    4. Nivîsandin (Writing Practice)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice writing Kurdish words:
+                </p>
+
+                <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+                    <h3 style="color: #f57f17; margin-bottom: 15px;">Exercise 1: Copy the Alphabet</h3>
+                    <p>Write the complete Kurdish alphabet:</p>
+                    <textarea id="alphabet-writing" style="width: 100%; min-height: 100px; padding: 15px; font-size: 1.2rem; border: 2px solid #e0e0e0; border-radius: 8px; font-family: inherit; margin: 10px 0;" placeholder="A B C Ç D E Ê F G H I Î J K L M N O P Q R S Ş T U Û V W X Y Z"></textarea>
+                    <button onclick="checkAlphabet()" style="padding: 10px 25px; background: #4caf50; color: white; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; margin-top: 10px;">✓ Check</button>
+                    <div id="alphabet-feedback" style="margin-top: 10px; font-weight: bold;"></div>
+                </div>
+
+                <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+                    <h3 style="color: #f57f17; margin-bottom: 15px;">Exercise 2: Translate and Write</h3>
+                    <p>Translate these English words to Kurdish and write them:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">1. Water = </label>
+                        <input type="text" id="trans-1" data-answer="av" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">2. Eye = </label>
+                        <input type="text" id="trans-2" data-answer="çav" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">3. Night = </label>
+                        <input type="text" id="trans-3" data-answer="şev" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">4. House = </label>
+                        <input type="text" id="trans-4" data-answer="mal" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">5. Book = </label>
+                        <input type="text" id="trans-5" data-answer="pirtûk" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">6. Sun/Day = </label>
+                        <input type="text" id="trans-6" data-answer="roj" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">7. Name = </label>
+                        <input type="text" id="trans-7" data-answer="nav" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">8. Bread = </label>
+                        <input type="text" id="trans-8" data-answer="nan" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;">
+                    </div>
+                    
+                    <button onclick="checkTranslations()" style="padding: 10px 25px; background: #4caf50; color: white; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; margin-top: 10px;">✓ Check All</button>
+                    <div id="translation-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+
+                <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+                    <h3 style="color: #f57f17; margin-bottom: 15px;">Exercise 3: Build Sentences</h3>
+                    <p>Write simple sentences using the words you learned:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">1. Write "My name is..." (Navê min ... e)</label>
+                        <input type="text" class="writing-input" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;" placeholder="Navê min Sara e">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">2. Write "I want water" (Ez av dixwazim)</label>
+                        <input type="text" class="writing-input" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;" placeholder="Ez av dixwazim">
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">3. Write "Good night" (Şeva te baş)</label>
+                        <input type="text" class="writing-input" style="width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 8px;" placeholder="Şeva te baş">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Speaking Practice -->
+            <div class="section" id="section-speaking">
+                <h2 class="section-title">
+                    <span class="section-icon">🗣️</span>
+                    5. Axaftin (Speaking Practice)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice pronouncing these words and phrases:<br>
+                    <span style="color: #f57f17; font-weight: bold;">🔊 Listen to each greeting and repeat it several times!</span>
+                </p>
+
+                <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 20px 0;">
+                    <h3 style="color: #1976d2; margin-bottom: 15px;">Basic Greetings</h3>
+                    <div style="display: grid; gap: 15px;">
+                        <div style="background: white; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 1.3rem; font-weight: bold; color: #f57f17;">Silav</div>
+                                <div style="color: #666;">Hello</div>
+                            </div>
+                            <button onclick="playWord('Silav')" style="background: #4caf50; color: white; border: none; padding: 10px 15px; border-radius: 20px; cursor: pointer; font-size: 1.2rem;">🔊</button>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 1.3rem; font-weight: bold; color: #f57f17;">Rojbaş</div>
+                                <div style="color: #666;">Good day</div>
+                            </div>
+                            <button onclick="playWord('Rojbaş')" style="background: #4caf50; color: white; border: none; padding: 10px 15px; border-radius: 20px; cursor: pointer; font-size: 1.2rem;">🔊</button>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 1.3rem; font-weight: bold; color: #f57f17;">Spas</div>
+                                <div style="color: #666;">Thank you</div>
+                            </div>
+                            <button onclick="playWord('Spas')" style="background: #4caf50; color: white; border: none; padding: 10px 15px; border-radius: 20px; cursor: pointer; font-size: 1.2rem;">🔊</button>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 1.3rem; font-weight: bold; color: #f57f17;">Roja te baş be</div>
+                                <div style="color: #666;">Goodbye (may your day be good)</div>
+                            </div>
+                            <button onclick="playWord('Roja te baş be')" style="background: #4caf50; color: white; border: none; padding: 10px 15px; border-radius: 20px; cursor: pointer; font-size: 1.2rem;">🔊</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button onclick="completeCourse()" class="next-course-btn" style="margin-right: 15px;">✅ Complete Course 1</button>
+                <a href="course-2.html" class="next-course-btn">Continue to Course 2 →</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Kurdish alphabet data with 10 example words per letter
+        const alphabetData = {
+            'A': {
+                pronunciation: '[a]',
+                words: [
+                    {kurdish: 'av', english: 'water'},
+                    {kurdish: 'ard', english: 'flour'},
+                    {kurdish: 'ava', english: 'populated'},
+                    {kurdish: 'axa', english: 'uncle'},
+                    {kurdish: 'ala', english: 'flag'},
+                    {kurdish: 'aman', english: 'mercy'},
+                    {kurdish: 'aram', english: 'calm'},
+                    {kurdish: 'asiman', english: 'sky'},
+                    {kurdish: 'axir', english: 'end'},
+                    {kurdish: 'alî', english: 'high'}
+                ]
+            },
+            'B': {
+                pronunciation: '[b]',
+                words: [
+                    {kurdish: 'ber', english: 'door'},
+                    {kurdish: 'bav', english: 'father'},
+                    {kurdish: 'ber', english: 'chest'},
+                    {kurdish: 'bax', english: 'garden'},
+                    {kurdish: 'baran', english: 'rain'},
+                    {kurdish: 'baş', english: 'good'},
+                    {kurdish: 'ber', english: 'fruit'},
+                    {kurdish: 'bira', english: 'brother'},
+                    {kurdish: 'bîr', english: 'memory'},
+                    {kurdish: 'bûk', english: 'bride'}
+                ]
+            },
+            'C': {
+                pronunciation: '[dʒ]',
+                words: [
+                    {kurdish: 'cil', english: 'clothes'},
+                    {kurdish: 'car', english: 'time'},
+                    {kurdish: 'caran', english: 'sometimes'},
+                    {kurdish: 'ciwan', english: 'young'},
+                    {kurdish: 'cih', english: 'place'},
+                    {kurdish: 'candar', english: 'animal'},
+                    {kurdish: 'cerg', english: 'liver'},
+                    {kurdish: 'ceza', english: 'punishment'},
+                    {kurdish: 'cot', english: 'pair'},
+                    {kurdish: 'cûre', english: 'type'}
+                ]
+            },
+            'Ç': {
+                pronunciation: '[tʃ]',
+                words: [
+                    {kurdish: 'çav', english: 'eye'},
+                    {kurdish: 'çay', english: 'tea'},
+                    {kurdish: 'çiya', english: 'mountain'},
+                    {kurdish: 'çi', english: 'what'},
+                    {kurdish: 'çend', english: 'how many'},
+                    {kurdish: 'çêkirin', english: 'to make'},
+                    {kurdish: 'çol', english: 'desert'},
+                    {kurdish: 'çerm', english: 'leather'},
+                    {kurdish: 'çira', english: 'why'},
+                    {kurdish: 'çûn', english: 'to go'}
+                ]
+            },
+            'D': {
+                pronunciation: '[d]',
+                words: [
+                    {kurdish: 'dê', english: 'mother'},
+                    {kurdish: 'dar', english: 'tree'},
+                    {kurdish: 'dest', english: 'hand'},
+                    {kurdish: 'dil', english: 'heart'},
+                    {kurdish: 'dîn', english: 'religion'},
+                    {kurdish: 'dîrok', english: 'history'},
+                    {kurdish: 'deng', english: 'voice'},
+                    {kurdish: 'dev', english: 'mouth'},
+                    {kurdish: 'dûr', english: 'far'},
+                    {kurdish: 'dîtin', english: 'to see'}
+                ]
+            },
+            'E': {
+                pronunciation: '[ɛ]',
+                words: [
+                    {kurdish: 'erd', english: 'earth'},
+                    {kurdish: 'em', english: 'we'},
+                    {kurdish: 'ew', english: 'he/she'},
+                    {kurdish: 'ewr', english: 'cloud'},
+                    {kurdish: 'esker', english: 'soldier'},
+                    {kurdish: 'ewle', english: 'safe'},
+                    {kurdish: 'erk', english: 'duty'},
+                    {kurdish: 'ezel', english: 'eternal'},
+                    {kurdish: 'ezîz', english: 'dear'},
+                    {kurdish: 'ewqas', english: 'so much'}
+                ]
+            },
+            'Ê': {
+                pronunciation: '[eː]',
+                words: [
+                    {kurdish: 'êvar', english: 'evening'},
+                    {kurdish: 'êş', english: 'pain'},
+                    {kurdish: 'dê', english: 'mother'},
+                    {kurdish: 'bê', english: 'without'},
+                    {kurdish: 'sê', english: 'three'},
+                    {kurdish: 'pê', english: 'foot'},
+                    {kurdish: 'rê', english: 'road'},
+                    {kurdish: 'tê', english: 'in it'},
+                    {kurdish: 'mê', english: 'sheep'},
+                    {kurdish: 'nêr', english: 'male'}
+                ]
+            },
+            'F': {
+                pronunciation: '[f]',
+                words: [
+                    {kurdish: 'fîl', english: 'elephant'},
+                    {kurdish: 'fireh', english: 'wide'},
+                    {kurdish: 'firok', english: 'airplane'},
+                    {kurdish: 'fêkî', english: 'fruit'},
+                    {kurdish: 'ferman', english: 'order'},
+                    {kurdish: 'firotin', english: 'to sell'},
+                    {kurdish: 'felek', english: 'sky'},
+                    {kurdish: 'fîlm', english: 'film'},
+                    {kurdish: 'firîn', english: 'to fly'},
+                    {kurdish: 'fam', english: 'understanding'}
+                ]
+            },
+            'G': {
+                pronunciation: '[g]',
+                words: [
+                    {kurdish: 'gul', english: 'flower'},
+                    {kurdish: 'germ', english: 'warm'},
+                    {kurdish: 'giran', english: 'heavy'},
+                    {kurdish: 'guh', english: 'ear'},
+                    {kurdish: 'gav', english: 'cow'},
+                    {kurdish: 'gel', english: 'people'},
+                    {kurdish: 'gund', english: 'village'},
+                    {kurdish: 'gîyan', english: 'soul'},
+                    {kurdish: 'goşt', english: 'meat'},
+                    {kurdish: 'germ', english: 'hot'}
+                ]
+            },
+            'H': {
+                pronunciation: '[h]',
+                words: [
+                    {kurdish: 'heval', english: 'friend'},
+                    {kurdish: 'hêvî', english: 'hope'},
+                    {kurdish: 'heft', english: 'seven'},
+                    {kurdish: 'hesp', english: 'horse'},
+                    {kurdish: 'hişk', english: 'dry'},
+                    {kurdish: 'hêsan', english: 'easy'},
+                    {kurdish: 'hatin', english: 'to come'},
+                    {kurdish: 'hev', english: 'each other'},
+                    {kurdish: 'hêz', english: 'strength'},
+                    {kurdish: 'hêlîn', english: 'egg'}
+                ]
+            },
+            'I': {
+                pronunciation: '[ɪ]',
+                words: [
+                    {kurdish: 'îsal', english: 'this year'},
+                    {kurdish: 'îro', english: 'today'},
+                    {kurdish: 'îşev', english: 'tonight'},
+                    {kurdish: 'îcar', english: 'now'},
+                    {kurdish: 'îman', english: 'faith'},
+                    {kurdish: 'îşaret', english: 'sign'},
+                    {kurdish: 'îstîfa', english: 'resignation'},
+                    {kurdish: 'îmza', english: 'signature'},
+                    {kurdish: 'îqrar', english: 'confession'},
+                    {kurdish: 'îrad', english: 'will'}
+                ]
+            },
+            'Î': {
+                pronunciation: '[iː]',
+                words: [
+                    {kurdish: 'îro', english: 'today'},
+                    {kurdish: 'îşev', english: 'tonight'},
+                    {kurdish: 'îsal', english: 'this year'},
+                    {kurdish: 'bîr', english: 'memory'},
+                    {kurdish: 'dîn', english: 'religion'},
+                    {kurdish: 'pîr', english: 'old'},
+                    {kurdish: 'şîr', english: 'milk'},
+                    {kurdish: 'tîr', english: 'arrow'},
+                    {kurdish: 'mîr', english: 'prince'},
+                    {kurdish: 'nîşan', english: 'sign'}
+                ]
+            },
+            'J': {
+                pronunciation: '[ʒ]',
+                words: [
+                    {kurdish: 'jin', english: 'woman'},
+                    {kurdish: 'jiyan', english: 'life'},
+                    {kurdish: 'jêr', english: 'below'},
+                    {kurdish: 'jor', english: 'above'},
+                    {kurdish: 'jimar', english: 'number'},
+                    {kurdish: 'jehr', english: 'poison'},
+                    {kurdish: 'jan', english: 'pain'},
+                    {kurdish: 'jîr', english: 'smart'},
+                    {kurdish: 'jûr', english: 'type'},
+                    {kurdish: 'jina', english: 'wife'}
+                ]
+            },
+            'K': {
+                pronunciation: '[k]',
+                words: [
+                    {kurdish: 'kar', english: 'work'},
+                    {kurdish: 'keç', english: 'girl'},
+                    {kurdish: 'kurî', english: 'boy'},
+                    {kurdish: 'kur', english: 'son'},
+                    {kurdish: 'kal', english: 'old man'},
+                    {kurdish: 'kêf', english: 'joy'},
+                    {kurdish: 'kurt', english: 'short'},
+                    {kurdish: 'kul', english: 'slave'},
+                    {kurdish: 'kêr', english: 'knife'},
+                    {kurdish: 'kîjan', english: 'which'}
+                ]
+            },
+            'L': {
+                pronunciation: '[l]',
+                words: [
+                    {kurdish: 'lêker', english: 'verb'},
+                    {kurdish: 'lal', english: 'mute'},
+                    {kurdish: 'lez', english: 'fast'},
+                    {kurdish: 'lêv', english: 'lip'},
+                    {kurdish: 'lîmon', english: 'lemon'},
+                    {kurdish: 'lûle', english: 'pipe'},
+                    {kurdish: 'lawik', english: 'boy'},
+                    {kurdish: 'ling', english: 'leg'},
+                    {kurdish: 'lêdan', english: 'to hit'},
+                    {kurdish: 'lîstik', english: 'game'}
+                ]
+            },
+            'M': {
+                pronunciation: '[m]',
+                words: [
+                    {kurdish: 'mal', english: 'house'},
+                    {kurdish: 'mêr', english: 'man'},
+                    {kurdish: 'mîr', english: 'prince'},
+                    {kurdish: 'mang', english: 'moon'},
+                    {kurdish: 'mêş', english: 'fly'},
+                    {kurdish: 'masî', english: 'fish'},
+                    {kurdish: 'mêze', english: 'table'},
+                    {kurdish: 'mirin', english: 'to die'},
+                    {kurdish: 'mejî', english: 'brain'},
+                    {kurdish: 'mîna', english: 'like'}
+                ]
+            },
+            'N': {
+                pronunciation: '[n]',
+                words: [
+                    {kurdish: 'nav', english: 'name'},
+                    {kurdish: 'nan', english: 'bread'},
+                    {kurdish: 'nîv', english: 'half'},
+                    {kurdish: 'nû', english: 'new'},
+                    {kurdish: 'nerm', english: 'soft'},
+                    {kurdish: 'nexweş', english: 'sick'},
+                    {kurdish: 'nivîsîn', english: 'to write'},
+                    {kurdish: 'nêzîk', english: 'near'},
+                    {kurdish: 'nîşan', english: 'sign'},
+                    {kurdish: 'nûçe', english: 'news'}
+                ]
+            },
+            'O': {
+                pronunciation: '[o]',
+                words: [
+                    {kurdish: 'oda', english: 'room'},
+                    {kurdish: 'ola', english: 'hall'},
+                    {kurdish: 'otel', english: 'hotel'},
+                    {kurdish: 'organ', english: 'organ'},
+                    {kurdish: 'ordu', english: 'army'},
+                    {kurdish: 'otobîs', english: 'bus'},
+                    {kurdish: 'okul', english: 'school'},
+                    {kurdish: 'opera', english: 'opera'},
+                    {kurdish: 'okyanus', english: 'ocean'},
+                    {kurdish: 'oxir', english: 'end'}
+                ]
+            },
+            'P': {
+                pronunciation: '[p]',
+                words: [
+                    {kurdish: 'pirtûk', english: 'book'},
+                    {kurdish: 'pîr', english: 'old'},
+                    {kurdish: 'pez', english: 'sheep'},
+                    {kurdish: 'pênc', english: 'five'},
+                    {kurdish: 'pênûs', english: 'pencil'},
+                    {kurdish: 'pêşî', english: 'first'},
+                    {kurdish: 'pêşeng', english: 'leader'},
+                    {kurdish: 'paqij', english: 'clean'},
+                    {kurdish: 'pêwîst', english: 'necessary'},
+                    {kurdish: 'pir', english: 'bridge'}
+                ]
+            },
+            'Q': {
+                pronunciation: '[q]',
+                words: [
+                    {kurdish: 'qehwe', english: 'coffee'},
+                    {kurdish: 'qelem', english: 'pen'},
+                    {kurdish: 'qewat', english: 'strength'},
+                    {kurdish: 'qels', english: 'castle'},
+                    {kurdish: 'qet', english: 'never'},
+                    {kurdish: 'qewî', english: 'strong'},
+                    {kurdish: 'qise', english: 'story'},
+                    {kurdish: 'qirêj', english: 'ugly'},
+                    {kurdish: 'qazanc', english: 'profit'},
+                    {kurdish: 'qul', english: 'servant'}
+                ]
+            },
+            'R': {
+                pronunciation: '[r]',
+                words: [
+                    {kurdish: 'roj', english: 'day/sun'},
+                    {kurdish: 'reng', english: 'color'},
+                    {kurdish: 'rê', english: 'road'},
+                    {kurdish: 'rûn', english: 'oil'},
+                    {kurdish: 'rast', english: 'right/true'},
+                    {kurdish: 'rind', english: 'beautiful'},
+                    {kurdish: 'rûpel', english: 'page'},
+                    {kurdish: 'rêz', english: 'line'},
+                    {kurdish: 'ronî', english: 'light'},
+                    {kurdish: 'rêber', english: 'guide'}
+                ]
+            },
+            'S': {
+                pronunciation: '[s]',
+                words: [
+                    {kurdish: 'sar', english: 'cold'},
+                    {kurdish: 'sê', english: 'three'},
+                    {kurdish: 'ser', english: 'head'},
+                    {kurdish: 'sîya', english: 'shadow'},
+                    {kurdish: 'sond', english: 'oath'},
+                    {kurdish: 'sîvik', english: 'light'},
+                    {kurdish: 'sax', english: 'healthy'},
+                    {kurdish: 'sipî', english: 'white'},
+                    {kurdish: 'sor', english: 'red'},
+                    {kurdish: 'sûr', english: 'red'}
+                ]
+            },
+            'Ş': {
+                pronunciation: '[ʃ]',
+                words: [
+                    {kurdish: 'şev', english: 'night'},
+                    {kurdish: 'şîr', english: 'milk'},
+                    {kurdish: 'şer', english: 'war'},
+                    {kurdish: 'şax', english: 'branch'},
+                    {kurdish: 'şîn', english: 'blue'},
+                    {kurdish: 'şeş', english: 'six'},
+                    {kurdish: 'şûn', english: 'place'},
+                    {kurdish: 'şêr', english: 'lion'},
+                    {kurdish: 'şerm', english: 'shame'},
+                    {kurdish: 'şivan', english: 'shepherd'}
+                ]
+            },
+            'T': {
+                pronunciation: '[t]',
+                words: [
+                    {kurdish: 'tîr', english: 'arrow'},
+                    {kurdish: 'tav', english: 'sun heat'},
+                    {kurdish: 'têr', english: 'full/satisfied'},
+                    {kurdish: 'teng', english: 'narrow'},
+                    {kurdish: 'tişt', english: 'thing'},
+                    {kurdish: 'tund', english: 'fast'},
+                    {kurdish: 'teze', english: 'fresh'},
+                    {kurdish: 'tîroj', english: 'date'},
+                    {kurdish: 'têgihiştin', english: 'to understand'},
+                    {kurdish: 'tên', english: 'to come'}
+                ]
+            },
+            'U': {
+                pronunciation: '[u]',
+                words: [
+                    {kurdish: 'usta', english: 'master'},
+                    {kurdish: 'umêd', english: 'hope'},
+                    {kurdish: 'usul', english: 'method'},
+                    {kurdish: 'ûmêd', english: 'hope'},
+                    {kurdish: 'ûsûl', english: 'principle'},
+                    {kurdish: 'ûlke', english: 'country'},
+                    {kurdish: 'ûmmet', english: 'nation'},
+                    {kurdish: 'ûfûq', english: 'horizon'},
+                    {kurdish: 'ûrfa', english: 'Urfa (city)'},
+                    {kurdish: 'ûstad', english: 'teacher'}
+                ]
+            },
+            'Û': {
+                pronunciation: '[uː]',
+                words: [
+                    {kurdish: 'gûl', english: 'flower'},
+                    {kurdish: 'dûr', english: 'far'},
+                    {kurdish: 'rûn', english: 'oil'},
+                    {kurdish: 'tûr', english: 'tour'},
+                    {kurdish: 'kûr', english: 'deep'},
+                    {kurdish: 'sûr', english: 'red'},
+                    {kurdish: 'pûl', english: 'money'},
+                    {kurdish: 'mûr', english: 'seal'},
+                    {kurdish: 'nûr', english: 'light'},
+                    {kurdish: 'sûd', english: 'benefit'}
+                ]
+            },
+            'V': {
+                pronunciation: '[v]',
+                words: [
+                    {kurdish: 'vîyan', english: 'conscience'},
+                    {kurdish: 'veger', english: 'return'},
+                    {kurdish: 'vexwarin', english: 'to drink'},
+                    {kurdish: 'veşartin', english: 'to hide'},
+                    {kurdish: 'vekirin', english: 'to open'},
+                    {kurdish: 'vegot', english: 'said'},
+                    {kurdish: 'veda', english: 'farewell'},
+                    {kurdish: 'vebûn', english: 'to open'},
+                    {kurdish: 'vedan', english: 'to give'},
+                    {kurdish: 'vexistin', english: 'to put on'}
+                ]
+            },
+            'W': {
+                pronunciation: '[w]',
+                words: [
+                    {kurdish: 'welat', english: 'country'},
+                    {kurdish: 'wek', english: 'like'},
+                    {kurdish: 'wext', english: 'time'},
+                    {kurdish: 'wêne', english: 'picture'},
+                    {kurdish: 'wisa', english: 'so'},
+                    {kurdish: 'wî', english: 'him'},
+                    {kurdish: 'wê', english: 'her'},
+                    {kurdish: 'werin', english: 'come'},
+                    {kurdish: 'wate', english: 'meaning'},
+                    {kurdish: 'wekî', english: 'as'}
+                ]
+            },
+            'X': {
+                pronunciation: '[x]',
+                words: [
+                    {kurdish: 'xwîn', english: 'blood'},
+                    {kurdish: 'xwarin', english: 'food'},
+                    {kurdish: 'xwe', english: 'self'},
+                    {kurdish: 'xwendin', english: 'to read'},
+                    {kurdish: 'xweh', english: 'sister'},
+                    {kurdish: 'xem', english: 'sorrow'},
+                    {kurdish: 'xêr', english: 'good'},
+                    {kurdish: 'xelat', english: 'prize'},
+                    {kurdish: 'xewnî', english: 'sleepy'},
+                    {kurdish: 'xort', english: 'young man'}
+                ]
+            },
+            'Y': {
+                pronunciation: '[j]',
+                words: [
+                    {kurdish: 'yar', english: 'friend'},
+                    {kurdish: 'yekî', english: 'someone'},
+                    {kurdish: 'yek', english: 'one'},
+                    {kurdish: 'yên', english: 'those'},
+                    {kurdish: 'yekcar', english: 'suddenly'},
+                    {kurdish: 'yekser', english: 'directly'},
+                    {kurdish: 'yekîtî', english: 'unity'},
+                    {kurdish: 'yekbûn', english: 'to unite'},
+                    {kurdish: 'yeksan', english: 'equal'},
+                    {kurdish: 'yekdem', english: 'suddenly'}
+                ]
+            },
+            'Z': {
+                pronunciation: '[z]',
+                words: [
+                    {kurdish: 'ziman', english: 'language'},
+                    {kurdish: 'zan', english: 'knowledge'},
+                    {kurdish: 'zêde', english: 'more'},
+                    {kurdish: 'zor', english: 'much'},
+                    {kurdish: 'zû', english: 'early'},
+                    {kurdish: 'zirav', english: 'smart'},
+                    {kurdish: 'zêrîn', english: 'golden'},
+                    {kurdish: 'zivistan', english: 'winter'},
+                    {kurdish: 'zana', english: 'wise'},
+                    {kurdish: 'zêr', english: 'gold'}
+                ]
+            }
+        };
+
+        // Generate alphabet cards
+        function generateAlphabet() {
+            const container = document.getElementById('alphabet-container');
+            
+            for (const [letter, data] of Object.entries(alphabetData)) {
+                const card = document.createElement('div');
+                card.className = 'letter-card';
+                card.id = `letter-${letter}`;
+                
+                card.innerHTML = `
+                    <div class="letter-header">
+                        <div>
+                            <div class="letter-main">${letter} ${letter.toLowerCase()}</div>
+                            <div class="letter-pronunciation">${data.pronunciation}</div>
+                        </div>
+                        <div class="expand-icon">▼</div>
+                    </div>
+                    <div class="word-list" id="words-${letter}">
+                        ${data.words.map((word, index) => `
+                            <div class="word-item">
+                                <div class="word-content">
+                                    <div class="word-text">${word.kurdish}</div>
+                                    <div class="word-meaning">${word.english}</div>
+                                </div>
+                                <button class="play-word-btn" onclick="playWord('${word.kurdish}')">🔊</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                
+                card.addEventListener('click', function(e) {
+                    // Don't toggle if clicking on play button
+                    if (e.target.classList.contains('play-word-btn')) return;
+                    
+                    toggleLetter(letter);
+                });
+                
+                container.appendChild(card);
+            }
+        }
+
+        // Toggle letter expansion
+        function toggleLetter(letter) {
+            const card = document.getElementById(`letter-${letter}`);
+            const wordList = document.getElementById(`words-${letter}`);
+            const isExpanded = card.classList.contains('expanded');
+            
+            // Close all other cards
+            document.querySelectorAll('.letter-card').forEach(c => {
+                c.classList.remove('expanded');
+            });
+            document.querySelectorAll('.word-list').forEach(w => {
+                w.classList.remove('show');
+            });
+            
+            // Toggle current card
+            if (!isExpanded) {
+                card.classList.add('expanded');
+                wordList.classList.add('show');
+            }
+        }
+
+        // Play word sound
+        function playWord(word) {
+            console.log('Playing word:', word);
+            // In production, this would play actual audio
+            const utterance = new SpeechSynthesisUtterance(word);
+            utterance.lang = 'ku-TR'; // Kurdish
+            utterance.rate = 0.8;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            generateAlphabet();
+            initializeMatching();
+            initializeRecognition();
+        });
+
+        // ===== MATCHING GAME =====
+        let matchingPairs = [
+            {kurdish: 'av', english: 'water'},
+            {kurdish: 'çav', english: 'eye'},
+            {kurdish: 'şev', english: 'night'},
+            {kurdish: 'mal', english: 'house'},
+            {kurdish: 'nav', english: 'name'},
+            {kurdish: 'roj', english: 'day'},
+            {kurdish: 'nan', english: 'bread'},
+            {kurdish: 'pirtûk', english: 'book'}
+        ];
+        
+        let selectedKurdish = null;
+        let selectedEnglish = null;
+        let matchedPairs = [];
+
+        function initializeMatching() {
+            const kurdishContainer = document.getElementById('kurdish-words');
+            const englishContainer = document.getElementById('english-words');
+            
+            // Shuffle English words
+            const shuffledEnglish = [...matchingPairs].sort(() => Math.random() - 0.5);
+            
+            matchingPairs.forEach((pair, index) => {
+                const kurdishBtn = createMatchButton(pair.kurdish, 'kurdish', index);
+                kurdishContainer.appendChild(kurdishBtn);
+            });
+            
+            shuffledEnglish.forEach((pair, index) => {
+                const englishBtn = createMatchButton(pair.english, 'english', matchingPairs.findIndex(p => p.english === pair.english));
+                englishContainer.appendChild(englishBtn);
+            });
+        }
+
+        function createMatchButton(text, type, pairIndex) {
+            const btn = document.createElement('button');
+            btn.textContent = text;
+            btn.dataset.type = type;
+            btn.dataset.index = pairIndex;
+            btn.style.cssText = 'padding: 15px; font-size: 1.1rem; border: 3px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; transition: all 0.3s ease; font-weight: bold;';
+            
+            btn.addEventListener('click', () => selectMatch(btn, type, pairIndex));
+            return btn;
+        }
+
+        function selectMatch(btn, type, pairIndex) {
+            if (matchedPairs.includes(pairIndex)) return;
+            
+            // Deselect previous selection of same type
+            document.querySelectorAll(`[data-type="${type}"]`).forEach(b => {
+                if (!matchedPairs.includes(parseInt(b.dataset.index))) {
+                    b.style.background = 'white';
+                    b.style.borderColor = '#e0e0e0';
+                }
+            });
+            
+            btn.style.background = '#fff9c4';
+            btn.style.borderColor = '#f9a825';
+            
+            if (type === 'kurdish') {
+                selectedKurdish = pairIndex;
+            } else {
+                selectedEnglish = pairIndex;
+            }
+            
+            // Check if match
+            if (selectedKurdish !== null && selectedEnglish !== null) {
+                if (selectedKurdish === selectedEnglish) {
+                    // Correct match!
+                    matchedPairs.push(selectedKurdish);
+                    document.querySelectorAll(`[data-index="${selectedKurdish}"]`).forEach(b => {
+                        b.style.background = '#c8e6c9';
+                        b.style.borderColor = '#4caf50';
+                    });
+                    
+                    document.getElementById('match-result').innerHTML = '✅ Correct! Great job!';
+                    document.getElementById('match-result').style.color = '#2e7d32';
+                    
+                    if (matchedPairs.length === matchingPairs.length) {
+                        setTimeout(() => {
+                            document.getElementById('match-result').innerHTML = '🎉 Perfect! You matched all words!';
+                        }, 500);
+                    }
+                } else {
+                    // Wrong match
+                    document.getElementById('match-result').innerHTML = '❌ Try again!';
+                    document.getElementById('match-result').style.color = '#d32f2f';
+                }
+                
+                selectedKurdish = null;
+                selectedEnglish = null;
+            }
+        }
+
+        function resetMatching() {
+            matchedPairs = [];
+            selectedKurdish = null;
+            selectedEnglish = null;
+            document.getElementById('kurdish-words').innerHTML = '';
+            document.getElementById('english-words').innerHTML = '';
+            document.getElementById('match-result').innerHTML = '';
+            initializeMatching();
+        }
+
+        // ===== LETTER RECOGNITION GAME =====
+        let currentLetter = 'Ç';
+        let recognitionScore = 0;
+        let recognitionTotal = 0;
+        let specialLetters = ['Ê', 'Î', 'Û', 'Ç', 'Ş', 'X', 'Q'];
+        let practiceLetters = [...specialLetters]; // Copy for tracking
+        let currentLetterIndex = 0;
+        let roundsCompleted = 0;
+
+        function initializeRecognition() {
+            newRecognitionRound();
+        }
+
+        function newRecognitionRound() {
+            // Check if all letters have been practiced
+            if (practiceLetters.length === 0) {
+                roundsCompleted++;
+                document.getElementById('recognition-score').innerHTML = `
+                    🎉 <strong>Excellent! You practiced all 7 special letters!</strong><br>
+                    Final Score: ${recognitionScore} / ${recognitionTotal}<br>
+                    Rounds completed: ${roundsCompleted}
+                `;
+                document.getElementById('recognition-score').style.color = '#2e7d32';
+                document.getElementById('word-buttons').innerHTML = '';
+                
+                // Hide next button, show restart button
+                document.getElementById('next-letter-btn').style.display = 'none';
+                document.getElementById('restart-recognition-btn').style.display = 'block';
+                return;
+            }
+            
+            // Get next letter from remaining letters
+            const randomIndex = Math.floor(Math.random() * practiceLetters.length);
+            currentLetter = practiceLetters[randomIndex];
+            practiceLetters.splice(randomIndex, 1); // Remove from list
+            
+            document.getElementById('target-letter').textContent = currentLetter;
+            
+            // Show progress
+            const practiced = specialLetters.length - practiceLetters.length;
+            document.getElementById('recognition-score').innerHTML = `
+                Progress: ${practiced} / ${specialLetters.length} letters practiced | Score: ${recognitionScore} / ${recognitionTotal}
+            `;
+            document.getElementById('recognition-score').style.color = '#f57f17';
+            
+            // Get words with and without the letter
+            const allWords = [];
+            for (const [letter, data] of Object.entries(alphabetData)) {
+                data.words.forEach(word => {
+                    allWords.push({word: word.kurdish, hasLetter: word.kurdish.toLowerCase().includes(currentLetter.toLowerCase())});
+                });
+            }
+            
+            // Select 12 random words (6 with letter, 6 without)
+            const wordsWithLetter = allWords.filter(w => w.hasLetter).sort(() => Math.random() - 0.5).slice(0, 6);
+            const wordsWithoutLetter = allWords.filter(w => !w.hasLetter).sort(() => Math.random() - 0.5).slice(0, 6);
+            const selectedWords = [...wordsWithLetter, ...wordsWithoutLetter].sort(() => Math.random() - 0.5);
+            
+            const container = document.getElementById('word-buttons');
+            container.innerHTML = '';
+            
+            selectedWords.forEach(wordData => {
+                const wordCard = document.createElement('div');
+                wordCard.style.cssText = 'display: flex; align-items: center; gap: 10px; padding: 12px; border: 3px solid #e0e0e0; border-radius: 8px; background: white; transition: all 0.3s ease;';
+                
+                const btn = document.createElement('button');
+                btn.textContent = wordData.word;
+                btn.dataset.hasLetter = wordData.hasLetter;
+                btn.style.cssText = 'flex: 1; padding: 10px; font-size: 1.1rem; border: none; background: transparent; cursor: pointer; font-weight: bold; text-align: left;';
+                
+                const audioBtn = document.createElement('button');
+                audioBtn.textContent = '🔊';
+                audioBtn.style.cssText = 'background: #4caf50; color: white; border: none; padding: 8px 12px; border-radius: 20px; cursor: pointer; font-size: 1rem; min-width: 40px;';
+                audioBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    playWord(wordData.word);
+                };
+                
+                btn.addEventListener('click', () => {
+                    if (btn.disabled) return;
+                    
+                    recognitionTotal++;
+                    if (wordData.hasLetter) {
+                        recognitionScore++;
+                        wordCard.style.background = '#c8e6c9';
+                        wordCard.style.borderColor = '#4caf50';
+                        btn.textContent = wordData.word + ' ✓';
+                    } else {
+                        wordCard.style.background = '#ffcdd2';
+                        wordCard.style.borderColor = '#f44336';
+                        btn.textContent = wordData.word + ' ✗';
+                    }
+                    btn.disabled = true;
+                    audioBtn.disabled = true;
+                    audioBtn.style.opacity = '0.5';
+                    
+                    updateRecognitionScore();
+                });
+                
+                wordCard.appendChild(btn);
+                wordCard.appendChild(audioBtn);
+                container.appendChild(wordCard);
+            });
+            
+            updateRecognitionScore();
+        }
+
+        function updateRecognitionScore() {
+            const practiced = specialLetters.length - practiceLetters.length;
+            document.getElementById('recognition-score').innerHTML = `
+                Progress: ${practiced} / ${specialLetters.length} letters practiced | Score: ${recognitionScore} / ${recognitionTotal}
+            `;
+        }
+
+        function nextLetterRound() {
+            newRecognitionRound();
+        }
+
+        function resetRecognition() {
+            // Reset all variables
+            practiceLetters = [...specialLetters];
+            recognitionScore = 0;
+            recognitionTotal = 0;
+            
+            // Hide restart button, show next button
+            document.getElementById('restart-recognition-btn').style.display = 'none';
+            document.getElementById('next-letter-btn').style.display = 'block';
+            
+            // Start new round
+            newRecognitionRound();
+        }
+
+        // ===== WRITING EXERCISES =====
+        function checkAlphabet() {
+            const input = document.getElementById('alphabet-writing').value.toUpperCase();
+            const correct = 'A B C Ç D E Ê F G H I Î J K L M N O P Q R S Ş T U Û V W X Y Z';
+            const feedback = document.getElementById('alphabet-feedback');
+            
+            if (input.replace(/\s+/g, ' ').trim() === correct) {
+                feedback.innerHTML = '✅ Perfect! You wrote the complete alphabet correctly!';
+                feedback.style.color = '#2e7d32';
+                document.getElementById('alphabet-writing').style.borderColor = '#4caf50';
+                document.getElementById('alphabet-writing').style.background = '#e8f5e9';
+            } else {
+                feedback.innerHTML = '❌ Not quite right. Check the special letters: Ç, Ê, Î, Ş, Û';
+                feedback.style.color = '#d32f2f';
+            }
+        }
+
+        function checkTranslations() {
+            let correct = 0;
+            const total = 8;
+            
+            for (let i = 1; i <= total; i++) {
+                const input = document.getElementById(`trans-${i}`);
+                const answer = input.dataset.answer;
+                const value = input.value.toLowerCase().trim();
+                
+                if (value === answer) {
+                    correct++;
+                    input.style.borderColor = '#4caf50';
+                    input.style.background = '#e8f5e9';
+                } else {
+                    input.style.borderColor = '#f44336';
+                    input.style.background = '#ffebee';
+                }
+            }
+            
+            const score = document.getElementById('translation-score');
+            score.textContent = `Score: ${correct} / ${total}`;
+            score.style.color = correct === total ? '#2e7d32' : '#f57f17';
+            
+            if (correct === total) {
+                score.textContent += ' 🎉 Perfect!';
+            }
+        }
+
+        // ===== COMPLETION =====
+        function completeCourse() {
+            alert('🎉 Congratulations! You completed Course 1!\n\nYou learned:\n✓ Kurdish alphabet (31 letters)\n✓ 310+ basic words\n✓ Special sounds (Ç, Ş, Ê, Î, Û, X, Q)\n✓ Writing practice\n✓ Word matching\n\nReady for Course 2?');
+        }
+
+        // Progress tracking
+        let completedSections = 0;
+        const totalSections = 5;
+
+        function updateProgress() {
+            completedSections++;
+            const percentage = (completedSections / totalSections) * 100;
+            document.getElementById('progress-bar').style.width = percentage + '%';
+        }
+
+        // Mark sections as viewed
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('viewed')) {
+                    entry.target.classList.add('viewed');
+                    updateProgress();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Auto-check writing inputs
+        document.querySelectorAll('.writing-input').forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.value.trim().length > 0) {
+                    this.style.borderColor = '#4caf50';
+                    this.style.background = '#e8f5e9';
+                }
+            });
+        });
+
+        // Toggle keyboard guide
+        function toggleKeyboardGuide() {
+            const content = document.getElementById('keyboard-guide-content');
+            const icon = document.getElementById('keyboard-toggle-icon');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+                icon.textContent = '▲';
+            } else {
+                content.style.display = 'none';
+                icon.style.transform = 'rotate(0deg)';
+                icon.textContent = '▼';
+            }
+        }
+    </script>
+</body>
+</html>

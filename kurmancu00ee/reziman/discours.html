@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Axaftina Rasterast/Nerasterast (Direct/Indirect Speech)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .speech-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .speech-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .speech-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .direct-badge {
+            background: #2196f3;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .indirect-badge {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .formula-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2196f3;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+
+        .transformation-box {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #9c27b0;
+            margin: 20px 0;
+        }
+
+        .quote-box {
+            background: #e8f5e9;
+            padding: 15px 20px;
+            border-radius: 5px;
+            border-left: 4px solid #4caf50;
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Axaftina Rasterast/Nerasterast</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Direct & Indirect Speech</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What is Direct and Indirect Speech?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    <strong>Direct speech</strong> (Axaftina Rasterast) reports the exact words someone said, using quotation marks.
+                </p>
+                <p style="line-height: 1.8; font-size: 1.05rem; margin-top: 10px;">
+                    <strong>Indirect speech</strong> (Axaftina Nerasterast) reports what someone said without using their exact words.
+                </p>
+                <div class="quote-box" style="margin-top: 20px;">
+                    <strong>Direct:</strong> Ew got: "Ez dixwazim herim."<br>
+                    (He said: "I want to go.")<br><br>
+                    <strong>Indirect:</strong> Ew got ku ew dixwaze here.<br>
+                    (He said that he wanted to go.)
+                </div>
+            </div>
+
+            <!-- SECTION 1: DIRECT SPEECH -->
+            <div class="speech-section">
+                <div class="speech-title">1. Direct Speech (Axaftina Rasterast)</div>
+                <div class="speech-subtitle">Quoting exact words</div>
+
+                <div class="explanation">
+                    <p>
+                        In <strong>direct speech</strong>, we report the exact words someone said. In Kurdish, quotation marks 
+                        are used, and the reporting verb is typically <strong>gotin</strong> (to say).
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Direct Speech Structure:</strong><br>
+                    Subject + gotin: "Quoted sentence"<br><br>
+                    Examples:<br>
+                    • Ew got: "<strong>Ez dixwazim herim.</strong>"<br>
+                    • Min got: "<strong>Tu li ku yî?</strong>"<br>
+                    • Em gotin: "<strong>Em kêfxweş in.</strong>"
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Common Reporting Verbs:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish Verb</th>
+                            <th>English</th>
+                            <th>Example (Kurdish)</th>
+                            <th>Example (English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="direct-badge">gotin</span></td>
+                            <td>to say</td>
+                            <td>Ew got: "Ez baş im."</td>
+                            <td>He said: "I am well."</td>
+                        </tr>
+                        <tr>
+                            <td><span class="direct-badge">pirsîn</span></td>
+                            <td>to ask</td>
+                            <td>Ew pirsî: "Tu çawa yî?"</td>
+                            <td>He asked: "How are you?"</td>
+                        </tr>
+                        <tr>
+                            <td><span class="direct-badge">bersivdan</span></td>
+                            <td>to answer</td>
+                            <td>Ez bersiv dam: "Ez baş im."</td>
+                            <td>I answered: "I am well."</td>
+                        </tr>
+                        <tr>
+                            <td><span class="direct-badge">qîrîn</span></td>
+                            <td>to shout</td>
+                            <td>Ew qîrîya: "Bêne vir!"</td>
+                            <td>He shouted: "Come here!"</td>
+                        </tr>
+                        <tr>
+                            <td><span class="direct-badge">axaftin</span></td>
+                            <td>to speak</td>
+                            <td>Ew axivî: "Ez dixwazim herim."</td>
+                            <td>He spoke: "I want to go."</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Direct Speech Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Min got: "Ez dixwazim pirtûkek bixwînim."</div>
+                        <div class="english-text">I said: "I want to read a book."</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew pirsî: "Tu li ku yî?"</div>
+                        <div class="english-text">He asked: "Where are you?"</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em gotin: "Em ê sibe herin bajarê."</div>
+                        <div class="english-text">We said: "We will go to the city tomorrow."</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu gotî: "Ez nikarim bêm."</div>
+                        <div class="english-text">You said: "I cannot come."</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Punctuation Note!</div>
+                    <p style="line-height: 1.8;">
+                        In Kurdish direct speech:<br>
+                        • Use quotation marks: <strong>"..."</strong><br>
+                        • Place a colon <strong>:</strong> before the quote<br>
+                        • Keep the original tense and pronouns<br>
+                        • Capitalize the first word inside quotes
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: INDIRECT SPEECH -->
+            <div class="speech-section">
+                <div class="speech-title">2. Indirect Speech (Axaftina Nerasterast)</div>
+                <div class="speech-subtitle">Reporting what was said</div>
+
+                <div class="explanation">
+                    <p>
+                        In <strong>indirect speech</strong>, we report what someone said without using their exact words. 
+                        The conjunction <strong>ku</strong> (that) is used to introduce the reported clause.
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Indirect Speech Structure:</strong><br>
+                    Subject + gotin + ku + Reported clause<br><br>
+                    Examples:<br>
+                    • Ew got <strong>ku</strong> ew dixwaze here.<br>
+                    • Min got <strong>ku</strong> ez baş im.<br>
+                    • Em gotin <strong>ku</strong> em ê herin.
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Direct to Indirect Transformation:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Direct Speech</th>
+                            <th>Indirect Speech</th>
+                            <th>English (Direct)</th>
+                            <th>English (Indirect)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="direct-badge">Ew got: "Ez baş im."</span></td>
+                            <td><span class="indirect-badge">Ew got ku ew baş e.</span></td>
+                            <td>He said: "I am well."</td>
+                            <td>He said that he was well.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="direct-badge">Min got: "Ez dixwazim herim."</span></td>
+                            <td><span class="indirect-badge">Min got ku ez dixwazim herim.</span></td>
+                            <td>I said: "I want to go."</td>
+                            <td>I said that I wanted to go.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="direct-badge">Tu gotî: "Ez li malê me."</span></td>
+                            <td><span class="indirect-badge">Tu gotî ku tu li malê yî.</span></td>
+                            <td>You said: "I am at home."</td>
+                            <td>You said that you were at home.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="direct-badge">Ew got: "Ez ê bêm."</span></td>
+                            <td><span class="indirect-badge">Ew got ku ew ê were.</span></td>
+                            <td>He said: "I will come."</td>
+                            <td>He said that he would come.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Key Changes!</div>
+                    <p style="line-height: 1.8;">
+                        When converting to indirect speech:<br>
+                        • Remove quotation marks<br>
+                        • Add <strong>ku</strong> (that) after the reporting verb<br>
+                        • Change pronouns (ez → ew, min → wî/wê)<br>
+                        • Adjust verb forms if necessary<br>
+                        • Change time/place references (îro → wê rojê, vir → wir)
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 3: PRONOUN CHANGES -->
+            <div class="speech-section">
+                <div class="speech-title">3. Pronoun Changes in Indirect Speech</div>
+                <div class="speech-subtitle">Adjusting personal pronouns</div>
+
+                <div class="explanation">
+                    <p>
+                        When converting from direct to indirect speech, pronouns must be changed to reflect 
+                        the perspective of the reporter.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 20px; margin-bottom: 15px;">Pronoun Transformations:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Direct Speech Pronoun</th>
+                            <th>Indirect Speech Pronoun</th>
+                            <th>Example (Direct)</th>
+                            <th>Example (Indirect)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ez (I)</td>
+                            <td>ew (he/she)</td>
+                            <td>Ew got: "Ez baş im."</td>
+                            <td>Ew got ku ew baş e.</td>
+                        </tr>
+                        <tr>
+                            <td>min (I - oblique)</td>
+                            <td>wî/wê (him/her)</td>
+                            <td>Ew got: "Min dît."</td>
+                            <td>Ew got ku wî dîtiye.</td>
+                        </tr>
+                        <tr>
+                            <td>tu (you)</td>
+                            <td>ew (he/she)</td>
+                            <td>Min got: "Tu baş î."</td>
+                            <td>Min got ku ew baş e.</td>
+                        </tr>
+                        <tr>
+                            <td>em (we)</td>
+                            <td>ew (they)</td>
+                            <td>Em gotin: "Em herin."</td>
+                            <td>Em gotin ku em herin.</td>
+                        </tr>
+                        <tr>
+                            <td>hûn (you pl.)</td>
+                            <td>ew (they)</td>
+                            <td>Ew got: "Hûn baş in."</td>
+                            <td>Ew got ku ew baş in.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Pronoun Change Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Ew got: "Ez dixwazim pirtûkek bixwînim."</div>
+                        <div class="english-text">He said: "I want to read a book."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Ew got ku ew dixwaze pirtûkek bixwîne.</div>
+                        <div class="english-text">He said that he wanted to read a book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Min got: "Tu pir baş î."</div>
+                        <div class="english-text">I said: "You are very good."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Min got ku ew pir baş e.</div>
+                        <div class="english-text">I said that he/she was very good.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: TENSE CHANGES -->
+            <div class="speech-section">
+                <div class="speech-title">4. Tense Changes in Indirect Speech</div>
+                <div class="speech-subtitle">Sequence of tenses</div>
+
+                <div class="explanation">
+                    <p>
+                        In Kurdish, tense changes in indirect speech are <strong>less strict</strong> than in English. 
+                        Often, the original tense is maintained, especially when the statement is still true.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 20px; margin-bottom: 15px;">Tense Transformations:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Direct Speech Tense</th>
+                            <th>Indirect Speech Tense</th>
+                            <th>Example (Direct)</th>
+                            <th>Example (Indirect)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Present</td>
+                            <td>Present (often unchanged)</td>
+                            <td>Ew got: "Ez dixwînim."</td>
+                            <td>Ew got ku ew dixwîne.</td>
+                        </tr>
+                        <tr>
+                            <td>Past</td>
+                            <td>Past (unchanged)</td>
+                            <td>Ew got: "Min xwend."</td>
+                            <td>Ew got ku wî xwendiye.</td>
+                        </tr>
+                        <tr>
+                            <td>Future (ê)</td>
+                            <td>Future (often unchanged)</td>
+                            <td>Ew got: "Ez ê herim."</td>
+                            <td>Ew got ku ew ê here.</td>
+                        </tr>
+                        <tr>
+                            <td>Present Perfect</td>
+                            <td>Present Perfect</td>
+                            <td>Ew got: "Ez hatî me."</td>
+                            <td>Ew got ku ew hatî ye.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Tense Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Ew got: "Ez her roj dixwînim."</div>
+                        <div class="english-text">He said: "I read every day."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Ew got ku ew her roj dixwîne.</div>
+                        <div class="english-text">He said that he reads every day.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Min got: "Ez duh çûm bajarê."</div>
+                        <div class="english-text">I said: "I went to the city yesterday."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Min got ku ez duh çûme bajarê.</div>
+                        <div class="english-text">I said that I went to the city yesterday.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Ew got: "Ez ê sibe herim dibistanê."</div>
+                        <div class="english-text">He said: "I will go to school tomorrow."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Ew got ku ew ê sibe here dibistanê.</div>
+                        <div class="english-text">He said that he would go to school tomorrow.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Tense Note!</div>
+                    <p style="line-height: 1.8;">
+                        Unlike English, Kurdish often <strong>keeps the original tense</strong> in indirect speech, especially:<br>
+                        • When the statement is still true<br>
+                        • When reporting recent speech<br>
+                        • In informal contexts<br><br>
+                        However, tense may shift when the context requires it.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 5: TIME AND PLACE CHANGES -->
+            <div class="speech-section">
+                <div class="speech-title">5. Time and Place References</div>
+                <div class="speech-subtitle">Adjusting temporal and spatial expressions</div>
+
+                <div class="explanation">
+                    <p>
+                        Time and place expressions often need to be adjusted when converting to indirect speech 
+                        to reflect the new context.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Direct Speech</th>
+                            <th>Indirect Speech</th>
+                            <th>English (Direct)</th>
+                            <th>English (Indirect)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>îro (today)</td>
+                            <td>wê rojê (that day)</td>
+                            <td>today</td>
+                            <td>that day</td>
+                        </tr>
+                        <tr>
+                            <td>sibe (tomorrow)</td>
+                            <td>rojê din (the next day)</td>
+                            <td>tomorrow</td>
+                            <td>the next day</td>
+                        </tr>
+                        <tr>
+                            <td>duh (yesterday)</td>
+                            <td>rojê berê (the day before)</td>
+                            <td>yesterday</td>
+                            <td>the day before</td>
+                        </tr>
+                        <tr>
+                            <td>niha (now)</td>
+                            <td>wê demê (at that time)</td>
+                            <td>now</td>
+                            <td>at that time</td>
+                        </tr>
+                        <tr>
+                            <td>li vir (here)</td>
+                            <td>li wir (there)</td>
+                            <td>here</td>
+                            <td>there</td>
+                        </tr>
+                        <tr>
+                            <td>ev (this)</td>
+                            <td>ew (that)</td>
+                            <td>this</td>
+                            <td>that</td>
+                        </tr>
+                        <tr>
+                            <td>îşev (tonight)</td>
+                            <td>wê şevê (that night)</td>
+                            <td>tonight</td>
+                            <td>that night</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Time/Place Change Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Ew got: "Ez îro li vir im."</div>
+                        <div class="english-text">He said: "I am here today."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Ew got ku ew wê rojê li wir bû.</div>
+                        <div class="english-text">He said that he was there that day.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Min got: "Ez ê sibe bêm."</div>
+                        <div class="english-text">I said: "I will come tomorrow."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Min got ku ez ê rojê din bêm.</div>
+                        <div class="english-text">I said that I would come the next day.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Ew got: "Ev pirtûk pir baş e."</div>
+                        <div class="english-text">He said: "This book is very good."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Ew got ku ew pirtûk pir baş e.</div>
+                        <div class="english-text">He said that that book was very good.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: QUESTIONS IN INDIRECT SPEECH -->
+            <div class="speech-section">
+                <div class="speech-title">6. Questions in Indirect Speech</div>
+                <div class="speech-subtitle">Reporting questions</div>
+
+                <div class="explanation">
+                    <p>
+                        When reporting questions, the word order changes and question marks are removed. 
+                        Use <strong>ka</strong> (whether/if) for yes/no questions and keep question words for wh-questions.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 20px; margin-bottom: 15px;">A. Yes/No Questions:</h4>
+
+                <div class="formula-box">
+                    <strong>Indirect Yes/No Questions:</strong><br>
+                    Subject + pirsîn + ka + Statement<br><br>
+                    Example:<br>
+                    Direct: Ew pirsî: "Tu baş î?"<br>
+                    Indirect: Ew pirsî <strong>ka</strong> ez baş im.
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Direct Question</th>
+                            <th>Indirect Question</th>
+                            <th>English (Direct)</th>
+                            <th>English (Indirect)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ew pirsî: "Tu baş î?"</td>
+                            <td>Ew pirsî ka ez baş im.</td>
+                            <td>He asked: "Are you well?"</td>
+                            <td>He asked if I was well.</td>
+                        </tr>
+                        <tr>
+                            <td>Min pirsî: "Tu dixwazî bêyî?"</td>
+                            <td>Min pirsî ka ew dixwaze were.</td>
+                            <td>I asked: "Do you want to come?"</td>
+                            <td>I asked if he wanted to come.</td>
+                        </tr>
+                        <tr>
+                            <td>Ew pirsî: "Ev pirtûk ya te ye?"</td>
+                            <td>Ew pirsî ka ev pirtûk ya min e.</td>
+                            <td>He asked: "Is this your book?"</td>
+                            <td>He asked if this was my book.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">B. Wh-Questions:</h4>
+
+                <div class="formula-box">
+                    <strong>Indirect Wh-Questions:</strong><br>
+                    Subject + pirsîn + Question word + Statement<br><br>
+                    Example:<br>
+                    Direct: Ew pirsî: "Tu li ku yî?"<br>
+                    Indirect: Ew pirsî <strong>ku</strong> ez li ku me.
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Direct Question</th>
+                            <th>Indirect Question</th>
+                            <th>English (Direct)</th>
+                            <th>English (Indirect)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ew pirsî: "Tu li ku yî?"</td>
+                            <td>Ew pirsî ku ez li ku me.</td>
+                            <td>He asked: "Where are you?"</td>
+                            <td>He asked where I was.</td>
+                        </tr>
+                        <tr>
+                            <td>Min pirsî: "Tu çawa yî?"</td>
+                            <td>Min pirsî çawa ew e.</td>
+                            <td>I asked: "How are you?"</td>
+                            <td>I asked how he was.</td>
+                        </tr>
+                        <tr>
+                            <td>Ew pirsî: "Tu çi dixwazî?"</td>
+                            <td>Ew pirsî çi ez dixwazim.</td>
+                            <td>He asked: "What do you want?"</td>
+                            <td>He asked what I wanted.</td>
+                        </tr>
+                        <tr>
+                            <td>Min pirsî: "Tu kengî hatî?"</td>
+                            <td>Min pirsî kengî ew hatiye.</td>
+                            <td>I asked: "When did you come?"</td>
+                            <td>I asked when he had come.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Question Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Ew pirsî: "Tu dixwazî çayekê vexwî?"</div>
+                        <div class="english-text">He asked: "Do you want to drink tea?"</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Ew pirsî ka ez dixwazim çayekê vexwim.</div>
+                        <div class="english-text">He asked if I wanted to drink tea.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Min pirsî: "Tu çi kar dikî?"</div>
+                        <div class="english-text">I asked: "What work do you do?"</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Min pirsî çi kar ew dike.</div>
+                        <div class="english-text">I asked what work he does.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 7: COMMANDS IN INDIRECT SPEECH -->
+            <div class="speech-section">
+                <div class="speech-title">7. Commands in Indirect Speech</div>
+                <div class="speech-subtitle">Reporting imperatives</div>
+
+                <div class="explanation">
+                    <p>
+                        Commands and requests in indirect speech are reported using verbs like <strong>gotin</strong> (to tell), 
+                        <strong>xwestin</strong> (to ask/request), or <strong>fermandar kirin</strong> (to order).
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Indirect Commands:</strong><br>
+                    Subject + gotin/xwestin + ku + Subject + Subjunctive/Imperative<br><br>
+                    Example:<br>
+                    Direct: Ew got: "Here vir!"<br>
+                    Indirect: Ew got ku ez bêm wir.
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Direct Command</th>
+                            <th>Indirect Command</th>
+                            <th>English (Direct)</th>
+                            <th>English (Indirect)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ew got: "Here vir!"</td>
+                            <td>Ew got ku ez bêm wir.</td>
+                            <td>He said: "Come here!"</td>
+                            <td>He told me to come there.</td>
+                        </tr>
+                        <tr>
+                            <td>Min got: "Derî veke!"</td>
+                            <td>Min got ku ew derî veke.</td>
+                            <td>I said: "Open the door!"</td>
+                            <td>I told him to open the door.</td>
+                        </tr>
+                        <tr>
+                            <td>Ew got: "Bixwîne!"</td>
+                            <td>Ew got ku ez bixwînim.</td>
+                            <td>He said: "Read!"</td>
+                            <td>He told me to read.</td>
+                        </tr>
+                        <tr>
+                            <td>Min got: "Hêdî biaxive!"</td>
+                            <td>Min got ku ew hêdî biaxive.</td>
+                            <td>I said: "Speak slowly!"</td>
+                            <td>I told him to speak slowly.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Command Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Dayik got: "Xwarina xwe bixwe!"</div>
+                        <div class="english-text">Mother said: "Eat your food!"</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Dayik got ku ez xwarina xwe bixwim.</div>
+                        <div class="english-text">Mother told me to eat my food.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Mamoste got: "Li vir rûne!"</div>
+                        <div class="english-text">Teacher said: "Sit here!"</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Mamoste got ku em li wir rûnin.</div>
+                        <div class="english-text">Teacher told us to sit there.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 8: COMPLETE TRANSFORMATION GUIDE -->
+            <div class="speech-section">
+                <div class="speech-title">8. Complete Transformation Guide</div>
+                <div class="speech-subtitle">Step-by-step conversion</div>
+
+                <div class="transformation-box">
+                    <h4 style="color: #9c27b0; margin-bottom: 15px;">Steps to Convert Direct → Indirect Speech:</h4>
+                    <ol style="line-height: 2; font-size: 1.05rem;">
+                        <li><strong>Remove quotation marks</strong> and the colon</li>
+                        <li><strong>Add "ku"</strong> (that) after the reporting verb</li>
+                        <li><strong>Change pronouns</strong> (ez → ew, min → wî/wê, tu → ew)</li>
+                        <li><strong>Adjust verb forms</strong> if needed (usually minimal changes)</li>
+                        <li><strong>Change time/place references</strong> (îro → wê rojê, vir → wir)</li>
+                        <li><strong>For questions:</strong> Use "ka" for yes/no, keep question words for wh-</li>
+                        <li><strong>For commands:</strong> Use subjunctive/imperative forms</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Complete Transformation Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Ew got: "Ez îro li vir dixebitim û sibe ê herim bajarê."</div>
+                        <div class="english-text">He said: "I am working here today and I will go to the city tomorrow."</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Ew got ku ew wê rojê li wir dixebite û rojê din ê here bajarê.</div>
+                        <div class="english-text">He said that he was working there that day and would go to the city the next day.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text"><strong>Direct:</strong> Min pirsî: "Tu çima duh li dibistanê nebûyî?"</div>
+                        <div class="english-text">I asked: "Why weren't you at school yesterday?"</div>
+                        <div class="kurdish-text" style="margin-top: 10px;"><strong>Indirect:</strong> Min pirsî çima ew rojê berê li dibistanê nebûye.</div>
+                        <div class="english-text">I asked why he hadn't been at school the day before.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: Direct vs Indirect Speech</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Direct Speech</th>
+                        <th>Indirect Speech</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Structure</strong></td>
+                        <td>Subject + got: "..."</td>
+                        <td>Subject + got ku ...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quotation marks</strong></td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Conjunction</strong></td>
+                        <td>Colon (:)</td>
+                        <td>ku (that)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pronouns</strong></td>
+                        <td>Original (ez, tu, min)</td>
+                        <td>Changed (ew, wî, wê)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tense</strong></td>
+                        <td>Original</td>
+                        <td>Often unchanged</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time/Place</strong></td>
+                        <td>îro, vir, ev</td>
+                        <td>wê rojê, wir, ew</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Yes/No Questions</strong></td>
+                        <td>"Tu baş î?"</td>
+                        <td>ka ez baş im</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wh-Questions</strong></td>
+                        <td>"Tu li ku yî?"</td>
+                        <td>ku ez li ku me</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commands</strong></td>
+                        <td>"Here vir!"</td>
+                        <td>ku ez bêm wir</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Direct Speech:</strong> Subject + got: "Exact words"</li>
+                    <li><strong>Indirect Speech:</strong> Subject + got ku + Reported clause</li>
+                    <li><strong>Add "ku"</strong> (that) after reporting verb</li>
+                    <li><strong>Change pronouns:</strong> ez → ew, min → wî/wê, tu → ew</li>
+                    <li><strong>Tense:</strong> Often remains unchanged in Kurdish</li>
+                    <li><strong>Time/Place:</strong> îro → wê rojê, vir → wir, ev → ew</li>
+                    <li><strong>Yes/No Questions:</strong> Use "ka" (if/whether)</li>
+                    <li><strong>Wh-Questions:</strong> Keep question word (ku, çawa, çi, kengî)</li>
+                    <li><strong>Commands:</strong> Use subjunctive/imperative forms</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

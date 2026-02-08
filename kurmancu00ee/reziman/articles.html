@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Gotinên Diyarker (Articles & Determiners)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .article-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .article-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .article-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .gender-box {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .masculine {
+            background: #bbdefb;
+            color: #1565c0;
+        }
+
+        .feminine {
+            background: #f8bbd0;
+            color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Gotinên Diyarker</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Articles & Determiners</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What are Articles?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    Articles are small words that come <strong>before nouns</strong> to show if we're talking about something <strong>specific</strong> (definite) 
+                    or something <strong>general</strong> (indefinite).
+                </p>
+                <div style="background: white; padding: 20px; border-radius: 5px; margin-top: 15px;">
+                    <div style="margin-bottom: 15px;">
+                        <strong style="color: #2e7d32;">English examples:</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                            <li><strong>Definite:</strong> "<span class="highlight">The</span> book" (a specific book we know)</li>
+                            <li><strong>Indefinite:</strong> "<span class="highlight">A</span> book" (any book, not specific)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="note-box" style="margin-top: 20px;">
+                    <div class="note-title">⚠️ Important Difference!</div>
+                    <p style="line-height: 1.8;">
+                        In Kurdish, articles come <strong>AFTER</strong> the noun (as suffixes), not before like in English!<br>
+                        Also, Kurdish articles change based on the noun's <strong>gender</strong> (masculine or feminine).
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 1: DEFINITE ARTICLES -->
+            <div class="article-section">
+                <div class="article-title">1. Definite Articles (Gotinên Diyar)</div>
+                <div class="article-subtitle">The specific one - "THE"</div>
+
+                <div class="explanation">
+                    <p>
+                        Definite articles in Kurdish are <strong>suffixes</strong> (endings) added to nouns. They indicate a <strong>specific</strong> 
+                        item that both the speaker and listener know about. The form depends on the noun's <strong>gender</strong>.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Definite Article Forms:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Gender</th>
+                            <th>Direct Case</th>
+                            <th>Oblique Case</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="gender-box masculine">Masculine</span></td>
+                            <td><strong>-ê</strong></td>
+                            <td><strong>-î</strong></td>
+                            <td>pirtûk<strong>ê</strong> (the book)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gender-box feminine">Feminine</span></td>
+                            <td><strong>-a</strong></td>
+                            <td><strong>-ê</strong></td>
+                            <td>kitêb<strong>a</strong> (the book - feminine)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples - Masculine Nouns:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">pirtûk → pirtûkê</div>
+                        <div class="english-text">book → the book</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">keç → keçê</div>
+                        <div class="english-text">girl → the girl</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkê dixwînim.</div>
+                        <div class="english-text">I read the book. (I the-book read)</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples - Feminine Nouns:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">kitêb → kitêba</div>
+                        <div class="english-text">book → the book</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">mala → mala</div>
+                        <div class="english-text">house → the house</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez kitêba dibînim.</div>
+                        <div class="english-text">I see the book. (I the-book see)</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 How to know if a noun is masculine or feminine?</div>
+                    <p style="line-height: 1.8;">
+                        <strong>General rules:</strong><br>
+                        • Nouns ending in consonants are usually <strong>masculine</strong><br>
+                        • Nouns ending in <strong>-a</strong> or <strong>-e</strong> are usually <strong>feminine</strong><br>
+                        • But there are exceptions! You'll learn them with practice.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: INDEFINITE ARTICLES -->
+            <div class="article-section">
+                <div class="article-title">2. Indefinite Articles (Gotinên Nediyar)</div>
+                <div class="article-subtitle">A general one - "A / AN"</div>
+
+                <div class="explanation">
+                    <p>
+                        Indefinite articles indicate <strong>any one</strong> of something, not a specific one. In Kurdish, there are two main forms:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8; margin-top: 10px;">
+                        <li><strong>yek</strong> - means "one" or "a/an" (used as a separate word)</li>
+                        <li><strong>-ek / -ak</strong> - suffix meaning "a/an" (attached to the noun)</li>
+                    </ul>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Using "yek" (one / a):</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with "yek":</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">yek pirtûk</div>
+                        <div class="english-text">a book / one book</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">yek keç</div>
+                        <div class="english-text">a girl / one girl</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez yek pirtûk dixwînim.</div>
+                        <div class="english-text">I read a book. (I one book read)</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Using "-ek / -ak" suffix:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Noun Type</th>
+                            <th>Suffix</th>
+                            <th>Example</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ends in consonant</td>
+                            <td><strong>-ek</strong></td>
+                            <td>pirtûk<strong>ek</strong></td>
+                            <td>a book</td>
+                        </tr>
+                        <tr>
+                            <td>Ends in vowel</td>
+                            <td><strong>-yek</strong></td>
+                            <td>mala<strong>yek</strong></td>
+                            <td>a house</td>
+                        </tr>
+                        <tr>
+                            <td>Some feminine nouns</td>
+                            <td><strong>-ak</strong></td>
+                            <td>keç<strong>ak</strong></td>
+                            <td>a girl</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with suffix:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">pirtûkek</div>
+                        <div class="english-text">a book</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">keçak</div>
+                        <div class="english-text">a girl</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkek dixwînim.</div>
+                        <div class="english-text">I read a book. (I a-book read)</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 When to use "yek" vs "-ek"?</div>
+                    <p style="line-height: 1.8;">
+                        Both are correct! <strong>"yek"</strong> emphasizes "one" more strongly, while <strong>"-ek"</strong> is more casual and common in everyday speech.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 3: DEMONSTRATIVES -->
+            <div class="article-section">
+                <div class="article-title">3. Demonstratives (Nîşanker)</div>
+                <div class="article-subtitle">This, That, These, Those</div>
+
+                <div class="explanation">
+                    <p>
+                        Demonstratives point to specific things based on their <strong>distance</strong> from the speaker. 
+                        They change based on <strong>number</strong> (singular/plural) and <strong>distance</strong> (near/far).
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Distance</th>
+                            <th>Singular</th>
+                            <th>Plural</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Near</strong> (close to speaker)</td>
+                            <td><strong>ev</strong></td>
+                            <td><strong>van</strong></td>
+                            <td>this / these</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Far</strong> (away from speaker)</td>
+                            <td><strong>ew</strong></td>
+                            <td><strong>wan</strong></td>
+                            <td>that / those</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples - Near (this/these):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">ev pirtûk</div>
+                        <div class="english-text">this book</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">van pirtûkan</div>
+                        <div class="english-text">these books</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez ev pirtûk dixwînim.</div>
+                        <div class="english-text">I read this book. (I this book read)</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples - Far (that/those):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">ew pirtûk</div>
+                        <div class="english-text">that book</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">wan pirtûkan</div>
+                        <div class="english-text">those books</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez ew pirtûk dixwînim.</div>
+                        <div class="english-text">I read that book. (I that book read)</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Important Note!</div>
+                    <p style="line-height: 1.8;">
+                        Notice that <strong>"ew"</strong> can mean both "he/she" (pronoun) AND "that" (demonstrative). 
+                        The meaning is clear from context!
+                    </p>
+                </div>
+            </div>
+
+            <!-- COMPARISON SUMMARY -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference Table</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Kurdish</th>
+                        <th>English</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Definite (masc.)</strong></td>
+                        <td>-ê / -î</td>
+                        <td>the</td>
+                        <td>pirtûk<strong>ê</strong> (the book)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Definite (fem.)</strong></td>
+                        <td>-a / -ê</td>
+                        <td>the</td>
+                        <td>mal<strong>a</strong> (the house)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Indefinite</strong></td>
+                        <td>yek / -ek / -ak</td>
+                        <td>a / an</td>
+                        <td>pirtûk<strong>ek</strong> (a book)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>This (near)</strong></td>
+                        <td>ev</td>
+                        <td>this</td>
+                        <td><strong>ev</strong> pirtûk (this book)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>That (far)</strong></td>
+                        <td>ew</td>
+                        <td>that</td>
+                        <td><strong>ew</strong> pirtûk (that book)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>These (near)</strong></td>
+                        <td>van</td>
+                        <td>these</td>
+                        <td><strong>van</strong> pirtûkan (these books)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Those (far)</strong></td>
+                        <td>wan</td>
+                        <td>those</td>
+                        <td><strong>wan</strong> pirtûkan (those books)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Definite articles</strong> (-ê, -a, -î) come AFTER the noun as suffixes and change based on gender and case</li>
+                    <li><strong>Indefinite articles</strong> (yek, -ek, -ak) mean "a/an" or "one"</li>
+                    <li><strong>Demonstratives</strong> (ev, ew, van, wan) come BEFORE the noun and show distance and number</li>
+                    <li>Kurdish articles are gender-sensitive (masculine vs feminine)</li>
+                    <li>Word order: Demonstrative + Noun + Definite/Indefinite suffix</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

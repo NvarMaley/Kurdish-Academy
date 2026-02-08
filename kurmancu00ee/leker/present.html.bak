@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dema Niha (Present Tenses) - Kurdish Academy</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="leker.html" class="active">Lêker (Verbs)</a></li>
+            <li><a href="../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="white-rectangle">
+            <a href="leker.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Retour aux Verbes</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 20px;">Dema Niha (Present Tense)</h2>
+            
+            <div style="margin-bottom: 30px;">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #333;">
+                    Kurdish has <strong>one present tense</strong>: Dema Niha (Present Tense). 
+                    The <strong>same form</strong> is used for both habitual and ongoing actions - 
+                    the difference is shown through <strong>context</strong> and <strong>time markers</strong> like "niha" (now) or "her roj" (every day).
+                </p>
+            </div>
+
+            <h3 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Formation</h3>
+            
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 5px solid #2e7d32; margin-bottom: 30px;">
+                <h4 style="color: #2e7d32; margin-top: 0;">Usage:</h4>
+                <p style="line-height: 1.8; color: #333; margin: 10px 0;">
+                    Used for <strong>both habitual and ongoing actions</strong>. The same form expresses:
+                </p>
+                <ul style="line-height: 1.8; color: #333; margin: 10px 0;">
+                    <li>Habitual actions: "Ez her roj diçim" (I go every day)</li>
+                    <li>Ongoing actions: "Ez niha diçim" (I am going now)</li>
+                    <li>General truths and facts</li>
+                </ul>
+                <h4 style="color: #2e7d32; margin-top: 15px;">Formation:</h4>
+                <p style="line-height: 1.8; color: #333; margin: 10px 0;">
+                    <strong>di-</strong> + verb stem + personal ending
+                </p>
+            </div>
+
+            <h4 style="color: #2e7d32; margin-top: 20px; margin-bottom: 15px;">Verb Conjugation Examples</h4>
+            
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">1. bûn (to be)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ez</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">me</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I am / I am being</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Tu</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">yî</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You are / You are being</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">e</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She is / is being</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Em</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">in</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We are / We are being</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Hûn</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">in</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You are / You are being</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">in</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They are / They are being</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">2. heye (to have)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Min ... heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I have</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Te ... heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You have</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Wî/Wê ... heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She has</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Me ... heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We have</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">We ... heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You have</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Wan ... heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">heye</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They have</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">3. hatin (to come)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ez</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">têm</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I come / I am coming</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Tu</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">têyî</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You come / You are coming</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">tê</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She comes / is coming</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Em</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">tên</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We come / We are coming</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Hûn</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">tên</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You come / You are coming</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">tên</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They come / They are coming</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">4. çûn (to go)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ez</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">diçim</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I go / I am going</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Tu</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">diçî</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You go / You are going</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">diçe</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She goes / is going</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Em</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">diçin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We go / We are going</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Hûn</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">diçin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You go / You are going</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">diçin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They go / They are going</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">5. xwarin (to eat)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ez</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwim</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I eat / I am eating</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Tu</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwî</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You eat / You are eating</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwe</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She eats / is eating</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Em</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We eat / We are eating</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Hûn</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You eat / You are eating</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They eat / They are eating</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">6. xwendin (to read / to study)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ez</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwînim</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I read / I am reading</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Tu</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwînî</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You read / You are reading</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwîne</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She reads / is reading</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Em</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwînin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We read / We are reading</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Hûn</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwînin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You read / You are reading</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dixwînin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They read / They are reading</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">7. kirin (to do / to make)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ez</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dikim</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I do / I am doing</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Tu</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dikî</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You do / You are doing</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dike</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She does / is doing</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Em</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dikin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We do / We are doing</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Hûn</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dikin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You do / You are doing</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dikin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They do / They are doing</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">8. gotin / bêjan (to say / to tell)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ez</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibêjim</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I say / I am saying</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Tu</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibêjî</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You say / You are saying</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibêje</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She says / is saying</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Em</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibêjin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We say / We are saying</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Hûn</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibêjin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You say / You are saying</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibêjin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They say / They are saying</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 style="color: #2e7d32; margin-top: 30px; margin-bottom: 10px;">9. dîtin (to see)</h5>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Pronoun</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conjugation</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ez</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibînim</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">I see / I am seeing</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Tu</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibînî</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You see / You are seeing</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibîne</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">He/She sees / is seeing</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Em</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibînin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">We see / We are seeing</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Hûn</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibînin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">You see / You are seeing</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Ew</td>
+                        <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">dibînin</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">They see / They are seeing</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Time Markers to Show Context:</h4>
+            
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white;">
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Time Marker</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Meaning</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">niha</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">now (ongoing)</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ez niha dixwim (I am eating now)</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">her roj</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">every day (habitual)</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ez her roj dixwim (I eat every day)</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">her gav</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">always (habitual)</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ez her gav diçim (I always go)</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">vê gavê</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">right now (ongoing)</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Ez vê gavê dixwim (I am eating right now)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../../scripts.js"></script>
+</body>
+</html>

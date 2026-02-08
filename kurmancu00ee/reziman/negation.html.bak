@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Neyînî (Negation)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .negation-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .negation-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .negation-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .negative {
+            background: #ffcdd2;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #c62828;
+        }
+
+        .positive {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Neyînî</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Negation</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What is Negation?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    Negation is how we make sentences <strong>negative</strong> - saying what is NOT happening, what does NOT exist, 
+                    or what someone does NOT do.
+                </p>
+                <div style="background: white; padding: 20px; border-radius: 5px; margin-top: 15px;">
+                    <p style="line-height: 1.8;">
+                        <strong>Examples in English:</strong>
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        <li>I <strong>do not</strong> go</li>
+                        <li>He is <strong>not</strong> here</li>
+                        <li>She <strong>doesn't</strong> eat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECTION 1: VERB NEGATION - PRESENT TENSE -->
+            <div class="negation-section">
+                <div class="negation-title">1. Present Tense Negation</div>
+                <div class="negation-subtitle">Using "na" and "ne"</div>
+
+                <div class="explanation">
+                    <p>
+                        In the <strong>present tense</strong>, Kurdish uses different negative particles depending on the verb form:
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        <li><strong>na-</strong> prefix for present continuous (di- verbs)</li>
+                        <li><strong>ne-</strong> prefix for simple present and subjunctive</li>
+                    </ul>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Present Continuous (di- verbs) → na-</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Positive</th>
+                            <th>Negative</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ez <span class="positive">diçim</span></td>
+                            <td>Ez <span class="negative">naçim</span></td>
+                            <td>I go / I don't go</td>
+                        </tr>
+                        <tr>
+                            <td>Tu <span class="positive">dixwî</span></td>
+                            <td>Tu <span class="negative">naxwî</span></td>
+                            <td>You eat / You don't eat</td>
+                        </tr>
+                        <tr>
+                            <td>Ew <span class="positive">dixwîne</span></td>
+                            <td>Ew <span class="negative">naxwîne</span></td>
+                            <td>He/She reads / He/She doesn't read</td>
+                        </tr>
+                        <tr>
+                            <td>Em <span class="positive">dibînin</span></td>
+                            <td>Em <span class="negative">nabînin</span></td>
+                            <td>We see / We don't see</td>
+                        </tr>
+                        <tr>
+                            <td>Hûn <span class="positive">dikarin</span></td>
+                            <td>Hûn <span class="negative">nikarin</span></td>
+                            <td>You can / You cannot</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Pattern!</div>
+                    <p style="line-height: 1.8;">
+                        <strong>di-</strong> becomes <strong>na-</strong> in negation:<br>
+                        • di<strong>çim</strong> → na<strong>çim</strong><br>
+                        • di<strong>xwînim</strong> → na<strong>xwînim</strong><br>
+                        • di<strong>bînim</strong> → na<strong>bînim</strong>
+                    </p>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Full Sentence Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez naçim dibistanê.</div>
+                        <div class="english-text">I don't go to school.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew naxwîne pirtûkê.</div>
+                        <div class="english-text">He/She doesn't read the book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em nabînin wî.</div>
+                        <div class="english-text">We don't see him.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: PAST TENSE NEGATION -->
+            <div class="negation-section">
+                <div class="negation-title">2. Past Tense Negation</div>
+                <div class="negation-subtitle">Using "ne" prefix</div>
+
+                <div class="explanation">
+                    <p>
+                        In the <strong>past tense</strong>, use the prefix <strong>ne-</strong> before the verb.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Positive</th>
+                            <th>Negative</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Min <span class="positive">çû</span></td>
+                            <td>Min <span class="negative">neçû</span></td>
+                            <td>I went / I didn't go</td>
+                        </tr>
+                        <tr>
+                            <td>Te <span class="positive">xwar</span></td>
+                            <td>Te <span class="negative">nexwar</span></td>
+                            <td>You ate / You didn't eat</td>
+                        </tr>
+                        <tr>
+                            <td>Wî <span class="positive">xwend</span></td>
+                            <td>Wî <span class="negative">nexwend</span></td>
+                            <td>He read / He didn't read</td>
+                        </tr>
+                        <tr>
+                            <td>Me <span class="positive">dît</span></td>
+                            <td>Me <span class="negative">nedît</span></td>
+                            <td>We saw / We didn't see</td>
+                        </tr>
+                        <tr>
+                            <td>Wan <span class="positive">kir</span></td>
+                            <td>Wan <span class="negative">nekir</span></td>
+                            <td>They did / They didn't do</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Full Sentence Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Min neçû dibistanê.</div>
+                        <div class="english-text">I didn't go to school.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Wî nexwend pirtûkê.</div>
+                        <div class="english-text">He didn't read the book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Me nedît wî.</div>
+                        <div class="english-text">We didn't see him.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">⚠️ Remember!</div>
+                    <p style="line-height: 1.8;">
+                        Past tense uses <strong>oblique pronouns</strong> (min, te, wî, wê, me, we, wan) with transitive verbs, 
+                        whether positive or negative!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 3: "TO BE" NEGATION -->
+            <div class="negation-section">
+                <div class="negation-title">3. Negating "To Be" (bûn)</div>
+                <div class="negation-subtitle">Using "ne" and "nîn"</div>
+
+                <div class="explanation">
+                    <p>
+                        The verb "to be" has special negative forms in Kurdish.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Present Tense - "To Be":</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Person</th>
+                            <th>Positive</th>
+                            <th>Negative</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ez</td>
+                            <td>Ez <span class="positive">im</span></td>
+                            <td>Ez <span class="negative">nînim</span></td>
+                            <td>I am / I am not</td>
+                        </tr>
+                        <tr>
+                            <td>Tu</td>
+                            <td>Tu <span class="positive">yî</span></td>
+                            <td>Tu <span class="negative">nînî</span></td>
+                            <td>You are / You are not</td>
+                        </tr>
+                        <tr>
+                            <td>Ew</td>
+                            <td>Ew <span class="positive">e</span></td>
+                            <td>Ew <span class="negative">nîne</span></td>
+                            <td>He/She is / He/She is not</td>
+                        </tr>
+                        <tr>
+                            <td>Em</td>
+                            <td>Em <span class="positive">in</span></td>
+                            <td>Em <span class="negative">nînin</span></td>
+                            <td>We are / We are not</td>
+                        </tr>
+                        <tr>
+                            <td>Hûn</td>
+                            <td>Hûn <span class="positive">in</span></td>
+                            <td>Hûn <span class="negative">nînin</span></td>
+                            <td>You are / You are not</td>
+                        </tr>
+                        <tr>
+                            <td>Ew</td>
+                            <td>Ew <span class="positive">in</span></td>
+                            <td>Ew <span class="negative">nînin</span></td>
+                            <td>They are / They are not</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez li malê nînim.</div>
+                        <div class="english-text">I am not at home.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew xweş nîne.</div>
+                        <div class="english-text">He/She is not good/well.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em li vir nînin.</div>
+                        <div class="english-text">We are not here.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Past Tense - "To Be":</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Positive</th>
+                            <th>Negative</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ez <span class="positive">bûm</span></td>
+                            <td>Ez <span class="negative">nebûm</span></td>
+                            <td>I was / I wasn't</td>
+                        </tr>
+                        <tr>
+                            <td>Tu <span class="positive">bûyî</span></td>
+                            <td>Tu <span class="negative">nebûyî</span></td>
+                            <td>You were / You weren't</td>
+                        </tr>
+                        <tr>
+                            <td>Ew <span class="positive">bû</span></td>
+                            <td>Ew <span class="negative">nebû</span></td>
+                            <td>He/She was / He/She wasn't</td>
+                        </tr>
+                        <tr>
+                            <td>Em <span class="positive">bûn</span></td>
+                            <td>Em <span class="negative">nebûn</span></td>
+                            <td>We were / We weren't</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez li malê nebûm.</div>
+                        <div class="english-text">I wasn't at home.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew li vir nebû.</div>
+                        <div class="english-text">He/She wasn't here.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: IMPERATIVE NEGATION -->
+            <div class="negation-section">
+                <div class="negation-title">4. Negative Commands (Imperative)</div>
+                <div class="negation-subtitle">Using "me" and "ne"</div>
+
+                <div class="explanation">
+                    <p>
+                        To make negative commands (telling someone NOT to do something), use <strong>me</strong> or <strong>ne</strong> 
+                        before the verb.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Positive Command</th>
+                            <th>Negative Command</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="positive">Biçe!</span></td>
+                            <td><span class="negative">Meçe!</span></td>
+                            <td>Go! / Don't go!</td>
+                        </tr>
+                        <tr>
+                            <td><span class="positive">Bixwe!</span></td>
+                            <td><span class="negative">Mexwe!</span></td>
+                            <td>Eat! / Don't eat!</td>
+                        </tr>
+                        <tr>
+                            <td><span class="positive">Bixwîne!</span></td>
+                            <td><span class="negative">Mexwîne!</span></td>
+                            <td>Read! / Don't read!</td>
+                        </tr>
+                        <tr>
+                            <td><span class="positive">Bike!</span></td>
+                            <td><span class="negative">Meke!</span></td>
+                            <td>Do! / Don't do!</td>
+                        </tr>
+                        <tr>
+                            <td><span class="positive">Binêre!</span></td>
+                            <td><span class="negative">Menêre!</span></td>
+                            <td>Look! / Don't look!</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Meçe li wir!</div>
+                        <div class="english-text">Don't go there!</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mexwe wan tiştan!</div>
+                        <div class="english-text">Don't eat those things!</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Meke vê yekê!</div>
+                        <div class="english-text">Don't do this!</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Pattern!</div>
+                    <p style="line-height: 1.8;">
+                        The subjunctive prefix <strong>bi-</strong> becomes <strong>me-</strong> in negative commands:<br>
+                        • <strong>bi</strong>çe → <strong>me</strong>çe<br>
+                        • <strong>bi</strong>xwe → <strong>me</strong>xwe
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 5: OTHER NEGATIVE WORDS -->
+            <div class="negation-section">
+                <div class="negation-title">5. Other Negative Words</div>
+                <div class="negation-subtitle">No, nothing, nobody, never</div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                            <th>Example</th>
+                            <th>Translation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>na / ne</strong></td>
+                            <td>no</td>
+                            <td>Na, ez naçim.</td>
+                            <td>No, I don't go.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>tu tişt</strong></td>
+                            <td>nothing</td>
+                            <td>Ez tu tişt nabînim.</td>
+                            <td>I see nothing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>tu kes</strong></td>
+                            <td>nobody, no one</td>
+                            <td>Tu kes li vir nîne.</td>
+                            <td>Nobody is here.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>qet / tu car</strong></td>
+                            <td>never</td>
+                            <td>Ez qet naçim.</td>
+                            <td>I never go.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>hîç</strong></td>
+                            <td>not at all, nothing</td>
+                            <td>Ez hîç nizanim.</td>
+                            <td>I don't know at all.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ne...ne</strong></td>
+                            <td>neither...nor</td>
+                            <td>Ne ez ne tu.</td>
+                            <td>Neither me nor you.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>bê</strong></td>
+                            <td>without</td>
+                            <td>Ez bê te naçim.</td>
+                            <td>I won't go without you.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples in Context:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu kes li malê nîne.</div>
+                        <div class="english-text">Nobody is at home.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez tu tişt naxwînim.</div>
+                        <div class="english-text">I don't read anything. / I read nothing.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez qet li wir naçim.</div>
+                        <div class="english-text">I never go there.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ne ez ne ew.</div>
+                        <div class="english-text">Neither me nor him.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez hîç nizanim.</div>
+                        <div class="english-text">I don't know at all.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: Negation Summary</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tense/Type</th>
+                        <th>Negative Marker</th>
+                        <th>Example</th>
+                        <th>English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Present Continuous</td>
+                        <td><strong>na-</strong> (replaces di-)</td>
+                        <td>naçim</td>
+                        <td>I don't go</td>
+                    </tr>
+                    <tr>
+                        <td>Past Tense</td>
+                        <td><strong>ne-</strong> prefix</td>
+                        <td>neçû</td>
+                        <td>didn't go</td>
+                    </tr>
+                    <tr>
+                        <td>To Be (present)</td>
+                        <td><strong>nîn-</strong></td>
+                        <td>nînim</td>
+                        <td>I am not</td>
+                    </tr>
+                    <tr>
+                        <td>To Be (past)</td>
+                        <td><strong>ne-</strong> prefix</td>
+                        <td>nebûm</td>
+                        <td>I wasn't</td>
+                    </tr>
+                    <tr>
+                        <td>Imperative</td>
+                        <td><strong>me-</strong> (replaces bi-)</td>
+                        <td>meçe</td>
+                        <td>don't go</td>
+                    </tr>
+                    <tr>
+                        <td>Nothing</td>
+                        <td><strong>tu tişt</strong></td>
+                        <td>tu tişt nabînim</td>
+                        <td>I see nothing</td>
+                    </tr>
+                    <tr>
+                        <td>Nobody</td>
+                        <td><strong>tu kes</strong></td>
+                        <td>tu kes nîne</td>
+                        <td>nobody is</td>
+                    </tr>
+                    <tr>
+                        <td>Never</td>
+                        <td><strong>qet / tu car</strong></td>
+                        <td>qet naçim</td>
+                        <td>I never go</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Present continuous:</strong> di- becomes na- (diçim → naçim)</li>
+                    <li><strong>Past tense:</strong> Add ne- prefix (çû → neçû)</li>
+                    <li><strong>To be (present):</strong> Use nîn- forms (im → nînim, e → nîne)</li>
+                    <li><strong>To be (past):</strong> Add ne- prefix (bûm → nebûm)</li>
+                    <li><strong>Commands:</strong> bi- becomes me- (biçe → meçe)</li>
+                    <li><strong>Negative words:</strong> tu kes (nobody), tu tişt (nothing), qet (never)</li>
+                    <li>Kurdish negation is consistent and follows clear patterns!</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

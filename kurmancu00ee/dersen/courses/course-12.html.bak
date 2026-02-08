@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 12 - Pêşkêşkirin (Presentation) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #9c27b0 0%, #ba68c8 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #7b1fa2; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .project-box { background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #ba68c8; }
+        .instruction-card { background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #9c27b0; }
+        .example-box { background: #fff9c4; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #f9a825; }
+        .writing-area { background: #f9fbe7; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #cddc39; }
+        .writing-area textarea { width: 100%; padding: 15px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; min-height: 200px; font-family: inherit; }
+        .checklist { background: white; padding: 20px; margin: 15px 0; border-radius: 10px; }
+        .checklist-item { padding: 10px; margin: 8px 0; background: #f5f5f5; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
+        .checklist-item input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; }
+        .speaking-prompt { background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); padding: 25px; border-radius: 12px; margin: 20px 0; border: 3px solid #4fc3f7; }
+        .feedback-section { background: #fff3e0; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #ff9800; }
+        .btn-primary { background: #9c27b0; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; margin: 10px 5px; }
+        .btn-primary:hover { background: #7b1fa2; transform: scale(1.05); }
+        .btn-secondary { background: #4caf50; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; margin: 10px 5px; }
+        .btn-secondary:hover { background: #388e3c; transform: scale(1.05); }
+        .progress-bar { width: 100%; height: 30px; background: #e0e0e0; border-radius: 15px; overflow: hidden; margin: 20px 0; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #9c27b0 0%, #ba68c8 100%); transition: width 0.3s ease; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>🎓 Course 12: Pêşkêşkirin</h1>
+            <div class="course-meta">Review & Final Project | A1 Level</div>
+        </div>
+        <div class="course-content">
+            
+            <!-- Section 1: Project Introduction -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎯</span>1. Proje: Mini Pêşkêşkirin (Mini Presentation)</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">Congratulations! You've completed 11 courses. Now it's time to create your own mini-presentation in Kurdish!</p>
+                
+                <div class="project-box">
+                    <h3 style="color: #7b1fa2; text-align: center; margin-bottom: 25px;">📋 Your Final Project</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        Create a complete presentation about yourself that includes:
+                    </p>
+                    
+                    <div class="instruction-card">
+                        <h4 style="color: #9c27b0; margin-bottom: 10px;">✍️ Part 1: Written Text (Nivîsandin)</h4>
+                        <p style="line-height: 1.8;">
+                            Write a text in Kurdish that includes:<br>
+                            • <strong>Who you are</strong> (name, age, nationality, family)<br>
+                            • <strong>What you do</strong> (job/studies, hobbies)<br>
+                            • <strong>Your daily routine</strong> (morning, day, evening activities)<br>
+                            • <strong>Your preferences</strong> (likes/dislikes, favorite things)
+                        </p>
+                    </div>
+
+                    <div class="instruction-card">
+                        <h4 style="color: #9c27b0; margin-bottom: 10px;">🗣️ Part 2: Oral Presentation (Axaftin)</h4>
+                        <p style="line-height: 1.8;">
+                            Prepare to present your text orally. Practice:<br>
+                            • <strong>Clear pronunciation</strong><br>
+                            • <strong>Natural rhythm</strong><br>
+                            • <strong>Confident delivery</strong><br>
+                            • <strong>Eye contact</strong> (if presenting to someone)
+                        </p>
+                    </div>
+
+                    <div class="instruction-card">
+                        <h4 style="color: #9c27b0; margin-bottom: 10px;">🌿 Part 3: Self-Evaluation (Nirxandin)</h4>
+                        <p style="line-height: 1.8;">
+                            Review your work using the checklist provided and identify areas for improvement.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4 style="color: #f57f17; margin-bottom: 15px;">💡 Example Presentation Structure</h4>
+                    <p style="line-height: 2;">
+                        <strong style="color: #9c27b0;">Introduction:</strong><br>
+                        Silav! Navê min Sara ye. Ez 25 salî me. Ez ji Fransa me.<br>
+                        <span style="color: #666; font-style: italic;">(Hello! My name is Sara. I am 25 years old. I am from France.)</span><br><br>
+                        
+                        <strong style="color: #9c27b0;">About Me:</strong><br>
+                        Ez mamosteyê zimanê îngilîzî me. Ez di zanîngehekê de dixebitim.<br>
+                        <span style="color: #666; font-style: italic;">(I am an English teacher. I work at a university.)</span><br><br>
+                        
+                        <strong style="color: #9c27b0;">Daily Routine:</strong><br>
+                        Ez her roj di seet 7:00an de raketim. Ez taştê dixwim û diçim kar.<br>
+                        <span style="color: #666; font-style: italic;">(I wake up every day at 7:00. I have breakfast and go to work.)</span><br><br>
+                        
+                        <strong style="color: #9c27b0;">Preferences:</strong><br>
+                        Ez pirtûkan pir hez dikim. Zimanê kurdî pir xweş e!<br>
+                        <span style="color: #666; font-style: italic;">(I like books very much. Kurdish language is very nice!)</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2: Writing Section -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>2. Nivîsandin: Your Presentation Text</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Write your complete presentation here. Aim for at least 10-15 sentences.</p>
+                
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin: 20px 0; border: 2px solid #42a5f5;">
+                    <h4 style="color: #1976d2; margin-bottom: 15px;">📚 Need Help? Use These Resources</h4>
+                    <p style="margin-bottom: 15px; color: #555;">Click on these buttons to open reference materials in a new tab while you write:</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                        <button onclick="window.open('../../peyven/peyven.html', '_blank')" style="padding: 12px 20px; background: #4caf50; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease;">
+                            📖 Peyvên (Vocabulary)
+                        </button>
+                        <button onclick="window.open('../../leker/leker.html', '_blank')" style="padding: 12px 20px; background: #ff9800; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease;">
+                            🔤 Lêker (Verbs)
+                        </button>
+                        <button onclick="window.open('../../reziman/reziman.html', '_blank')" style="padding: 12px 20px; background: #f44336; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease;">
+                            📐 Rêziman (Grammar)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="writing-area">
+                    <h4 style="color: #827717; margin-bottom: 15px;">📝 Write Your Text in Kurdish</h4>
+                    <p style="margin-bottom: 15px; color: #666;">Include all four parts: who you are, what you do, your routine, and your preferences.</p>
+                    <textarea id="presentation-text" placeholder="Start writing your presentation here...
+
+Example:
+Silav! Navê min... ye.
+Ez... salî me.
+Ez ji... me.
+..."></textarea>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="btn-primary" onclick="savePresentation()">💾 Save My Text</button>
+                        <button class="btn-secondary" onclick="checkWordCount()">📊 Check Word Count</button>
+                    </div>
+                    <div id="word-count-feedback" style="margin-top: 15px; font-size: 1.1rem; font-weight: bold; text-align: center;"></div>
+                </div>
+
+                <div class="checklist">
+                    <h4 style="color: #7b1fa2; margin-bottom: 15px;">✅ Writing Checklist</h4>
+                    <p style="margin-bottom: 15px; color: #666;">Make sure your text includes:</p>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1" onchange="updateProgress()">
+                        <label for="check1">My name, age, and nationality</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2" onchange="updateProgress()">
+                        <label for="check2">Information about my family</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3" onchange="updateProgress()">
+                        <label for="check3">My job or studies</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check4" onchange="updateProgress()">
+                        <label for="check4">My daily routine (morning, day, evening)</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check5" onchange="updateProgress()">
+                        <label for="check5">What I like and don't like</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check6" onchange="updateProgress()">
+                        <label for="check6">At least 10-15 sentences</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check7" onchange="updateProgress()">
+                        <label for="check7">Correct verb forms (present tense)</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check8" onchange="updateProgress()">
+                        <label for="check8">Time expressions (sibeh, êvar, her roj, etc.)</label>
+                    </div>
+                    
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-bar" style="width: 0%;">0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Speaking Practice -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>3. Axaftin: Oral Presentation Practice</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Now practice presenting your text orally!</p>
+                
+                <div class="speaking-prompt">
+                    <h3 style="color: #0277bd; text-align: center; margin-bottom: 20px;">🎤 Presentation Tips</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px;">
+                        <h4 style="color: #0288d1; margin-bottom: 10px;">Before You Start:</h4>
+                        <ul style="line-height: 2; margin-left: 20px;">
+                            <li>Read your text several times silently</li>
+                            <li>Identify difficult words and practice them</li>
+                            <li>Break your presentation into sections</li>
+                            <li>Practice each section separately first</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px;">
+                        <h4 style="color: #0288d1; margin-bottom: 10px;">While Presenting:</h4>
+                        <ul style="line-height: 2; margin-left: 20px;">
+                            <li>Speak slowly and clearly</li>
+                            <li>Pause between sentences</li>
+                            <li>Use natural intonation</li>
+                            <li>Don't worry about small mistakes - keep going!</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px;">
+                        <h4 style="color: #0288d1; margin-bottom: 10px;">Practice Methods:</h4>
+                        <ul style="line-height: 2; margin-left: 20px;">
+                            <li>📱 Record yourself and listen back</li>
+                            <li>🪞 Practice in front of a mirror</li>
+                            <li>👥 Present to a friend or family member</li>
+                            <li>🎥 Make a video of your presentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <button class="btn-primary" onclick="markPracticed()">✅ I've Practiced My Presentation</button>
+                    <div id="practice-feedback" style="margin-top: 20px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Self-Evaluation & Feedback -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>4. Nirxandin: Self-Evaluation</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Reflect on your learning journey and evaluate your presentation.</p>
+                
+                <div class="feedback-section">
+                    <h3 style="color: #e65100; margin-bottom: 20px;">📊 Evaluate Your Presentation</h3>
+                    
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #f57c00; margin-bottom: 10px;">Content (Naverok)</h4>
+                        <p style="margin-bottom: 10px;">Did you include all required information?</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="rating-btn" onclick="rateContent(1)">1 ⭐</button>
+                            <button class="rating-btn" onclick="rateContent(2)">2 ⭐⭐</button>
+                            <button class="rating-btn" onclick="rateContent(3)">3 ⭐⭐⭐</button>
+                            <button class="rating-btn" onclick="rateContent(4)">4 ⭐⭐⭐⭐</button>
+                            <button class="rating-btn" onclick="rateContent(5)">5 ⭐⭐⭐⭐⭐</button>
+                        </div>
+                        <div id="content-rating" style="margin-top: 10px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #f57c00; margin-bottom: 10px;">Grammar (Rêziman)</h4>
+                        <p style="margin-bottom: 10px;">How accurate was your grammar?</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="rating-btn" onclick="rateGrammar(1)">1 ⭐</button>
+                            <button class="rating-btn" onclick="rateGrammar(2)">2 ⭐⭐</button>
+                            <button class="rating-btn" onclick="rateGrammar(3)">3 ⭐⭐⭐</button>
+                            <button class="rating-btn" onclick="rateGrammar(4)">4 ⭐⭐⭐⭐</button>
+                            <button class="rating-btn" onclick="rateGrammar(5)">5 ⭐⭐⭐⭐⭐</button>
+                        </div>
+                        <div id="grammar-rating" style="margin-top: 10px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #f57c00; margin-bottom: 10px;">Speaking (Axaftin)</h4>
+                        <p style="margin-bottom: 10px;">How confident and clear was your oral presentation?</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="rating-btn" onclick="rateSpeaking(1)">1 ⭐</button>
+                            <button class="rating-btn" onclick="rateSpeaking(2)">2 ⭐⭐</button>
+                            <button class="rating-btn" onclick="rateSpeaking(3)">3 ⭐⭐⭐</button>
+                            <button class="rating-btn" onclick="rateSpeaking(4)">4 ⭐⭐⭐⭐</button>
+                            <button class="rating-btn" onclick="rateSpeaking(5)">5 ⭐⭐⭐⭐⭐</button>
+                        </div>
+                        <div id="speaking-rating" style="margin-top: 10px; font-weight: bold;"></div>
+                    </div>
+                </div>
+
+                <div style="background: #f3e5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+                    <h4 style="color: #7b1fa2; margin-bottom: 15px;">💭 Reflection Questions</h4>
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">What was the most challenging part?</label>
+                        <textarea id="reflection1" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 8px; min-height: 80px;"></textarea>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">What are you most proud of?</label>
+                        <textarea id="reflection2" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 8px; min-height: 80px;"></textarea>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">What will you work on next?</label>
+                        <textarea id="reflection3" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 8px; min-height: 80px;"></textarea>
+                    </div>
+                </div>
+
+                <div id="final-score" style="background: linear-gradient(135deg, #9c27b0 0%, #ba68c8 100%); padding: 30px; border-radius: 15px; margin: 30px 0; text-align: center; color: white; display: none;">
+                    <h3 style="font-size: 2rem; margin-bottom: 15px;">🎉 Your Overall Score</h3>
+                    <div style="font-size: 3rem; font-weight: bold; margin: 20px 0;" id="total-score">0/15</div>
+                    <p style="font-size: 1.2rem;" id="score-message"></p>
+                </div>
+            </div>
+
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);">
+                <h2 style="color: #7b1fa2; margin-bottom: 20px;">🎊 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 20px; line-height: 1.8;">
+                    You've completed all 12 courses of the A1 level!<br>
+                    You can now introduce yourself, talk about your family, describe your routine,<br>
+                    and express your preferences in Kurdish.<br><br>
+                    <strong style="color: #9c27b0;">Bi xêr hatî! Welcome to your Kurdish learning journey!</strong>
+                </p>
+                <a href="../level-a1.html" class="back-link" style="background: #9c27b0; font-size: 1.1rem; padding: 15px 30px;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+    <footer><p>&copy; 2025 Kurdish Academy. All rights reserved.</p></footer>
+    <script>
+        let contentScore = 0;
+        let grammarScore = 0;
+        let speakingScore = 0;
+        let practiced = false;
+
+        function savePresentation() {
+            const text = document.getElementById('presentation-text').value;
+            if (text.trim().length < 50) {
+                alert('Please write more! Your presentation should be at least 10-15 sentences.');
+                return;
+            }
+            localStorage.setItem('kurdish-presentation', text);
+            alert('✅ Your presentation has been saved!');
+        }
+
+        function checkWordCount() {
+            const text = document.getElementById('presentation-text').value.trim();
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+            const words = text.split(/\s+/).filter(w => w.length > 0);
+            const feedback = document.getElementById('word-count-feedback');
+            
+            feedback.innerHTML = `
+                📊 <strong>Statistics:</strong><br>
+                Words: ${words.length} | Sentences: ${sentences.length}<br>
+                ${sentences.length >= 10 ? '✅ Great! You have enough sentences.' : '⚠️ Try to write at least 10 sentences.'}
+            `;
+            feedback.style.color = sentences.length >= 10 ? '#2e7d32' : '#f57f17';
+        }
+
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const total = checkboxes.length;
+            const percentage = Math.round((checked / total) * 100);
+            
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = percentage + '%';
+            progressBar.textContent = percentage + '%';
+        }
+
+        function markPracticed() {
+            practiced = true;
+            const feedback = document.getElementById('practice-feedback');
+            feedback.innerHTML = '✅ Excellent! Keep practicing to improve your fluency.';
+            feedback.style.color = '#2e7d32';
+        }
+
+        function rateContent(score) {
+            contentScore = score;
+            document.getElementById('content-rating').innerHTML = `Your rating: ${score}/5 ⭐`;
+            document.getElementById('content-rating').style.color = '#2e7d32';
+            updateFinalScore();
+        }
+
+        function rateGrammar(score) {
+            grammarScore = score;
+            document.getElementById('grammar-rating').innerHTML = `Your rating: ${score}/5 ⭐`;
+            document.getElementById('grammar-rating').style.color = '#2e7d32';
+            updateFinalScore();
+        }
+
+        function rateSpeaking(score) {
+            speakingScore = score;
+            document.getElementById('speaking-rating').innerHTML = `Your rating: ${score}/5 ⭐`;
+            document.getElementById('speaking-rating').style.color = '#2e7d32';
+            updateFinalScore();
+        }
+
+        function updateFinalScore() {
+            if (contentScore > 0 && grammarScore > 0 && speakingScore > 0) {
+                const total = contentScore + grammarScore + speakingScore;
+                const finalScoreDiv = document.getElementById('final-score');
+                const totalScoreDiv = document.getElementById('total-score');
+                const messageDiv = document.getElementById('score-message');
+                
+                finalScoreDiv.style.display = 'block';
+                totalScoreDiv.textContent = `${total}/15`;
+                
+                if (total >= 13) {
+                    messageDiv.textContent = '🌟 Outstanding! Pir baş! You did an excellent job!';
+                } else if (total >= 10) {
+                    messageDiv.textContent = '👏 Great work! Baş e! Keep practicing!';
+                } else if (total >= 7) {
+                    messageDiv.textContent = '👍 Good effort! Continue learning!';
+                } else {
+                    messageDiv.textContent = '💪 Keep going! Practice makes perfect!';
+                }
+            }
+        }
+
+        // Load saved presentation if exists
+        window.onload = function() {
+            const saved = localStorage.getItem('kurdish-presentation');
+            if (saved) {
+                document.getElementById('presentation-text').value = saved;
+            }
+        };
+    </script>
+    <style>
+        .rating-btn {
+            padding: 10px 15px;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .rating-btn:hover {
+            background: #fff3e0;
+            transform: scale(1.05);
+        }
+    </style>
+</body>
+</html>

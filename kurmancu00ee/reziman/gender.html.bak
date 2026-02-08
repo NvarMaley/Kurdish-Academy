@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Zayend û Hejmar (Gender & Number)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .gender-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .gender-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .gender-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .gender-box {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .masculine {
+            background: #bbdefb;
+            color: #1565c0;
+        }
+
+        .feminine {
+            background: #f8bbd0;
+            color: #c2185b;
+        }
+
+        .rule-box {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #2e7d32;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Zayend û Hejmar</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Gender & Number</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What are Gender and Number?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    In Kurdish Kurmanji, nouns have two important grammatical features:
+                </p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8; font-size: 1.05rem;">
+                    <li><strong>Gender (Zayend):</strong> Every noun is either <strong>masculine</strong> or <strong>feminine</strong></li>
+                    <li><strong>Number (Hejmar):</strong> Nouns can be <strong>singular</strong> (one) or <strong>plural</strong> (more than one)</li>
+                </ul>
+                <div class="note-box" style="margin-top: 20px;">
+                    <div class="note-title">⚠️ Important!</div>
+                    <p style="line-height: 1.8;">
+                        Gender affects how articles, adjectives, and verbs work with nouns. This is a key feature of Kurmanji grammar!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 1: GENDER -->
+            <div class="gender-section">
+                <div class="gender-title">1. Zayend (Gender)</div>
+                <div class="gender-subtitle">Masculine & Feminine</div>
+
+                <div class="explanation">
+                    <p>
+                        Kurdish Kurmanji has <strong>two genders</strong>: masculine (nêr) and feminine (mê). 
+                        Unlike English, where gender only matters for people, in Kurdish <strong>ALL nouns</strong> have a gender, 
+                        including objects, animals, and abstract concepts.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">How to Identify Gender:</h4>
+
+                <div class="rule-box">
+                    <h5 style="color: #2e7d32; margin-bottom: 10px;">✅ General Rules (with exceptions):</h5>
+                    <ul style="line-height: 1.8; margin-left: 20px;">
+                        <li><strong>Masculine:</strong> Nouns ending in a <strong>consonant</strong></li>
+                        <li><strong>Feminine:</strong> Nouns ending in <strong>-a</strong>, <strong>-e</strong>, or <strong>-î</strong></li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples - Masculine Nouns:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">pirtûk <span class="gender-box masculine">Masculine</span></div>
+                        <div class="english-text">book</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">keç <span class="gender-box masculine">Masculine</span></div>
+                        <div class="english-text">boy</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">roj <span class="gender-box masculine">Masculine</span></div>
+                        <div class="english-text">day</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">dar <span class="gender-box masculine">Masculine</span></div>
+                        <div class="english-text">tree</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples - Feminine Nouns:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">mala <span class="gender-box feminine">Feminine</span></div>
+                        <div class="english-text">house</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">keçik <span class="gender-box feminine">Feminine</span></div>
+                        <div class="english-text">girl</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">şev <span class="gender-box feminine">Feminine</span></div>
+                        <div class="english-text">night</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">dayîk <span class="gender-box feminine">Feminine</span></div>
+                        <div class="english-text">mother</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Gender affects Articles:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Gender</th>
+                            <th>Indefinite</th>
+                            <th>Definite (Direct)</th>
+                            <th>Definite (Oblique)</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="gender-box masculine">Masculine</span></td>
+                            <td>-ek</td>
+                            <td>-ê</td>
+                            <td>-î</td>
+                            <td>pirtûk → pirtûk<strong>ek</strong> → pirtûk<strong>ê</strong></td>
+                        </tr>
+                        <tr>
+                            <td><span class="gender-box feminine">Feminine</span></td>
+                            <td>-ek / -ak</td>
+                            <td>-a</td>
+                            <td>-ê</td>
+                            <td>mala → mala<strong>yek</strong> → mala<strong>a</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Important Note!</div>
+                    <p style="line-height: 1.8;">
+                        There are <strong>exceptions</strong> to the ending rules! Some nouns ending in consonants are feminine, 
+                        and some ending in vowels are masculine. You'll learn these with practice and exposure to the language.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: NUMBER (SINGULAR & PLURAL) -->
+            <div class="gender-section">
+                <div class="gender-title">2. Hejmar (Number)</div>
+                <div class="gender-subtitle">Singular & Plural</div>
+
+                <div class="explanation">
+                    <p>
+                        Kurdish nouns change form to show whether we're talking about <strong>one thing</strong> (singular) 
+                        or <strong>more than one</strong> (plural). There are several ways to form plurals in Kurdish.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Method 1: Adding -an (Most Common)</h4>
+
+                <div class="explanation">
+                    <p>
+                        The most common way to make a plural is to add <strong>-an</strong> to the end of the noun.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Singular</th>
+                            <th>Plural</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>pirtûk</td>
+                            <td>pirtûk<strong>an</strong></td>
+                            <td>book → books</td>
+                        </tr>
+                        <tr>
+                            <td>keç</td>
+                            <td>keç<strong>an</strong></td>
+                            <td>boy → boys</td>
+                        </tr>
+                        <tr>
+                            <td>dar</td>
+                            <td>dar<strong>an</strong></td>
+                            <td>tree → trees</td>
+                        </tr>
+                        <tr>
+                            <td>roj</td>
+                            <td>roj<strong>an</strong></td>
+                            <td>day → days</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Method 2: Feminine Nouns ending in -a or -e</h4>
+
+                <div class="explanation">
+                    <p>
+                        For feminine nouns ending in <strong>-a</strong> or <strong>-e</strong>, the ending changes to <strong>-ê</strong> 
+                        and then <strong>-an</strong> is added.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Singular</th>
+                            <th>Plural</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mal<strong>a</strong></td>
+                            <td>mal<strong>ên</strong></td>
+                            <td>house → houses</td>
+                        </tr>
+                        <tr>
+                            <td>keçik<strong>a</strong></td>
+                            <td>keçik<strong>ên</strong></td>
+                            <td>girl → girls</td>
+                        </tr>
+                        <tr>
+                            <td>xanî</td>
+                            <td>xanî<strong>yên</strong></td>
+                            <td>house → houses</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Method 3: Irregular Plurals</h4>
+
+                <div class="explanation">
+                    <p>
+                        Some common nouns have <strong>irregular plural forms</strong> that don't follow the standard rules. 
+                        These must be memorized.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Singular</th>
+                            <th>Plural</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mirov</td>
+                            <td>mirov<strong>ên</strong></td>
+                            <td>person → people</td>
+                        </tr>
+                        <tr>
+                            <td>jin</td>
+                            <td>jin<strong>ên</strong></td>
+                            <td>woman → women</td>
+                        </tr>
+                        <tr>
+                            <td>zarok</td>
+                            <td>zarok<strong>ên</strong></td>
+                            <td>child → children</td>
+                        </tr>
+                        <tr>
+                            <td>pez</td>
+                            <td>pez</td>
+                            <td>sheep → sheep (no change)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples in Sentences:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkek dixwînim.</div>
+                        <div class="english-text">I read a book. (singular)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkan dixwînim.</div>
+                        <div class="english-text">I read books. (plural)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mala mezin e.</div>
+                        <div class="english-text">The house is big. (singular)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Malên mezin in.</div>
+                        <div class="english-text">The houses are big. (plural)</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Tip for Learners!</div>
+                    <p style="line-height: 1.8;">
+                        When learning new vocabulary, always learn the <strong>gender</strong> and <strong>plural form</strong> 
+                        together with the singular form. This will help you use the word correctly in sentences!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 3: GENDER & NUMBER TOGETHER -->
+            <div class="gender-section">
+                <div class="gender-title">3. Gender & Number Working Together</div>
+                <div class="gender-subtitle">How they affect articles and adjectives</div>
+
+                <div class="explanation">
+                    <p>
+                        When you use articles with plural nouns, the gender still matters! Here's how it works:
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Definite Articles with Plurals:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Singular</th>
+                            <th>Plural</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="gender-box masculine">Masculine</span></td>
+                            <td>pirtûk<strong>ê</strong></td>
+                            <td>pirtûk<strong>an</strong></td>
+                            <td>the book → the books</td>
+                        </tr>
+                        <tr>
+                            <td><span class="gender-box feminine">Feminine</span></td>
+                            <td>mal<strong>a</strong></td>
+                            <td>mal<strong>ên</strong></td>
+                            <td>the house → the houses</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">With Demonstratives:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Distance</th>
+                            <th>Singular</th>
+                            <th>Plural</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Near</strong></td>
+                            <td>ev</td>
+                            <td>van</td>
+                            <td>ev pirtûk → van pirtûkan</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Far</strong></td>
+                            <td>ew</td>
+                            <td>wan</td>
+                            <td>ew pirtûk → wan pirtûkan</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Complete Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">ev pirtûkê mezin</div>
+                        <div class="english-text">this big book (singular, masculine)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">van pirtûkên mezin</div>
+                        <div class="english-text">these big books (plural, masculine)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">ew mala spî</div>
+                        <div class="english-text">that white house (singular, feminine)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">wan malên spî</div>
+                        <div class="english-text">those white houses (plural, feminine)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: Plural Formation</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Noun Type</th>
+                        <th>Rule</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Most nouns</td>
+                        <td>Add <strong>-an</strong></td>
+                        <td>pirtûk → pirtûk<strong>an</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Feminine ending in -a/-e</td>
+                        <td>Change to <strong>-ên</strong></td>
+                        <td>mala → mal<strong>ên</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Feminine ending in -î</td>
+                        <td>Add <strong>-yên</strong></td>
+                        <td>xanî → xanî<strong>yên</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Irregular</td>
+                        <td>Must memorize</td>
+                        <td>mirov → mirov<strong>ên</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Gender:</strong> All Kurdish nouns are either masculine or feminine</li>
+                    <li><strong>Gender rules:</strong> Consonant endings = usually masculine; -a/-e/-î endings = usually feminine</li>
+                    <li><strong>Plural formation:</strong> Most commonly add -an; feminine nouns often use -ên</li>
+                    <li><strong>Gender affects:</strong> Articles, adjectives, and verb agreement</li>
+                    <li><strong>Learn together:</strong> Always learn gender and plural form with new vocabulary</li>
+                    <li><strong>Exceptions exist:</strong> Some irregular forms must be memorized</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

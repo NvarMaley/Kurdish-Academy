@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 18 - Serbilindî (Leisure) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #1976d2; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-card { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 20px; border-radius: 12px; text-align: center; transition: transform 0.3s ease; border: 2px solid #42a5f5; }
+        .vocab-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(33, 150, 243, 0.2); }
+        .vocab-word { font-size: 1.4rem; font-weight: bold; color: #0d47a1; margin-bottom: 8px; }
+        .vocab-translation { font-size: 1rem; color: #1565c0; }
+        .structure-box { background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #4caf50; }
+        .structure-pattern { font-size: 1.2rem; color: #2e7d32; margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .example-dialogue { background: #fff3e0; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .dialogue-line { margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .speaker { font-weight: bold; color: #ff9800; margin-bottom: 8px; }
+        .kurdish-text { font-size: 1.2rem; color: #333; margin: 8px 0; }
+        .translation { font-size: 0.95rem; color: #666; font-style: italic; }
+        .exercise-box { background: #f3e5f5; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #ba68c8; }
+        .exercise-title { font-size: 1.5rem; color: #6a1b9a; margin-bottom: 15px; font-weight: bold; }
+        .exercise-box input[type="text"], .exercise-box textarea { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .exercise-box button { background: #1976d2; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .exercise-box button:hover { background: #0d47a1; transform: scale(1.05); }
+        .activity-card { background: #e3f2fd; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2; }
+        .frequency-box { background: #fff9c4; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #fbc02d; }
+        .scenario-box { background: #e3f2fd; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #1976d2; }
+        .role-btn { transition: all 0.3s ease; }
+        .role-btn:hover { background: #f5f5f5 !important; transform: translateX(5px); }
+        .role-btn.correct { background: #c8e6c9 !important; border-color: #4caf50 !important; color: #2e7d32 !important; }
+        .role-btn.incorrect { background: #ffcdd2 !important; border-color: #f44336 !important; color: #c62828 !important; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>🎨 Course 18: Serbilindî (Leisure)</h1>
+            <div class="course-meta">Sport, Music & Hobbies | A1 Level</div>
+        </div>
+        <div class="course-content">
+            
+            <!-- Section 1: Vocabulary -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧩</span>1. Peyvên (Vocabulary): Serbilindî</h2>
+                
+                <h3 style="color: #1976d2; margin: 20px 0;">⚽ Werzîş (Sports)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Top</div><div class="vocab-translation">Football/Soccer</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Basketbol</div><div class="vocab-translation">Basketball</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Tenis</div><div class="vocab-translation">Tennis</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Avjenî</div><div class="vocab-translation">Swimming</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Bezandin</div><div class="vocab-translation">Running</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sîklêt</div><div class="vocab-translation">Cycling</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Yoga</div><div class="vocab-translation">Yoga</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şanorî</div><div class="vocab-translation">Skiing</div></div>
+                </div>
+
+                <h3 style="color: #1976d2; margin: 20px 0;">🎵 Muzîk û Huner (Music & Arts)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Muzîk</div><div class="vocab-translation">Music</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Stran</div><div class="vocab-translation">Song</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dengbêj</div><div class="vocab-translation">Singer</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Gitar</div><div class="vocab-translation">Guitar</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Piyano</div><div class="vocab-translation">Piano</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dilan</div><div class="vocab-translation">Drums</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Wêne</div><div class="vocab-translation">Painting/Drawing</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şano</div><div class="vocab-translation">Theater</div></div>
+                </div>
+
+                <h3 style="color: #1976d2; margin: 20px 0;">🎬 Çalakiyên Din (Other Activities)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Sînema</div><div class="vocab-translation">Cinema</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Fîlm</div><div class="vocab-translation">Movie</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Xwendin</div><div class="vocab-translation">Reading</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pirtûk</div><div class="vocab-translation">Book</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Lîstik</div><div class="vocab-translation">Game/Play</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Danûstandin</div><div class="vocab-translation">Dancing</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Rêwîtî</div><div class="vocab-translation">Travel/Trip</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Baxçevanî</div><div class="vocab-translation">Gardening</div></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Grammar - Activity Verbs & Frequency -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧠</span>2. Rêziman (Grammar): Çalakî û Pêwendî (Activities & Frequency)</h2>
+                
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #0d47a1; margin-bottom: 10px;">💡 Talking About Weekend Activities</h4>
+                    <p style="line-height: 1.8;">
+                        To talk about what you do on weekends or in your free time, use activity verbs with the present tense.
+                    </p>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Common Activity Verbs</h3>
+                    <div class="structure-pattern">
+                        <strong>Ez ... dikim</strong> = I do/play...<br><br>
+                        
+                        <strong>Sports & Activities:</strong><br>
+                        • <strong>Ez top dilîzim</strong> = I play football<br>
+                        • <strong>Ez avjenî dikim</strong> = I swim<br>
+                        • <strong>Ez bezim</strong> = I run<br>
+                        • <strong>Ez sîklêt dikim</strong> = I cycle<br>
+                        • <strong>Ez yoga dikim</strong> = I do yoga<br><br>
+                        
+                        <strong>Music & Arts:</strong><br>
+                        • <strong>Ez muzîk guhdarî dikim</strong> = I listen to music<br>
+                        • <strong>Ez gitar dilîzim</strong> = I play guitar<br>
+                        • <strong>Ez distrim</strong> = I sing<br>
+                        • <strong>Ez wêne dikim</strong> = I paint/draw<br><br>
+                        
+                        <strong>Other Activities:</strong><br>
+                        • <strong>Ez pirtûk dixwînim</strong> = I read books<br>
+                        • <strong>Ez fîlm temaşe dikim</strong> = I watch movies<br>
+                        • <strong>Ez danûstandin dikim</strong> = I dance<br>
+                        • <strong>Ez bi hevalên xwe re derdikevim</strong> = I go out with friends
+                    </div>
+                </div>
+
+                <div class="frequency-box">
+                    <h3 style="color: #f57f17; margin-bottom: 15px;">📌 Frequency Expressions</h3>
+                    <div style="font-size: 1.1rem; line-height: 2;">
+                        <strong>Her tim</strong> = Always<br>
+                        <strong>Pir caran</strong> = Often / Many times<br>
+                        <strong>Carinan</strong> = Sometimes<br>
+                        <strong>Kêm caran</strong> = Rarely / Few times<br>
+                        <strong>Tu car</strong> = Never<br>
+                        <strong>Her roj</strong> = Every day<br>
+                        <strong>Her hefte</strong> = Every week<br>
+                        <strong>Hefteyek carekê</strong> = Once a week<br>
+                        <strong>Mehekê du caran</strong> = Twice a month<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • Ez <strong>her hefte</strong> top dilîzim. = I play football every week.<br>
+                        • Ez <strong>pir caran</strong> muzîk guhdarî dikim. = I often listen to music.<br>
+                        • Ez <strong>carinan</strong> sînemayê diçim. = I sometimes go to the cinema.<br>
+                        • Ez <strong>tu car</strong> yoga nakim. = I never do yoga.
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Weekend Expressions</h3>
+                    <div class="structure-pattern">
+                        <strong>Dawiya hefteyê</strong> = On the weekend<br>
+                        <strong>Li vê dawiya hefteyê</strong> = This weekend<br>
+                        <strong>Şemî</strong> = Saturday<br>
+                        <strong>Yekşem</strong> = Sunday<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • <strong>Dawiya hefteyê</strong> ez bi hevalên xwe re derdikevim.<br>
+                        • <strong>Li vê dawiya hefteyê</strong> ez dê biçim sînemayê.<br>
+                        • <strong>Şemî</strong> ez top dilîzim û <strong>Yekşem</strong> ez razim.
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #ff9800; margin-bottom: 15px;">💬 Example Sentences:</h4>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        • Ez her hefte top dilîzim û avjenî dikim.<br>
+                        • Dawiya hefteyê ez pir caran muzîk guhdarî dikim.<br>
+                        • Ez carinan bi hevalên xwe re diçim sînemayê.<br>
+                        • Ez her roj pirtûk dixwînim û muzîk guhdarî dikim.<br>
+                        • Li vê dawiya hefteyê ez dê biçim rêwîtiyê.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening - Leisure Conversation -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎧</span>3. Guhdarîkirin (Listening): Axaftina Serbilindiyê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Listen to this conversation about weekend activities:
+                </p>
+
+                <div class="example-dialogue">
+                    <div class="dialogue-line">
+                        <div class="speaker">👨 Rêzan:</div>
+                        <div class="kurdish-text">Silav Dîlan! Tu çi dikî dawiya hefteyê?</div>
+                        <div class="translation">Hi Dilan! What do you do on weekends?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Dîlan:</div>
+                        <div class="kurdish-text">Silav! Ez pir caran top dilîzim. Tu jî?</div>
+                        <div class="translation">Hi! I often play football. And you?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨 Rêzan:</div>
+                        <div class="kurdish-text">Ez her hefte avjenî dikim. Ez jî muzîk guhdarî dikim.</div>
+                        <div class="translation">I swim every week. I also listen to music.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Dîlan:</div>
+                        <div class="kurdish-text">Wah, çi muzîkê tu hez dikî?</div>
+                        <div class="translation">Wow, what music do you like?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨 Rêzan:</div>
+                        <div class="kurdish-text">Ez muzîka kurdî û rock hez dikim. Tu çi dikî?</div>
+                        <div class="translation">I like Kurdish music and rock. What do you do?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Dîlan:</div>
+                        <div class="kurdish-text">Ez carinan gitar dilîzim û pirtûk dixwînim.</div>
+                        <div class="translation">I sometimes play guitar and read books.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👨 Rêzan:</div>
+                        <div class="kurdish-text">Li vê dawiya hefteyê tu çi dê bikî?</div>
+                        <div class="translation">What will you do this weekend?</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">👩 Dîlan:</div>
+                        <div class="kurdish-text">Şemî ez dê biçim sînemayê û Yekşem ez dê bi hevalên xwe re top dilîzim.</div>
+                        <div class="translation">Saturday I will go to the cinema and Sunday I will play football with my friends.</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Comprehension Questions</div>
+                    <p style="margin-bottom: 15px;">Answer these questions based on the dialogue:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What does Dilan often do on weekends?</label>
+                        <input type="text" id="listen-q1" placeholder="Type in Kurdish...">
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What music does Rêzan like?</label>
+                        <input type="text" id="listen-q2" placeholder="Type in Kurdish...">
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What will Dilan do on Saturday?</label>
+                        <input type="text" id="listen-q3" placeholder="Type in Kurdish...">
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading - Weekend Program -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📖</span>4. Xwendin (Reading): Bernameya Dawiya Hefteyê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Read Leyla's weekend program:
+                </p>
+
+                <div style="background: white; border: 3px solid #1976d2; padding: 30px; margin: 20px 0; border-radius: 12px;">
+                    <h3 style="color: #0d47a1; text-align: center; margin-bottom: 20px;">📅 Bernameya Min - Leyla</h3>
+                    
+                    <div class="activity-card">
+                        <strong style="color: #1976d2; font-size: 1.2rem;">Şemî (Saturday)</strong><br><br>
+                        <strong>Sibê (Morning):</strong><br>
+                        Saet 9:00 - Ez bezim (30 deqe)<br>
+                        Saet 10:00 - Ez yoga dikim<br><br>
+                        
+                        <strong>Nîvro (Afternoon):</strong><br>
+                        Saet 14:00 - Ez bi hevalên xwe re diçim qehwexaneyê<br>
+                        Saet 16:00 - Ez pirtûk dixwînim li parkê<br><br>
+                        
+                        <strong>Êvar (Evening):</strong><br>
+                        Saet 19:00 - Ez bi malbata xwe re fîlm temaşe dikim
+                    </div>
+                    
+                    <div class="activity-card">
+                        <strong style="color: #1976d2; font-size: 1.2rem;">Yekşem (Sunday)</strong><br><br>
+                        <strong>Sibê (Morning):</strong><br>
+                        Saet 10:00 - Ez avjenî dikim<br>
+                        Saet 11:30 - Ez bi hevalên xwe re top dilîzim<br><br>
+                        
+                        <strong>Nîvro (Afternoon):</strong><br>
+                        Saet 15:00 - Ez gitar dilîzim<br>
+                        Saet 17:00 - Ez muzîk guhdarî dikim<br><br>
+                        
+                        <strong>Êvar (Evening):</strong><br>
+                        Saet 20:00 - Ez bi malbata xwe re şîvê dixwim
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Reading Comprehension</div>
+                    <p style="margin-bottom: 15px;">Answer these questions about Leyla's weekend:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What does Leyla do on Saturday morning at 9:00?</label>
+                        <input type="text" id="read-q1" placeholder="Type in Kurdish...">
+                        <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What time does Leyla play guitar on Sunday?</label>
+                        <input type="text" id="read-q2" placeholder="Type the time...">
+                        <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What does Leyla do on Sunday morning at 11:30?</label>
+                        <input type="text" id="read-q3" placeholder="Type in Kurdish...">
+                        <div id="read-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReading()">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing - My Weekend -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>5. Nivîsandin (Writing): Dawiya Hefteya Min</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Write about your typical weekend activities:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise: My Weekend</div>
+                    <p style="margin-bottom: 15px; color: #666;">
+                        Write 6-8 sentences describing your weekend. Include:<br>
+                        • What activities you do<br>
+                        • How often you do them<br>
+                        • What you do on Saturday and Sunday<br>
+                        • Who you do activities with
+                    </p>
+
+                    <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <strong>Example:</strong><br>
+                        Dawiya hefteyê ez pir çalak im. Şemî sibê ez bezim û yoga dikim. Nîvro ez bi hevalên xwe re diçim qehwexaneyê. Êvar ez pirtûk dixwînim yan jî fîlm temaşe dikim. Yekşem ez her tim top dilîzim. Ez pir caran muzîk guhdarî dikim. Ez hez dikim ku dawiya hefteyê ez bi malbata xwe re dem derbas bikim.
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">Your Weekend Description (6-8 sentences):</label>
+                        <textarea id="write-weekend" rows="8" placeholder="Dawiya hefteyê ez..."></textarea>
+                        <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkWriting()">✓ Submit Description</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking - Free Discussion -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>6. Axaftin (Speaking): Guftûgoya Azad</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice talking about your hobbies and leisure activities:
+                </p>
+
+                <div class="scenario-box">
+                    <h4 style="color: #0d47a1; margin-bottom: 15px;">Scenario 1: Talking About Sports</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> Someone asks what sport you play.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkDiscussion(1, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Ez top dilîzim.
+                        </button>
+                        <button class="role-btn" onclick="checkDiscussion(1, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez pirtûk dixwînim.
+                        </button>
+                        <button class="role-btn" onclick="checkDiscussion(1, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Ez muzîk im.
+                        </button>
+                    </div>
+                    <div id="discuss-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #0d47a1; margin-bottom: 15px;">Scenario 2: Saying You Often Do Something</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to say you often listen to music.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkDiscussion(2, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Ez tu car muzîk guhdarî nakim.
+                        </button>
+                        <button class="role-btn" onclick="checkDiscussion(2, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez pir caran muzîk guhdarî dikim.
+                        </button>
+                        <button class="role-btn" onclick="checkDiscussion(2, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Ez muzîk im.
+                        </button>
+                    </div>
+                    <div id="discuss-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #0d47a1; margin-bottom: 15px;">Scenario 3: Weekend Plans</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> Someone asks what you'll do this weekend.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkDiscussion(3, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Ez dê biçim sînemayê.
+                        </button>
+                        <button class="role-btn" onclick="checkDiscussion(3, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez çûm sînemayê.
+                        </button>
+                        <button class="role-btn" onclick="checkDiscussion(3, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Ez sînema me.
+                        </button>
+                    </div>
+                    <div id="discuss-feedback-3" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #0d47a1; margin-bottom: 15px;">Scenario 4: Frequency Expression</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to say you play football every week.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkDiscussion(4, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            A) Ez her hefte top dilîzim.
+                        </button>
+                        <button class="role-btn" onclick="checkDiscussion(4, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            B) Ez tu car top dilîzim.
+                        </button>
+                        <button class="role-btn" onclick="checkDiscussion(4, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left;">
+                            C) Ez top im.
+                        </button>
+                    </div>
+                    <div id="discuss-feedback-4" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: #e8f5e9; border-radius: 10px;">
+                    <h4 style="color: #2e7d32;">🎯 Your Score: <span id="discuss-correct">0</span> / 4</h4>
+                </div>
+            </div>
+
+            <!-- Section 7: Culture -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>7. Çand (Culture): Kurdish Leisure & Entertainment</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Discover traditional and modern Kurdish leisure activities:</p>
+                
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #42a5f5;">
+                    <h3 style="color: #0d47a1; text-align: center; margin-bottom: 25px;">🎭 Serbilindiya Kurdî (Kurdish Leisure)</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">💃 Govend & Danûstandin (Traditional Dance)</h4>
+                        <p style="line-height: 1.8;">
+                            <strong>Govend</strong> is the traditional Kurdish circle dance, performed at weddings, celebrations, and festivals. People hold hands and move in a circle to the rhythm of traditional music. Different regions have their own styles - <strong>Delîlo</strong>, <strong>Çepî</strong>, and <strong>Sepe</strong> are popular forms. Dancing is a communal activity that brings people together, and everyone from children to elders participates. The <strong>sergovend</strong> (dance leader) leads the circle with a handkerchief.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">🎵 Muzîka Kurdî (Kurdish Music)</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdish music has a rich tradition spanning centuries. The <strong>dengbêj</strong> (traditional singer) tells stories and preserves oral history through song. Traditional instruments include the <strong>tembûr</strong> (long-necked lute), <strong>daf</strong> (frame drum), <strong>zirne</strong> (double-reed instrument), and <strong>dehol</strong> (large drum). Modern Kurdish music blends traditional melodies with contemporary styles. Listening to music and singing together is a beloved pastime in Kurdish culture.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">⚽ Werzîş (Sports)</h4>
+                        <p style="line-height: 1.8;">
+                            Football (soccer) is by far the most popular sport in Kurdish regions. Every neighborhood has informal football games, and professional teams have passionate followings. <strong>Wrestling</strong> (<strong>zor</strong>) is a traditional sport with deep cultural roots. Mountain climbing and hiking are popular given Kurdistan's mountainous terrain. In recent years, basketball, volleyball, and martial arts have also gained popularity, especially among youth.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">📚 Storytelling & Literature</h4>
+                        <p style="line-height: 1.8;">
+                            Storytelling (<strong>çîrokbêjî</strong>) is an ancient Kurdish tradition. Elders gather children and tell folk tales, legends, and historical stories. Poetry holds a special place - <strong>lawik</strong> (folk songs) and classical poetry are recited and memorized. Reading Kurdish literature, both classical works and modern novels, is increasingly popular. Book clubs and literary gatherings are common in cities.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">🏞️ Picnics & Nature Outings</h4>
+                        <p style="line-height: 1.8;">
+                            <strong>Seyran</strong> (picnic/outing) is a cherished weekend activity. Families pack food and spend the day in nature - by rivers, in mountains, or in parks. Spring is especially popular for outings when the countryside is green and flowers bloom. These gatherings often include music, dancing, games, and traditional foods. The connection to nature and spending time outdoors is deeply valued in Kurdish culture.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Review Exercises -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🔄</span>8. Dubare (Review): Leisure Activities</h2>
+                
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Final Review Exercise</div>
+                    <p style="margin-bottom: 20px;">Complete these sentences about leisure activities:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. I play football. → Ez top _____.</label>
+                        <input type="text" id="rev-q1" placeholder="Type the word...">
+                        <div id="rev-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. I listen to music. → Ez muzîk _____ dikim.</label>
+                        <input type="text" id="rev-q2" placeholder="Type the word...">
+                        <div id="rev-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. Every week. → Her _____.</label>
+                        <input type="text" id="rev-q3" placeholder="Type the word...">
+                        <div id="rev-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. Often. → Pir _____.</label>
+                        <input type="text" id="rev-q4" placeholder="Type the word...">
+                        <div id="rev-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">5. On the weekend. → Dawiya _____.</label>
+                        <input type="text" id="rev-q5" placeholder="Type the word...">
+                        <div id="rev-q5-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">6. I read books. → Ez pirtûk _____.</label>
+                        <input type="text" id="rev-q6" placeholder="Type the word...">
+                        <div id="rev-q6-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReview()">✓ Check Answers</button>
+                    <div id="rev-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Completion Section -->
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);">
+                <h2 style="color: #1b5e20; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    You've completed Course 18: Leisure!<br>
+                    You can now talk about your hobbies, weekend activities, and free time in Kurdish!
+                </p>
+                <a href="../level-a1.html" class="back-link" style="background: #1b5e20;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Listening comprehension validation
+        function checkListening() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('listen-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if (q1.includes('top')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Top dilîzim';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Top dilîzim</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('listen-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if ((q2.includes('kurdî') || q2.includes('kurdi')) && q2.includes('rock')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Muzîka kurdî û rock';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Muzîka kurdî û rock</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('listen-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3.includes('sînema') || q3.includes('sinema')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Biçim sînemayê';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Biçim sînemayê</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Reading comprehension validation
+        function checkReading() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('read-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1.includes('bezim') || q1.includes('bezandin')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Ez bezim';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Ez bezim</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('read-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2.includes('15') || q2.includes('15:00')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Saet 15:00';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Saet 15:00</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('read-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('read-q3-feedback');
+            if (q3.includes('top')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Top dilîzim';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Top dilîzim</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Writing validation
+        function checkWriting() {
+            const weekend = document.getElementById('write-weekend').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            
+            if (weekend.length < 50) {
+                feedback.innerHTML = '❌ Please write at least 6-8 sentences.';
+                feedback.style.color = '#d32f2f';
+                return;
+            }
+
+            const hasActivity = /top|muzîk|pirtûk|avjenî|bezim|sînema|fîlm|gitar|yoga/i.test(weekend);
+            const hasFrequency = /her|pir caran|carinan|tim|hefte|roj/i.test(weekend);
+            const hasWeekend = /dawiya hefteyê|şemî|yekşem/i.test(weekend);
+            
+            if (hasActivity && hasFrequency && hasWeekend) {
+                feedback.innerHTML = '✅ Excellent description! You included activities, frequency, and weekend references!';
+                feedback.style.color = '#2e7d32';
+            } else if ((hasActivity && hasFrequency) || (hasActivity && hasWeekend)) {
+                feedback.innerHTML = '👍 Good effort! Try to include activities, frequency expressions, and weekend days.';
+                feedback.style.color = '#f57f17';
+            } else {
+                feedback.innerHTML = '💪 Keep practicing! Include activities, frequency words, and weekend references.';
+                feedback.style.color = '#f57f17';
+            }
+        }
+
+        // Discussion validation
+        let discussCorrect = 0;
+        let discussAnswered = [false, false, false, false];
+
+        function checkDiscussion(scenario, answer) {
+            if (discussAnswered[scenario - 1]) return;
+            
+            const feedback = document.getElementById(`discuss-feedback-${scenario}`);
+            const correctAnswers = {1: 'a', 2: 'b', 3: 'a', 4: 'a'};
+            
+            discussAnswered[scenario - 1] = true;
+            
+            // Get all buttons in this scenario
+            const buttons = event.target.parentElement.querySelectorAll('.role-btn');
+            
+            if (answer === correctAnswers[scenario]) {
+                discussCorrect++;
+                // Mark clicked button as correct
+                event.target.classList.add('correct');
+                if (scenario === 1) {
+                    feedback.innerHTML = '✅ Perfect! "Ez top dilîzim" = I play football';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '✅ Excellent! "Pir caran" = Often';
+                } else if (scenario === 3) {
+                    feedback.innerHTML = '✅ Great! "Ez dê biçim" = I will go (future tense)';
+                } else {
+                    feedback.innerHTML = '✅ Perfect! "Her hefte" = Every week';
+                }
+                feedback.style.color = '#2e7d32';
+            } else {
+                // Mark clicked button as incorrect
+                event.target.classList.add('incorrect');
+                // Show correct answer in green
+                buttons.forEach((btn, index) => {
+                    const btnAnswer = String.fromCharCode(97 + index); // 'a', 'b', 'c'
+                    if (btnAnswer === correctAnswers[scenario]) {
+                        btn.classList.add('correct');
+                    }
+                });
+                if (scenario === 1) {
+                    feedback.innerHTML = '❌ Not quite. Say "Ez top dilîzim" to say you play football.';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '❌ Not quite. "Pir caran" means often.';
+                } else if (scenario === 3) {
+                    feedback.innerHTML = '❌ Not quite. Use "Ez dê biçim" for future tense.';
+                } else {
+                    feedback.innerHTML = '❌ Not quite. "Her hefte" means every week.';
+                }
+                feedback.style.color = '#d32f2f';
+            }
+            
+            // Disable all buttons in this scenario
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            
+            document.getElementById('discuss-correct').textContent = discussCorrect;
+        }
+
+        // Review exercise validation
+        function checkReview() {
+            let correct = 0;
+            const total = 6;
+
+            const q1 = document.getElementById('rev-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('rev-q1-feedback');
+            if (q1.includes('dilîzim')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! dilîzim';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dilîzim</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('rev-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('rev-q2-feedback');
+            if (q2.includes('guhdarî')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! guhdarî';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>guhdarî</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('rev-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('rev-q3-feedback');
+            if (q3.includes('hefte')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! hefte';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>hefte</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const q4 = document.getElementById('rev-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('rev-q4-feedback');
+            if (q4.includes('caran')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! caran';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>caran</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+
+            const q5 = document.getElementById('rev-q5').value.toLowerCase().trim();
+            const q5Feedback = document.getElementById('rev-q5-feedback');
+            if (q5.includes('hefteyê')) {
+                correct++;
+                q5Feedback.innerHTML = '✅ Correct! hefteyê';
+                q5Feedback.style.color = '#2e7d32';
+            } else {
+                q5Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>hefteyê</strong>';
+                q5Feedback.style.color = '#d32f2f';
+            }
+
+            const q6 = document.getElementById('rev-q6').value.toLowerCase().trim();
+            const q6Feedback = document.getElementById('rev-q6-feedback');
+            if (q6.includes('dixwînim')) {
+                correct++;
+                q6Feedback.innerHTML = '✅ Correct! dixwînim';
+                q6Feedback.style.color = '#2e7d32';
+            } else {
+                q6Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dixwînim</strong>';
+                q6Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('rev-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+            
+            if (correct === total) {
+                scoreDiv.textContent += ' 🎉 Perfect!';
+            }
+        }
+    </script>
+</body>
+</html>

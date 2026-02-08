@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Partîsîp (Participles)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .participle-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .participle-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .participle-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .present-badge {
+            background: #2196f3;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .past-badge {
+            background: #ff9800;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .usage-badge {
+            background: #9c27b0;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .formula-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2196f3;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Partîsîp</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Participles</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What are Participles?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    <strong>Participles</strong> (Partîsîp in Kurdish) are verb forms that can function as <strong>adjectives</strong> 
+                    or be used to form <strong>compound tenses</strong>. They bridge the gap between verbs and adjectives.
+                </p>
+                <p style="line-height: 1.8; font-size: 1.05rem; margin-top: 15px;">
+                    In Kurdish, there are two main types of participles:
+                </p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8; font-size: 1.05rem;">
+                    <li><strong>Present Participle:</strong> Describes ongoing actions (like "-ing" in English)</li>
+                    <li><strong>Past Participle:</strong> Describes completed actions (like "-ed" or "-en" in English)</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 1: PRESENT PARTICIPLE -->
+            <div class="participle-section">
+                <div class="participle-title">1. Present Participle (Partîsîpa Niha)</div>
+                <div class="participle-subtitle">Describing ongoing actions</div>
+
+                <div class="explanation">
+                    <p>
+                        The <strong>present participle</strong> in Kurdish is formed from the <strong>present stem</strong> of the verb. 
+                        It describes an action that is happening or ongoing.
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Formation:</strong><br>
+                    Present Stem + (di-) prefix = Present Participle<br><br>
+                    Examples:<br>
+                    • xwendin (to read) → <strong>dixwîne</strong> (reading)<br>
+                    • çûn (to go) → <strong>diçe</strong> (going)<br>
+                    • hatin (to come) → <strong>tê</strong> (coming)
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Common Present Participles:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Infinitive</th>
+                            <th>Present Stem</th>
+                            <th>Present Participle</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>xwendin</td>
+                            <td>xwîn-</td>
+                            <td><span class="present-badge">dixwîne</span></td>
+                            <td>reading</td>
+                        </tr>
+                        <tr>
+                            <td>nivîsandin</td>
+                            <td>nivîs-</td>
+                            <td><span class="present-badge">dinivîse</span></td>
+                            <td>writing</td>
+                        </tr>
+                        <tr>
+                            <td>çûn</td>
+                            <td>ç-</td>
+                            <td><span class="present-badge">diçe</span></td>
+                            <td>going</td>
+                        </tr>
+                        <tr>
+                            <td>hatin</td>
+                            <td>-</td>
+                            <td><span class="present-badge">tê</span></td>
+                            <td>coming</td>
+                        </tr>
+                        <tr>
+                            <td>dîtin</td>
+                            <td>bîn-</td>
+                            <td><span class="present-badge">dibîne</span></td>
+                            <td>seeing</td>
+                        </tr>
+                        <tr>
+                            <td>gotin</td>
+                            <td>bêj-</td>
+                            <td><span class="present-badge">dibêje</span></td>
+                            <td>saying</td>
+                        </tr>
+                        <tr>
+                            <td>kirin</td>
+                            <td>k-</td>
+                            <td><span class="present-badge">dike</span></td>
+                            <td>doing</td>
+                        </tr>
+                        <tr>
+                            <td>xwarin</td>
+                            <td>xw-</td>
+                            <td><span class="present-badge">dixwe</span></td>
+                            <td>eating</td>
+                        </tr>
+                        <tr>
+                            <td>vexwarin</td>
+                            <td>vexw-</td>
+                            <td><span class="present-badge">divexwe</span></td>
+                            <td>drinking</td>
+                        </tr>
+                        <tr>
+                            <td>xebitîn</td>
+                            <td>xebit-</td>
+                            <td><span class="present-badge">dixebite</span></td>
+                            <td>working</td>
+                        </tr>
+                        <tr>
+                            <td>razan</td>
+                            <td>raz-</td>
+                            <td><span class="present-badge">dirazê</span></td>
+                            <td>sleeping</td>
+                        </tr>
+                        <tr>
+                            <td>lîstin</td>
+                            <td>lîz-</td>
+                            <td><span class="present-badge">dilîze</span></td>
+                            <td>playing</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Present Participle as Adjective:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Zarokê dixwîne pirtûkek xweş e.</div>
+                        <div class="english-text">The reading child is a good book. (The child who is reading...)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mêrê diçe hevalê min e.</div>
+                        <div class="english-text">The going man is my friend. (The man who is going...)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Jinê dixebite mamosteyê me ye.</div>
+                        <div class="english-text">The working woman is our teacher. (The woman who is working...)</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Usage Note!</div>
+                    <p style="line-height: 1.8;">
+                        The present participle in Kurdish is essentially the <strong>3rd person singular present tense form</strong> 
+                        used as an adjective. It describes someone or something in the act of doing the action.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: PAST PARTICIPLE -->
+            <div class="participle-section">
+                <div class="participle-title">2. Past Participle (Partîsîpa Borî)</div>
+                <div class="participle-subtitle">Describing completed actions</div>
+
+                <div class="explanation">
+                    <p>
+                        The <strong>past participle</strong> is formed from the <strong>past stem</strong> of the verb. 
+                        It is used to form compound past tenses and can function as an adjective describing a completed state.
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <strong>Formation:</strong><br>
+                    Past Stem + -î/-yî/-iyî = Past Participle<br><br>
+                    Examples:<br>
+                    • xwendin (to read) → <strong>xwendî</strong> (read, having read)<br>
+                    • çûn (to go) → <strong>çûyî</strong> (gone)<br>
+                    • dîtin (to see) → <strong>dîtî</strong> (seen)
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Common Past Participles:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Infinitive</th>
+                            <th>Past Stem</th>
+                            <th>Past Participle</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>xwendin</td>
+                            <td>xwend-</td>
+                            <td><span class="past-badge">xwendî</span></td>
+                            <td>read</td>
+                        </tr>
+                        <tr>
+                            <td>nivîsandin</td>
+                            <td>nivîsand-</td>
+                            <td><span class="past-badge">nivîsandî</span></td>
+                            <td>written</td>
+                        </tr>
+                        <tr>
+                            <td>çûn</td>
+                            <td>ç-</td>
+                            <td><span class="past-badge">çûyî</span></td>
+                            <td>gone</td>
+                        </tr>
+                        <tr>
+                            <td>hatin</td>
+                            <td>hat-</td>
+                            <td><span class="past-badge">hatî</span></td>
+                            <td>come</td>
+                        </tr>
+                        <tr>
+                            <td>dîtin</td>
+                            <td>dît-</td>
+                            <td><span class="past-badge">dîtî</span></td>
+                            <td>seen</td>
+                        </tr>
+                        <tr>
+                            <td>gotin</td>
+                            <td>got-</td>
+                            <td><span class="past-badge">gotî</span></td>
+                            <td>said</td>
+                        </tr>
+                        <tr>
+                            <td>kirin</td>
+                            <td>kir-</td>
+                            <td><span class="past-badge">kirî</span></td>
+                            <td>done</td>
+                        </tr>
+                        <tr>
+                            <td>xwarin</td>
+                            <td>xwar-</td>
+                            <td><span class="past-badge">xwarî</span></td>
+                            <td>eaten</td>
+                        </tr>
+                        <tr>
+                            <td>vexwarin</td>
+                            <td>vexwar-</td>
+                            <td><span class="past-badge">vexwarî</span></td>
+                            <td>drunk</td>
+                        </tr>
+                        <tr>
+                            <td>xebitîn</td>
+                            <td>xebitî-</td>
+                            <td><span class="past-badge">xebitî</span></td>
+                            <td>worked</td>
+                        </tr>
+                        <tr>
+                            <td>razan</td>
+                            <td>razâ-</td>
+                            <td><span class="past-badge">razâyî</span></td>
+                            <td>slept</td>
+                        </tr>
+                        <tr>
+                            <td>lîstin</td>
+                            <td>lîst-</td>
+                            <td><span class="past-badge">lîstî</span></td>
+                            <td>played</td>
+                        </tr>
+                        <tr>
+                            <td>standin</td>
+                            <td>stand-</td>
+                            <td><span class="past-badge">standî</span></td>
+                            <td>taken</td>
+                        </tr>
+                        <tr>
+                            <td>dan</td>
+                            <td>da-</td>
+                            <td><span class="past-badge">dayî</span></td>
+                            <td>given</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Past Participle as Adjective:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Pirtûka xwendî li ser masê ye.</div>
+                        <div class="english-text">The read book is on the table. (The book that has been read...)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mêrê hatî hevalê min e.</div>
+                        <div class="english-text">The man who came is my friend.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Nameya nivîsandî pir dirêj e.</div>
+                        <div class="english-text">The written letter is very long.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Xwarina xwarî pir xweş bû.</div>
+                        <div class="english-text">The eaten food was very good.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Formation Note!</div>
+                    <p style="line-height: 1.8;">
+                        The past participle ending depends on the final sound of the past stem:<br>
+                        • <strong>-î</strong> after consonants: xwend → xwend<strong>î</strong><br>
+                        • <strong>-yî</strong> after vowels: çû → çû<strong>yî</strong><br>
+                        • Some verbs have irregular forms: hatin → hat<strong>î</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 3: USING PARTICIPLES TO FORM COMPOUND TENSES -->
+            <div class="participle-section">
+                <div class="participle-title">3. Participles in Compound Tenses</div>
+                <div class="participle-subtitle">Perfect and pluperfect tenses</div>
+
+                <div class="explanation">
+                    <p>
+                        Past participles are essential for forming <strong>compound past tenses</strong> in Kurdish, 
+                        particularly the <strong>present perfect</strong> and <strong>past perfect (pluperfect)</strong>.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">A. Present Perfect (Boriya Niha)</h4>
+
+                <div class="formula-box">
+                    <strong>Formation:</strong><br>
+                    Past Participle + Present of "bûn" (to be)<br><br>
+                    <strong>Intransitive verbs:</strong><br>
+                    Ez hatî me (I have come)<br>
+                    Tu çûyî yî (You have gone)<br>
+                    Ew raketî ye (He/She has gotten up)<br><br>
+                    <strong>Transitive verbs (with oblique pronouns):</strong><br>
+                    Min xwendî ye (I have read)<br>
+                    Te dîtî ye (You have seen)<br>
+                    Wî kirî ye (He has done)
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Person</th>
+                            <th>Intransitive (çûn - to go)</th>
+                            <th>Transitive (xwendin - to read)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ez (I)</td>
+                            <td>Ez çûyî me</td>
+                            <td>Min xwendî ye</td>
+                        </tr>
+                        <tr>
+                            <td>Tu (You)</td>
+                            <td>Tu çûyî yî</td>
+                            <td>Te xwendî ye</td>
+                        </tr>
+                        <tr>
+                            <td>Ew (He/She)</td>
+                            <td>Ew çûyî ye</td>
+                            <td>Wî/Wê xwendî ye</td>
+                        </tr>
+                        <tr>
+                            <td>Em (We)</td>
+                            <td>Em çûyî ne</td>
+                            <td>Me xwendî ye</td>
+                        </tr>
+                        <tr>
+                            <td>Hûn (You pl.)</td>
+                            <td>Hûn çûyî ne</td>
+                            <td>We xwendî ye</td>
+                        </tr>
+                        <tr>
+                            <td>Ew (They)</td>
+                            <td>Ew çûyî ne</td>
+                            <td>Wan xwendî ye</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">B. Past Perfect / Pluperfect (Boriya Dûr)</h4>
+
+                <div class="formula-box">
+                    <strong>Formation:</strong><br>
+                    Past Participle + Past of "bûn" (to be)<br><br>
+                    <strong>Intransitive verbs:</strong><br>
+                    Ez hatî bûm (I had come)<br>
+                    Tu çûyî bûyî (You had gone)<br>
+                    Ew raketî bû (He/She had gotten up)<br><br>
+                    <strong>Transitive verbs (with oblique pronouns):</strong><br>
+                    Min xwendî bû (I had read)<br>
+                    Te dîtî bû (You had seen)<br>
+                    Wî kirî bû (He had done)
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Person</th>
+                            <th>Intransitive (hatin - to come)</th>
+                            <th>Transitive (dîtin - to see)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ez (I)</td>
+                            <td>Ez hatî bûm</td>
+                            <td>Min dîtî bû</td>
+                        </tr>
+                        <tr>
+                            <td>Tu (You)</td>
+                            <td>Tu hatî bûyî</td>
+                            <td>Te dîtî bû</td>
+                        </tr>
+                        <tr>
+                            <td>Ew (He/She)</td>
+                            <td>Ew hatî bû</td>
+                            <td>Wî/Wê dîtî bû</td>
+                        </tr>
+                        <tr>
+                            <td>Em (We)</td>
+                            <td>Em hatî bûn</td>
+                            <td>Me dîtî bû</td>
+                        </tr>
+                        <tr>
+                            <td>Hûn (You pl.)</td>
+                            <td>Hûn hatî bûn</td>
+                            <td>We dîtî bû</td>
+                        </tr>
+                        <tr>
+                            <td>Ew (They)</td>
+                            <td>Ew hatî bûn</td>
+                            <td>Wan dîtî bû</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples in Context:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez çûyî me dibistanê.</div>
+                        <div class="english-text">I have gone to school.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Min pirtûkek xwendî ye.</div>
+                        <div class="english-text">I have read a book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew hatî bû berî ku ez herim.</div>
+                        <div class="english-text">He had come before I left.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Me kar kirî bû berî ku tu bêyî.</div>
+                        <div class="english-text">We had done the work before you came.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: PARTICIPLES AS ADJECTIVES -->
+            <div class="participle-section">
+                <div class="participle-title">4. Participles as Adjectives</div>
+                <div class="participle-subtitle">Describing nouns with verb forms</div>
+
+                <div class="explanation">
+                    <p>
+                        Both present and past participles can function as <strong>adjectives</strong> to describe nouns. 
+                        They follow the same agreement rules as regular adjectives.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Present Participles as Adjectives:</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Zarokê dilîze pir kêfxweş e.</div>
+                        <div class="english-text">The playing child is very happy.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mêrê dixebite hevalê min e.</div>
+                        <div class="english-text">The working man is my friend.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Jinê dixwîne mamosteyê me ye.</div>
+                        <div class="english-text">The reading woman is our teacher.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Heywanê dirazê li ber agir e.</div>
+                        <div class="english-text">The sleeping animal is by the fire.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">Past Participles as Adjectives:</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Pirtûka xwendî li ser masê ye.</div>
+                        <div class="english-text">The read book is on the table.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Nameya nivîsandî pir dirêj e.</div>
+                        <div class="english-text">The written letter is very long.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Xwarina xwarî pir xweş bû.</div>
+                        <div class="english-text">The eaten food was very good.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mêrê hatî li vir e.</div>
+                        <div class="english-text">The man who came is here.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Dergê vekirî mezin e.</div>
+                        <div class="english-text">The opened door is big.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Agreement Note!</div>
+                    <p style="line-height: 1.8;">
+                        When used as adjectives, participles follow the noun and are connected with the <strong>izafe</strong> construction:<br>
+                        • Masculine: zarok<strong>ê</strong> dixwîne (the reading child)<br>
+                        • Feminine: jin<strong>a</strong> dixwîne (the reading woman)<br>
+                        • Plural: zarok<strong>ên</strong> dixwînin (the reading children)
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 5: SPECIAL USES -->
+            <div class="participle-section">
+                <div class="participle-title">5. Special Uses of Participles</div>
+                <div class="participle-subtitle">Advanced constructions</div>
+
+                <div class="explanation">
+                    <p>
+                        Participles have several special uses in Kurdish beyond their basic functions.
+                    </p>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 20px; margin-bottom: 15px;">A. Relative Clauses</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Mêrê ku dixebite hevalê min e.</div>
+                        <div class="english-text">The man who is working is my friend.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Pirtûka ku min xwendî ye pir xweş e.</div>
+                        <div class="english-text">The book that I read is very good.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">B. Passive Constructions</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Pirtûk hatiye xwendin.</div>
+                        <div class="english-text">The book has been read.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mal hatiye avakirin.</div>
+                        <div class="english-text">The house has been built.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin-top: 30px; margin-bottom: 15px;">C. Absolute Constructions</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Kar kirî, ez çûm malê.</div>
+                        <div class="english-text">Having done the work, I went home.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Pirtûk xwendî, ew razâ.</div>
+                        <div class="english-text">Having read the book, he/she slept.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: Participle Formation</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Verb</th>
+                        <th>Present Participle</th>
+                        <th>Past Participle</th>
+                        <th>English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>xwendin</td>
+                        <td>dixwîne</td>
+                        <td>xwendî</td>
+                        <td>to read</td>
+                    </tr>
+                    <tr>
+                        <td>nivîsandin</td>
+                        <td>dinivîse</td>
+                        <td>nivîsandî</td>
+                        <td>to write</td>
+                    </tr>
+                    <tr>
+                        <td>çûn</td>
+                        <td>diçe</td>
+                        <td>çûyî</td>
+                        <td>to go</td>
+                    </tr>
+                    <tr>
+                        <td>hatin</td>
+                        <td>tê</td>
+                        <td>hatî</td>
+                        <td>to come</td>
+                    </tr>
+                    <tr>
+                        <td>dîtin</td>
+                        <td>dibîne</td>
+                        <td>dîtî</td>
+                        <td>to see</td>
+                    </tr>
+                    <tr>
+                        <td>gotin</td>
+                        <td>dibêje</td>
+                        <td>gotî</td>
+                        <td>to say</td>
+                    </tr>
+                    <tr>
+                        <td>kirin</td>
+                        <td>dike</td>
+                        <td>kirî</td>
+                        <td>to do</td>
+                    </tr>
+                    <tr>
+                        <td>xwarin</td>
+                        <td>dixwe</td>
+                        <td>xwarî</td>
+                        <td>to eat</td>
+                    </tr>
+                    <tr>
+                        <td>vexwarin</td>
+                        <td>divexwe</td>
+                        <td>vexwarî</td>
+                        <td>to drink</td>
+                    </tr>
+                    <tr>
+                        <td>xebitîn</td>
+                        <td>dixebite</td>
+                        <td>xebitî</td>
+                        <td>to work</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Present Participle:</strong> Formed from present stem (dixwîne, diçe, tê)</li>
+                    <li><strong>Past Participle:</strong> Formed from past stem + -î/-yî (xwendî, çûyî, hatî)</li>
+                    <li><strong>As Adjectives:</strong> Both types can describe nouns with izafe connection</li>
+                    <li><strong>Compound Tenses:</strong> Past participle + bûn = perfect tenses</li>
+                    <li><strong>Present Perfect:</strong> Past participle + present of bûn (ez çûyî me)</li>
+                    <li><strong>Past Perfect:</strong> Past participle + past of bûn (ez çûyî bûm)</li>
+                    <li><strong>Transitive verbs:</strong> Use oblique pronouns in perfect tenses (min xwendî ye)</li>
+                    <li><strong>Intransitive verbs:</strong> Use nominative pronouns (ez çûyî me)</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 13 - Xwarin û Vexwarin (Food & Drink) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #e65100; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-card { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 20px; border-radius: 12px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid #ffb74d; }
+        .vocab-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(255, 152, 0, 0.2); }
+        .vocab-word { font-size: 1.4rem; font-weight: bold; color: #e65100; margin-bottom: 8px; }
+        .vocab-translation { font-size: 1rem; color: #f57c00; }
+        .structure-box { background: #fff8e1; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #ffa726; }
+        .structure-pattern { font-size: 1.2rem; color: #e65100; margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .example-dialogue { background: #fff3e0; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .dialogue-line { margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .speaker { font-weight: bold; color: #ff9800; margin-bottom: 8px; }
+        .kurdish-text { font-size: 1.2rem; color: #333; margin: 8px 0; }
+        .translation { font-size: 0.95rem; color: #666; font-style: italic; }
+        .exercise-box { background: #f9fbe7; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #cddc39; }
+        .exercise-title { font-size: 1.5rem; color: #827717; margin-bottom: 15px; font-weight: bold; }
+        .exercise-box input[type="text"], .exercise-box textarea { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .exercise-box button { background: #ff9800; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .exercise-box button:hover { background: #f57c00; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>🍽️ Course 13: Xwarin û Vexwarin</h1>
+            <div class="course-meta">Food & Drink | A1 Level</div>
+        </div>
+        <div class="course-content">
+            
+            <!-- Section 1: Vocabulary -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧩</span>1. Peyvên (Vocabulary): Food & Drink</h2>
+                
+                <h3 style="color: #ff9800; margin: 20px 0;">🍞 Xwarinên Bingehîn (Basic Foods)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Nan</div><div class="vocab-translation">Bread</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Penîr</div><div class="vocab-translation">Cheese</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Hêk</div><div class="vocab-translation">Egg</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Goşt</div><div class="vocab-translation">Meat</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Mîrişk</div><div class="vocab-translation">Chicken</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Masî</div><div class="vocab-translation">Fish</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Birinc</div><div class="vocab-translation">Rice</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şorbe</div><div class="vocab-translation">Soup</div></div>
+                </div>
+
+                <h3 style="color: #ff9800; margin: 20px 0;">🥗 Sebze û Fêkî (Vegetables & Fruits)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Sebze</div><div class="vocab-translation">Vegetable</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Fêkî</div><div class="vocab-translation">Fruit</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sîv</div><div class="vocab-translation">Apple</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Portexal</div><div class="vocab-translation">Orange</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Bîr</div><div class="vocab-translation">Grape</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Bacan</div><div class="vocab-translation">Tomato</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pîvaz</div><div class="vocab-translation">Onion</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Salate</div><div class="vocab-translation">Salad</div></div>
+                </div>
+
+                <h3 style="color: #ff9800; margin: 20px 0;">☕ Vexwarin (Drinks)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Av</div><div class="vocab-translation">Water</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Çay</div><div class="vocab-translation">Tea</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Qehwe</div><div class="vocab-translation">Coffee</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şîr</div><div class="vocab-translation">Milk</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şerbeta fêkî</div><div class="vocab-translation">Fruit juice</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Dew</div><div class="vocab-translation">Yogurt drink</div></div>
+                </div>
+
+                <h3 style="color: #ff9800; margin: 20px 0;">🍴 Peyvên Xwarinê (Food-related Words)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Xwarin</div><div class="vocab-translation">Food</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Taşt</div><div class="vocab-translation">Breakfast</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Nîvro</div><div class="vocab-translation">Lunch</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Şivane</div><div class="vocab-translation">Dinner</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Xweş</div><div class="vocab-translation">Delicious</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Birçî</div><div class="vocab-translation">Hungry</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Tînî</div><div class="vocab-translation">Thirsty</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Têr</div><div class="vocab-translation">Full (satiated)</div></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Grammar -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧠</span>2. Rêziman: Verbs & Negation</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Learn how to talk about eating and drinking, and how to say "no"!</p>
+                
+                <div class="structure-box">
+                    <h3 style="color: #ff9800; margin-bottom: 15px;">🍽️ Verbs: Xwarin (to eat) & Vexwarin (to drink)</h3>
+                    <div class="structure-pattern">
+                        <strong>Xwarin (to eat):</strong><br>
+                        • Ez <strong style="color: #e65100;">dixwim</strong> = I eat<br>
+                        • Tu <strong style="color: #e65100;">dixwî</strong> = You eat<br>
+                        • Ew <strong style="color: #e65100;">dixwe</strong> = He/She eats<br>
+                        • Em <strong style="color: #e65100;">dixwin</strong> = We eat<br><br>
+                        
+                        <strong>Vexwarin (to drink):</strong><br>
+                        • Ez <strong style="color: #e65100;">vedixwim</strong> = I drink<br>
+                        • Tu <strong style="color: #e65100;">vedixwî</strong> = You drink<br>
+                        • Ew <strong style="color: #e65100;">vedixwe</strong> = He/She drinks<br>
+                        • Em <strong style="color: #e65100;">vedixwin</strong> = We drink
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #ff9800; margin-bottom: 15px;">🚫 Negation (Na / Ne)</h3>
+                    <div class="structure-pattern">
+                        <strong>To make a sentence negative, add "na" or "ne" before the verb:</strong><br><br>
+                        
+                        <strong style="color: #388e3c;">Positive:</strong><br>
+                        • Ez nan dixwim. <span style="color: #666; font-style: italic;">(I eat bread.)</span><br>
+                        • Ez çay vedixwim. <span style="color: #666; font-style: italic;">(I drink tea.)</span><br><br>
+                        
+                        <strong style="color: #d32f2f;">Negative:</strong><br>
+                        • Ez nan <strong style="color: #d32f2f;">na</strong>xwim. <span style="color: #666; font-style: italic;">(I don't eat bread.)</span><br>
+                        • Ez çay <strong style="color: #d32f2f;">na</strong>vexwim. <span style="color: #666; font-style: italic;">(I don't drink tea.)</span><br>
+                        • Ez goşt <strong style="color: #d32f2f;">na</strong>xwim. <span style="color: #666; font-style: italic;">(I don't eat meat.)</span>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Practice: Complete with Verbs</div>
+                    <p style="margin-bottom: 15px; color: #666;">Fill in with the correct verb form:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. Ez her sibeh nan ___. (I eat bread every morning)</label>
+                        <input type="text" id="verb-q1" placeholder="Type the verb...">
+                        <div id="verb-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. Tu çay ___? (Do you drink tea?)</label>
+                        <input type="text" id="verb-q2" placeholder="Type the verb...">
+                        <div id="verb-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. Ez goşt ___. (I don't eat meat - negative)</label>
+                        <input type="text" id="verb-q3" placeholder="Type the verb...">
+                        <div id="verb-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. Em şorbe ___. (We eat soup)</label>
+                        <input type="text" id="verb-q4" placeholder="Type the verb...">
+                        <div id="verb-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">5. Ew qehwe ___. (He/She doesn't drink coffee - negative)</label>
+                        <input type="text" id="verb-q5" placeholder="Type the verb...">
+                        <div id="verb-q5-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkVerbs()">✓ Check Answers</button>
+                    <div id="verb-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎧</span>3. Guhdarîkirin (Listening): At the Restaurant</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Listen to people ordering food at a restaurant:</p>
+                
+                <div class="example-dialogue">
+                    <h4 style="color: #ff9800; margin-bottom: 15px;">🎙️ Dialogue 1: Ordering Food</h4>
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍🍳 Garson (Waiter):</div>
+                        <div class="kurdish-text">Silav! Tu çi dixwazî?</div>
+                        <div class="translation">(Hello! What do you want?)</div>
+                    </div>
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Xerîb (Customer):</div>
+                        <div class="kurdish-text">Ez şorbe û nan dixwazim.</div>
+                        <div class="translation">(I want soup and bread.)</div>
+                    </div>
+                    <div class="dialogue-line">
+                        <div class="speaker">👨‍🍳 Garson:</div>
+                        <div class="kurdish-text">Tu çi vedixwazî?</div>
+                        <div class="translation">(What do you want to drink?)</div>
+                    </div>
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Xerîb:</div>
+                        <div class="kurdish-text">Ez av vedixwazim, spas.</div>
+                        <div class="translation">(I want water, thank you.)</div>
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #ff9800; margin-bottom: 15px;">🎙️ Dialogue 2: Preferences</h4>
+                    <div class="dialogue-line">
+                        <div class="speaker">👥 Aram:</div>
+                        <div class="kurdish-text">Tu goşt dixwî?</div>
+                        <div class="translation">(Do you eat meat?)</div>
+                    </div>
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Leyla:</div>
+                        <div class="kurdish-text">Na, ez goşt naxwim. Ez tenê sebze dixwim.</div>
+                        <div class="translation">(No, I don't eat meat. I only eat vegetables.)</div>
+                    </div>
+                    <div class="dialogue-line">
+                        <div class="speaker">👥 Aram:</div>
+                        <div class="kurdish-text">Tu çay vedixwî?</div>
+                        <div class="translation">(Do you drink tea?)</div>
+                    </div>
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Leyla:</div>
+                        <div class="kurdish-text">Erê, ez çay pir hez dikim!</div>
+                        <div class="translation">(Yes, I like tea very much!)</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Listening Comprehension</div>
+                    <p style="margin-bottom: 20px; color: #666;">Answer these questions:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What food does the customer order in Dialogue 1?</label>
+                        <input type="text" id="listen-q1" placeholder="Answer in Kurdish...">
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What does the customer want to drink?</label>
+                        <input type="text" id="listen-q2" placeholder="Answer in Kurdish...">
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. Does Leyla eat meat?</label>
+                        <input type="text" id="listen-q3" placeholder="Answer in Kurdish...">
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. What does Leyla like very much?</label>
+                        <input type="text" id="listen-q4" placeholder="Answer in Kurdish...">
+                        <div id="listen-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📖</span>4. Xwendin (Reading): Restaurant Menu</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Read this Kurdish restaurant menu:</p>
+                
+                <div style="background: #fff3e0; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #ff9800;">
+                    <h4 style="color: #e65100; margin-bottom: 15px; text-align: center;">🍽️ Menû (Menu)</h4>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px;">
+                        <h4 style="color: #ff9800; margin-bottom: 10px;">🍲 Xwarinên Germ (Hot Dishes)</h4>
+                        <p style="line-height: 2;">
+                            • <strong>Şorbeyê Mercimek</strong><br>
+                            • <strong>Mîrişkê Birincan</strong><br>
+                            • <strong>Kebab</strong><br>
+                            • <strong>Dolma</strong><br>
+                            • <strong>Kofta</strong>
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px;">
+                        <h4 style="color: #ff9800; margin-bottom: 10px;">🥗 Salate û Sebze (Salads & Vegetables)</h4>
+                        <p style="line-height: 2;">
+                            • <strong>Salateyê Taze</strong><br>
+                            • <strong>Sebzeyên Birincan</strong><br>
+                            • <strong>Penîr û Bacan</strong>
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px;">
+                        <h4 style="color: #ff9800; margin-bottom: 10px;">☕ Vexwarin (Drinks)</h4>
+                        <p style="line-height: 2;">
+                            • <strong>Çay</strong><br>
+                            • <strong>Qehwe</strong><br>
+                            • <strong>Şerbeta Portexal</strong><br>
+                            • <strong>Dew</strong><br>
+                            • <strong>Av</strong>
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px;">
+                        <h4 style="color: #ff9800; margin-bottom: 10px;">🍰 Şirîn (Desserts)</h4>
+                        <p style="line-height: 2;">
+                            • <strong>Baklava</strong><br>
+                            • <strong>Fêkî</strong><br>
+                            • <strong>Şîrberinc</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Reading Comprehension</div>
+                    <p style="margin-bottom: 20px; color: #666;">Answer these questions:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What soup is on the menu?</label>
+                        <input type="text" id="read-q1" placeholder="Answer in Kurdish...">
+                        <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. Name one meat dish from the menu.</label>
+                        <input type="text" id="read-q2" placeholder="Answer in Kurdish...">
+                        <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What juice is available?</label>
+                        <input type="text" id="read-q3" placeholder="Answer in Kurdish...">
+                        <div id="read-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. Name one dessert from the menu.</label>
+                        <input type="text" id="read-q4" placeholder="Answer in Kurdish...">
+                        <div id="read-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReading()">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>5. Nivîsandin (Writing): My Favorite Dish</h2>
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise: Describe Your Favorite Food</div>
+                    <p style="margin-bottom: 15px; color: #666;">Write about your favorite dish. What do you like to eat and drink?</p>
+                    
+                    <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">💡 Example:</h4>
+                        <p style="line-height: 2; margin: 0;">
+                            Xwarina min a bijare <strong style="color: #ff9800;">kebab</strong> e. <span style="color: #666; font-style: italic;">(My favorite food is kebab.)</span><br>
+                            Ez <strong style="color: #ff9800;">kebab</strong> pir hez dikim. <span style="color: #666; font-style: italic;">(I like kebab very much.)</span><br>
+                            Ez bi <strong style="color: #ff9800;">birinc</strong> û <strong style="color: #ff9800;">salate</strong> dixwim. <span style="color: #666; font-style: italic;">(I eat it with rice and salad.)</span><br>
+                            Ez <strong style="color: #ff9800;">çay</strong> vedixwim. <span style="color: #666; font-style: italic;">(I drink tea.)</span><br>
+                            Pir <strong style="color: #ff9800;">xweş</strong> e! <span style="color: #666; font-style: italic;">(It's very delicious!)</span>
+                        </p>
+                    </div>
+                    
+                    <textarea id="write-food" rows="8" placeholder="Write about your favorite food here...
+
+Example:
+Xwarina min a bijare... e.
+Ez... pir hez dikim.
+..."></textarea>
+                    <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    <button onclick="checkWriting()">✓ Submit</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>6. Axaftin (Speaking): Ordering at a Restaurant</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Practice ordering food and drinks:</p>
+                <div class="exercise-box">
+                    <div class="exercise-title">🎭 Speaking Scenarios</div>
+                    
+                    <div style="margin: 25px 0; padding: 20px; background: #fff3e0; border-radius: 10px;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 1: The waiter asks "Tu çi dixwazî?"</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(1, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Ez şorbe û nan dixwazim.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(1, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Ez birçî me.
+                            </button>
+                        </div>
+                        <div id="speak-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff3e0; border-radius: 10px;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 2: Someone asks "Tu goşt dixwî?"</h4>
+                        <p style="margin-bottom: 10px;"><strong>How do you say "No, I don't eat meat"?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(2, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Erê, ez goşt dixwim.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(2, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Na, ez goşt naxwim.
+                            </button>
+                        </div>
+                        <div id="speak-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff3e0; border-radius: 10px;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 3: The waiter asks "Tu çi vedixwazî?"</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you want to drink?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(3, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Ez çay vedixwazim.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(3, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Ez nan dixwim.
+                            </button>
+                        </div>
+                        <div id="speak-feedback-3" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff3e0; border-radius: 10px;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 4: Someone asks "Xwarin xweş e?"</h4>
+                        <p style="margin-bottom: 10px;"><strong>How do you say "Yes, very delicious!"?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(4, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Na, xweş nine.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(4, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Erê, pir xweş e!
+                            </button>
+                        </div>
+                        <div id="speak-feedback-4" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff3e0; border-radius: 10px;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">Scenario 5: You want to order kebab with rice</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="speak-btn" onclick="checkSpeaking(5, 'a')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                A) Ez kebab bi birincan dixwazim.
+                            </button>
+                            <button class="speak-btn" onclick="checkSpeaking(5, 'b')" style="padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; color: #333; text-align: left;">
+                                B) Ez tînî me.
+                            </button>
+                        </div>
+                        <div id="speak-feedback-5" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div id="speak-score" style="margin-top: 25px; font-size: 1.3rem; font-weight: bold; text-align: center;">
+                        Score: <span id="speak-correct">0</span> / 5
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Culture -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>7. Çand (Culture): Kurdish Cuisine</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Discover the rich culinary traditions of Kurdish culture:</p>
+                
+                <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #ffb74d;">
+                    <h3 style="color: #e65100; text-align: center; margin-bottom: 25px;">🍽️ Xwarina Kurdî (Kurdish Food)</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">🍞 Nan (Bread) - The Foundation</h4>
+                        <p style="line-height: 1.8;">
+                            Bread is the most important element of Kurdish cuisine. Traditional Kurdish bread is baked fresh daily in a <strong>tanûr</strong> (clay oven). The most common types are <strong>nana tanûrê</strong> (tandoor bread) and <strong>nana tîrî</strong> (thin flatbread). Bread is served with every meal and is used to scoop up food.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">🥘 Traditional Dishes</h4>
+                        <p style="line-height: 1.8;">
+                            • <strong>Dolma</strong> - Vegetables (peppers, tomatoes, eggplants) stuffed with rice and meat<br>
+                            • <strong>Kofta</strong> - Spiced meatballs, often served with rice or bulgur<br>
+                            • <strong>Biryani</strong> - Fragrant rice dish with meat and spices<br>
+                            • <strong>Yaprax</strong> - Grape leaves stuffed with rice and herbs<br>
+                            • <strong>Kubba</strong> - Bulgur shells filled with meat and nuts
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">☕ Çay (Tea) Culture</h4>
+                        <p style="line-height: 1.8;">
+                            Tea is the most popular drink in Kurdish culture. It's served throughout the day - morning, afternoon, and evening. Kurdish tea is typically black tea served in small glasses, often sweetened with sugar. Offering tea is a sign of hospitality, and refusing tea can be considered impolite. The phrase <strong>"Çayê te pîroz be!"</strong> (May your tea be blessed!) is commonly used.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">🧀 Penîr û Dew (Cheese & Yogurt)</h4>
+                        <p style="line-height: 1.8;">
+                            Dairy products are essential in Kurdish cuisine. Fresh white cheese (<strong>penîrê spî</strong>) is eaten at breakfast with bread and honey. <strong>Dew</strong> (yogurt drink) is a popular beverage, especially in summer. <strong>Mast</strong> (yogurt) is used in many dishes and sauces.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #ff9800;">
+                        <h4 style="color: #e65100; margin-bottom: 10px;">🎉 Mêvandarî (Hospitality)</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdish hospitality is legendary. Guests are always offered the best food available, and hosts take great pride in serving abundant meals. It's customary to insist that guests eat more, even when they say they're full. The phrase <strong>"Nûş be!"</strong> (Enjoy your meal!) is said before eating.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Review -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🔤</span>8. Dubare (Review): Vocabulary Matching</h2>
+                
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Match Food & Drink Vocabulary (20 pairs)</div>
+                    <p style="margin-bottom: 20px; color: #666;">Match the Kurdish words with their English translations:</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+                        <div>
+                            <h4 style="color: #ff9800; margin-bottom: 15px;">Kurdish Words</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; max-height: 500px; overflow-y: auto;">
+                                <button class="match-btn-c13" data-word="nan" onclick="selectWordC13('nan')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Nan</button>
+                                <button class="match-btn-c13" data-word="penîr" onclick="selectWordC13('penîr')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Penîr</button>
+                                <button class="match-btn-c13" data-word="goşt" onclick="selectWordC13('goşt')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Goşt</button>
+                                <button class="match-btn-c13" data-word="mîrişk" onclick="selectWordC13('mîrişk')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Mîrişk</button>
+                                <button class="match-btn-c13" data-word="masî" onclick="selectWordC13('masî')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Masî</button>
+                                <button class="match-btn-c13" data-word="birinc" onclick="selectWordC13('birinc')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Birinc</button>
+                                <button class="match-btn-c13" data-word="şorbe" onclick="selectWordC13('şorbe')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Şorbe</button>
+                                <button class="match-btn-c13" data-word="sebze" onclick="selectWordC13('sebze')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Sebze</button>
+                                <button class="match-btn-c13" data-word="fêkî" onclick="selectWordC13('fêkî')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Fêkî</button>
+                                <button class="match-btn-c13" data-word="sîv" onclick="selectWordC13('sîv')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Sîv</button>
+                                <button class="match-btn-c13" data-word="av" onclick="selectWordC13('av')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Av</button>
+                                <button class="match-btn-c13" data-word="çay" onclick="selectWordC13('çay')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Çay</button>
+                                <button class="match-btn-c13" data-word="qehwe" onclick="selectWordC13('qehwe')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Qehwe</button>
+                                <button class="match-btn-c13" data-word="şîr" onclick="selectWordC13('şîr')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Şîr</button>
+                                <button class="match-btn-c13" data-word="xweş" onclick="selectWordC13('xweş')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Xweş</button>
+                                <button class="match-btn-c13" data-word="birçî" onclick="selectWordC13('birçî')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Birçî</button>
+                                <button class="match-btn-c13" data-word="tînî" onclick="selectWordC13('tînî')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Tînî</button>
+                                <button class="match-btn-c13" data-word="dixwim" onclick="selectWordC13('dixwim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Dixwim</button>
+                                <button class="match-btn-c13" data-word="vedixwim" onclick="selectWordC13('vedixwim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Vedixwim</button>
+                                <button class="match-btn-c13" data-word="dixwazim" onclick="selectWordC13('dixwazim')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Dixwazim</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #e65100; margin-bottom: 15px;">English Translations</h4>
+                            <div style="display: flex; flex-direction: column; gap: 8px; max-height: 500px; overflow-y: auto;">
+                                <button class="match-trans-c13" data-trans="bread" onclick="selectTransC13('bread')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Bread</button>
+                                <button class="match-trans-c13" data-trans="cheese" onclick="selectTransC13('cheese')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Cheese</button>
+                                <button class="match-trans-c13" data-trans="meat" onclick="selectTransC13('meat')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Meat</button>
+                                <button class="match-trans-c13" data-trans="chicken" onclick="selectTransC13('chicken')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Chicken</button>
+                                <button class="match-trans-c13" data-trans="fish" onclick="selectTransC13('fish')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Fish</button>
+                                <button class="match-trans-c13" data-trans="rice" onclick="selectTransC13('rice')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Rice</button>
+                                <button class="match-trans-c13" data-trans="soup" onclick="selectTransC13('soup')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Soup</button>
+                                <button class="match-trans-c13" data-trans="vegetable" onclick="selectTransC13('vegetable')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Vegetable</button>
+                                <button class="match-trans-c13" data-trans="fruit" onclick="selectTransC13('fruit')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Fruit</button>
+                                <button class="match-trans-c13" data-trans="apple" onclick="selectTransC13('apple')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Apple</button>
+                                <button class="match-trans-c13" data-trans="water" onclick="selectTransC13('water')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Water</button>
+                                <button class="match-trans-c13" data-trans="tea" onclick="selectTransC13('tea')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Tea</button>
+                                <button class="match-trans-c13" data-trans="coffee" onclick="selectTransC13('coffee')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Coffee</button>
+                                <button class="match-trans-c13" data-trans="milk" onclick="selectTransC13('milk')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Milk</button>
+                                <button class="match-trans-c13" data-trans="delicious" onclick="selectTransC13('delicious')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Delicious</button>
+                                <button class="match-trans-c13" data-trans="hungry" onclick="selectTransC13('hungry')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Hungry</button>
+                                <button class="match-trans-c13" data-trans="thirsty" onclick="selectTransC13('thirsty')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• Thirsty</button>
+                                <button class="match-trans-c13" data-trans="eat" onclick="selectTransC13('eat')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I eat</button>
+                                <button class="match-trans-c13" data-trans="drink" onclick="selectTransC13('drink')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I drink</button>
+                                <button class="match-trans-c13" data-trans="want" onclick="selectTransC13('want')" style="padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333; font-size: 0.95rem;">• I want</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <button onclick="resetVocabC13()" style="background: #ff9800; padding: 10px 20px; border: none; border-radius: 8px; color: white; cursor: pointer;">🔄 Reset</button>
+                    </div>
+                    <div id="vocab-match-feedback-c13" style="margin-top: 20px; font-size: 1.2rem; font-weight: bold; text-align: center;"></div>
+                </div>
+            </div>
+
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+                <h2 style="color: #e65100; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">You've completed Course 13: Food & Drink!<br>You can now order food, talk about your preferences, and understand Kurdish menus.</p>
+                <a href="../level-a1.html" class="back-link" style="background: #ff9800;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+    <footer><p>&copy; 2025 Kurdish Academy. All rights reserved.</p></footer>
+    <script>
+        function checkVerbs() {
+            let correct = 0;
+            const total = 5;
+            
+            const q1 = document.getElementById('verb-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('verb-q1-feedback');
+            if (q1.includes('dixwim')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! dixwim';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dixwim</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('verb-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('verb-q2-feedback');
+            if (q2.includes('vedixwî') || q2.includes('vedixwi')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! vedixwî';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>vedixwî</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('verb-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('verb-q3-feedback');
+            if (q3.includes('naxwim')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! naxwim';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>naxwim</strong> (negative form)';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const q4 = document.getElementById('verb-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('verb-q4-feedback');
+            if (q4.includes('dixwin')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! dixwin';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dixwin</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+            
+            const q5 = document.getElementById('verb-q5').value.toLowerCase().trim();
+            const q5Feedback = document.getElementById('verb-q5-feedback');
+            if (q5.includes('navexwe')) {
+                correct++;
+                q5Feedback.innerHTML = '✅ Correct! navexwe';
+                q5Feedback.style.color = '#2e7d32';
+            } else {
+                q5Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>navexwe</strong> (negative form)';
+                q5Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('verb-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkListening() {
+            let correct = 0;
+            const total = 4;
+            
+            const q1 = document.getElementById('listen-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if (q1.includes('şorbe') || q1.includes('sorbe') || q1.includes('nan')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Şorbe û nan';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Şorbe û nan</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('listen-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if (q2.includes('av') || q2.includes('water')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Av';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Av</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('listen-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3.includes('na') || q3.includes('no') || q3.includes('naxwim')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Na, ez goşt naxwim';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Na, ez goşt naxwim</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const q4 = document.getElementById('listen-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('listen-q4-feedback');
+            if (q4.includes('çay') || q4.includes('cay') || q4.includes('tea')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! Çay';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Çay</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkReading() {
+            let correct = 0;
+            const total = 4;
+            
+            const q1 = document.getElementById('read-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1.includes('mercimek') || q1.includes('lentil')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Şorbeyê Mercimek';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Şorbeyê Mercimek</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+            
+            const q2 = document.getElementById('read-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2.includes('kebab') || q2.includes('kofta') || q2.includes('dolma') || q2.includes('mîrişk')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct!';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Examples: <strong>Kebab, Kofta, Dolma, Mîrişkê Birincan</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+            
+            const q3 = document.getElementById('read-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('read-q3-feedback');
+            if (q3.includes('portexal') || q3.includes('orange')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Şerbeta Portexal';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Şerbeta Portexal</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+            
+            const q4 = document.getElementById('read-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('read-q4-feedback');
+            if (q4.includes('baklava') || q4.includes('fêkî') || q4.includes('şîrberinc')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct!';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Examples: <strong>Baklava, Fêkî, Şîrberinc</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+            
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        function checkWriting() {
+            const text = document.getElementById('write-food').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            if (text.length < 30) {
+                feedback.innerHTML = '❌ Please write at least 4-5 sentences about your favorite food.';
+                feedback.style.color = '#d32f2f';
+            } else {
+                feedback.innerHTML = '✅ Great! Your text has been submitted.';
+                feedback.style.color = '#2e7d32';
+            }
+        }
+
+        let speakCorrect = 0;
+        function checkSpeaking(scenario, answer) {
+            const feedback = document.getElementById(`speak-feedback-${scenario}`);
+            if (scenario === 1 && answer === 'a') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Ez şorbe û nan dixwazim.';
+                feedback.style.color = '#2e7d32';
+            } else if (scenario === 2 && answer === 'b') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Na, ez goşt naxwim.';
+                feedback.style.color = '#2e7d32';
+            } else if (scenario === 3 && answer === 'a') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Ez çay vedixwazim.';
+                feedback.style.color = '#2e7d32';
+            } else if (scenario === 4 && answer === 'b') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Erê, pir xweş e!';
+                feedback.style.color = '#2e7d32';
+            } else if (scenario === 5 && answer === 'a') {
+                speakCorrect++;
+                feedback.innerHTML = '✅ Correct! Ez kebab bi birincan dixwazim.';
+                feedback.style.color = '#2e7d32';
+            } else {
+                feedback.innerHTML = '❌ Try again.';
+                feedback.style.color = '#d32f2f';
+            }
+            document.getElementById('speak-correct').textContent = speakCorrect;
+        }
+
+        const vocabPairsC13 = {
+            'nan': 'bread',
+            'penîr': 'cheese',
+            'goşt': 'meat',
+            'mîrişk': 'chicken',
+            'masî': 'fish',
+            'birinc': 'rice',
+            'şorbe': 'soup',
+            'sebze': 'vegetable',
+            'fêkî': 'fruit',
+            'sîv': 'apple',
+            'av': 'water',
+            'çay': 'tea',
+            'qehwe': 'coffee',
+            'şîr': 'milk',
+            'xweş': 'delicious',
+            'birçî': 'hungry',
+            'tînî': 'thirsty',
+            'dixwim': 'eat',
+            'vedixwim': 'drink',
+            'dixwazim': 'want'
+        };
+        let selectedWordC13 = null;
+        let selectedTransC13 = null;
+        let matchedPairsC13 = 0;
+
+        function selectWordC13(word) {
+            if (document.querySelector(`[data-word="${word}"]`).classList.contains('matched')) return;
+            document.querySelectorAll('.match-btn-c13').forEach(btn => {
+                if (!btn.classList.contains('matched')) {
+                    btn.style.background = 'white';
+                }
+            });
+            document.querySelector(`[data-word="${word}"]`).style.background = '#fff9c4';
+            selectedWordC13 = word;
+            checkMatchC13();
+        }
+
+        function selectTransC13(trans) {
+            if (document.querySelector(`[data-trans="${trans}"]`).classList.contains('matched')) return;
+            document.querySelectorAll('.match-trans-c13').forEach(btn => {
+                if (!btn.classList.contains('matched')) {
+                    btn.style.background = 'white';
+                }
+            });
+            document.querySelector(`[data-trans="${trans}"]`).style.background = '#fff9c4';
+            selectedTransC13 = trans;
+            checkMatchC13();
+        }
+
+        function checkMatchC13() {
+            if (selectedWordC13 && selectedTransC13) {
+                if (vocabPairsC13[selectedWordC13] === selectedTransC13) {
+                    document.querySelector(`[data-word="${selectedWordC13}"]`).style.background = '#c8e6c9';
+                    document.querySelector(`[data-trans="${selectedTransC13}"]`).style.background = '#c8e6c9';
+                    document.querySelector(`[data-word="${selectedWordC13}"]`).classList.add('matched');
+                    document.querySelector(`[data-trans="${selectedTransC13}"]`).classList.add('matched');
+                    matchedPairsC13++;
+                    if (matchedPairsC13 === 20) {
+                        document.getElementById('vocab-match-feedback-c13').innerHTML = '🎉 Perfect! All 20 pairs matched!';
+                        document.getElementById('vocab-match-feedback-c13').style.color = '#2e7d32';
+                    } else {
+                        document.getElementById('vocab-match-feedback-c13').innerHTML = `✅ ${matchedPairsC13} / 20 matched`;
+                        document.getElementById('vocab-match-feedback-c13').style.color = '#ff9800';
+                    }
+                } else {
+                    document.querySelector(`[data-word="${selectedWordC13}"]`).style.background = '#ffcdd2';
+                    document.querySelector(`[data-trans="${selectedTransC13}"]`).style.background = '#ffcdd2';
+                    setTimeout(() => {
+                        document.querySelector(`[data-word="${selectedWordC13}"]`).style.background = 'white';
+                        document.querySelector(`[data-trans="${selectedTransC13}"]`).style.background = 'white';
+                    }, 1000);
+                }
+                selectedWordC13 = null;
+                selectedTransC13 = null;
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function resetVocabC13() {
+            selectedWordC13 = null;
+            selectedTransC13 = null;
+            matchedPairsC13 = 0;
+            document.getElementById('vocab-match-feedback-c13').innerHTML = '';
+            
+            const wordsContainer = document.querySelector('.match-btn-c13').parentElement;
+            const transContainer = document.querySelector('.match-trans-c13').parentElement;
+            
+            const wordButtons = Array.from(document.querySelectorAll('.match-btn-c13'));
+            const transButtons = Array.from(document.querySelectorAll('.match-trans-c13'));
+            
+            wordButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.classList.remove('matched');
+            });
+            transButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.classList.remove('matched');
+            });
+            
+            shuffleArray(wordButtons);
+            shuffleArray(transButtons);
+            
+            wordsContainer.innerHTML = '';
+            transContainer.innerHTML = '';
+            
+            wordButtons.forEach(btn => wordsContainer.appendChild(btn));
+            transButtons.forEach(btn => transContainer.appendChild(btn));
+        }
+    </script>
+</body>
+</html>

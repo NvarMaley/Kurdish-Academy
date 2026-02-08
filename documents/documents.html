@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents - Kurdish Academy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../chatbot.css">
+    <script src="../scripts.js"></script>
+    <script src="../chatbot-ai.js"></script>
+    <style>
+        .documents-container {
+            padding: 40px 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title {
+            color: #2e7d32;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .page-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .sidebar {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        .info-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #e65100;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .document-card {
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+        }
+
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+        }
+
+        .document-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .document-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .document-description {
+            font-size: 0.95rem;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        .document-link {
+            display: block;
+            text-align: center;
+            padding: 12px 25px;
+            background: white;
+            color: #2e7d32;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .document-link:hover {
+            background: #f1f1f1;
+        }
+
+        .pdf-viewer-section {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .pdf-viewer-section.active {
+            display: block;
+        }
+
+        .pdf-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        .pdf-controls h3 {
+            color: #2e7d32;
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .zoom-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .zoom-btn {
+            padding: 8px 16px;
+            background: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .zoom-btn:hover {
+            background: #1b5e20;
+        }
+
+        .zoom-level {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #2e7d32;
+            border-radius: 5px;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 300px);
+            min-height: 600px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: auto;
+            background: #f5f5f5;
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left">
+            <img src="../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="documents.html" class="active">Document</a></li>
+            <li><a href="#" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+
+    <!-- Barre de navigation spécifique pour Kurmancî (masquée par défaut) -->
+    <nav class="sub-nav" id="kurmanci-subnav" style="display: none;">
+        <ul>
+            <li><a href="../kurmancu00ee/dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../kurmancu00ee/alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../kurmancu00ee/peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../kurmancu00ee/leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../kurmancu00ee/reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../kurmancu00ee/guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../kurmancu00ee/xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../kurmancu00ee/nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../kurmancu00ee/axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../culture/history/history.html">History</a></li>
+            <li><a href="../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../culture/music/music.html">Music</a></li>
+            <li><a href="../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+
+    <main class="documents-container">
+        <div class="page-header">
+            <h1 class="page-title">📚 Documents & Resources</h1>
+            <p class="page-subtitle">
+                Educational materials and resources prepared by the Kurdish Youth Association
+            </p>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Sidebar with document card -->
+            <div class="sidebar">
+                <div class="document-card" onclick="openPDF()">
+                    <div class="document-icon">📄</div>
+                    <div class="document-title">January 2026 Report</div>
+                    <div class="document-description">
+                        Kurdish Youth Association - Monthly Report January 2026
+                    </div>
+                    <button class="document-link">View Document</button>
+                </div>
+            </div>
+
+            <!-- PDF Viewer Section -->
+            <div class="pdf-viewer-section" id="pdf-viewer">
+                <div class="pdf-controls">
+                    <h3>📄 January 2026 Report</h3>
+                    <div class="zoom-controls">
+                        <button class="zoom-btn" onclick="zoomOut()">−</button>
+                        <span class="zoom-level" id="zoom-level">100%</span>
+                        <button class="zoom-btn" onclick="zoomIn()">+</button>
+                        <a href="pdfs/Rapport_january_2026_kurdeENG .pdf" download="January_2026_Report.pdf" class="zoom-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 5px;">
+                            📥 Download
+                        </a>
+                    </div>
+                </div>
+                <div class="pdf-container" id="pdf-container">
+                    <iframe id="pdf-frame" src="pdfs/Rapport_january_2026_kurdeENG .pdf#toolbar=1&navpanes=1&scrollbar=1"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentZoom = 100;
+        
+        // Function to open PDF inline
+        function openPDF() {
+            document.getElementById('pdf-viewer').classList.add('active');
+        }
+        
+        // Zoom functions
+        function zoomIn() {
+            if (currentZoom < 200) {
+                currentZoom += 25;
+                updateZoom();
+            }
+        }
+        
+        function zoomOut() {
+            if (currentZoom > 50) {
+                currentZoom -= 25;
+                updateZoom();
+            }
+        }
+        
+        function updateZoom() {
+            document.getElementById('zoom-level').textContent = currentZoom + '%';
+            const iframe = document.getElementById('pdf-frame');
+            const container = document.getElementById('pdf-container');
+            
+            // Apply zoom to iframe
+            iframe.style.transform = `scale(${currentZoom / 100})`;
+            iframe.style.transformOrigin = 'top left';
+            
+            // Adjust container to accommodate scaled content
+            if (currentZoom > 100) {
+                iframe.style.width = (100 * (100 / currentZoom)) + '%';
+                iframe.style.height = (100 * (100 / currentZoom)) + '%';
+            } else {
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+            }
+        }
+        
+        // Auto-open PDF on page load
+        window.addEventListener('load', function() {
+            openPDF();
+        });
+    </script>
+</body>
+</html>

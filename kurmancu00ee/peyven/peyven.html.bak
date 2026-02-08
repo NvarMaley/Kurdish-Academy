@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Peyvên (Vocabulary)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <!-- Logo à gauche -->
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <!-- Logo à droite -->
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="peyven.html" class="active">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal du site (fond blanc sur arrière-plan beige clair) -->
+    <main>
+        <div class="vocabulary-container">
+            <h2 class="vocabulary-title">Peyvên (Vocabulary)</h2>
+            
+            <div class="vocabulary-grid">
+                <!-- Carte Salutations -->
+                <div class="vocabulary-card" onclick="window.location.href='salutations.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/salutations.png" alt="Salutations" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">📋</div>
+                    </div>
+                    <div class="vocabulary-text">Salutations</div>
+                    <div class="vocabulary-description">Greetings and polite expressions</div>
+                </div>
+
+                <!-- Carte Animaux -->
+                <div class="vocabulary-card" onclick="window.location.href='animaux.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/animaux.png" alt="Animaux" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🐕</div>
+                    </div>
+                    <div class="vocabulary-text">Animals</div>
+                    <div class="vocabulary-description">Animals and pets</div>
+                </div>
+
+                <!-- Carte Famille -->
+                <div class="vocabulary-card" onclick="window.location.href='famille.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/famille.png" alt="Famille" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">👨‍👩‍👧‍👦</div>
+                    </div>
+                    <div class="vocabulary-text">Family</div>
+                    <div class="vocabulary-description">Family members</div>
+                </div>
+
+                <!-- Carte Couleurs -->
+                <div class="vocabulary-card" onclick="window.location.href='couleurs.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/couleurs.png" alt="Couleurs" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🎨</div>
+                    </div>
+                    <div class="vocabulary-text">Colors</div>
+                    <div class="vocabulary-description">Colors and shades</div>
+                </div>
+
+                <!-- Carte Corps -->
+                <div class="vocabulary-card" onclick="window.location.href='corps.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/corps.png" alt="Corps" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">👤</div>
+                    </div>
+                    <div class="vocabulary-text">Body</div>
+                    <div class="vocabulary-description">Body parts</div>
+                </div>
+
+                <!-- Carte Nourriture -->
+                <div class="vocabulary-card" onclick="window.location.href='nourriture.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/nourriture.png" alt="Nourriture" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🍎</div>
+                    </div>
+                    <div class="vocabulary-text">Food</div>
+                    <div class="vocabulary-description">Food and drinks</div>
+                </div>
+
+                <!-- Carte Vêtements -->
+                <div class="vocabulary-card" onclick="window.location.href='vetements.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/vetements.png" alt="Vêtements" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">👕</div>
+                    </div>
+                    <div class="vocabulary-text">Clothing</div>
+                    <div class="vocabulary-description">Clothing and accessories</div>
+                </div>
+
+                <!-- Carte Transports -->
+                <div class="vocabulary-card" onclick="window.location.href='transports.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/transports.png" alt="Transports" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🚗</div>
+                    </div>
+                    <div class="vocabulary-text">Transportation</div>
+                    <div class="vocabulary-description">Vehicles and transportation</div>
+                </div>
+
+                <!-- Carte Temps -->
+                <div class="vocabulary-card" onclick="window.location.href='temps.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/temps.png" alt="Temps" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">⏰</div>
+                    </div>
+                    <div class="vocabulary-text">Time</div>
+                    <div class="vocabulary-description">Time and dates</div>
+                </div>
+
+                <!-- Carte Chiffres -->
+                <div class="vocabulary-card" onclick="window.location.href='chiffres.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/chiffres.png" alt="Chiffres" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🔢</div>
+                    </div>
+                    <div class="vocabulary-text">Numbers</div>
+                    <div class="vocabulary-description">Numbers and counting</div>
+                </div>
+
+                <!-- Carte Météo -->
+                <div class="vocabulary-card" onclick="window.location.href='meteo.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/meteo.png" alt="Météo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">☀️</div>
+                    </div>
+                    <div class="vocabulary-text">Weather</div>
+                    <div class="vocabulary-description">Weather and climate</div>
+                </div>
+
+                <!-- Carte Émotions -->
+                <div class="vocabulary-card" onclick="window.location.href='emotions.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/emotions.png" alt="Émotions" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">😊</div>
+                    </div>
+                    <div class="vocabulary-text">Emotions</div>
+                    <div class="vocabulary-description">Feelings and emotions</div>
+                </div>
+
+                <!-- Carte Travail -->
+                <div class="vocabulary-card" onclick="window.location.href='travail.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/travail.png" alt="Travail" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">💼</div>
+                    </div>
+                    <div class="vocabulary-text">Work</div>
+                    <div class="vocabulary-description">Jobs and professions</div>
+                </div>
+
+                <!-- Carte Sports -->
+                <div class="vocabulary-card" onclick="window.location.href='sports.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/sports.png" alt="Sports" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">⚽</div>
+                    </div>
+                    <div class="vocabulary-text">Sports</div>
+                    <div class="vocabulary-description">Sports and activities</div>
+                </div>
+
+                <!-- Carte Musique -->
+                <div class="vocabulary-card" onclick="window.location.href='musique.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/musique.png" alt="Musique" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🎵</div>
+                    </div>
+                    <div class="vocabulary-text">Music</div>
+                    <div class="vocabulary-description">Music and instruments</div>
+                </div>
+
+                <!-- Carte Santé -->
+                <div class="vocabulary-card" onclick="window.location.href='sante.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/sante.png" alt="Santé" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🏥</div>
+                    </div>
+                    <div class="vocabulary-text">Health</div>
+                    <div class="vocabulary-description">Health and medicine</div>
+                </div>
+
+                <!-- Carte Éducation -->
+                <div class="vocabulary-card" onclick="window.location.href='education.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/education.png" alt="Éducation" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🎓</div>
+                    </div>
+                    <div class="vocabulary-text">Education</div>
+                    <div class="vocabulary-description">School and learning</div>
+                </div>
+
+                <!-- Carte Technologie -->
+                <div class="vocabulary-card" onclick="window.location.href='technologie.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/technologie.png" alt="Technologie" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">💻</div>
+                    </div>
+                    <div class="vocabulary-text">Technology</div>
+                    <div class="vocabulary-description">Technology and devices</div>
+                </div>
+
+                <!-- Carte Lieux -->
+                <div class="vocabulary-card" onclick="window.location.href='lieux.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/lieux.png" alt="Lieux" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🏢</div>
+                    </div>
+                    <div class="vocabulary-text">Places</div>
+                    <div class="vocabulary-description">Places and locations</div>
+                </div>
+
+                <!-- Carte Pays -->
+                <div class="vocabulary-card" onclick="window.location.href='pays.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/pays.png" alt="Pays" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🌍</div>
+                    </div>
+                    <div class="vocabulary-text">Countries</div>
+                    <div class="vocabulary-description">Countries and nations</div>
+                </div>
+
+                <!-- Carte Directions -->
+                <div class="vocabulary-card" onclick="window.location.href='directions.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/directions.png" alt="Directions" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🧭</div>
+                    </div>
+                    <div class="vocabulary-text">Directions</div>
+                    <div class="vocabulary-description">Directions and navigation</div>
+                </div>
+
+                <!-- Carte Objets -->
+                <div class="vocabulary-card" onclick="window.location.href='objets.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/objets.png" alt="Objets" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">📦</div>
+                    </div>
+                    <div class="vocabulary-text">Objects</div>
+                    <div class="vocabulary-description">Objects and items</div>
+                </div>
+
+                <!-- Carte Outils -->
+                <div class="vocabulary-card" onclick="window.location.href='outils.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/outils.png" alt="Outils" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🔧</div>
+                    </div>
+                    <div class="vocabulary-text">Tools</div>
+                    <div class="vocabulary-description">Tools and equipment</div>
+                </div>
+
+                <!-- Carte Plantes -->
+                <div class="vocabulary-card" onclick="window.location.href='plantes.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/plantes.png" alt="Plantes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🌱</div>
+                    </div>
+                    <div class="vocabulary-text">Plants</div>
+                    <div class="vocabulary-description">Plants and nature</div>
+                </div>
+
+                <!-- Carte Religion -->
+                <div class="vocabulary-card" onclick="window.location.href='religion.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/religion.png" alt="Religion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🕌</div>
+                    </div>
+                    <div class="vocabulary-text">Religion</div>
+                    <div class="vocabulary-description">Religion and spirituality</div>
+                </div>
+
+                <!-- Carte Politique -->
+                <div class="vocabulary-card" onclick="window.location.href='politique.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/politique.png" alt="Politique" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🏛️</div>
+                    </div>
+                    <div class="vocabulary-text">Politics</div>
+                    <div class="vocabulary-description">Politics and government</div>
+                </div>
+
+                <!-- Carte Verbes -->
+                <div class="vocabulary-card" onclick="window.location.href='verbes.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/verbes.png" alt="Verbes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">⚡</div>
+                    </div>
+                    <div class="vocabulary-text">Verbs</div>
+                    <div class="vocabulary-description">Action words and verbs</div>
+                </div>
+
+                <!-- Carte Adjectifs -->
+                <div class="vocabulary-card" onclick="window.location.href='adjectifs.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/adjectifs.png" alt="Adjectifs" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">📝</div>
+                    </div>
+                    <div class="vocabulary-text">Adjectives</div>
+                    <div class="vocabulary-description">Descriptive words</div>
+                </div>
+
+                <!-- Carte Pronoms -->
+                <div class="vocabulary-card" onclick="window.location.href='pronoms.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/pronoms.png" alt="Pronoms" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">👥</div>
+                    </div>
+                    <div class="vocabulary-text">Pronouns</div>
+                    <div class="vocabulary-description">Personal pronouns</div>
+                </div>
+
+                <!-- Carte Expressions -->
+                <div class="vocabulary-card" onclick="window.location.href='expressions.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/expressions.png" alt="Expressions" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">💬</div>
+                    </div>
+                    <div class="vocabulary-text">Expressions</div>
+                    <div class="vocabulary-description">Common expressions</div>
+                </div>
+
+                <!-- Carte Expressions Idiomatiques -->
+                <div class="vocabulary-card" onclick="window.location.href='expressions-idiomatiques.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/expressions_idiomatiques.png" alt="Expressions Idiomatiques" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🗣️</div>
+                    </div>
+                    <div class="vocabulary-text">Idiomatic Expressions</div>
+                    <div class="vocabulary-description">Idiomatic expressions</div>
+                </div>
+
+                <!-- Carte Informatique -->
+                <div class="vocabulary-card" onclick="window.location.href='informatique.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/informatique.png" alt="Informatique" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🖥️</div>
+                    </div>
+                    <div class="vocabulary-text">Computer Science</div>
+                    <div class="vocabulary-description">Computer science</div>
+                </div>
+
+                <!-- Carte Administration -->
+                <div class="vocabulary-card" onclick="window.location.href='administration.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/administration.png" alt="Administration" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">📋</div>
+                    </div>
+                    <div class="vocabulary-text">Administration</div>
+                    <div class="vocabulary-description">Administrative terms</div>
+                </div>
+
+                <!-- Carte Droit -->
+                <div class="vocabulary-card" onclick="window.location.href='droit.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/droit.png" alt="Droit" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">⚖️</div>
+                    </div>
+                    <div class="vocabulary-text">Law</div>
+                    <div class="vocabulary-description">Legal terms</div>
+                </div>
+
+                <!-- Carte Académique -->
+                <div class="vocabulary-card" onclick="window.location.href='academique.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/academique.png" alt="Académique" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🎓</div>
+                    </div>
+                    <div class="vocabulary-text">Academic</div>
+                    <div class="vocabulary-description">Academic vocabulary</div>
+                </div>
+
+                <!-- Carte Pièces -->
+                <div class="vocabulary-card" onclick="window.location.href='pieces.html'">
+                    <div class="vocabulary-image">
+                        <img src="images/pieces.png" alt="Pièces" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🏠</div>
+                    </div>
+                    <div class="vocabulary-text">Rooms</div>
+                    <div class="vocabulary-description">Rooms and house parts</div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <style>
+        .vocabulary-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .vocabulary-title {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        
+        .vocabulary-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .vocabulary-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .vocabulary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .vocabulary-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            border-radius: 12px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .vocabulary-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .image-placeholder {
+            font-size: 3rem;
+            color: #2e7d32;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .vocabulary-text {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 15px 0 10px 0;
+        }
+        
+        .vocabulary-description {
+            color: #666;
+            font-size: 1rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+    </style>
+    
+    <!-- Pied de page du site (fond gris foncé avec texte blanc) -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

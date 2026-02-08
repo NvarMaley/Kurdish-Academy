@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Daçek (Prepositions)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .prep-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .prep-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .prep-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .prep-category {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #2e7d32;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Daçek</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Prepositions</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What are Prepositions?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    Prepositions are small words that show the <strong>relationship</strong> between nouns/pronouns and other words in a sentence. 
+                    They indicate location, direction, time, manner, and more.
+                </p>
+                <div style="background: white; padding: 20px; border-radius: 5px; margin-top: 15px;">
+                    <p style="line-height: 1.8;">
+                        <strong>Examples in English:</strong>
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        <li><strong>in</strong> the house</li>
+                        <li><strong>on</strong> the table</li>
+                        <li><strong>with</strong> my friend</li>
+                        <li><strong>from</strong> school</li>
+                    </ul>
+                </div>
+                <div class="note-box" style="margin-top: 20px;">
+                    <div class="note-title">⚠️ Important!</div>
+                    <p style="line-height: 1.8;">
+                        In Kurdish, prepositions require pronouns to be in the <strong>oblique case</strong>!<br>
+                        Example: <strong>bi min</strong> (with me) - NOT "bi ez"
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 1: PLACE & LOCATION -->
+            <div class="prep-section">
+                <div class="prep-title">1. Place & Location (Cîh û Şûn)</div>
+                <div class="prep-subtitle">Where something is</div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                            <th>Example</th>
+                            <th>Translation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>li</strong></td>
+                            <td>at, in, on</td>
+                            <td>Ez li malê me.</td>
+                            <td>I am at home.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>di...de</strong></td>
+                            <td>in, inside</td>
+                            <td>Pirtûk di çenteyê de ye.</td>
+                            <td>The book is in the bag.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li ser</strong></td>
+                            <td>on, on top of</td>
+                            <td>Pirtûk li ser maseyê ye.</td>
+                            <td>The book is on the table.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li bin</strong></td>
+                            <td>under, below</td>
+                            <td>Pişîk li bin maseyê ye.</td>
+                            <td>The cat is under the table.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li pey</strong></td>
+                            <td>behind</td>
+                            <td>Ez li pey malê me.</td>
+                            <td>I am behind the house.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li ber</strong></td>
+                            <td>in front of</td>
+                            <td>Ez li ber derî me.</td>
+                            <td>I am in front of the door.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li rex</strong></td>
+                            <td>beside, next to</td>
+                            <td>Ez li rex te me.</td>
+                            <td>I am beside you.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li nav</strong></td>
+                            <td>among, between</td>
+                            <td>Ez li nava wan me.</td>
+                            <td>I am among them.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 More Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Pirtûk li ser maseyê ye.</div>
+                        <div class="english-text">The book is on the table.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez di malê de me.</div>
+                        <div class="english-text">I am in the house.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew li ber pencereyê ye.</div>
+                        <div class="english-text">He/She is in front of the window.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Note about "li"</div>
+                    <p style="line-height: 1.8;">
+                        <strong>"Li"</strong> is the most common preposition for location. It's very versatile and can mean "at," "in," or "on" 
+                        depending on context. It's often combined with other words: li ser (on), li bin (under), li ber (in front of).
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: DIRECTION & MOVEMENT -->
+            <div class="prep-section">
+                <div class="prep-title">2. Direction & Movement (Alî û Tevger)</div>
+                <div class="prep-subtitle">Where something is going</div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                            <th>Example</th>
+                            <th>Translation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>bo</strong></td>
+                            <td>to, for</td>
+                            <td>Ez diçim bo malê.</td>
+                            <td>I go to the house.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ji</strong></td>
+                            <td>from</td>
+                            <td>Ez ji malê têm.</td>
+                            <td>I come from home.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ber bi...ve</strong></td>
+                            <td>towards</td>
+                            <td>Ez ber bi malê ve diçim.</td>
+                            <td>I go towards the house.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>heta</strong></td>
+                            <td>until, up to</td>
+                            <td>Ez heta malê diçim.</td>
+                            <td>I go up to the house.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>di nav...de</strong></td>
+                            <td>through</td>
+                            <td>Ez di nava daristanê de diçim.</td>
+                            <td>I go through the forest.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez ji dibistanê têm.</div>
+                        <div class="english-text">I come from school.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew diçe bo bazarê.</div>
+                        <div class="english-text">He/She goes to the market.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em ber bi malê ve diçin.</div>
+                        <div class="english-text">We go towards home.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: TIME -->
+            <div class="prep-section">
+                <div class="prep-title">3. Time (Dem)</div>
+                <div class="prep-subtitle">When something happens</div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                            <th>Example</th>
+                            <th>Translation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>di...de</strong></td>
+                            <td>in, during</td>
+                            <td>Di havînê de ez diçim.</td>
+                            <td>In summer I go.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>piştî</strong></td>
+                            <td>after</td>
+                            <td>Piştî xwarinê ez diçim.</td>
+                            <td>After eating I go.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>berî</strong></td>
+                            <td>before</td>
+                            <td>Berî xwarinê ez kar dikim.</td>
+                            <td>Before eating I work.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>dema ku</strong></td>
+                            <td>when, while</td>
+                            <td>Dema ku ez dixwînim...</td>
+                            <td>When I read...</td>
+                        </tr>
+                        <tr>
+                            <td><strong>heta</strong></td>
+                            <td>until</td>
+                            <td>Ez heta êvarê li vir im.</td>
+                            <td>I am here until evening.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ji...ve</strong></td>
+                            <td>since, from (time)</td>
+                            <td>Ji sibehê ve ez li vir im.</td>
+                            <td>I've been here since morning.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Di şevê de ez radizim.</div>
+                        <div class="english-text">At night I sleep.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Piştî xebatê ez vedigerim malê.</div>
+                        <div class="english-text">After work I return home.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Berî ku ez biçim, ez dixwînim.</div>
+                        <div class="english-text">Before I go, I read.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: MANNER & ACCOMPANIMENT -->
+            <div class="prep-section">
+                <div class="prep-title">4. Manner & Accompaniment (Awayî û Hevrêtî)</div>
+                <div class="prep-subtitle">How and with whom</div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                            <th>Example</th>
+                            <th>Translation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>bi</strong></td>
+                            <td>with, by (means)</td>
+                            <td>Ez bi otomobîlê diçim.</td>
+                            <td>I go by car.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>bi...re</strong></td>
+                            <td>with (person)</td>
+                            <td>Ez bi te re diçim.</td>
+                            <td>I go with you.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>bê</strong></td>
+                            <td>without</td>
+                            <td>Ez bê te naçim.</td>
+                            <td>I won't go without you.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ji bo</strong></td>
+                            <td>for, for the sake of</td>
+                            <td>Ev ji bo te ye.</td>
+                            <td>This is for you.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ji ber</strong></td>
+                            <td>because of</td>
+                            <td>Ji ber baranê ez namêm.</td>
+                            <td>Because of rain I don't stay.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>wek</strong></td>
+                            <td>like, as</td>
+                            <td>Ew wek bavê min e.</td>
+                            <td>He is like my father.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with Pronouns (Oblique Case):</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez bi min re diaxivim.</div>
+                        <div class="english-text">I speak with myself.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu bi te re diçî?</div>
+                        <div class="english-text">Are you going with yourself?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez bi wî re diçim.</div>
+                        <div class="english-text">I go with him.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Em bi wan re diaxivin.</div>
+                        <div class="english-text">We speak with them.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">⚠️ Critical Rule!</div>
+                    <p style="line-height: 1.8;">
+                        When using prepositions with pronouns, <strong>ALWAYS use the oblique case</strong>:<br>
+                        • bi <strong>min</strong> re (with me) - NOT "bi ez re"<br>
+                        • ji <strong>te</strong> (from you) - NOT "ji tu"<br>
+                        • li <strong>wî</strong> (at him) - NOT "li ew"
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 5: COMPOUND PREPOSITIONS -->
+            <div class="prep-section">
+                <div class="prep-title">5. Compound Prepositions (Daçekên Hevgirtin)</div>
+                <div class="prep-subtitle">Multi-word prepositions</div>
+
+                <div class="explanation">
+                    <p>
+                        Kurdish has many <strong>compound prepositions</strong> made of two or more words. These are very common!
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>li ser</strong></td>
+                            <td>on, on top of</td>
+                            <td>li ser maseyê (on the table)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li bin</strong></td>
+                            <td>under</td>
+                            <td>li bin darê (under the tree)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li ber</strong></td>
+                            <td>in front of</td>
+                            <td>li ber malê (in front of the house)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li pey</strong></td>
+                            <td>behind</td>
+                            <td>li pey derî (behind the door)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li rex</strong></td>
+                            <td>beside, next to</td>
+                            <td>li rex min (beside me)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>li nav</strong></td>
+                            <td>among, between</td>
+                            <td>li nava me (among us)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ji bo</strong></td>
+                            <td>for</td>
+                            <td>ji bo te (for you)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ji ber</strong></td>
+                            <td>because of</td>
+                            <td>ji ber baranê (because of rain)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>bi...re</strong></td>
+                            <td>with (person)</td>
+                            <td>bi min re (with me)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ber bi...ve</strong></td>
+                            <td>towards</td>
+                            <td>ber bi malê ve (towards home)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>di...de</strong></td>
+                            <td>in, inside</td>
+                            <td>di malê de (in the house)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ji...ve</strong></td>
+                            <td>since, from</td>
+                            <td>ji sibehê ve (since morning)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Pattern Recognition!</div>
+                    <p style="line-height: 1.8;">
+                        Notice that many compound prepositions start with <strong>li</strong> (for location) or <strong>ji</strong> (for source/origin). 
+                        This helps you understand their meaning!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 6: PREPOSITIONS WITH PRONOUNS -->
+            <div class="prep-section">
+                <div class="prep-title">6. Prepositions with Pronouns</div>
+                <div class="prep-subtitle">Complete reference table</div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Common Preposition + Pronoun Combinations:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Preposition</th>
+                            <th>With "me"</th>
+                            <th>With "you"</th>
+                            <th>With "him"</th>
+                            <th>With "her"</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>li</strong> (at)</td>
+                            <td>li min</td>
+                            <td>li te</td>
+                            <td>li wî</td>
+                            <td>li wê</td>
+                        </tr>
+                        <tr>
+                            <td><strong>bi</strong> (with/by)</td>
+                            <td>bi min</td>
+                            <td>bi te</td>
+                            <td>bi wî</td>
+                            <td>bi wê</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ji</strong> (from)</td>
+                            <td>ji min</td>
+                            <td>ji te</td>
+                            <td>ji wî</td>
+                            <td>ji wê</td>
+                        </tr>
+                        <tr>
+                            <td><strong>bo</strong> (for/to)</td>
+                            <td>bo min</td>
+                            <td>bo te</td>
+                            <td>bo wî</td>
+                            <td>bo wê</td>
+                        </tr>
+                        <tr>
+                            <td><strong>bi...re</strong> (with)</td>
+                            <td>bi min re</td>
+                            <td>bi te re</td>
+                            <td>bi wî re</td>
+                            <td>bi wê re</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Full Sentence Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Li min binêre!</div>
+                        <div class="english-text">Look at me!</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez bi te re diaxivim.</div>
+                        <div class="english-text">I speak with you.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ji te re spas!</div>
+                        <div class="english-text">Thank you! (Thanks to you!)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ev ji bo wê ye.</div>
+                        <div class="english-text">This is for her.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez ji wî hêvî dikim.</div>
+                        <div class="english-text">I hope from him. (I hope he will)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: Most Common Prepositions</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Kurdish</th>
+                        <th>English</th>
+                        <th>Category</th>
+                        <th>Quick Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>li</strong></td>
+                        <td>at, in, on</td>
+                        <td>Location</td>
+                        <td>li malê (at home)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>di...de</strong></td>
+                        <td>in, inside</td>
+                        <td>Location</td>
+                        <td>di malê de (in the house)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ji</strong></td>
+                        <td>from</td>
+                        <td>Direction</td>
+                        <td>ji malê (from home)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>bo</strong></td>
+                        <td>to, for</td>
+                        <td>Direction</td>
+                        <td>bo malê (to home)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>bi</strong></td>
+                        <td>with, by</td>
+                        <td>Manner</td>
+                        <td>bi min (with me)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>bi...re</strong></td>
+                        <td>with (person)</td>
+                        <td>Accompaniment</td>
+                        <td>bi te re (with you)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>bê</strong></td>
+                        <td>without</td>
+                        <td>Manner</td>
+                        <td>bê te (without you)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>li ser</strong></td>
+                        <td>on</td>
+                        <td>Location</td>
+                        <td>li ser maseyê (on the table)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Prepositions</strong> show relationships of place, time, direction, and manner</li>
+                    <li><strong>Most common:</strong> li (at), di...de (in), ji (from), bo (to/for), bi (with/by)</li>
+                    <li><strong>Compound prepositions:</strong> li ser (on), li bin (under), bi...re (with person), ji bo (for)</li>
+                    <li><strong>Critical rule:</strong> Always use OBLIQUE case pronouns with prepositions (bi min, ji te, li wî)</li>
+                    <li><strong>Location base:</strong> "li" is the foundation for many location prepositions</li>
+                    <li><strong>Source base:</strong> "ji" indicates origin or source in many expressions</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

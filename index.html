@@ -1,0 +1,166 @@
+<!-- Déclaration du type de document (HTML5) -->
+<!DOCTYPE html>
+<!-- Début du document HTML avec la langue anglaise définie -->
+<html lang="en">
+<!-- En-tête du document contenant les métadonnées et liens vers les ressources -->
+<head>
+    <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères internationaux -->
+    <meta charset="UTF-8">
+    <!-- Configure la vue pour les appareils mobiles (responsive design) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
+    <title>Academy - Kurdish Academy</title>
+    <!-- Lien vers la feuille de style CSS externe -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<!-- Corps du document contenant tout le contenu visible -->
+<body>
+    <!-- En-tête du site avec bande verte foncée (#2e7d32) -->
+    <header>
+        <!-- Conteneur pour le logo situé à gauche de l'en-tête -->
+        <div class="logo-left">
+            <!-- Image du logo gauche (à placer dans le dossier 'images') -->
+            <!-- Si l'image n'est pas trouvée, un texte alternatif 'Logo gauche' s'affiche -->
+            <img src="images/logo-left.png" alt="Logo gauche" class="logo">
+        </div>
+        
+        <!-- Conteneur pour le titre centré -->
+        <div class="title">
+            <!-- Titre principal du site en grande taille (3.5rem) -->
+            <h1>Kurdish Academy</h1>
+        </div>
+        
+        <!-- Conteneur pour le logo situé à droite de l'en-tête -->
+        <div class="logo-right">
+            <!-- Image du logo droit (à placer dans le dossier 'images') -->
+            <!-- Si l'image n'est pas trouvée, un texte alternatif 'Logo droite' s'affiche -->
+            <img src="images/logo-right.png" alt="Logo droite" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale avec les sections demandées -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="documents/documents.html">Document</a></li>
+            <li><a href="#" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Deuxième barre de navigation pour les sous-sections de Home -->
+    <nav class="sub-nav" id="home-subnav">
+        <ul>
+            <li><a href="index.html" class="active">Academy</a></li>
+            <li><a href="home/event/event.html">Event</a></li>
+            <li><a href="home/partner/partner.html">Partner</a></li>
+            <li><a href="home/contact/contact.html">Contact</a></li>
+            <li><a href="home/donation/donation.html">Donation</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancîî (masquée par défaut) -->
+    <nav class="sub-nav" id="kurmanci-subnav" style="display: none;">
+        <ul>
+            <li><a href="kurmancu00ee/dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="kurmancu00ee/alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="kurmancu00ee/peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="kurmancu00ee/leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="kurmancu00ee/reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="kurmancu00ee/guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="kurmancu00ee/xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="kurmancu00ee/nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="kurmancu00ee/axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="culture/history/history.html">History</a></li>
+            <li><a href="culture/geography/geography.html">Geography</a></li>
+            <li><a href="culture/politics/politics.html">Politics</a></li>
+            <li><a href="culture/literature/literature.html">Literature</a></li>
+            <li><a href="culture/music/music.html">Music</a></li>
+            <li><a href="culture/dance/dance.html">Dance</a></li>
+            <li><a href="culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal du site (fond blanc sur arrière-plan beige clair) -->
+    <main>
+        <div class="big-quote">
+            <p>"Education is the only key to a free society."</p>
+            <p class="quote-author">Nvar M.</p>
+        </div>
+        
+        <h2 class="main-title-left">Welcome to Kurdish Academy</h2>
+        
+        <!-- First white rectangle -->
+        <section class="white-rectangle">
+            <h3 class="rectangle-title">History and dialects of the Kurdish language</h3>
+            <p>The Kurdish language has existed for more than 2000 years. Originating from the Indo-European language family, it has traversed centuries through poetry, songs, oral narratives, and writings of great Kurdish figures. Despite repeated attempts at erasure, it remains today one of the fundamental pillars of Kurdish identity.</p>
+            
+            <p>It primarily exists in two major dialects: Kurmanji, spoken in the regions of Northern and Southern Kurdistan (Bakur, Bashur) and Western Kurdistan (Rojava), currently controlled by Turkey, Iraq, and Syria; and Sorani, spoken in the regions of Southern Kurdistan (Bashur) and Eastern Kurdistan (Rojhelat), under the control of Iraq and Iran. These two forms are now the most widely used in education, media, and written production.</p>
+            
+            <p>But the Kurdish language doesn't stop there. It also includes other important variants such as Zazaki (Dimilkî), Hawrami, Kelhuri, Lekî, and Gurani. Each form carries a unique richness, bearing witness to a deep and centuries-old culture. Today, survival is not enough: we must rebuild, transmit, and bring our language to life.</p>
+        </section>
+        
+        <!-- Second white rectangle -->
+        <section class="white-rectangle">
+            <h3 class="rectangle-title">Importance of learning and transmission</h3>
+            <p>Learning and teaching Kurdish is not just about speaking a language. It's about recognizing its history, defending its identity, and preparing for the future. A strong language is the foundation of a solid society. It enables creation, documentation, education, and free thinking.</p>
+            
+            <p>Teaching Kurdish to children gives them direct access to their heritage, their roots, their writers, philosophers, and ancestors. A Kurdish society that aspires to freedom, emancipation, and justice must be able to produce knowledge in its own language. This requires a living, structured, and transmitted language.</p>
+            
+            <p>At Kurdish Academy, we offer a clear, structured, and accessible space to learn Kurdish step by step. The site is divided into several sections:</p>
+            <ul>
+                <li>Alphabet: to learn sounds and letters.</li>
+                <li>Vocabulary: illustrated, by theme.</li>
+                <li>Grammar and verbs: to build solid sentences.</li>
+                <li>Oral comprehension, writing, and listening: to master all skills.</li>
+            </ul>
+            <p>Each section is organized into levels (beginner, intermediate, advanced), with assessment tests to track your progress.</p>
+        </section>
+        
+        <!-- Third white rectangle -->
+        <section class="white-rectangle">
+            <h3 class="rectangle-title">Our mission and commitment</h3>
+            
+            <p>This project is an initiative of the Kurdish Youth Association, based in Lausanne, which works for a cultural, linguistic, and educational renaissance of the Kurdish people.</p>
+            
+            <p>We believe it is time to take back control of our intellectual future, to pass on our language to new generations, and to build a free, strong, and united Kurdish society.</p>
+            
+            <p>Despite prohibitions, despite censorship, despite imposed divisions:<br>it is time to change history.</p>
+            
+            <p>Share this platform, follow us on social media, and join the movement.<br>
+            <strong>Language is our strength, knowledge our weapon.</strong></p>
+        </section>
+    </main>
+    
+    <!-- Pied de page du site (fond gris foncé avec texte blanc) -->
+    <footer>
+        <!-- Mention de copyright avec l'année actuelle -->
+        <p>&copy; 2025 Kurdish Academy. Tous droits réservés.</p>
+    </footer>
+<!-- Fin du corps du document -->
+</body>
+<!-- Fin du document HTML -->
+</html>

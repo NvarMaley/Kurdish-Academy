@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 1 - Alfabê & Dengên | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .course-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .course-header .course-meta {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #1b5e20;
+            transform: translateX(-5px);
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #f9a825;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 2rem;
+        }
+
+        .alphabet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .letter-card {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f57f17;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .letter-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(245, 127, 23, 0.3);
+        }
+
+        .letter-card.expanded {
+            grid-column: span 3;
+            text-align: left;
+        }
+
+        .letter-card .pronunciation {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .letter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .letter-main {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f57f17;
+        }
+
+        .expand-icon {
+            font-size: 1.5rem;
+            color: #f57f17;
+        }
+
+        .word-list {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #f9a825;
+        }
+
+        .word-list.show {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .word-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .word-item:hover {
+            background: #e8f5e9;
+            transform: translateX(5px);
+        }
+
+        .word-text {
+            font-size: 1.1rem;
+            color: #f57f17;
+            font-weight: bold;
+        }
+
+        .word-meaning {
+            font-size: 0.9rem;
+            color: #666;
+            margin-left: 10px;
+        }
+
+        .play-word-btn {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-word-btn:hover {
+            background: #2e7d32;
+            transform: scale(1.1);
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .vocab-card {
+            background: #fff9c4;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #f9a825;
+            transition: all 0.3s ease;
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(249, 168, 37, 0.3);
+        }
+
+        .vocab-word {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f57f17;
+            margin-bottom: 5px;
+        }
+
+        .vocab-translation {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .vocab-pronunciation {
+            font-size: 0.9rem;
+            color: #999;
+            font-style: italic;
+        }
+
+        .exercise-box {
+            background: #f5f5f5;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 2px solid #e0e0e0;
+        }
+
+        .exercise-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #f57f17;
+            margin-bottom: 15px;
+        }
+
+        .syllable-practice {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .syllable {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #f57f17;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .writing-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: inherit;
+        }
+
+        .writing-input:focus {
+            outline: none;
+            border-color: #f9a825;
+        }
+
+        .sound-button {
+            background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .sound-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(249, 168, 37, 0.4);
+        }
+
+        .tips-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+
+        .tips-box strong {
+            color: #1976d2;
+        }
+
+        .progress-indicator {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #f9a825 0%, #fdd835 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .completion-message {
+            text-align: center;
+            padding: 30px;
+            background: #c8e6c9;
+            border-radius: 15px;
+            margin: 30px 0;
+            display: none;
+        }
+
+        .completion-message.show {
+            display: block;
+        }
+
+        .next-course-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .next-course-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left">
+            <img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../../culture/history/history.html">History</a></li>
+            <li><a href="../../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../../culture/music/music.html">Music</a></li>
+            <li><a href="../../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="course-page">
+            <a href="../level-a1.html" class="back-link">← Back to Level A1</a>
+            
+            <div class="course-header">
+                <h1>📚 Course 1: Alfabê & Dengên</h1>
+                <div class="course-meta">
+                    <strong>Level A1 - Destpêk</strong> | Alphabet & Sounds<br>
+                    🎯 Goal: Read, write, and pronounce correctly
+                </div>
+            </div>
+
+            <div class="progress-indicator">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <!-- Section 1: Alphabet -->
+            <div class="section" id="section-alphabet">
+                <h2 class="section-title">
+                    <span class="section-icon">🔤</span>
+                    1. Alfabeya Kurdî (Kurdish Alphabet)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    The Kurdish alphabet (Kurmanci) has <strong>31 letters</strong> using Latin script. Click on each letter to hear its sound!
+                </p>
+
+                <div class="alphabet-grid">
+                    <div class="letter-card" onclick="playSound('a')">
+                        A a<br><span class="pronunciation">[a]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('b')">
+                        B b<br><span class="pronunciation">[b]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('c')">
+                        C c<br><span class="pronunciation">[dʒ]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('ch')">
+                        Ç ç<br><span class="pronunciation">[tʃ]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('d')">
+                        D d<br><span class="pronunciation">[d]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('e')">
+                        E e<br><span class="pronunciation">[ɛ]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('ee')">
+                        Ê ê<br><span class="pronunciation">[eː]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('f')">
+                        F f<br><span class="pronunciation">[f]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('g')">
+                        G g<br><span class="pronunciation">[g]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('h')">
+                        H h<br><span class="pronunciation">[h]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('i')">
+                        I i<br><span class="pronunciation">[ɪ]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('ii')">
+                        Î î<br><span class="pronunciation">[iː]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('j')">
+                        J j<br><span class="pronunciation">[ʒ]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('k')">
+                        K k<br><span class="pronunciation">[k]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('l')">
+                        L l<br><span class="pronunciation">[l]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('m')">
+                        M m<br><span class="pronunciation">[m]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('n')">
+                        N n<br><span class="pronunciation">[n]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('o')">
+                        O o<br><span class="pronunciation">[o]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('p')">
+                        P p<br><span class="pronunciation">[p]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('q')">
+                        Q q<br><span class="pronunciation">[q]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('r')">
+                        R r<br><span class="pronunciation">[r]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('s')">
+                        S s<br><span class="pronunciation">[s]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('sh')">
+                        Ş ş<br><span class="pronunciation">[ʃ]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('t')">
+                        T t<br><span class="pronunciation">[t]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('u')">
+                        U u<br><span class="pronunciation">[u]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('uu')">
+                        Û û<br><span class="pronunciation">[uː]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('v')">
+                        V v<br><span class="pronunciation">[v]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('w')">
+                        W w<br><span class="pronunciation">[w]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('x')">
+                        X x<br><span class="pronunciation">[x]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('y')">
+                        Y y<br><span class="pronunciation">[j]</span>
+                    </div>
+                    <div class="letter-card" onclick="playSound('z')">
+                        Z z<br><span class="pronunciation">[z]</span>
+                    </div>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 Special Sounds:</strong><br>
+                    • <strong>Ê ê</strong> = long "e" (like "ay" in "day")<br>
+                    • <strong>Î î</strong> = long "i" (like "ee" in "see")<br>
+                    • <strong>Û û</strong> = long "u" (like "oo" in "moon")<br>
+                    • <strong>Ç ç</strong> = "ch" sound (like "church")<br>
+                    • <strong>Ş ş</strong> = "sh" sound (like "ship")<br>
+                    • <strong>X x</strong> = guttural "kh" (like Scottish "loch")<br>
+                    • <strong>Q q</strong> = deeper "k" from throat
+                </div>
+            </div>
+
+            <!-- Section 2: Vocabulary -->
+            <div class="section" id="section-vocab">
+                <h2 class="section-title">
+                    <span class="section-icon">📖</span>
+                    2. Peyvên Bingehîn (Basic Words)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Learn these 10 essential Kurdish words:
+                </p>
+
+                <div class="vocab-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-word">nav</div>
+                        <div class="vocab-translation">name</div>
+                        <div class="vocab-pronunciation">pronounced: "nahv"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">av</div>
+                        <div class="vocab-translation">water</div>
+                        <div class="vocab-pronunciation">pronounced: "ahv"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">mal</div>
+                        <div class="vocab-translation">house</div>
+                        <div class="vocab-pronunciation">pronounced: "mahl"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">jin</div>
+                        <div class="vocab-translation">woman</div>
+                        <div class="vocab-pronunciation">pronounced: "zheen"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">mêr</div>
+                        <div class="vocab-translation">man</div>
+                        <div class="vocab-pronunciation">pronounced: "mair"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">nan</div>
+                        <div class="vocab-translation">bread</div>
+                        <div class="vocab-pronunciation">pronounced: "nahn"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">roj</div>
+                        <div class="vocab-translation">day / sun</div>
+                        <div class="vocab-pronunciation">pronounced: "rozh"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">şev</div>
+                        <div class="vocab-translation">night</div>
+                        <div class="vocab-pronunciation">pronounced: "shev"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">ber</div>
+                        <div class="vocab-translation">door</div>
+                        <div class="vocab-pronunciation">pronounced: "behr"</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">çav</div>
+                        <div class="vocab-translation">eye</div>
+                        <div class="vocab-pronunciation">pronounced: "chahv"</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening -->
+            <div class="section" id="section-listening">
+                <h2 class="section-title">
+                    <span class="section-icon">🎧</span>
+                    3. Guhdarîkirin (Listening Practice)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice listening to and repeating special Kurdish sounds:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Special Vowels</div>
+                    <p>Click to hear and repeat:</p>
+                    <button class="sound-button" onclick="playSound('ee')">🔊 Ê (ê)</button>
+                    <button class="sound-button" onclick="playSound('ii')">🔊 Î (î)</button>
+                    <button class="sound-button" onclick="playSound('uu')">🔊 Û (û)</button>
+                    <p style="margin-top: 15px;"><strong>Practice words:</strong> dê (mother), bîr (memory), gûl (flower)</p>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Special Consonants</div>
+                    <p>Click to hear and repeat:</p>
+                    <button class="sound-button" onclick="playSound('ch')">🔊 Ç (ç)</button>
+                    <button class="sound-button" onclick="playSound('sh')">🔊 Ş (ş)</button>
+                    <button class="sound-button" onclick="playSound('x')">🔊 X (x)</button>
+                    <button class="sound-button" onclick="playSound('q')">🔊 Q (q)</button>
+                    <p style="margin-top: 15px;"><strong>Practice words:</strong> çay (tea), şev (night), xwîn (blood), qehwe (coffee)</p>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading -->
+            <div class="section" id="section-reading">
+                <h2 class="section-title">
+                    <span class="section-icon">📖</span>
+                    4. Xwendin (Reading Practice)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice reading syllables and short words:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Syllable Practice</div>
+                    <p>Read these syllables out loud:</p>
+                    <div class="syllable-practice">
+                        <div class="syllable">ma</div>
+                        <div class="syllable">na</div>
+                        <div class="syllable">ba</div>
+                        <div class="syllable">da</div>
+                        <div class="syllable">ka</div>
+                        <div class="syllable">la</div>
+                        <div class="syllable">sa</div>
+                        <div class="syllable">ta</div>
+                    </div>
+                    <div class="syllable-practice">
+                        <div class="syllable">mê</div>
+                        <div class="syllable">nê</div>
+                        <div class="syllable">bê</div>
+                        <div class="syllable">dê</div>
+                        <div class="syllable">kê</div>
+                        <div class="syllable">lê</div>
+                        <div class="syllable">sê</div>
+                        <div class="syllable">tê</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Read Short Words</div>
+                    <p>Practice reading these words:</p>
+                    <div class="syllable-practice">
+                        <div class="syllable">av</div>
+                        <div class="syllable">mal</div>
+                        <div class="syllable">nav</div>
+                        <div class="syllable">nan</div>
+                        <div class="syllable">roj</div>
+                        <div class="syllable">şev</div>
+                        <div class="syllable">ber</div>
+                        <div class="syllable">çav</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing -->
+            <div class="section" id="section-writing">
+                <h2 class="section-title">
+                    <span class="section-icon">✍️</span>
+                    5. Nivîsandin (Writing Practice)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice writing in Kurdish:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Exercise 1: Write Your Name</div>
+                    <p>Write your name in Kurdish letters:</p>
+                    <input type="text" class="writing-input" placeholder="Navê min..." id="name-input">
+                    <p style="margin-top: 10px; color: #666;">Example: If your name is "Sara", write: <strong>Sara</strong></p>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Exercise 2: Copy These Words</div>
+                    <p>Write each word 3 times:</p>
+                    <p><strong>1. av (water)</strong></p>
+                    <input type="text" class="writing-input" placeholder="Write here...">
+                    
+                    <p><strong>2. mal (house)</strong></p>
+                    <input type="text" class="writing-input" placeholder="Write here...">
+                    
+                    <p><strong>3. nan (bread)</strong></p>
+                    <input type="text" class="writing-input" placeholder="Write here...">
+                    
+                    <p><strong>4. roj (day)</strong></p>
+                    <input type="text" class="writing-input" placeholder="Write here...">
+                    
+                    <p><strong>5. şev (night)</strong></p>
+                    <input type="text" class="writing-input" placeholder="Write here...">
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking -->
+            <div class="section" id="section-speaking">
+                <h2 class="section-title">
+                    <span class="section-icon">🗣️</span>
+                    6. Axaftin (Speaking Practice)
+                </h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice spelling and pronunciation:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Exercise 1: Spell the Alphabet</div>
+                    <p>Practice spelling out loud: A, B, C, Ç, D, E, Ê, F, G, H, I, Î, J, K, L, M, N, O, P, Q, R, S, Ş, T, U, Û, V, W, X, Y, Z</p>
+                    <button class="sound-button" onclick="playAlphabet()">🔊 Listen to Full Alphabet</button>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Exercise 2: Pronounce Words</div>
+                    <p>Say each word out loud 5 times:</p>
+                    <ol style="font-size: 1.1rem; line-height: 2;">
+                        <li><strong>nav</strong> - name</li>
+                        <li><strong>av</strong> - water</li>
+                        <li><strong>mal</strong> - house</li>
+                        <li><strong>jin</strong> - woman</li>
+                        <li><strong>mêr</strong> - man</li>
+                        <li><strong>nan</strong> - bread</li>
+                        <li><strong>roj</strong> - day</li>
+                        <li><strong>şev</strong> - night</li>
+                        <li><strong>ber</strong> - door</li>
+                        <li><strong>çav</strong> - eye</li>
+                    </ol>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">Exercise 3: Introduce Yourself</div>
+                    <p>Practice saying: <strong>"Navê min [your name] e"</strong> (My name is [your name])</p>
+                    <p style="margin-top: 10px; color: #666;">Example: "Navê min Sara e" (My name is Sara)</p>
+                </div>
+            </div>
+
+            <!-- Completion Section -->
+            <div class="completion-message" id="completion-message">
+                <h2 style="color: #2e7d32; font-size: 2rem; margin-bottom: 15px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    You've completed Course 1! You now know the Kurdish alphabet and can read, write, and pronounce basic words!
+                </p>
+                <a href="course-2.html" class="next-course-btn">Continue to Course 2 →</a>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="next-course-btn" onclick="completeCourse()">✅ Mark as Complete</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sound playback function (placeholder - would need actual audio files)
+        function playSound(sound) {
+            console.log('Playing sound:', sound);
+            alert('🔊 Sound: ' + sound + '\n(Audio files would play here in production)');
+        }
+
+        function playAlphabet() {
+            alert('🔊 Playing full alphabet...\n(Audio would play here in production)');
+        }
+
+        // Progress tracking
+        let completedSections = 0;
+        const totalSections = 6;
+
+        function updateProgress() {
+            completedSections++;
+            const percentage = (completedSections / totalSections) * 100;
+            document.getElementById('progress-bar').style.width = percentage + '%';
+        }
+
+        // Mark sections as viewed when scrolled into view
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('viewed')) {
+                    entry.target.classList.add('viewed');
+                    updateProgress();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Complete course function
+        function completeCourse() {
+            document.getElementById('completion-message').classList.add('show');
+            document.getElementById('progress-bar').style.width = '100%';
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        // Auto-check writing inputs
+        document.querySelectorAll('.writing-input').forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.value.trim().length > 0) {
+                    this.style.borderColor = '#4caf50';
+                    this.style.background = '#e8f5e9';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

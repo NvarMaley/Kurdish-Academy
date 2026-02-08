@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 20 - Hewa û Demsalên (Weather & Seasons) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .course-header { text-align: center; margin-bottom: 50px; padding: 30px; background: linear-gradient(135deg, #42a5f5 0%, #64b5f6 100%); border-radius: 20px; color: white; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .course-header .course-meta { font-size: 1.1rem; opacity: 0.95; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #2e7d32; color: white; text-decoration: none; border-radius: 20px; transition: all 0.3s ease; }
+        .back-link:hover { background: #1b5e20; transform: translateX(-5px); }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 2rem; color: #1976d2; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 2.5rem; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-card { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 20px; border-radius: 12px; text-align: center; transition: transform 0.3s ease; border: 2px solid #42a5f5; }
+        .vocab-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(33, 150, 243, 0.2); }
+        .vocab-word { font-size: 1.4rem; font-weight: bold; color: #0d47a1; margin-bottom: 8px; }
+        .vocab-translation { font-size: 1rem; color: #1565c0; }
+        .structure-box { background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 5px solid #4caf50; }
+        .structure-pattern { font-size: 1.2rem; color: #2e7d32; margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .example-dialogue { background: #e3f2fd; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .dialogue-line { margin: 15px 0; padding: 15px; background: white; border-radius: 8px; }
+        .speaker { font-weight: bold; color: #1976d2; margin-bottom: 8px; }
+        .kurdish-text { font-size: 1.2rem; color: #333; margin: 8px 0; }
+        .translation { font-size: 0.95rem; color: #666; font-style: italic; }
+        .exercise-box { background: #f3e5f5; padding: 25px; border-radius: 12px; margin: 20px 0; border: 2px solid #ba68c8; }
+        .exercise-title { font-size: 1.5rem; color: #6a1b9a; margin-bottom: 15px; font-weight: bold; }
+        .exercise-box input[type="text"], .exercise-box textarea, .exercise-box select { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .exercise-box button { background: #1976d2; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .exercise-box button:hover { background: #0d47a1; transform: scale(1.05); }
+        .weather-card { background: #e3f2fd; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2; }
+        .season-box { background: #fff9c4; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #fbc02d; }
+        .scenario-box { background: #e3f2fd; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #1976d2; }
+        .role-btn { transition: all 0.3s ease; }
+        .role-btn:hover { background: #f5f5f5 !important; transform: translateX(5px); }
+        .role-btn.correct { background: #c8e6c9 !important; border-color: #4caf50 !important; color: #2e7d32 !important; }
+        .role-btn.incorrect { background: #ffcdd2 !important; border-color: #f44336 !important; color: #c62828 !important; }
+        .weather-icon { font-size: 3rem; text-align: center; margin: 10px 0; }
+        .checkbox-group { display: flex; flex-direction: column; gap: 10px; margin: 15px 0; }
+        .checkbox-item { padding: 12px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+        .checkbox-item:hover { background: #f5f5f5; }
+        .checkbox-item input[type="checkbox"] { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left"><img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo"></div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right"><img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo"></div>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+        <div class="course-header">
+            <h1>☀️ Course 20: Hewa û Demsalên (Weather & Seasons)</h1>
+            <div class="course-meta">Describing Weather & Climate | A1 Level</div>
+        </div>
+        <div class="course-content">
+            
+            <!-- Section 1: Vocabulary -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧩</span>1. Peyvên (Vocabulary): Hewa û Demsalên</h2>
+                
+                <h3 style="color: #1976d2; margin: 20px 0;">☀️ Rewşa Hewayê (Weather Conditions)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Hewa</div><div class="vocab-translation">Weather</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Tav</div><div class="vocab-translation">Sun/Sunny</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Baran</div><div class="vocab-translation">Rain</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Berf</div><div class="vocab-translation">Snow</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Ba</div><div class="vocab-translation">Wind</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Ewr</div><div class="vocab-translation">Cloud</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Mij</div><div class="vocab-translation">Fog/Mist</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Birûsk</div><div class="vocab-translation">Lightning</div></div>
+                </div>
+
+                <h3 style="color: #1976d2; margin: 20px 0;">🌡️ Germahî (Temperature)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Germ</div><div class="vocab-translation">Hot/Warm</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sar</div><div class="vocab-translation">Cold</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Hênik</div><div class="vocab-translation">Cool</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Germahî</div><div class="vocab-translation">Temperature</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pir germ</div><div class="vocab-translation">Very hot</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Pir sar</div><div class="vocab-translation">Very cold</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Nerm</div><div class="vocab-translation">Mild</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Xweş</div><div class="vocab-translation">Pleasant/Nice</div></div>
+                </div>
+
+                <h3 style="color: #1976d2; margin: 20px 0;">🍂 Demsalên (Seasons)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><div class="vocab-word">Demsalên</div><div class="vocab-translation">Seasons</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Bihar</div><div class="vocab-translation">Spring</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Havîn</div><div class="vocab-translation">Summer</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Payîz</div><div class="vocab-translation">Autumn/Fall</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Zivistan</div><div class="vocab-translation">Winter</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Îro</div><div class="vocab-translation">Today</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Sibe</div><div class="vocab-translation">Tomorrow</div></div>
+                    <div class="vocab-card"><div class="vocab-word">Duh</div><div class="vocab-translation">Yesterday</div></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Grammar - Weather Descriptions -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🧠</span>2. Rêziman (Grammar): Hewa Danasîn</h2>
+                
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #1976d2;">
+                    <h4 style="color: #0d47a1; margin-bottom: 10px;">💡 Describing the Weather</h4>
+                    <p style="line-height: 1.8;">
+                        To describe weather in Kurdish, you use simple adjective structures. Weather descriptions are straightforward and use "is" constructions.
+                    </p>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Basic Weather Patterns</h3>
+                    <div class="structure-pattern">
+                        <strong>Hewa ... e</strong> = The weather is ...<br><br>
+                        
+                        <strong>Current Weather:</strong><br>
+                        • <strong>Hewa xweş e</strong> = The weather is nice<br>
+                        • <strong>Hewa germ e</strong> = The weather is hot<br>
+                        • <strong>Hewa sar e</strong> = The weather is cold<br>
+                        • <strong>Hewa hênik e</strong> = The weather is cool<br>
+                        • <strong>Tav heye</strong> = It's sunny (there is sun)<br>
+                        • <strong>Baran dibare</strong> = It's raining<br>
+                        • <strong>Berf dibare</strong> = It's snowing<br>
+                        • <strong>Ba heye</strong> = It's windy (there is wind)<br>
+                        • <strong>Ewr heye</strong> = It's cloudy (there are clouds)
+                    </div>
+                </div>
+
+                <div class="season-box">
+                    <h3 style="color: #f57f17; margin-bottom: 15px;">📌 Time Expressions</h3>
+                    <div style="font-size: 1.1rem; line-height: 2;">
+                        <strong>Îro</strong> = Today<br>
+                        <strong>Sibe</strong> = Tomorrow<br>
+                        <strong>Duh</strong> = Yesterday<br>
+                        <strong>Îro sibê</strong> = This morning<br>
+                        <strong>Îro êvarê</strong> = This evening<br>
+                        <strong>Sibe dê</strong> = Tomorrow will...<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • <strong>Îro</strong> hewa xweş e. = Today the weather is nice.<br>
+                        • <strong>Duh</strong> baran dibarî. = Yesterday it rained.<br>
+                        • <strong>Sibe dê</strong> tav hebe. = Tomorrow it will be sunny.<br>
+                        • <strong>Îro sibê</strong> hewa sar bû. = This morning the weather was cold.
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px;">📌 Seasons & Weather</h3>
+                    <div class="structure-pattern">
+                        <strong>Di ... de</strong> = In ... (season)<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        • <strong>Di biharê de</strong> hewa nerm e. = In spring the weather is mild.<br>
+                        • <strong>Di havînê de</strong> pir germ e. = In summer it's very hot.<br>
+                        • <strong>Di payîzê de</strong> baran dibare. = In autumn it rains.<br>
+                        • <strong>Di zivistanê de</strong> berf dibare. = In winter it snows.<br>
+                        • <strong>Di zivistanê de</strong> pir sar e. = In winter it's very cold.
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #1976d2; margin-bottom: 15px;">💬 Example Sentences:</h4>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        • Îro hewa pir xweş e, tav heye!<br>
+                        • Sibe dê baran bibare.<br>
+                        • Duh hewa pir sar bû.<br>
+                        • Di biharê de gulên xweş in.<br>
+                        • Hewa germ e, ez dixwazim biçim avê.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening - Weather Bulletin -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🎧</span>3. Guhdarîkirin (Listening): Rapora Hewayê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Listen to this weather forecast:
+                </p>
+
+                <div class="example-dialogue">
+                    <div class="weather-icon">📻</div>
+                    <h4 style="color: #1976d2; text-align: center; margin-bottom: 20px;">Rapora Hewayê - Kurdistan</h4>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">📡 Raportvan (Reporter):</div>
+                        <div class="kurdish-text">Silav! Ev rapora hewayê ya îro ye ji bo Kurdistan.</div>
+                        <div class="translation">Hello! This is today's weather report for Kurdistan.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">📡 Raportvan:</div>
+                        <div class="kurdish-text">Îro li Hewlêrê hewa pir xweş e. Tav heye û germahî 25 derece ye.</div>
+                        <div class="translation">Today in Erbil the weather is very nice. It's sunny and the temperature is 25 degrees.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">📡 Raportvan:</div>
+                        <div class="kurdish-text">Li Silêmaniyê hewa hênik e. Ewrek heye lê baran nabe.</div>
+                        <div class="translation">In Sulaymaniyah the weather is cool. There are some clouds but no rain.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">📡 Raportvan:</div>
+                        <div class="kurdish-text">Li Duhokê ba heye. Germahî 20 derece ye.</div>
+                        <div class="translation">In Duhok it's windy. The temperature is 20 degrees.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">📡 Raportvan:</div>
+                        <div class="kurdish-text">Sibe li hemû herêman hewa dê germ be. Tav dê hebe.</div>
+                        <div class="translation">Tomorrow in all regions the weather will be warm. It will be sunny.</div>
+                    </div>
+
+                    <div class="dialogue-line">
+                        <div class="speaker">📡 Raportvan:</div>
+                        <div class="kurdish-text">Pêşniyara min: Îro rojeke xweş e ji bo derdikevînê!</div>
+                        <div class="translation">My suggestion: Today is a nice day to go out!</div>
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Multiple Choice Questions</div>
+                    <p style="margin-bottom: 15px;">Choose the correct answer for each question:</p>
+                    
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What is the weather like in Erbil today?</label>
+                        <select id="listen-q1" style="width: 100%; padding: 10px;">
+                            <option value="">-- Select an answer --</option>
+                            <option value="sunny">Sunny and nice</option>
+                            <option value="rainy">Rainy</option>
+                            <option value="cloudy">Cloudy</option>
+                            <option value="snowy">Snowy</option>
+                        </select>
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What is the temperature in Erbil?</label>
+                        <select id="listen-q2" style="width: 100%; padding: 10px;">
+                            <option value="">-- Select an answer --</option>
+                            <option value="20">20 degrees</option>
+                            <option value="25">25 degrees</option>
+                            <option value="30">30 degrees</option>
+                            <option value="15">15 degrees</option>
+                        </select>
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. What will the weather be like tomorrow?</label>
+                        <select id="listen-q3" style="width: 100%; padding: 10px;">
+                            <option value="">-- Select an answer --</option>
+                            <option value="cold">Cold</option>
+                            <option value="warm">Warm and sunny</option>
+                            <option value="rainy">Rainy</option>
+                            <option value="windy">Very windy</option>
+                        </select>
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading - Weather Report -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📖</span>4. Xwendin (Reading): Rapora Hewayê ya Hefteyek</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Read this weekly weather forecast:
+                </p>
+
+                <div style="background: white; border: 3px solid #42a5f5; padding: 30px; margin: 20px 0; border-radius: 12px;">
+                    <h3 style="color: #0d47a1; text-align: center; margin-bottom: 20px;">📅 Hewa ya Hefteyê - Hewlêr</h3>
+                    
+                    <div class="weather-card">
+                        <div class="weather-icon">☀️</div>
+                        <strong style="color: #1976d2; font-size: 1.2rem;">Duşem (Monday)</strong><br>
+                        Hewa: Tav heye, pir xweş<br>
+                        Germahî: 28°C<br>
+                        Ba: Kêm
+                    </div>
+                    
+                    <div class="weather-card">
+                        <div class="weather-icon">⛅</div>
+                        <strong style="color: #1976d2; font-size: 1.2rem;">Sêşem (Tuesday)</strong><br>
+                        Hewa: Tav û ewrek<br>
+                        Germahî: 26°C<br>
+                        Ba: Navîn
+                    </div>
+                    
+                    <div class="weather-card">
+                        <div class="weather-icon">🌧️</div>
+                        <strong style="color: #1976d2; font-size: 1.2rem;">Çarşem (Wednesday)</strong><br>
+                        Hewa: Baran<br>
+                        Germahî: 22°C<br>
+                        Ba: Zêde
+                    </div>
+                    
+                    <div class="weather-card">
+                        <div class="weather-icon">🌦️</div>
+                        <strong style="color: #1976d2; font-size: 1.2rem;">Pêncşem (Thursday)</strong><br>
+                        Hewa: Baran û tav<br>
+                        Germahî: 24°C<br>
+                        Ba: Kêm
+                    </div>
+                    
+                    <div class="weather-card">
+                        <div class="weather-icon">☀️</div>
+                        <strong style="color: #1976d2; font-size: 1.2rem;">În (Friday)</strong><br>
+                        Hewa: Tav heye<br>
+                        Germahî: 27°C<br>
+                        Ba: Tune
+                    </div>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 True or False</div>
+                    <p style="margin-bottom: 15px;">Mark each statement as True or False:</p>
+                    
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="radio" name="read-q1" value="true">
+                            <strong>True:</strong> Monday will be sunny and very nice
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="radio" name="read-q1" value="false">
+                            <strong>False:</strong> Monday will be sunny and very nice
+                        </label>
+                    </div>
+                    <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+
+                    <div class="checkbox-group" style="margin-top: 20px;">
+                        <label class="checkbox-item">
+                            <input type="radio" name="read-q2" value="true">
+                            <strong>True:</strong> It will rain on Wednesday
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="radio" name="read-q2" value="false">
+                            <strong>False:</strong> It will rain on Wednesday
+                        </label>
+                    </div>
+                    <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+
+                    <div class="checkbox-group" style="margin-top: 20px;">
+                        <label class="checkbox-item">
+                            <input type="radio" name="read-q3" value="true">
+                            <strong>True:</strong> Friday will be the hottest day
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="radio" name="read-q3" value="false">
+                            <strong>False:</strong> Friday will be the hottest day
+                        </label>
+                    </div>
+                    <div id="read-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+
+                    <button onclick="checkReading()" style="margin-top: 20px;">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing - Tomorrow's Weather -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">✍️</span>5. Nivîsandin (Writing): Hewa ya Sibê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Write a weather forecast for tomorrow:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise: Tomorrow's Weather Forecast</div>
+                    <p style="margin-bottom: 15px; color: #666;">
+                        Write a weather forecast for tomorrow (5-6 sentences). Include:<br>
+                        • What the weather will be like (sunny, rainy, cloudy, etc.)<br>
+                        • The temperature<br>
+                        • If there will be wind<br>
+                        • A recommendation for what to do or wear
+                    </p>
+
+                    <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <strong>Example:</strong><br>
+                        Sibe hewa dê pir xweş be. Tav dê hebe û germahî dê 30 derece be. Ba tune ye. Hewa pir germ e, ji ber vê yekê tu dikarî biçî avê. Ez pêşniyar dikim ku tu cilên sivik li xwe bikî.
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">Your Weather Forecast (5-6 sentences):</label>
+                        <textarea id="write-forecast" rows="6" placeholder="Sibe hewa dê..."></textarea>
+                        <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkWriting()">✓ Submit Forecast</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking - Weather Discussion -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🗣️</span>6. Axaftin (Speaking): Guftûgoya Hewayê</h2>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice talking about weather in different situations:
+                </p>
+
+                <div class="scenario-box">
+                    <h4 style="color: #0d47a1; margin-bottom: 15px;">Scenario 1: Describing Today's Weather</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> Someone asks you about today's weather.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say if it's sunny?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkWeather(1, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            A) Îro tav heye, hewa pir xweş e.
+                        </button>
+                        <button class="role-btn" onclick="checkWeather(1, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            B) Îro baran dibare.
+                        </button>
+                        <button class="role-btn" onclick="checkWeather(1, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            C) Îro berf heye.
+                        </button>
+                    </div>
+                    <div id="weather-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #0d47a1; margin-bottom: 15px;">Scenario 2: Talking About Temperature</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to say it's very cold.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkWeather(2, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            A) Hewa pir germ e.
+                        </button>
+                        <button class="role-btn" onclick="checkWeather(2, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            B) Hewa pir sar e.
+                        </button>
+                        <button class="role-btn" onclick="checkWeather(2, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            C) Hewa xweş e.
+                        </button>
+                    </div>
+                    <div id="weather-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #0d47a1; margin-bottom: 15px;">Scenario 3: Describing Your Favorite Season</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to say you like spring.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkWeather(3, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            A) Ez hez ji biharê dikim.
+                        </button>
+                        <button class="role-btn" onclick="checkWeather(3, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            B) Ez hez ji zivistanê dikim.
+                        </button>
+                        <button class="role-btn" onclick="checkWeather(3, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            C) Ez hez ji havînê dikim.
+                        </button>
+                    </div>
+                    <div id="weather-feedback-3" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div class="scenario-box">
+                    <h4 style="color: #0d47a1; margin-bottom: 15px;">Scenario 4: Predicting Tomorrow's Weather</h4>
+                    <p style="margin-bottom: 10px;"><strong>Situation:</strong> You want to say it will rain tomorrow.</p>
+                    <p style="margin-bottom: 15px;"><strong>What do you say?</strong></p>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="role-btn" onclick="checkWeather(4, 'a')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            A) Sibe dê baran bibare.
+                        </button>
+                        <button class="role-btn" onclick="checkWeather(4, 'b')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            B) Duh baran dibarî.
+                        </button>
+                        <button class="role-btn" onclick="checkWeather(4, 'c')" style="padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; text-align: left; color: #333;">
+                            C) Îro baran dibare.
+                        </button>
+                    </div>
+                    <div id="weather-feedback-4" style="margin-top: 15px; font-weight: bold;"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: #e8f5e9; border-radius: 10px;">
+                    <h4 style="color: #2e7d32;">🎯 Your Score: <span id="weather-correct">0</span> / 4</h4>
+                </div>
+            </div>
+
+            <!-- Section 7: Culture -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌿</span>7. Çand (Culture): Kurdish Climate & Seasons</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Discover Kurdistan's diverse climate and seasonal traditions:</p>
+                
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #42a5f5;">
+                    <h3 style="color: #0d47a1; text-align: center; margin-bottom: 25px;">🌍 Hewaya Kurdistan (Kurdistan's Climate)</h3>
+                    
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">🏔️ Diverse Geography, Diverse Weather</h4>
+                        <p style="line-height: 1.8;">
+                            Kurdistan's geography creates varied climates. The <strong>mountainous regions</strong> (like Amadiya, Rawanduz, and Qandil) experience cold winters with heavy snowfall and mild summers. The <strong>plains</strong> (Hewlêr, Silêmanî) have hot, dry summers reaching 40-45°C and cool, wet winters. The <strong>foothills</strong> enjoy moderate temperatures year-round. This diversity means you can ski in the mountains and swim in valleys on the same day in spring!
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">🌸 Bihar (Spring) - Season of Renewal</h4>
+                        <p style="line-height: 1.8;">
+                            Spring (March-May) is the most beloved season in Kurdistan. The landscape transforms into a green paradise with wildflowers covering the mountains. <strong>Newroz</strong> (March 21), the Kurdish New Year, marks the beginning of spring. Families go on <strong>seyran</strong> (picnics) to enjoy the mild weather and blooming nature. The saying <strong>"Bihar hat, dil şa bû"</strong> (Spring came, hearts rejoiced) captures the joy this season brings.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">☀️ Havîn (Summer) - Heat and Harvest</h4>
+                        <p style="line-height: 1.8;">
+                            Summer (June-August) brings intense heat to the plains, with temperatures often exceeding 40°C. Many families escape to mountain resorts where it's cooler. This is harvest season for wheat, barley, and fruits. Traditional <strong>serma</strong> (shaded outdoor seating areas) and <strong>serdab</strong> (underground cool rooms) help people cope with the heat. Evening gatherings become common as people wait for cooler temperatures.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">🍂 Payîz (Autumn) - Golden Season</h4>
+                        <p style="line-height: 1.8;">
+                            Autumn (September-November) brings relief from summer heat. Temperatures become pleasant, making it ideal for outdoor activities. This is grape harvest season, and families make <strong>şîra tirî</strong> (grape molasses) and <strong>mewîj</strong> (raisins). The mountains turn golden and red with changing leaves. Pomegranates, figs, and walnuts ripen. Many consider autumn the second-best season after spring.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 4px solid #1976d2;">
+                        <h4 style="color: #0d47a1; margin-bottom: 10px;">❄️ Zivistan (Winter) - Snow and Warmth</h4>
+                        <p style="line-height: 1.8;">
+                            Winter (December-February) varies by region. Mountains receive heavy snow, perfect for skiing and winter sports. Plains experience cold, rainy weather. Families gather around <strong>sobê</strong> (heaters) or traditional <strong>tendûr</strong> (clay ovens) for warmth. Winter foods include <strong>kulikê zivistanê</strong> (winter soups), roasted chestnuts, and hot tea. Despite the cold, winter brings families together indoors for storytelling and traditional games.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Review Exercises -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🔄</span>8. Dubare (Review): Weather & Seasons Quiz</h2>
+                
+                <div class="exercise-box">
+                    <div class="exercise-title">🎯 Weather Knowledge Check</div>
+                    <p style="margin-bottom: 20px;">Select ALL correct answers for each question (multiple answers possible):</p>
+                    
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 12px;">1. Which of these describe hot weather?</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q1-a" value="germ">
+                                Hewa germ e
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q1-b" value="sar">
+                                Hewa sar e
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q1-c" value="pir-germ">
+                                Pir germ e
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q1-d" value="henik">
+                                Hewa hênik e
+                            </label>
+                        </div>
+                        <div id="rev-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 12px;">2. Which words relate to rain?</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q2-a" value="baran">
+                                Baran
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q2-b" value="tav">
+                                Tav
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q2-c" value="dibare">
+                                Baran dibare
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q2-d" value="berf">
+                                Berf
+                            </label>
+                        </div>
+                        <div id="rev-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 12px;">3. Which are seasons?</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q3-a" value="bihar">
+                                Bihar
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q3-b" value="iro">
+                                Îro
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q3-c" value="zivistan">
+                                Zivistan
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="rev-q3-d" value="havin">
+                                Havîn
+                            </label>
+                        </div>
+                        <div id="rev-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReview()">✓ Check Answers</button>
+                    <div id="rev-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Completion Section -->
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);">
+                <h2 style="color: #1b5e20; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    You've completed Course 20: Weather & Seasons!<br>
+                    You can now describe weather, talk about seasons, and discuss climate in Kurdish!
+                </p>
+                <a href="../level-a1.html" class="back-link" style="background: #1b5e20;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Listening comprehension validation (dropdown)
+        function checkListening() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.getElementById('listen-q1').value;
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if (q1 === 'sunny') {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Sunny and nice';
+                q1Feedback.style.color = '#2e7d32';
+            } else if (q1 === '') {
+                q1Feedback.innerHTML = '⚠️ Please select an answer';
+                q1Feedback.style.color = '#f57f17';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Sunny and nice</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.getElementById('listen-q2').value;
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if (q2 === '25') {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! 25 degrees';
+                q2Feedback.style.color = '#2e7d32';
+            } else if (q2 === '') {
+                q2Feedback.innerHTML = '⚠️ Please select an answer';
+                q2Feedback.style.color = '#f57f17';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>25 degrees</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.getElementById('listen-q3').value;
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3 === 'warm') {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Warm and sunny';
+                q3Feedback.style.color = '#2e7d32';
+            } else if (q3 === '') {
+                q3Feedback.innerHTML = '⚠️ Please select an answer';
+                q3Feedback.style.color = '#f57f17';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Warm and sunny</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Reading comprehension validation (True/False radio buttons)
+        function checkReading() {
+            let correct = 0;
+            const total = 3;
+
+            const q1 = document.querySelector('input[name="read-q1"]:checked');
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1 && q1.value === 'true') {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Monday will be sunny';
+                q1Feedback.style.color = '#2e7d32';
+            } else if (!q1) {
+                q1Feedback.innerHTML = '⚠️ Please select an answer';
+                q1Feedback.style.color = '#f57f17';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. The statement is TRUE';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            const q2 = document.querySelector('input[name="read-q2"]:checked');
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2 && q2.value === 'true') {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! It will rain on Wednesday';
+                q2Feedback.style.color = '#2e7d32';
+            } else if (!q2) {
+                q2Feedback.innerHTML = '⚠️ Please select an answer';
+                q2Feedback.style.color = '#f57f17';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. The statement is TRUE';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const q3 = document.querySelector('input[name="read-q3"]:checked');
+            const q3Feedback = document.getElementById('read-q3-feedback');
+            if (q3 && q3.value === 'false') {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Monday (28°C) is the hottest';
+                q3Feedback.style.color = '#2e7d32';
+            } else if (!q3) {
+                q3Feedback.innerHTML = '⚠️ Please select an answer';
+                q3Feedback.style.color = '#f57f17';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. The statement is FALSE (Monday is hottest at 28°C)';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Writing validation
+        function checkWriting() {
+            const forecast = document.getElementById('write-forecast').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            
+            if (forecast.length < 50) {
+                feedback.innerHTML = '❌ Please write at least 5-6 sentences.';
+                feedback.style.color = '#d32f2f';
+                return;
+            }
+
+            const hasWeather = /tav|baran|berf|ba|ewr|germ|sar|xweş/i.test(forecast);
+            const hasTime = /sibe|dê/i.test(forecast);
+            const hasTemp = /germahî|derece/i.test(forecast);
+            
+            if (hasWeather && hasTime && hasTemp) {
+                feedback.innerHTML = '✅ Excellent forecast! You included weather conditions, time expressions, and temperature!';
+                feedback.style.color = '#2e7d32';
+            } else if ((hasWeather && hasTime) || (hasWeather && hasTemp)) {
+                feedback.innerHTML = '👍 Good effort! Try to include weather, time (sibe/dê), and temperature.';
+                feedback.style.color = '#f57f17';
+            } else {
+                feedback.innerHTML = '💪 Keep practicing! Include weather conditions, tomorrow (sibe dê), and temperature.';
+                feedback.style.color = '#f57f17';
+            }
+        }
+
+        // Weather discussion validation
+        let weatherCorrect = 0;
+        let weatherAnswered = [false, false, false, false];
+
+        function checkWeather(scenario, answer) {
+            if (weatherAnswered[scenario - 1]) return;
+            
+            const feedback = document.getElementById(`weather-feedback-${scenario}`);
+            const correctAnswers = {1: 'a', 2: 'b', 3: 'a', 4: 'a'};
+            
+            weatherAnswered[scenario - 1] = true;
+            
+            // Get all buttons in this scenario
+            const buttons = event.target.parentElement.querySelectorAll('.role-btn');
+            
+            if (answer === correctAnswers[scenario]) {
+                weatherCorrect++;
+                event.target.classList.add('correct');
+                if (scenario === 1) {
+                    feedback.innerHTML = '✅ Perfect! "Îro tav heye" = Today it\'s sunny';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '✅ Excellent! "Pir sar e" = Very cold';
+                } else if (scenario === 3) {
+                    feedback.innerHTML = '✅ Great! "Ez hez ji biharê dikim" = I like spring';
+                } else {
+                    feedback.innerHTML = '✅ Perfect! "Sibe dê baran bibare" = Tomorrow it will rain';
+                }
+                feedback.style.color = '#2e7d32';
+            } else {
+                event.target.classList.add('incorrect');
+                buttons.forEach((btn, index) => {
+                    const btnAnswer = String.fromCharCode(97 + index);
+                    if (btnAnswer === correctAnswers[scenario]) {
+                        btn.classList.add('correct');
+                    }
+                });
+                if (scenario === 1) {
+                    feedback.innerHTML = '❌ Not quite. Say "Îro tav heye, hewa pir xweş e" for sunny weather.';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '❌ Not quite. "Hewa pir sar e" means very cold.';
+                } else if (scenario === 3) {
+                    feedback.innerHTML = '❌ Not quite. "Ez hez ji biharê dikim" means I like spring.';
+                } else {
+                    feedback.innerHTML = '❌ Not quite. Use "Sibe dê baran bibare" for tomorrow\'s rain.';
+                }
+                feedback.style.color = '#d32f2f';
+            }
+            
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            document.getElementById('weather-correct').textContent = weatherCorrect;
+        }
+
+        // Review exercise validation (multiple checkboxes)
+        function checkReview() {
+            let correct = 0;
+            const total = 3;
+
+            // Question 1: Hot weather (germ and pir-germ are correct)
+            const q1a = document.getElementById('rev-q1-a').checked;
+            const q1b = document.getElementById('rev-q1-b').checked;
+            const q1c = document.getElementById('rev-q1-c').checked;
+            const q1d = document.getElementById('rev-q1-d').checked;
+            const q1Feedback = document.getElementById('rev-q1-feedback');
+            
+            if (q1a && q1c && !q1b && !q1d) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Germ and Pir germ describe hot weather';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answers: <strong>Hewa germ e</strong> and <strong>Pir germ e</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            // Question 2: Rain (baran and dibare are correct)
+            const q2a = document.getElementById('rev-q2-a').checked;
+            const q2b = document.getElementById('rev-q2-b').checked;
+            const q2c = document.getElementById('rev-q2-c').checked;
+            const q2d = document.getElementById('rev-q2-d').checked;
+            const q2Feedback = document.getElementById('rev-q2-feedback');
+            
+            if (q2a && q2c && !q2b && !q2d) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Baran and Baran dibare relate to rain';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answers: <strong>Baran</strong> and <strong>Baran dibare</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            // Question 3: Seasons (bihar, zivistan, havin are correct)
+            const q3a = document.getElementById('rev-q3-a').checked;
+            const q3b = document.getElementById('rev-q3-b').checked;
+            const q3c = document.getElementById('rev-q3-c').checked;
+            const q3d = document.getElementById('rev-q3-d').checked;
+            const q3Feedback = document.getElementById('rev-q3-feedback');
+            
+            if (q3a && q3c && q3d && !q3b) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Bihar, Zivistan, and Havîn are seasons';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answers: <strong>Bihar</strong>, <strong>Zivistan</strong>, and <strong>Havîn</strong> (Îro means today)';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('rev-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+            
+            if (correct === total) {
+                scoreDiv.textContent += ' 🎉 Perfect!';
+            }
+        }
+    </script>
+</body>
+</html>

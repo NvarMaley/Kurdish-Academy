@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Îzafe (Izafe Construction)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .izafe-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .izafe-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .izafe-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .izafe-marker {
+            background: #ffeb3b;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #f57f00;
+        }
+
+        .formula-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #2196f3;
+            text-align: center;
+        }
+
+        .formula-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1976d2;
+            margin: 10px 0;
+        }
+
+        .chain-box {
+            background: #f3e5f5;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #9c27b0;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Îzafe</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Izafe Construction</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What is Izafe?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    The <strong>Izafe</strong> (also spelled Ezafe) is a <strong>linking particle</strong> used in Kurdish to connect:
+                </p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8; font-size: 1.05rem;">
+                    <li>A noun to another noun (possession, relationship)</li>
+                    <li>A noun to an adjective (description)</li>
+                    <li>A noun to a possessive pronoun</li>
+                </ul>
+                <p style="line-height: 1.8; font-size: 1.05rem; margin-top: 15px;">
+                    It's similar to <strong>"of"</strong> in English or <strong>"de"</strong> in French, but it's a suffix attached to the first noun.
+                </p>
+            </div>
+
+            <!-- SECTION 1: IZAFE FORMS -->
+            <div class="izafe-section">
+                <div class="izafe-title">1. The Four Forms of Izafe</div>
+                <div class="izafe-subtitle">Based on gender and number</div>
+
+                <div class="explanation">
+                    <p>
+                        The Izafe has <strong>four different forms</strong> depending on the gender and whether the noun ends in a vowel or consonant:
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Form</th>
+                            <th>Used With</th>
+                            <th>Example</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="izafe-marker">-ê</span></td>
+                            <td>Masculine singular (ends in consonant)</td>
+                            <td>pirtûk<strong>ê</strong> min</td>
+                            <td>my book</td>
+                        </tr>
+                        <tr>
+                            <td><span class="izafe-marker">-a</span></td>
+                            <td>Feminine singular (ends in consonant)</td>
+                            <td>mal<strong>a</strong> min</td>
+                            <td>my house</td>
+                        </tr>
+                        <tr>
+                            <td><span class="izafe-marker">-yê</span></td>
+                            <td>Masculine singular (ends in vowel)</td>
+                            <td>bav<strong>yê</strong> min</td>
+                            <td>my father</td>
+                        </tr>
+                        <tr>
+                            <td><span class="izafe-marker">-ya</span></td>
+                            <td>Feminine singular (ends in vowel)</td>
+                            <td>daya<strong>ya</strong> min</td>
+                            <td>my mother</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Simple Rule!</div>
+                    <p style="line-height: 1.8;">
+                        <strong>Ends in consonant:</strong> -ê (masc.) or -a (fem.)<br>
+                        <strong>Ends in vowel:</strong> -yê (masc.) or -ya (fem.)
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: IZAFE FOR POSSESSION -->
+            <div class="izafe-section">
+                <div class="izafe-title">2. Izafe for Possession</div>
+                <div class="izafe-subtitle">Noun + Izafe + Possessor</div>
+
+                <div class="explanation">
+                    <p>
+                        The most common use of Izafe is to show <strong>possession</strong> or <strong>belonging</strong>, 
+                        similar to "'s" in English or "de" in French.
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <div class="formula-text">
+                        NOUN + IZAFE + POSSESSOR
+                    </div>
+                    <div style="color: #666; margin-top: 10px;">
+                        (thing owned + link + owner)
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">With Possessive Pronouns:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Breakdown</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>pirtûkê min</strong></td>
+                            <td>pirtûk + ê + min</td>
+                            <td>my book (book of me)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pirtûkê te</strong></td>
+                            <td>pirtûk + ê + te</td>
+                            <td>your book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pirtûkê wî</strong></td>
+                            <td>pirtûk + ê + wî</td>
+                            <td>his book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pirtûkê wê</strong></td>
+                            <td>pirtûk + ê + wê</td>
+                            <td>her book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pirtûkê me</strong></td>
+                            <td>pirtûk + ê + me</td>
+                            <td>our book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pirtûkê we</strong></td>
+                            <td>pirtûk + ê + we</td>
+                            <td>your (pl.) book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pirtûkê wan</strong></td>
+                            <td>pirtûk + ê + wan</td>
+                            <td>their book</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">With Feminine Nouns:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Breakdown</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>mala min</strong></td>
+                            <td>mal + a + min</td>
+                            <td>my house</td>
+                        </tr>
+                        <tr>
+                            <td><strong>mala te</strong></td>
+                            <td>mal + a + te</td>
+                            <td>your house</td>
+                        </tr>
+                        <tr>
+                            <td><strong>mala wî</strong></td>
+                            <td>mal + a + wî</td>
+                            <td>his house</td>
+                        </tr>
+                        <tr>
+                            <td><strong>mala wê</strong></td>
+                            <td>mal + a + wê</td>
+                            <td>her house</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 More Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">hevalê min</div>
+                        <div class="english-text">my friend (friend of me)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">navê te</div>
+                        <div class="english-text">your name (name of you)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">zarokên wan</div>
+                        <div class="english-text">their children (children of them)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">bavê wê</div>
+                        <div class="english-text">her father (father of her)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: IZAFE WITH NOUNS -->
+            <div class="izafe-section">
+                <div class="izafe-title">3. Izafe Between Two Nouns</div>
+                <div class="izafe-subtitle">Showing relationship or possession</div>
+
+                <div class="explanation">
+                    <p>
+                        Izafe can connect two nouns to show a relationship, possession, or association.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Breakdown</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>pirtûkê zarok</strong></td>
+                            <td>pirtûk + ê + zarok</td>
+                            <td>the child's book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>mala mamosta</strong></td>
+                            <td>mal + a + mamosta</td>
+                            <td>the teacher's house</td>
+                        </tr>
+                        <tr>
+                            <td><strong>deriyê mal</strong></td>
+                            <td>derî + yê + mal</td>
+                            <td>the door of the house</td>
+                        </tr>
+                        <tr>
+                            <td><strong>navê bajar</strong></td>
+                            <td>nav + ê + bajar</td>
+                            <td>the name of the city</td>
+                        </tr>
+                        <tr>
+                            <td><strong>rengê esman</strong></td>
+                            <td>reng + ê + esman</td>
+                            <td>the color of the sky</td>
+                        </tr>
+                        <tr>
+                            <td><strong>dergeyê dibistan</strong></td>
+                            <td>dergeh + yê + dibistan</td>
+                            <td>the school door</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 In Sentences:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkê zarok dixwînim.</div>
+                        <div class="english-text">I read the child's book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mala mamosta mezin e.</div>
+                        <div class="english-text">The teacher's house is big.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Navê bajar çi ye?</div>
+                        <div class="english-text">What is the name of the city?</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: IZAFE WITH ADJECTIVES -->
+            <div class="izafe-section">
+                <div class="izafe-title">4. Izafe with Adjectives</div>
+                <div class="izafe-subtitle">Definite noun + adjective</div>
+
+                <div class="explanation">
+                    <p>
+                        When a <strong>definite noun</strong> (with article -ê or -a) is followed by an adjective, 
+                        you use Izafe to connect them.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Without Izafe (Indefinite)</th>
+                            <th>With Izafe (Definite)</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>pirtûkek baş</td>
+                            <td><strong>pirtûkê baş</strong></td>
+                            <td>a good book / the good book</td>
+                        </tr>
+                        <tr>
+                            <td>malek mezin</td>
+                            <td><strong>mala mezin</strong></td>
+                            <td>a big house / the big house</td>
+                        </tr>
+                        <tr>
+                            <td>zarokek biçûk</td>
+                            <td><strong>zarokê biçûk</strong></td>
+                            <td>a small child / the small child</td>
+                        </tr>
+                        <tr>
+                            <td>hevalek nû</td>
+                            <td><strong>hevalê nû</strong></td>
+                            <td>a new friend / the new friend</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkê baş dixwînim.</div>
+                        <div class="english-text">I read the good book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mala mezin li vir e.</div>
+                        <div class="english-text">The big house is here.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Zarokê biçûk dilîze.</div>
+                        <div class="english-text">The small child plays.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Important Distinction!</div>
+                    <p style="line-height: 1.8;">
+                        <strong>Indefinite:</strong> pirtûk<strong>ek</strong> baş (a good book) - no Izafe<br>
+                        <strong>Definite:</strong> pirtûk<strong>ê</strong> baş (the good book) - with Izafe
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 5: IZAFE CHAINS -->
+            <div class="izafe-section">
+                <div class="izafe-title">5. Izafe Chains</div>
+                <div class="izafe-subtitle">Multiple Izafe connections</div>
+
+                <div class="explanation">
+                    <p>
+                        You can create <strong>chains</strong> of Izafe to express complex relationships, 
+                        like "my friend's father's house".
+                    </p>
+                </div>
+
+                <div class="formula-box">
+                    <div class="formula-text">
+                        NOUN₁ + IZAFE + NOUN₂ + IZAFE + NOUN₃
+                    </div>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Breakdown</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>pirtûkê hevalê min</strong></td>
+                            <td>pirtûk + ê + heval + ê + min</td>
+                            <td>my friend's book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>mala bavê wî</strong></td>
+                            <td>mal + a + bav + ê + wî</td>
+                            <td>his father's house</td>
+                        </tr>
+                        <tr>
+                            <td><strong>navê hevalê te</strong></td>
+                            <td>nav + ê + heval + ê + te</td>
+                            <td>your friend's name</td>
+                        </tr>
+                        <tr>
+                            <td><strong>deriyê mala me</strong></td>
+                            <td>derî + yê + mal + a + me</td>
+                            <td>our house's door</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pirtûkê mamostayê zarokan</strong></td>
+                            <td>pirtûk + ê + mamosta + yê + zarok + an</td>
+                            <td>the children's teacher's book</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="chain-box">
+                    <h4 style="color: #7b1fa2; margin-bottom: 10px;">Complex Chain Example:</h4>
+                    <div style="line-height: 2; font-size: 1.1rem;">
+                        <strong>mala bavê hevalê min</strong><br>
+                        <span style="color: #666;">mal + a + bav + ê + heval + ê + min</span><br>
+                        <span style="color: #666; font-style: italic;">= my friend's father's house</span>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Chains in Sentences:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkê hevalê min dixwînim.</div>
+                        <div class="english-text">I read my friend's book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Mala bavê wî mezin e.</div>
+                        <div class="english-text">His father's house is big.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Navê hevalê te çi ye?</div>
+                        <div class="english-text">What is your friend's name?</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: IZAFE WITH PLURAL NOUNS -->
+            <div class="izafe-section">
+                <div class="izafe-title">6. Izafe with Plural Nouns</div>
+                <div class="izafe-subtitle">Plural forms</div>
+
+                <div class="explanation">
+                    <p>
+                        When the first noun is <strong>plural</strong>, the Izafe form is usually <strong>-ên</strong> or <strong>-an</strong>.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>Breakdown</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>pirtûkên min</strong></td>
+                            <td>pirtûk + ên + min</td>
+                            <td>my books</td>
+                        </tr>
+                        <tr>
+                            <td><strong>hevalên te</strong></td>
+                            <td>heval + ên + te</td>
+                            <td>your friends</td>
+                        </tr>
+                        <tr>
+                            <td><strong>zarokên wan</strong></td>
+                            <td>zarok + ên + wan</td>
+                            <td>their children</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pirtûkên baş</strong></td>
+                            <td>pirtûk + ên + baş</td>
+                            <td>the good books</td>
+                        </tr>
+                        <tr>
+                            <td><strong>malên mezin</strong></td>
+                            <td>mal + ên + mezin</td>
+                            <td>the big houses</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez pirtûkên min dixwînim.</div>
+                        <div class="english-text">I read my books.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Hevalên te li ku ne?</div>
+                        <div class="english-text">Where are your friends?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Zarokên wan dilîzin.</div>
+                        <div class="english-text">Their children play.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 7: COMMON MISTAKES -->
+            <div class="izafe-section">
+                <div class="izafe-title">7. Common Mistakes to Avoid</div>
+                <div class="izafe-subtitle">What NOT to do</div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>❌ Wrong</th>
+                            <th>✅ Correct</th>
+                            <th>Why</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>pirtûk min</td>
+                            <td><strong>pirtûkê min</strong></td>
+                            <td>Missing Izafe -ê</td>
+                        </tr>
+                        <tr>
+                            <td>mala mezin</td>
+                            <td><strong>malek mezin</strong> (indef.) or <strong>mala mezin</strong> (def.)</td>
+                            <td>Need -ek for indefinite</td>
+                        </tr>
+                        <tr>
+                            <td>pirtûka min</td>
+                            <td><strong>pirtûkê min</strong></td>
+                            <td>pirtûk is masculine, use -ê not -a</td>
+                        </tr>
+                        <tr>
+                            <td>hevalê baş</td>
+                            <td><strong>hevalek baş</strong> (indef.) or <strong>hevalê baş</strong> (def.)</td>
+                            <td>Context determines if definite or not</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: Izafe Forms</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Izafe Form</th>
+                        <th>When to Use</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>-ê</strong></td>
+                        <td>Masculine, ends in consonant</td>
+                        <td>pirtûkê min, hevalê te</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-a</strong></td>
+                        <td>Feminine, ends in consonant</td>
+                        <td>mala min, keça te</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-yê</strong></td>
+                        <td>Masculine, ends in vowel</td>
+                        <td>bavyê min, deriyê mal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-ya</strong></td>
+                        <td>Feminine, ends in vowel</td>
+                        <td>dayaya min</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-ên</strong></td>
+                        <td>Plural</td>
+                        <td>pirtûkên min, hevalên te</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Izafe = linking particle</strong> connecting nouns, adjectives, and possessors</li>
+                    <li><strong>Four main forms:</strong> -ê (masc.), -a (fem.), -yê (masc. after vowel), -ya (fem. after vowel)</li>
+                    <li><strong>Possession:</strong> pirtûkê min (my book), mala te (your house)</li>
+                    <li><strong>Between nouns:</strong> pirtûkê zarok (the child's book)</li>
+                    <li><strong>With adjectives:</strong> pirtûkê baş (the good book) - definite only</li>
+                    <li><strong>Chains:</strong> pirtûkê hevalê min (my friend's book)</li>
+                    <li><strong>Plural:</strong> pirtûkên min (my books)</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

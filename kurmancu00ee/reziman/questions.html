@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurdish Academy - Pirsyar (Questions)</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        .question-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+        }
+
+        .question-title {
+            color: #2e7d32;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .question-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .explanation {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .example-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .example-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .kurdish-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .english-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f9a825;
+            margin: 20px 0;
+        }
+
+        .note-title {
+            color: #f57f17;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #c8e6c9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .question-word {
+            background: #bbdefb;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site (fond vert avec titre centré et logo) -->
+    <header>
+        <div class="logo-left">
+            <img src="../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale (jaune clair) -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî -->
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="reziman.html" class="active">Rêziman (Grammar)</a></li>
+            <li><a href="../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="white-rectangle">
+            <a href="reziman.html" class="back-button" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Vegerîn bo Rêziman</a>
+            
+            <h2 style="color: #2e7d32; margin-bottom: 10px;">Pirsyar</h2>
+            <h3 style="color: #666; margin-bottom: 30px; font-weight: normal;">Questions</h3>
+
+            <!-- INTRODUCTION -->
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;">
+                <h3 style="color: #1976d2; margin-bottom: 15px;">📌 What are Questions?</h3>
+                <p style="line-height: 1.8; font-size: 1.05rem;">
+                    Questions are sentences that <strong>ask for information</strong>. In Kurdish, there are two main types of questions:
+                </p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8; font-size: 1.05rem;">
+                    <li><strong>Yes/No Questions:</strong> Questions that can be answered with "yes" or "no"</li>
+                    <li><strong>Wh-Questions:</strong> Questions that use interrogative words (who, what, where, when, why, how)</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 1: YES/NO QUESTIONS -->
+            <div class="question-section">
+                <div class="question-title">1. Yes/No Questions</div>
+                <div class="question-subtitle">Questions with "...an?" or intonation</div>
+
+                <div class="explanation">
+                    <p>
+                        In Kurdish, you can form yes/no questions in two ways:
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        <li><strong>Add "...an?" or "...in?"</strong> at the end of the sentence</li>
+                        <li><strong>Use rising intonation</strong> (like in English)</li>
+                    </ul>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Method 1: Adding "...an?" or "...in?"</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Statement</th>
+                            <th>Question</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tu diçî.</td>
+                            <td>Tu diçî<strong>?</strong> / Tu diçî<strong>n?</strong></td>
+                            <td>You go. / Do you go?</td>
+                        </tr>
+                        <tr>
+                            <td>Ew li malê ye.</td>
+                            <td>Ew li malê ye<strong>?</strong></td>
+                            <td>He is at home. / Is he at home?</td>
+                        </tr>
+                        <tr>
+                            <td>Hûn dixwazin.</td>
+                            <td>Hûn dixwazin<strong>?</strong></td>
+                            <td>You want. / Do you want?</td>
+                        </tr>
+                        <tr>
+                            <td>Ez karim.</td>
+                            <td>Ez karim<strong>?</strong></td>
+                            <td>I can. / Can I?</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu diçî dibistanê?</div>
+                        <div class="english-text">Do you go to school?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew pirtûkê dixwîne?</div>
+                        <div class="english-text">Does he/she read the book?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Hûn li vir in?</div>
+                        <div class="english-text">Are you here?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ez karim biçim?</div>
+                        <div class="english-text">Can I go?</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">Answering Yes/No Questions:</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Answer Type</th>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yes</td>
+                            <td><strong>Erê / Belê</strong></td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>No</td>
+                            <td><strong>Na / Ne</strong></td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Question & Answer Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Tu diçî dibistanê? → A: Erê, ez diçim. / Na, ez naçim.</div>
+                        <div class="english-text">Q: Do you go to school? → A: Yes, I go. / No, I don't go.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Ew li malê ye? → A: Belê, ew li malê ye. / Na, ew li malê nîne.</div>
+                        <div class="english-text">Q: Is he at home? → A: Yes, he is at home. / No, he is not at home.</div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <div class="note-title">💡 Simple Rule!</div>
+                    <p style="line-height: 1.8;">
+                        In spoken Kurdish, you often just use <strong>rising intonation</strong> at the end of a statement to make it a question, 
+                        just like in English! The question mark in writing indicates this.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 2: INTERROGATIVE WORDS -->
+            <div class="question-section">
+                <div class="question-title">2. Interrogative Words (Wh-Questions)</div>
+                <div class="question-subtitle">Who, What, Where, When, Why, How</div>
+
+                <div class="explanation">
+                    <p>
+                        Kurdish has specific words for asking different types of questions. These are called <strong>interrogative words</strong>.
+                    </p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kurdish</th>
+                            <th>English</th>
+                            <th>Asks About</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="question-word">Kî</span></td>
+                            <td>Who</td>
+                            <td>People (identity)</td>
+                            <td>Kî ye? (Who is it?)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="question-word">Çi</span></td>
+                            <td>What</td>
+                            <td>Things, actions</td>
+                            <td>Çi ye? (What is it?)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="question-word">Kîjan</span></td>
+                            <td>Which / Which one</td>
+                            <td>Choice, selection</td>
+                            <td>Kîjan dixwazî? (Which do you want?)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="question-word">Li ku / Ku</span></td>
+                            <td>Where</td>
+                            <td>Place, location</td>
+                            <td>Tu li ku yî? (Where are you?)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="question-word">Kengî</span></td>
+                            <td>When</td>
+                            <td>Time</td>
+                            <td>Kengî tê? (When are you coming?)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="question-word">Çima</span></td>
+                            <td>Why</td>
+                            <td>Reason</td>
+                            <td>Çima? (Why?)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="question-word">Çawa</span></td>
+                            <td>How</td>
+                            <td>Manner, state</td>
+                            <td>Çawa yî? (How are you?)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="question-word">Çend</span></td>
+                            <td>How many / How much</td>
+                            <td>Quantity, number</td>
+                            <td>Çend? (How many?)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="question-word">Çiqas</span></td>
+                            <td>How much (price)</td>
+                            <td>Price, cost</td>
+                            <td>Çiqas e? (How much is it?)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- SECTION 3: WHO QUESTIONS (KÎ) -->
+            <div class="question-section">
+                <div class="question-title">3. "Who" Questions (Kî)</div>
+                <div class="question-subtitle">Asking about people</div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with "Kî":</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Kî ye?</div>
+                        <div class="english-text">Who is it? / Who is he/she?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Kî li vir e?</div>
+                        <div class="english-text">Who is here?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Kî hat?</div>
+                        <div class="english-text">Who came?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ev kî ye?</div>
+                        <div class="english-text">Who is this?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu bi kî re diaxivî?</div>
+                        <div class="english-text">Who are you talking with?</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Answers:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Kî ye? → A: Ew Ahmad e.</div>
+                        <div class="english-text">Q: Who is it? → A: It's Ahmad.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Kî hat? → A: Hevalê min hat.</div>
+                        <div class="english-text">Q: Who came? → A: My friend came.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: WHAT QUESTIONS (ÇI) -->
+            <div class="question-section">
+                <div class="question-title">4. "What" Questions (Çi)</div>
+                <div class="question-subtitle">Asking about things and actions</div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with "Çi":</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Çi ye?</div>
+                        <div class="english-text">What is it?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ev çi ye?</div>
+                        <div class="english-text">What is this?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu çi dixwazî?</div>
+                        <div class="english-text">What do you want?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu çi dikî?</div>
+                        <div class="english-text">What are you doing?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çi bû?</div>
+                        <div class="english-text">What happened?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu çi dixwî?</div>
+                        <div class="english-text">What do you eat?</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Answers:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Ev çi ye? → A: Ev pirtûk e.</div>
+                        <div class="english-text">Q: What is this? → A: This is a book.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Tu çi dikî? → A: Ez dixwînim.</div>
+                        <div class="english-text">Q: What are you doing? → A: I'm reading.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 5: WHERE QUESTIONS (LI KU) -->
+            <div class="question-section">
+                <div class="question-title">5. "Where" Questions (Li ku / Ku)</div>
+                <div class="question-subtitle">Asking about location</div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with "Li ku" / "Ku":</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu li ku yî?</div>
+                        <div class="english-text">Where are you?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ew li ku ye?</div>
+                        <div class="english-text">Where is he/she?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Pirtûk li ku ye?</div>
+                        <div class="english-text">Where is the book?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu diçî ku?</div>
+                        <div class="english-text">Where are you going?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Tu ji ku têyî?</div>
+                        <div class="english-text">Where are you from? / Where do you come from?</div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Answers:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Tu li ku yî? → A: Ez li malê me.</div>
+                        <div class="english-text">Q: Where are you? → A: I'm at home.</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Tu diçî ku? → A: Ez diçim dibistanê.</div>
+                        <div class="english-text">Q: Where are you going? → A: I'm going to school.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: WHEN, WHY, HOW QUESTIONS -->
+            <div class="question-section">
+                <div class="question-title">6. When, Why, How Questions</div>
+                <div class="question-subtitle">Kengî, Çima, Çawa</div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">"When" (Kengî):</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Kengî tê?</div>
+                        <div class="english-text">When are you coming?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Kengî diçî?</div>
+                        <div class="english-text">When are you going?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Kengî hat?</div>
+                        <div class="english-text">When did he/she come?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Kengî tê? → A: Ez sibehê têm.</div>
+                        <div class="english-text">Q: When are you coming? → A: I'm coming in the morning.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">"Why" (Çima):</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Çima?</div>
+                        <div class="english-text">Why?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çima tu nayê?</div>
+                        <div class="english-text">Why aren't you coming?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çima tu naçî?</div>
+                        <div class="english-text">Why don't you go?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Çima tu nayê? → A: Ji ber ku ez nexweş im.</div>
+                        <div class="english-text">Q: Why aren't you coming? → A: Because I'm sick.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">"How" (Çawa):</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Çawa yî?</div>
+                        <div class="english-text">How are you?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çawa bû?</div>
+                        <div class="english-text">How did it happen?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çawa dikî?</div>
+                        <div class="english-text">How do you do it?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Çawa yî? → A: Ez baş im, spas.</div>
+                        <div class="english-text">Q: How are you? → A: I'm good, thanks.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 7: HOW MANY/MUCH QUESTIONS -->
+            <div class="question-section">
+                <div class="question-title">7. "How Many/Much" Questions</div>
+                <div class="question-subtitle">Çend, Çiqas</div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">"How many/much" (Çend):</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Çend pirtûk hene?</div>
+                        <div class="english-text">How many books are there?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çend kes hatin?</div>
+                        <div class="english-text">How many people came?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Çend salî tu yî?</div>
+                        <div class="english-text">How old are you? (How many years are you?)</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Çend salî tu yî? → A: Ez bîst salî me.</div>
+                        <div class="english-text">Q: How old are you? → A: I'm 20 years old.</div>
+                    </div>
+                </div>
+
+                <h4 style="color: #2e7d32; margin: 25px 0 15px 0;">"How much (price)" (Çiqas):</h4>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples:</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Çiqas e?</div>
+                        <div class="english-text">How much is it?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Ev çiqas e?</div>
+                        <div class="english-text">How much is this?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Pirtûk çiqas e?</div>
+                        <div class="english-text">How much is the book?</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 8: WHICH QUESTIONS -->
+            <div class="question-section">
+                <div class="question-title">8. "Which" Questions (Kîjan)</div>
+                <div class="question-subtitle">Asking about choice or selection</div>
+
+                <div class="example-box">
+                    <div class="example-title">📌 Examples with "Kîjan":</div>
+                    
+                    <div class="example-item">
+                        <div class="kurdish-text">Kîjan dixwazî?</div>
+                        <div class="english-text">Which one do you want?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Kîjan pirtûk dixwazî?</div>
+                        <div class="english-text">Which book do you want?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Kîjan yek baştir e?</div>
+                        <div class="english-text">Which one is better?</div>
+                    </div>
+
+                    <div class="example-item">
+                        <div class="kurdish-text">Q: Kîjan dixwazî? → A: Ez vê yekê dixwazim.</div>
+                        <div class="english-text">Q: Which one do you want? → A: I want this one.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK REFERENCE -->
+            <h3 style="color: #2e7d32; margin-top: 40px; margin-bottom: 20px;">Quick Reference: All Question Words</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Kurdish</th>
+                        <th>English</th>
+                        <th>Quick Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Kî</strong></td>
+                        <td>Who</td>
+                        <td>Kî ye? (Who is it?)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Çi</strong></td>
+                        <td>What</td>
+                        <td>Çi ye? (What is it?)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kîjan</strong></td>
+                        <td>Which</td>
+                        <td>Kîjan dixwazî? (Which do you want?)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Li ku / Ku</strong></td>
+                        <td>Where</td>
+                        <td>Tu li ku yî? (Where are you?)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kengî</strong></td>
+                        <td>When</td>
+                        <td>Kengî tê? (When are you coming?)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Çima</strong></td>
+                        <td>Why</td>
+                        <td>Çima? (Why?)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Çawa</strong></td>
+                        <td>How</td>
+                        <td>Çawa yî? (How are you?)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Çend</strong></td>
+                        <td>How many/much</td>
+                        <td>Çend? (How many?)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Çiqas</strong></td>
+                        <td>How much (price)</td>
+                        <td>Çiqas e? (How much is it?)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- FINAL SUMMARY -->
+            <div class="note-box" style="background: #e8f5e9; border-left-color: #2e7d32; margin-top: 40px;">
+                <div class="note-title" style="color: #2e7d32;">📚 Summary:</div>
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Yes/No questions:</strong> Use rising intonation or add "...an?" / "...in?" at the end</li>
+                    <li><strong>Answers:</strong> Erê/Belê (yes), Na/Ne (no)</li>
+                    <li><strong>Who:</strong> Kî (Kî ye? = Who is it?)</li>
+                    <li><strong>What:</strong> Çi (Çi ye? = What is it?)</li>
+                    <li><strong>Where:</strong> Li ku / Ku (Tu li ku yî? = Where are you?)</li>
+                    <li><strong>When:</strong> Kengî (Kengî tê? = When are you coming?)</li>
+                    <li><strong>Why:</strong> Çima (Çima? = Why?)</li>
+                    <li><strong>How:</strong> Çawa (Çawa yî? = How are you?)</li>
+                    <li><strong>How many:</strong> Çend (Çend? = How many?)</li>
+                    <li><strong>Which:</strong> Kîjan (Kîjan dixwazî? = Which do you want?)</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Pied de page du site -->
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

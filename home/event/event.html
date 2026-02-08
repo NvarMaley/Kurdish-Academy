@@ -1,0 +1,195 @@
+<!-- Déclaration du type de document (HTML5) -->
+<!DOCTYPE html>
+<!-- Début du document HTML avec la langue anglaise définie -->
+<html lang="en">
+<!-- En-tête du document contenant les métadonnées et liens vers les ressources -->
+<head>
+    <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères internationaux -->
+    <meta charset="UTF-8">
+    <!-- Configure la vue pour les appareils mobiles (responsive design) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
+    <title>Event - Kurdish Academy</title>
+    <!-- Lien vers la feuille de style CSS externe -->
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../scripts.js"></script>
+    <style>
+        /* Style spécifique pour les événements */
+        .event-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .event-title {
+            color: #2e7d32;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .event-content {
+            display: flex;
+            gap: 30px;
+            align-items: stretch;
+        }
+        
+        .event-image {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        
+        .event-details {
+            flex: 1;
+            padding-left: 0;
+        }
+        
+        .event-date {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .event-location {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .event-description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<!-- Corps du document contenant tout le contenu visible -->
+<body>
+    <!-- En-tête du site avec bande verte foncée (#2e7d32) -->
+    <header>
+        <!-- Conteneur pour le logo situé à gauche de l'en-tête -->
+        <div class="logo-left">
+            <!-- Image du logo gauche (à placer dans le dossier 'images') -->
+            <img src="../../images/logo-left.png" alt="Logo gauche" class="logo">
+        </div>
+        
+        <!-- Conteneur pour le titre centré -->
+        <div class="title">
+            <!-- Titre principal du site en grande taille (3.5rem) -->
+            <h1>Kurdish Academy</h1>
+        </div>
+        
+        <!-- Conteneur pour le logo situé à droite de l'en-tête -->
+        <div class="logo-right">
+            <!-- Image du logo droit (à placer dans le dossier 'images') -->
+            <img src="../../images/logo-right.png" alt="Logo droite" class="logo">
+        </div>
+    </header>
+    
+    <!-- Barre de navigation principale avec les sections demandées -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../index.html" class="active">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
+            <li><a href="#" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Deuxième barre de navigation pour les sous-sections de Home -->
+    <nav class="sub-nav" id="home-subnav">
+        <ul>
+            <li><a href="../../index.html">Academy</a></li>
+            <li><a href="event.html" class="active">Event</a></li>
+            <li><a href="../partner/partner.html">Partner</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+            <li><a href="../donation/donation.html">Donation</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Kurmancî (masquée par défaut) -->
+    <nav class="sub-nav" id="kurmanci-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../kurmancu00ee/dersen/dersen.html">Dersên (Course)</a></li>
+            <li><a href="../../kurmancu00ee/alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../kurmancu00ee/peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../kurmancu00ee/leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../kurmancu00ee/reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../kurmancu00ee/guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../kurmancu00ee/xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../kurmancu00ee/nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../kurmancu00ee/axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+            <li><a href="../../sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
+            <li><a href="../../sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
+            <li><a href="../../sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
+            <li><a href="../../sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
+            <li><a href="../../sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
+    <nav class="sub-nav" id="culture-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../culture/history/history.html">History</a></li>
+            <li><a href="../../culture/geography/geography.html">Geography</a></li>
+            <li><a href="../../culture/politics/politics.html">Politics</a></li>
+            <li><a href="../../culture/literature/literature.html">Literature</a></li>
+            <li><a href="../../culture/music/music.html">Music</a></li>
+            <li><a href="../../culture/dance/dance.html">Dance</a></li>
+            <li><a href="../../culture/food/food.html">Food</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main content of the site (white on light beige background) -->
+    <main>
+        <h2 class="main-title-left">Upcoming Events</h2>
+        
+        <!-- Carte événement Newroz -->
+        <div class="event-card">
+            <h3 class="event-title">Newroz Lausanne 2026</h3>
+            
+            <div class="event-content">
+                <!-- Image de l'événement Newroz -->
+                <img src="images/image newroz .png" alt="Newroz Lausanne 2026" class="event-image">
+                
+                <div class="event-details">
+                    <div class="event-date">⏳ March 20, 2026</div>
+                    <div class="event-location">📍 Riponne, Lausanne</div>
+                    
+                    <div class="event-description">
+                        Join us to celebrate Newroz, the Kurdish New Year! A festive day filled with traditional music, folk dances, Kurdish cuisine, and cultural activities for the whole family. Experience the rich heritage of Kurdish culture through authentic performances, delicious food, and community celebrations that bring people together to welcome spring and new beginnings.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Pied de page du site (fond gris foncé avec texte blanc) -->
+    <footer>
+        <!-- Mention de copyright avec l'année actuelle -->
+        <p>&copy; 2025 Kurdish Academy. Tous droits réservés.</p>
+    </footer>
+</body>
+<!-- Fin du document HTML -->
+</html>

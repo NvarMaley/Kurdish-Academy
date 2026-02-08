@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 7 - Malbat (Family) | Kurdish Academy</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../chatbot.css">
+    <script src="../../../scripts.js"></script>
+    <script src="../../../chatbot-ai.js"></script>
+    <style>
+        .course-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .course-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .course-header .course-meta {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #1b5e20;
+            transform: translateX(-5px);
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 2.5rem;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .vocab-card {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #fbc02d;
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(249, 168, 37, 0.2);
+        }
+
+        .vocab-word {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #f57f17;
+            margin-bottom: 8px;
+        }
+
+        .vocab-translation {
+            font-size: 1rem;
+            color: #f9a825;
+        }
+
+        .structure-box {
+            background: #fffde7;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #fbc02d;
+        }
+
+        .structure-pattern {
+            font-size: 1.2rem;
+            color: #f57f17;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .example-dialogue {
+            background: #fff9c4;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .dialogue-line {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .speaker {
+            font-weight: bold;
+            color: #f9a825;
+            margin-bottom: 8px;
+        }
+
+        .kurdish-text {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 8px 0;
+        }
+
+        .translation {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .exercise-box {
+            background: #f9fbe7;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 2px solid #cddc39;
+        }
+
+        .exercise-title {
+            font-size: 1.5rem;
+            color: #827717;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .exercise-box input[type="text"],
+        .exercise-box textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .exercise-box button {
+            background: #fbc02d;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .exercise-box button:hover {
+            background: #f9a825;
+            transform: scale(1.05);
+        }
+
+        .scene-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 4px solid #fbc02d;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .scene-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f9a825;
+            margin-bottom: 10px;
+        }
+
+        .scene-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .family-tree {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 3px solid #fbc02d;
+        }
+
+        .tree-level {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            gap: 30px;
+        }
+
+        .family-member {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 2px solid #f9a825;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f57f17;
+        }
+
+        .member-relation {
+            font-size: 0.9rem;
+            color: #f9a825;
+            margin-top: 5px;
+        }
+
+        .present-btn {
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 1.1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: white;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .present-btn:hover {
+            background: #f5f5f5;
+            border-color: #fbc02d;
+        }
+
+        .present-btn.correct {
+            background: #c8e6c9;
+            border-color: #4caf50;
+            color: #1b5e20;
+        }
+
+        .present-btn.wrong {
+            background: #ffcdd2;
+            border-color: #f44336;
+            color: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-left">
+            <img src="../../../images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+        <h1>Kurdish Academy</h1>
+        <div class="logo-right">
+            <img src="../../../images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="#" class="active" id="kurmanci-link">Kurmancî</a></li>
+            <li><a href="#" id="sorani-link">Sorani</a></li>
+            <li><a href="#" id="culture-link">Culture</a></li>
+        </ul>
+    </nav>
+
+    <nav class="sub-nav" id="kurmanci-subnav">
+        <ul>
+            <li><a href="../dersen.html" class="active">Dersên (Course)</a></li>
+            <li><a href="../../alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
+            <li><a href="../../peyven/peyven.html">Peyvên (Vocabulary)</a></li>
+            <li><a href="../../leker/leker.html">Lêker (Verbs)</a></li>
+            <li><a href="../../reziman/reziman.html">Rêziman (Grammar)</a></li>
+            <li><a href="../../guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
+            <li><a href="../../xwendin/xwendin.html">Xwendin (Reading)</a></li>
+            <li><a href="../../nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
+            <li><a href="../../axaftin/axaftin.html">Axaftin (Speaking)</a></li>
+        </ul>
+    </nav>
+
+    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
+        <ul>
+            <li><a href="../../sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
+            <li><a href="../../../sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
+            <li><a href="../../../sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
+            <li><a href="../../../sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
+        </ul>
+    </nav>
+
+    <main class="course-page">
+        <a href="../level-a1.html" class="back-link">← Back to A1 Courses</a>
+
+        <div class="course-header">
+            <h1>👨‍👩‍👧‍👦 Course 7: Malbat</h1>
+            <div class="course-meta">
+                Family | Level: A1
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Section 1: Vocabulary - Family Members -->
+            <div class="section" id="section-vocabulary">
+                <h2 class="section-title">
+                    <span class="section-icon">🧩</span>
+                    1. Peyvên (Vocabulary): Family Members
+                </h2>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Immediate Family (Malbata Nêzîk)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-word">Bav</div>
+                        <div class="vocab-translation">Father</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Dê / Dayik</div>
+                        <div class="vocab-translation">Mother</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Bira</div>
+                        <div class="vocab-translation">Brother</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Xwişk</div>
+                        <div class="vocab-translation">Sister</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Kur</div>
+                        <div class="vocab-translation">Son</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Keç</div>
+                        <div class="vocab-translation">Daughter</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Malbat</div>
+                        <div class="vocab-translation">Family</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Zarok</div>
+                        <div class="vocab-translation">Children</div>
+                    </div>
+                </div>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">Extended Family (Malbata Mezin)</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-word">Pîr / Bapîr</div>
+                        <div class="vocab-translation">Grandfather</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Pîrik / Dapîr</div>
+                        <div class="vocab-translation">Grandmother</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Ap</div>
+                        <div class="vocab-translation">Uncle (paternal)</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Xal</div>
+                        <div class="vocab-translation">Uncle (maternal)</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Met</div>
+                        <div class="vocab-translation">Aunt (paternal)</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Xaltî</div>
+                        <div class="vocab-translation">Aunt (maternal)</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Pismam</div>
+                        <div class="vocab-translation">Cousin (male)</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Dotmam</div>
+                        <div class="vocab-translation">Cousin (female)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Structure - Possessives & Plurals -->
+            <div class="section" id="section-structure">
+                <h2 class="section-title">
+                    <span class="section-icon">🧠</span>
+                    2. Struktur (Structure): Possessives & Plurals
+                </h2>
+
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Learn how to talk about YOUR family using possessive pronouns:
+                </p>
+
+                <div class="structure-box">
+                    <h3 style="color: #f9a825; margin-bottom: 15px;">💡 Possessive Pronouns</h3>
+                    
+                    <div class="structure-pattern">
+                        <strong>min</strong> = my<br>
+                        <strong>te</strong> = your (singular)<br>
+                        <strong>wî</strong> = his<br>
+                        <strong>wê</strong> = her<br>
+                        <strong>me</strong> = our<br>
+                        <strong>we</strong> = your (plural)<br>
+                        <strong>wan</strong> = their
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 20px; background: white; border-radius: 10px;">
+                        <h4 style="color: #f9a825; margin-bottom: 15px;">Examples:</h4>
+                        <p style="font-size: 1.1rem; line-height: 2;">
+                            • <strong>Bavê min</strong> = My father<br>
+                            • <strong>Diya te</strong> = Your mother<br>
+                            • <strong>Birayê wî</strong> = His brother<br>
+                            • <strong>Xwişka wê</strong> = Her sister<br>
+                            • <strong>Malbata me</strong> = Our family
+                        </p>
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #f9a825; margin-bottom: 15px;">💡 Plural Forms</h3>
+                    
+                    <div class="structure-pattern">
+                        <strong>Pattern:</strong> Add <strong>-an</strong> or <strong>-ên</strong> for plural
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 20px; background: white; border-radius: 10px;">
+                        <h4 style="color: #f9a825; margin-bottom: 15px;">Examples:</h4>
+                        <p style="font-size: 1.1rem; line-height: 2;">
+                            • <strong>Bira</strong> (brother) → <strong>Birayan</strong> (brothers)<br>
+                            • <strong>Xwişk</strong> (sister) → <strong>Xwişkan</strong> (sisters)<br>
+                            • <strong>Kur</strong> (son) → <strong>Kuran</strong> (sons)<br>
+                            • <strong>Keç</strong> (daughter) → <strong>Keçan</strong> (daughters)<br>
+                            • <strong>Zarok</strong> = Children (already plural)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="structure-box">
+                    <h3 style="color: #f9a825; margin-bottom: 15px;">💡 Describing Family</h3>
+                    
+                    <div class="structure-pattern">
+                        <strong>Pattern:</strong> Li malbata min [number] [family member] hene/heye
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 20px; background: white; border-radius: 10px;">
+                        <h4 style="color: #f9a825; margin-bottom: 15px;">Examples:</h4>
+                        <p style="font-size: 1.1rem; line-height: 2;">
+                            • <strong>Li malbata min du bira hene.</strong> = In my family there are two brothers.<br>
+                            • <strong>Li malbata min yek xwişk heye.</strong> = In my family there is one sister.<br>
+                            • <strong>Li malbata min sê zarok hene.</strong> = In my family there are three children.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="example-dialogue">
+                    <h4 style="color: #f9a825; margin-bottom: 15px;">🗣️ Example Conversation:</h4>
+                    
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Person A:</div>
+                        <div class="kurdish-text">Li malbata te çend kes hene?</div>
+                        <div class="translation">How many people are in your family?</div>
+                    </div>
+                    
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Person B:</div>
+                        <div class="kurdish-text">Li malbata min pênc kes hene. Bavê min, diya min, du birayan û ez.</div>
+                        <div class="translation">In my family there are five people. My father, my mother, two brothers and me.</div>
+                    </div>
+                    
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Person A:</div>
+                        <div class="kurdish-text">Tu xwişk heye?</div>
+                        <div class="translation">Do you have a sister?</div>
+                    </div>
+                    
+                    <div class="dialogue-line">
+                        <div class="speaker">👤 Person B:</div>
+                        <div class="kurdish-text">Na, xwişk tune. Tenê du bira hene.</div>
+                        <div class="translation">No, no sister. Only two brothers.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Listening - Family Presentation -->
+            <div class="section" id="section-listening">
+                <h2 class="section-title">
+                    <span class="section-icon">🎧</span>
+                    3. Guhdarîkirin (Listening): Family Presentations
+                </h2>
+
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Listen to these people describing their families:
+                </p>
+
+                <div class="scene-card">
+                    <div class="scene-title">Presentation 1: Sara's Family</div>
+                    <div class="scene-text">
+                        <strong>Sara:</strong> Silav! Navê min Sara ye. Li malbata min çar kes hene. Bavê min, diya min, birayê min û ez. Navê bavê min Hasan e. Ew mamoste ye. Diya min Leyla ye. Ew doktor e. Birayê min Azad e. Ew xwendekar e.<br>
+                        <em>(Hello! My name is Sara. In my family there are four people. My father, my mother, my brother and me. My father's name is Hasan. He is a teacher. My mother is Leyla. She is a doctor. My brother is Azad. He is a student.)</em>
+                    </div>
+                </div>
+
+                <div class="scene-card">
+                    <div class="scene-title">Presentation 2: Roj's Family</div>
+                    <div class="scene-text">
+                        <strong>Roj:</strong> Ez Roj im. Malbata min mezin e. Li malbata min şeş kes hene. Bavê min, diya min, du xwişkan, birayê min û ez. Navê xwişka min mezin Dilan e. Xwişka min biçûk Berivan e. Birayê min Şervan e.<br>
+                        <em>(I am Roj. My family is big. In my family there are six people. My father, my mother, two sisters, my brother and me. My older sister's name is Dilan. My younger sister is Berivan. My brother is Şervan.)</em>
+                    </div>
+                </div>
+
+                <div class="scene-card">
+                    <div class="scene-title">Presentation 3: Asking About Family</div>
+                    <div class="scene-text">
+                        <strong>A:</strong> Li malbata te çend bira hene?<br>
+                        <em>(How many brothers do you have?)</em><br>
+                        <strong>B:</strong> Li malbata min du bira hene. Yek mezin û yek biçûk.<br>
+                        <em>(In my family there are two brothers. One older and one younger.)</em><br>
+                        <strong>A:</strong> Xwişk jî heye?<br>
+                        <em>(Do you also have a sister?)</em><br>
+                        <strong>B:</strong> Erê, yek xwişk heye.<br>
+                        <em>(Yes, there is one sister.)</em>
+                    </div>
+                </div>
+
+                <div class="exercise-box" style="margin-top: 30px;">
+                    <div class="exercise-title">🎯 Comprehension Questions</div>
+                    <p style="margin-bottom: 15px;">Answer these questions about the presentations <strong>(in Kurdish)</strong>:</p>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. How many people are in Sara's family?</label>
+                        <input type="text" id="listen-q1" placeholder="Answer in Kurdish...">
+                        <div id="listen-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. What is Sara's father's profession?</label>
+                        <input type="text" id="listen-q2" placeholder="Answer in Kurdish...">
+                        <div id="listen-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. How many sisters does Roj have?</label>
+                        <input type="text" id="listen-q3" placeholder="Answer in Kurdish...">
+                        <div id="listen-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkListening()">✓ Check Answers</button>
+                    <div id="listen-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 4: Reading - Family Tree -->
+            <div class="section" id="section-reading">
+                <h2 class="section-title">
+                    <span class="section-icon">📖</span>
+                    4. Xwendin (Reading): Simple Family Tree
+                </h2>
+
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Study this family tree and learn the relationships:
+                </p>
+
+                <div class="family-tree">
+                    <h4 style="text-align: center; color: #f57f17; margin-bottom: 25px;">Dara Malbatê (Family Tree)</h4>
+                    
+                    <div class="tree-level">
+                        <div class="family-member">
+                            <div class="member-name">Hasan</div>
+                            <div class="member-relation">Bapîr (Grandfather)</div>
+                        </div>
+                        <div class="family-member">
+                            <div class="member-name">Fatma</div>
+                            <div class="member-relation">Dapîr (Grandmother)</div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin: 10px 0;">
+                        <span style="font-size: 2rem;">↓</span>
+                    </div>
+
+                    <div class="tree-level">
+                        <div class="family-member">
+                            <div class="member-name">Kemal</div>
+                            <div class="member-relation">Bav (Father)</div>
+                        </div>
+                        <div class="family-member">
+                            <div class="member-name">Leyla</div>
+                            <div class="member-relation">Dê (Mother)</div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin: 10px 0;">
+                        <span style="font-size: 2rem;">↓</span>
+                    </div>
+
+                    <div class="tree-level">
+                        <div class="family-member">
+                            <div class="member-name">Azad</div>
+                            <div class="member-relation">Bira (Brother)</div>
+                        </div>
+                        <div class="family-member">
+                            <div class="member-name">Sara</div>
+                            <div class="member-relation">Ez (Me)</div>
+                        </div>
+                        <div class="family-member">
+                            <div class="member-name">Dilan</div>
+                            <div class="member-relation">Xwişk (Sister)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-dialogue" style="margin-top: 30px;">
+                    <h4 style="color: #f9a825; margin-bottom: 15px;">📝 About This Family:</h4>
+                    
+                    <p style="font-size: 1.1rem; line-height: 2; margin: 15px 0;">
+                        Ev malbata Sara ye. Li malbata wê pênc kes hene: bavê wê Kemal, diya wê Leyla, birayê wê Azad, xwişka wê Dilan û Sara. 
+                        Bapîrê Sara Hasan e û dapîra wê Fatma ye. Ev malbateke mezin û xweş e.
+                    </p>
+
+                    <p style="font-size: 1rem; color: #666; font-style: italic; margin: 15px 0;">
+                        <strong>Translation:</strong> This is Sara's family. In her family there are five people: her father Kemal, her mother Leyla, 
+                        her brother Azad, her sister Dilan and Sara. Sara's grandfather is Hasan and her grandmother is Fatma. 
+                        This is a big and nice family.
+                    </p>
+                </div>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Reading Comprehension</div>
+                    <p style="margin-bottom: 15px;">Answer these questions about the family tree <strong>(in Kurdish)</strong>:</p>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. What is Sara's mother's name?</label>
+                        <input type="text" id="read-q1" placeholder="Answer in Kurdish...">
+                        <div id="read-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. How many siblings does Sara have?</label>
+                        <input type="text" id="read-q2" placeholder="Answer in Kurdish...">
+                        <div id="read-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkReading()">✓ Check Answers</button>
+                    <div id="read-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <!-- Section 5: Writing - My Family -->
+            <div class="section" id="section-writing">
+                <h2 class="section-title">
+                    <span class="section-icon">✍️</span>
+                    5. Nivîsandin (Writing): In My Family...
+                </h2>
+
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Write 6 sentences describing your family:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">📝 Writing Exercise</div>
+                    <p style="margin-bottom: 15px; color: #666;">
+                        Write 6 sentences about your family. Use:<br>
+                        • "Li malbata min..." (In my family...)<br>
+                        • Possessive pronouns (min, te, wî/wê)<br>
+                        • Family member vocabulary<br>
+                        • Numbers (yek, du, sê...)
+                    </p>
+
+                    <div style="margin: 20px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">Your Family Description:</label>
+                        <textarea id="write-family" rows="8" placeholder="Example:
+Li malbata min pênc kes hene.
+Bavê min navê wî Hasan e.
+Diya min doktor e.
+Ez du bira heye.
+Xwişka min xwendekar e.
+Malbata min mezin e."></textarea>
+                        <div id="write-feedback" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkWriting()">✓ Submit Description</button>
+                </div>
+            </div>
+
+            <!-- Section 6: Speaking - Present a Family Member -->
+            <div class="section" id="section-speaking">
+                <h2 class="section-title">
+                    <span class="section-icon">🗣️</span>
+                    6. Axaftin (Speaking): Present a Family Member
+                </h2>
+
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Practice presenting a family member in different scenarios:
+                </p>
+
+                <div class="exercise-box">
+                    <div class="exercise-title">🎭 Presentation Scenarios</div>
+                    <p style="margin-bottom: 20px; color: #666;">
+                        Choose the correct way to present your family member:
+                    </p>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff9c4; border-radius: 10px;">
+                        <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 1: Introducing your father</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="present-btn" data-scenario="1" data-answer="a" onclick="checkPresent(1, 'a')">
+                                A) Ev bavê min e. Navê wî Hasan e.
+                            </button>
+                            <button class="present-btn" data-scenario="1" data-answer="b" onclick="checkPresent(1, 'b')">
+                                B) Ev bira min e. Navê wî Hasan e.
+                            </button>
+                            <button class="present-btn" data-scenario="1" data-answer="c" onclick="checkPresent(1, 'c')">
+                                C) Ev diya min e. Navê wê Hasan e.
+                            </button>
+                        </div>
+                        <div id="present-feedback-1" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff9c4; border-radius: 10px;">
+                        <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 2: Describing your sister</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="present-btn" data-scenario="2" data-answer="a" onclick="checkPresent(2, 'a')">
+                                A) Xwişka min xwendekar e.
+                            </button>
+                            <button class="present-btn" data-scenario="2" data-answer="b" onclick="checkPresent(2, 'b')">
+                                B) Birayê min xwendekar e.
+                            </button>
+                            <button class="present-btn" data-scenario="2" data-answer="c" onclick="checkPresent(2, 'c')">
+                                C) Bavê min xwendekar e.
+                            </button>
+                        </div>
+                        <div id="present-feedback-2" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 25px 0; padding: 20px; background: #fff9c4; border-radius: 10px;">
+                        <h4 style="color: #f57f17; margin-bottom: 15px;">Scenario 3: Talking about your grandparents</h4>
+                        <p style="margin-bottom: 10px;"><strong>What do you say?</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="present-btn" data-scenario="3" data-answer="a" onclick="checkPresent(3, 'a')">
+                                A) Bavê min û diya min li vir in.
+                            </button>
+                            <button class="present-btn" data-scenario="3" data-answer="b" onclick="checkPresent(3, 'b')">
+                                B) Bapîrê min û dapîra min li vir in.
+                            </button>
+                            <button class="present-btn" data-scenario="3" data-answer="c" onclick="checkPresent(3, 'c')">
+                                C) Birayê min û xwişka min li vir in.
+                            </button>
+                        </div>
+                        <div id="present-feedback-3" style="margin-top: 15px; font-weight: bold;"></div>
+                    </div>
+
+                    <div id="present-score" style="margin-top: 25px; font-size: 1.3rem; font-weight: bold; text-align: center; color: #f9a825;">
+                        Score: <span id="present-correct">0</span> / 3
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Present Tense & Family Actions -->
+            <div class="section" id="section-present">
+                <h2 class="section-title">
+                    <span class="section-icon">⏰</span>
+                    7. Dema Niha (Present Tense): Family Actions
+                </h2>
+
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Learn new verbs and how to conjugate them in the present tense:
+                </p>
+
+                <h3 style="color: #f9a825; margin: 20px 0;">New Verbs - Family Activities</h3>
+                <div class="vocab-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-word">Jîn</div>
+                        <div class="vocab-translation">To live</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Kar kirin</div>
+                        <div class="vocab-translation">To work</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Xwarin</div>
+                        <div class="vocab-translation">To eat</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Vexwarin</div>
+                        <div class="vocab-translation">To drink</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Çûn</div>
+                        <div class="vocab-translation">To go</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Hatin</div>
+                        <div class="vocab-translation">To come</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Kirin</div>
+                        <div class="vocab-translation">To do / To make</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Dîtin</div>
+                        <div class="vocab-translation">To see</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Hezkirîn</div>
+                        <div class="vocab-translation">To love</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Yarîkirin</div>
+                        <div class="vocab-translation">To play</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Razanîn</div>
+                        <div class="vocab-translation">To sleep</div>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Alîkarîkirin</div>
+                        <div class="vocab-translation">To help</div>
+                    </div>
+                </div>
+
+                <div class="structure-box" style="margin-top: 30px;">
+                    <h3 style="color: #f9a825; margin-bottom: 15px;">📚 Theory: Present Tense in Kurdish</h3>
+                    
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        In Kurdish (Kurmanji), the present tense is formed by adding the prefix <strong>di-</strong> before the verb stem 
+                        and conjugating it with personal endings. The basic pattern is:
+                    </p>
+
+                    <div class="structure-pattern">
+                        <strong>Formula:</strong> Subject + di + verb stem + personal ending
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 20px; background: white; border-radius: 10px;">
+                        <h4 style="color: #f9a825; margin-bottom: 15px;">Personal Endings:</h4>
+                        <p style="font-size: 1.1rem; line-height: 2;">
+                            <strong>Ez</strong> (I) → <strong>-m</strong><br>
+                            <strong>Tu</strong> (You) → <strong>-yî</strong><br>
+                            <strong>Ew</strong> (He/She) → <strong>-e</strong> or <strong>∅</strong> (no ending)<br>
+                            <strong>Em</strong> (We) → <strong>-n</strong><br>
+                            <strong>Hûn</strong> (You plural/formal) → <strong>-n</strong><br>
+                            <strong>Ew</strong> (They) → <strong>-n</strong>
+                        </p>
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 20px; background: white; border-radius: 10px;">
+                        <h4 style="color: #f9a825; margin-bottom: 15px;">Conjugation Examples:</h4>
+                        
+                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                            <thead>
+                                <tr style="background: #fff9c4;">
+                                    <th style="padding: 12px; border: 2px solid #fbc02d; text-align: left; font-size: 1.1rem; color: #f57f17;">Jîn (To live)</th>
+                                    <th style="padding: 12px; border: 2px solid #fbc02d; text-align: left; font-size: 1.1rem; color: #f57f17;">Kar kirin (To work)</th>
+                                    <th style="padding: 12px; border: 2px solid #fbc02d; text-align: left; font-size: 1.1rem; color: #f57f17;">Hezkirîn (To love/like)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ez <span style="color: #1976d2;">di</span>jî<span style="color: #d32f2f;">m</span></strong><br><em style="color: #666;">I live</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ez kar <span style="color: #1976d2;">di</span>ki<span style="color: #d32f2f;">m</span></strong><br><em style="color: #666;">I work</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ez hez <span style="color: #1976d2;">di</span>ki<span style="color: #d32f2f;">m</span></strong><br><em style="color: #666;">I love/like</em></td>
+                                </tr>
+                                <tr style="background: #fffde7;">
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Tu <span style="color: #1976d2;">di</span>jî<span style="color: #d32f2f;">yî</span></strong><br><em style="color: #666;">You live</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Tu kar <span style="color: #1976d2;">di</span>k<span style="color: #d32f2f;">î</span></strong><br><em style="color: #666;">You work</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Tu hez <span style="color: #1976d2;">di</span>k<span style="color: #d32f2f;">î</span></strong><br><em style="color: #666;">You love/like</em></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew <span style="color: #1976d2;">di</span>jî</strong><br><em style="color: #666;">He/She lives</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew kar <span style="color: #1976d2;">di</span>k<span style="color: #d32f2f;">e</span></strong><br><em style="color: #666;">He/She works</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew hez <span style="color: #1976d2;">di</span>k<span style="color: #d32f2f;">e</span></strong><br><em style="color: #666;">He/She loves/likes</em></td>
+                                </tr>
+                                <tr style="background: #fffde7;">
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Em <span style="color: #1976d2;">di</span>jî<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">We live</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Em kar <span style="color: #1976d2;">di</span>ki<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">We work</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Em hez <span style="color: #1976d2;">di</span>ki<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">We love/like</em></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Hûn <span style="color: #1976d2;">di</span>jî<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">You live (pl.)</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Hûn kar <span style="color: #1976d2;">di</span>ki<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">You work (pl.)</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Hûn hez <span style="color: #1976d2;">di</span>ki<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">You love/like (pl.)</em></td>
+                                </tr>
+                                <tr style="background: #fffde7;">
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew <span style="color: #1976d2;">di</span>jî<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">They live</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew kar <span style="color: #1976d2;">di</span>ki<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">They work</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew hez <span style="color: #1976d2;">di</span>ki<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">They love/like</em></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background: #fff9c4;">
+                                    <th style="padding: 12px; border: 2px solid #fbc02d; text-align: left; font-size: 1.1rem; color: #f57f17;">Xwarin (To eat)</th>
+                                    <th style="padding: 12px; border: 2px solid #fbc02d; text-align: left; font-size: 1.1rem; color: #f57f17;">Xwestin (To want)</th>
+                                    <th style="padding: 12px; border: 2px solid #fbc02d; text-align: left; font-size: 1.1rem; color: #f57f17;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ez <span style="color: #1976d2;">di</span>xwi<span style="color: #d32f2f;">m</span></strong><br><em style="color: #666;">I eat</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ez <span style="color: #1976d2;">di</span>xwazi<span style="color: #d32f2f;">m</span></strong><br><em style="color: #666;">I want</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"></td>
+                                </tr>
+                                <tr style="background: #fffde7;">
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Tu <span style="color: #1976d2;">di</span>xw<span style="color: #d32f2f;">î</span></strong><br><em style="color: #666;">You eat</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Tu <span style="color: #1976d2;">di</span>xwaz<span style="color: #d32f2f;">î</span></strong><br><em style="color: #666;">You want</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew <span style="color: #1976d2;">di</span>xw<span style="color: #d32f2f;">e</span></strong><br><em style="color: #666;">He/She eats</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew <span style="color: #1976d2;">di</span>xwaz<span style="color: #d32f2f;">e</span></strong><br><em style="color: #666;">He/She wants</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"></td>
+                                </tr>
+                                <tr style="background: #fffde7;">
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Em <span style="color: #1976d2;">di</span>xwi<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">We eat</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Em <span style="color: #1976d2;">di</span>xwazi<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">We want</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Hûn <span style="color: #1976d2;">di</span>xwi<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">You eat (pl.)</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Hûn <span style="color: #1976d2;">di</span>xwazi<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">You want (pl.)</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"></td>
+                                </tr>
+                                <tr style="background: #fffde7;">
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew <span style="color: #1976d2;">di</span>xwi<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">They eat</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"><strong>Ew <span style="color: #1976d2;">di</span>xwazi<span style="color: #d32f2f;">n</span></strong><br><em style="color: #666;">They want</em></td>
+                                    <td style="padding: 10px; border: 1px solid #e0e0e0;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="exercise-box" style="margin-top: 30px;">
+                    <div class="exercise-title">🎯 Exercise 1: Match Verbs with Translations</div>
+                    <p style="margin-bottom: 20px; color: #666;">
+                        Click on a Kurdish verb, then click on its English translation to match them:
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+                        <div>
+                            <h4 style="color: #f9a825; margin-bottom: 15px;">Kurdish Verbs</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <button class="match-verb-btn-c7" data-verb="jin" onclick="selectVerbC7('jin')">• Jîn</button>
+                                <button class="match-verb-btn-c7" data-verb="xwarin" onclick="selectVerbC7('xwarin')">• Xwarin</button>
+                                <button class="match-verb-btn-c7" data-verb="cun" onclick="selectVerbC7('cun')">• Çûn</button>
+                                <button class="match-verb-btn-c7" data-verb="hatin" onclick="selectVerbC7('hatin')">• Hatin</button>
+                                <button class="match-verb-btn-c7" data-verb="hezkirin" onclick="selectVerbC7('hezkirin')">• Hezkirîn</button>
+                                <button class="match-verb-btn-c7" data-verb="razanin" onclick="selectVerbC7('razanin')">• Razanîn</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #f57f17; margin-bottom: 15px;">English Translations</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <button class="match-trans-btn-c7" data-trans="eat" onclick="selectTransC7('eat')">• To eat</button>
+                                <button class="match-trans-btn-c7" data-trans="sleep" onclick="selectTransC7('sleep')">• To sleep</button>
+                                <button class="match-trans-btn-c7" data-trans="live" onclick="selectTransC7('live')">• To live</button>
+                                <button class="match-trans-btn-c7" data-trans="come" onclick="selectTransC7('come')">• To come</button>
+                                <button class="match-trans-btn-c7" data-trans="go" onclick="selectTransC7('go')">• To go</button>
+                                <button class="match-trans-btn-c7" data-trans="love" onclick="selectTransC7('love')">• To love</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin: 20px 0;">
+                        <button onclick="resetVerbMatchingC7()" style="background: #ff9800; padding: 10px 20px; border: none; border-radius: 8px; color: white; cursor: pointer; font-size: 1rem;">
+                            🔄 Reset
+                        </button>
+                    </div>
+
+                    <div id="verb-match-feedback-c7" style="margin-top: 20px; font-size: 1.2rem; font-weight: bold; text-align: center;"></div>
+                </div>
+
+                <div class="exercise-box" style="margin-top: 30px;">
+                    <div class="exercise-title">🎯 Exercise 2: Family Actions in Present Tense</div>
+                    <p style="margin-bottom: 20px; color: #666;">
+                        Complete these sentences about family members using the present tense:
+                    </p>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">1. My father works (Bavê min kar ___)</label>
+                        <input type="text" id="present-q1" placeholder="Type the conjugated verb...">
+                        <div id="present-q1-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">2. My mother loves us (Diya min me hez ___)</label>
+                        <input type="text" id="present-q2" placeholder="Type the conjugated verb...">
+                        <div id="present-q2-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">3. My brother eats (Birayê min ___)</label>
+                        <input type="text" id="present-q3" placeholder="Type the conjugated verb...">
+                        <div id="present-q3-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">4. We live in a house (Em li malekê ___)</label>
+                        <input type="text" id="present-q4" placeholder="Type the conjugated verb...">
+                        <div id="present-q4-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <div style="margin: 15px 0;">
+                        <label style="font-weight: bold; display: block; margin-bottom: 8px;">5. My sister goes to school (Xwişka min diçe dibistanê / Xwişka min ___)</label>
+                        <input type="text" id="present-q5" placeholder="Type the conjugated verb...">
+                        <div id="present-q5-feedback" style="margin-top: 8px; font-weight: bold;"></div>
+                    </div>
+
+                    <button onclick="checkPresentTense()">✓ Check Answers</button>
+                    <div id="present-score" style="margin-top: 15px; font-size: 1.2rem; font-weight: bold;"></div>
+                </div>
+
+                <style>
+                    .match-verb-btn-c7, .match-trans-btn-c7 {
+                        padding: 12px 20px;
+                        font-size: 1.1rem;
+                        border: 2px solid #e0e0e0;
+                        border-radius: 8px;
+                        background: white;
+                        color: #333;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        text-align: left;
+                    }
+
+                    .match-verb-btn-c7:hover, .match-trans-btn-c7:hover {
+                        background: #f5f5f5;
+                        border-color: #fbc02d;
+                    }
+
+                    .match-verb-btn-c7.selected {
+                        background: #fff9c4;
+                        border-color: #fbc02d;
+                    }
+
+                    .match-trans-btn-c7.selected {
+                        background: #fff9c4;
+                        border-color: #fbc02d;
+                    }
+
+                    .match-verb-btn-c7.matched, .match-trans-btn-c7.matched {
+                        background: #c8e6c9;
+                        border-color: #4caf50;
+                        color: #1b5e20;
+                        pointer-events: none;
+                    }
+                </style>
+            </div>
+
+            <!-- Course Completion -->
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);">
+                <h2 style="color: #f57f17; margin-bottom: 20px;">🎉 Pîroz be! Congratulations!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    You've completed Course 7: Family!<br>
+                    You can now describe your family and talk about family members in Kurdish.
+                </p>
+                <a href="../level-a1.html" class="back-link" style="background: #f9a825;">← Back to Course Selection</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Listening comprehension validation
+        function checkListening() {
+            let correct = 0;
+            const total = 3;
+
+            // Q1: How many people in Sara's family?
+            const q1 = document.getElementById('listen-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('listen-q1-feedback');
+            if (q1.includes('çar') || q1.includes('4') || q1.includes('car')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Çar kes (four people).';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Çar kes</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            // Q2: Sara's father's profession
+            const q2 = document.getElementById('listen-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('listen-q2-feedback');
+            if (q2.includes('mamoste')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Mamoste (teacher).';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Mamoste</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            // Q3: How many sisters does Roj have?
+            const q3 = document.getElementById('listen-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('listen-q3-feedback');
+            if (q3.includes('du') || q3.includes('2')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Du xwişkan (two sisters).';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Du xwişkan</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('listen-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Reading comprehension validation
+        function checkReading() {
+            let correct = 0;
+            const total = 2;
+
+            // Q1: Sara's mother's name
+            const q1 = document.getElementById('read-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('read-q1-feedback');
+            if (q1.includes('leyla')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Leyla.';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Leyla</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            // Q2: How many siblings
+            const q2 = document.getElementById('read-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('read-q2-feedback');
+            if (q2.includes('du') || q2.includes('2')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Du (two siblings).';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>Du</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('read-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Writing validation
+        function checkWriting() {
+            const family = document.getElementById('write-family').value.trim();
+            const feedback = document.getElementById('write-feedback');
+            
+            if (family.length < 30) {
+                feedback.innerHTML = '❌ Please write at least 6 sentences.';
+                feedback.style.color = '#d32f2f';
+                return;
+            }
+
+            const lines = family.split('\n').filter(line => line.trim().length > 0);
+            
+            if (lines.length < 5) {
+                feedback.innerHTML = '❌ Please write at least 6 sentences.';
+                feedback.style.color = '#d32f2f';
+                return;
+            }
+
+            const hasFamily = /malbat|bav|dê|diya|bira|xwişk|kur|keç/i.test(family);
+            const hasPossessive = /min|te|wî|wê|me/i.test(family);
+            
+            if (hasFamily && hasPossessive) {
+                feedback.innerHTML = '✅ Great description! You described your family well!';
+                feedback.style.color = '#2e7d32';
+            } else if (hasFamily || hasPossessive) {
+                feedback.innerHTML = '👍 Good effort! Try to use more family words and possessives.';
+                feedback.style.color = '#f57f17';
+            } else {
+                feedback.innerHTML = '💪 Keep practicing! Remember to include family members and possessives (min, te...).';
+                feedback.style.color = '#f57f17';
+            }
+        }
+
+        // Verb matching exercise (Section 7)
+        const verbMatchesC7 = {
+            'jin': 'live',
+            'xwarin': 'eat',
+            'cun': 'go',
+            'hatin': 'come',
+            'hezkirin': 'love',
+            'razanin': 'sleep'
+        };
+
+        let selectedVerbC7 = null;
+        let selectedTransC7 = null;
+        let matchedPairsC7 = 0;
+
+        function selectVerbC7(verb) {
+            if (document.querySelector(`[data-verb="${verb}"]`).classList.contains('matched')) return;
+            
+            document.querySelectorAll('.match-verb-btn-c7').forEach(btn => btn.classList.remove('selected'));
+            document.querySelector(`[data-verb="${verb}"]`).classList.add('selected');
+            selectedVerbC7 = verb;
+            
+            if (selectedTransC7) {
+                checkVerbMatchC7();
+            }
+        }
+
+        function selectTransC7(trans) {
+            if (document.querySelector(`[data-trans="${trans}"]`).classList.contains('matched')) return;
+            
+            document.querySelectorAll('.match-trans-btn-c7').forEach(btn => btn.classList.remove('selected'));
+            document.querySelector(`[data-trans="${trans}"]`).classList.add('selected');
+            selectedTransC7 = trans;
+            
+            if (selectedVerbC7) {
+                checkVerbMatchC7();
+            }
+        }
+
+        function checkVerbMatchC7() {
+            const feedback = document.getElementById('verb-match-feedback-c7');
+            
+            if (verbMatchesC7[selectedVerbC7] === selectedTransC7) {
+                document.querySelector(`[data-verb="${selectedVerbC7}"]`).classList.add('matched');
+                document.querySelector(`[data-verb="${selectedVerbC7}"]`).classList.remove('selected');
+                document.querySelector(`[data-trans="${selectedTransC7}"]`).classList.add('matched');
+                document.querySelector(`[data-trans="${selectedTransC7}"]`).classList.remove('selected');
+                matchedPairsC7++;
+                
+                feedback.innerHTML = '✅ Correct match!';
+                feedback.style.color = '#2e7d32';
+                
+                if (matchedPairsC7 === 6) {
+                    setTimeout(() => {
+                        feedback.innerHTML = '🎉 Perfect! You matched all verbs correctly!';
+                    }, 500);
+                }
+                
+                selectedVerbC7 = null;
+                selectedTransC7 = null;
+            } else {
+                feedback.innerHTML = '❌ Not a match. Try again!';
+                feedback.style.color = '#d32f2f';
+                
+                setTimeout(() => {
+                    document.querySelectorAll('.match-verb-btn-c7').forEach(btn => btn.classList.remove('selected'));
+                    document.querySelectorAll('.match-trans-btn-c7').forEach(btn => btn.classList.remove('selected'));
+                    selectedVerbC7 = null;
+                    selectedTransC7 = null;
+                    feedback.innerHTML = '';
+                }, 1500);
+            }
+        }
+
+        function resetVerbMatchingC7() {
+            document.querySelectorAll('.match-verb-btn-c7, .match-trans-btn-c7').forEach(btn => {
+                btn.classList.remove('matched', 'selected');
+            });
+            selectedVerbC7 = null;
+            selectedTransC7 = null;
+            matchedPairsC7 = 0;
+            document.getElementById('verb-match-feedback-c7').innerHTML = '';
+        }
+
+        // Present tense exercise
+        function checkPresentTense() {
+            let correct = 0;
+            const total = 5;
+
+            // Q1: Bavê min kar dike
+            const q1 = document.getElementById('present-q1').value.toLowerCase().trim();
+            const q1Feedback = document.getElementById('present-q1-feedback');
+            if (q1.includes('dike')) {
+                correct++;
+                q1Feedback.innerHTML = '✅ Correct! Bavê min kar dike.';
+                q1Feedback.style.color = '#2e7d32';
+            } else {
+                q1Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dike</strong>';
+                q1Feedback.style.color = '#d32f2f';
+            }
+
+            // Q2: Diya min me hez dike
+            const q2 = document.getElementById('present-q2').value.toLowerCase().trim();
+            const q2Feedback = document.getElementById('present-q2-feedback');
+            if (q2.includes('dike')) {
+                correct++;
+                q2Feedback.innerHTML = '✅ Correct! Diya min me hez dike.';
+                q2Feedback.style.color = '#2e7d32';
+            } else {
+                q2Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dike</strong>';
+                q2Feedback.style.color = '#d32f2f';
+            }
+
+            // Q3: Birayê min dixwe
+            const q3 = document.getElementById('present-q3').value.toLowerCase().trim();
+            const q3Feedback = document.getElementById('present-q3-feedback');
+            if (q3.includes('dixwe')) {
+                correct++;
+                q3Feedback.innerHTML = '✅ Correct! Birayê min dixwe.';
+                q3Feedback.style.color = '#2e7d32';
+            } else {
+                q3Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dixwe</strong>';
+                q3Feedback.style.color = '#d32f2f';
+            }
+
+            // Q4: Em li malekê dijîn
+            const q4 = document.getElementById('present-q4').value.toLowerCase().trim();
+            const q4Feedback = document.getElementById('present-q4-feedback');
+            if (q4.includes('dijîn') || q4.includes('dijin')) {
+                correct++;
+                q4Feedback.innerHTML = '✅ Correct! Em li malekê dijîn.';
+                q4Feedback.style.color = '#2e7d32';
+            } else {
+                q4Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>dijîn</strong>';
+                q4Feedback.style.color = '#d32f2f';
+            }
+
+            // Q5: Xwişka min diçe
+            const q5 = document.getElementById('present-q5').value.toLowerCase().trim();
+            const q5Feedback = document.getElementById('present-q5-feedback');
+            if (q5.includes('diçe') || q5.includes('dice')) {
+                correct++;
+                q5Feedback.innerHTML = '✅ Correct! Xwişka min diçe dibistanê.';
+                q5Feedback.style.color = '#2e7d32';
+            } else {
+                q5Feedback.innerHTML = '❌ Wrong. Correct answer: <strong>diçe</strong>';
+                q5Feedback.style.color = '#d32f2f';
+            }
+
+            const scoreDiv = document.getElementById('present-score');
+            scoreDiv.textContent = `Score: ${correct} / ${total}`;
+            scoreDiv.style.color = correct === total ? '#2e7d32' : '#f57f17';
+        }
+
+        // Presentation exercise
+        const presentAnswers = {
+            1: 'a',  // Ev bavê min e. Navê wî Hasan e.
+            2: 'a',  // Xwişka min xwendekar e.
+            3: 'b'   // Bapîrê min û dapîra min li vir in.
+        };
+        
+        let presentCorrect = 0;
+        let presentAnswered = [false, false, false];
+
+        function checkPresent(scenario, answer) {
+            if (presentAnswered[scenario - 1]) return;
+            
+            const feedback = document.getElementById(`present-feedback-${scenario}`);
+            const buttons = document.querySelectorAll(`[data-scenario="${scenario}"]`);
+            
+            presentAnswered[scenario - 1] = true;
+            
+            buttons.forEach(btn => btn.disabled = true);
+            
+            if (answer === presentAnswers[scenario]) {
+                presentCorrect++;
+                const selectedBtn = document.querySelector(`[data-scenario="${scenario}"][data-answer="${answer}"]`);
+                selectedBtn.classList.add('correct');
+                feedback.innerHTML = '✅ Correct! Perfect presentation!';
+                feedback.style.color = '#2e7d32';
+            } else {
+                const selectedBtn = document.querySelector(`[data-scenario="${scenario}"][data-answer="${answer}"]`);
+                selectedBtn.classList.add('wrong');
+                const correctBtn = document.querySelector(`[data-scenario="${scenario}"][data-answer="${presentAnswers[scenario]}"]`);
+                correctBtn.classList.add('correct');
+                
+                if (scenario === 1) {
+                    feedback.innerHTML = '❌ Not quite. Say "Ev bavê min e. Navê wî Hasan e."';
+                } else if (scenario === 2) {
+                    feedback.innerHTML = '❌ Not quite. Say "Xwişka min xwendekar e."';
+                } else {
+                    feedback.innerHTML = '❌ Not quite. Say "Bapîrê min û dapîra min li vir in."';
+                }
+                feedback.style.color = '#d32f2f';
+            }
+            
+            document.getElementById('present-correct').textContent = presentCorrect;
+            
+            if (presentAnswered.every(a => a)) {
+                setTimeout(() => {
+                    if (presentCorrect === 3) {
+                        alert('🎉 Perfect! You know how to present your family!');
+                    } else if (presentCorrect >= 2) {
+                        alert('👍 Good job! Keep practicing family presentations.');
+                    } else {
+                        alert('💪 Keep learning! Remember to use possessives correctly.');
+                    }
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>
