@@ -35,18 +35,17 @@
         }
 
         .content-wrapper {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 30px;
+            display: flex;
+            justify-content: center;
             margin-top: 30px;
         }
 
-        .sidebar {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            height: fit-content;
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
         }
 
         .info-box {
@@ -70,65 +69,64 @@
         }
 
         .document-card {
-            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            background: white;
             border-radius: 15px;
             padding: 30px;
-            color: white;
-            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .document-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .document-icon {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 15px;
+            font-size: 4rem;
+            margin-bottom: 20px;
         }
 
         .document-title {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            margin-bottom: 10px;
-            text-align: center;
+            margin-bottom: 15px;
+            color: #2e7d32;
         }
 
         .document-description {
-            font-size: 0.95rem;
-            text-align: center;
-            margin-bottom: 20px;
-            line-height: 1.5;
-            opacity: 0.95;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #666;
         }
 
-        .document-link {
-            display: block;
-            text-align: center;
-            padding: 12px 25px;
-            background: white;
-            color: #2e7d32;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
+        .download-btn {
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            color: white;
             border: none;
-            width: 100%;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: bold;
             cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
         }
 
-        .document-link:hover {
-            background: #f1f1f1;
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
         }
 
         .pdf-viewer-section {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             display: none;
         }
 
@@ -199,12 +197,9 @@
         }
 
         @media (max-width: 1024px) {
-            .content-wrapper {
+            .documents-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                margin-bottom: 20px;
+                max-width: 600px;
             }
         }
         
@@ -217,25 +212,8 @@
                 font-size: 1rem;
             }
             
-            .pdf-controls {
-                flex-direction: column;
-                gap: 15px;
-                align-items: stretch;
-            }
-            
-            .pdf-controls h3 {
-                text-align: center;
-                font-size: 1.1rem;
-            }
-            
-            .zoom-controls {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .pdf-container {
-                height: 500px;
-                min-height: 400px;
+            .documents-grid {
+                padding: 0 15px;
             }
         }
         
@@ -252,39 +230,25 @@
                 font-size: 0.9rem;
             }
             
-            .sidebar {
-                padding: 20px 15px;
+            .document-card {
+                padding: 25px 20px;
             }
             
-            .document-card {
-                padding: 20px;
+            .document-icon {
+                font-size: 3rem;
             }
             
             .document-title {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             
             .document-description {
-                font-size: 0.85rem;
-            }
-            
-            .pdf-viewer-section {
-                padding: 15px 10px;
-            }
-            
-            .zoom-btn {
-                padding: 6px 12px;
                 font-size: 0.9rem;
             }
             
-            .zoom-level {
-                padding: 6px 12px;
-                font-size: 0.9rem;
-            }
-            
-            .pdf-container {
-                height: 400px;
-                min-height: 300px;
+            .download-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -362,33 +326,17 @@
         </div>
 
         <div class="content-wrapper">
-            <!-- Sidebar with document card -->
-            <div class="sidebar">
-                <div class="document-card" onclick="openPDF()">
+            <div class="documents-grid">
+                <div class="document-card">
                     <div class="document-icon">📄</div>
                     <div class="document-title">January 2026 Report</div>
                     <div class="document-description">
-                        Kurdish Youth Association - Monthly Report January 2026
+                        Kurdish Youth Association - Monthly Report January 2026 (English)
                     </div>
-                    <button class="document-link">View Document</button>
-                </div>
-            </div>
-
-            <!-- PDF Viewer Section -->
-            <div class="pdf-viewer-section" id="pdf-viewer">
-                <div class="pdf-controls">
-                    <h3>📄 January 2026 Report</h3>
-                    <div class="zoom-controls">
-                        <button class="zoom-btn" onclick="zoomOut()">−</button>
-                        <span class="zoom-level" id="zoom-level">100%</span>
-                        <button class="zoom-btn" onclick="zoomIn()">+</button>
-                        <a href="pdfs/Rapport_january_2026_kurdeENG .pdf" download="January_2026_Report.pdf" class="zoom-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 5px;">
-                            📥 Download
-                        </a>
-                    </div>
-                </div>
-                <div class="pdf-container" id="pdf-container">
-                    <iframe id="pdf-frame" src="pdfs/Rapport_january_2026_kurdeENG .pdf#toolbar=1&navpanes=1&scrollbar=1"></iframe>
+                    <a href="pdfs/Rapport_january_2026_kurdeENG .pdf" download="January_2026_Report.pdf" class="download-btn">
+                        <span>📥</span>
+                        <span>Download PDF</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -398,53 +346,6 @@
         <p>&copy; 2025 Kurdish Academy. All rights reserved.</p>
     </footer>
 
-    <script>
-        let currentZoom = 100;
-        
-        // Function to open PDF inline
-        function openPDF() {
-            document.getElementById('pdf-viewer').classList.add('active');
-        }
-        
-        // Zoom functions
-        function zoomIn() {
-            if (currentZoom < 200) {
-                currentZoom += 25;
-                updateZoom();
-            }
-        }
-        
-        function zoomOut() {
-            if (currentZoom > 50) {
-                currentZoom -= 25;
-                updateZoom();
-            }
-        }
-        
-        function updateZoom() {
-            document.getElementById('zoom-level').textContent = currentZoom + '%';
-            const iframe = document.getElementById('pdf-frame');
-            const container = document.getElementById('pdf-container');
-            
-            // Apply zoom to iframe
-            iframe.style.transform = `scale(${currentZoom / 100})`;
-            iframe.style.transformOrigin = 'top left';
-            
-            // Adjust container to accommodate scaled content
-            if (currentZoom > 100) {
-                iframe.style.width = (100 * (100 / currentZoom)) + '%';
-                iframe.style.height = (100 * (100 / currentZoom)) + '%';
-            } else {
-                iframe.style.width = '100%';
-                iframe.style.height = '100%';
-            }
-        }
-        
-        // Auto-open PDF on page load
-        window.addEventListener('load', function() {
-            openPDF();
-        });
-    </script>
     <script src="../mobile-navigation.js"></script>
 </body>
 </html>

@@ -292,26 +292,7 @@ footer {
 /* Media queries pour l'affichage mobile et tablette */
 
 @media (max-width: 768px) {
-    /* Header responsive */
-    header {
-        flex-direction: column;
-        padding: 15px 10px;
-    }
-    
-    .title h1 {
-        font-size: 2rem;
-        margin: 10px 0;
-    }
-    
-    .logo-left, .logo-right {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .logo {
-        max-width: 60px;
-        max-height: 60px;
-    }
+    /* Header responsive - handled by mobile-navigation.css */
     
     /* Navigation principale responsive */
     .main-nav {
