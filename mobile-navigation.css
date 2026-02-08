@@ -114,14 +114,18 @@
         flex-direction: column;
         padding: 0;
         margin: 0;
+        width: 100%;
     }
     
     .main-nav li {
         width: 100%;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        list-style: none;
     }
     
-    .main-nav a {
+    /* Support for both ul/li and direct <a> structures */
+    .main-nav a,
+    .main-nav > a {
         display: block;
         width: 100%;
         padding: 18px 25px !important;
@@ -132,10 +136,14 @@
         text-align: left;
         font-size: 1.1rem;
         transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
     }
     
     .main-nav a:hover,
-    .main-nav a.active {
+    .main-nav a.active,
+    .main-nav > a:hover,
+    .main-nav > a.active {
         background: rgba(255, 255, 255, 0.15) !important;
         padding-left: 35px !important;
     }
