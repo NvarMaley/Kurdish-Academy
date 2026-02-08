@@ -35,14 +35,21 @@
         max-height: 50px !important;
     }
     
-    /* Title in center between logos */
-    header h1,
-    .title h1 {
+    /* Title container in center between logos */
+    .title {
         order: 2;
-        font-size: 1.3rem !important;
-        margin: 0 10px !important;
         flex-grow: 1;
         flex-shrink: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Title text styling */
+    header h1,
+    .title h1 {
+        font-size: 1.3rem !important;
+        margin: 0 10px !important;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
