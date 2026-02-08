@@ -1,0 +1,240 @@
+/* ========== RESPONSIVE STYLES FOR VOCABULARY, GRAMMAR, VERBS, AND OTHER SECTION PAGES ========== */
+
+@media (max-width: 768px) {
+    /* Vocabulary container */
+    .vocabulary-container,
+    .grammar-container,
+    .verbs-container,
+    .section-container {
+        padding: 15px 10px !important;
+    }
+    
+    /* Page titles */
+    .page-title,
+    .section-main-title {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    /* Category grids */
+    .categories-grid,
+    .vocab-categories,
+    .grammar-topics,
+    .verb-types {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    /* Category cards */
+    .category-card,
+    .vocab-card,
+    .grammar-card,
+    .verb-card {
+        padding: 20px 15px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .category-title {
+        font-size: 1.2rem !important;
+    }
+    
+    .category-description {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Word lists */
+    .word-list,
+    .vocabulary-list {
+        padding: 10px !important;
+    }
+    
+    .word-item {
+        padding: 12px 10px !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    .word-kurdish {
+        font-size: 1.1rem !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .word-translation {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Tables */
+    .grammar-table,
+    .verb-table,
+    table {
+        font-size: 0.85rem !important;
+        display: block !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    table td, table th {
+        padding: 8px 6px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* Conjugation tables */
+    .conjugation-table {
+        overflow-x: auto !important;
+    }
+    
+    /* Examples */
+    .example-box,
+    .example-sentence {
+        padding: 12px 10px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Navigation buttons */
+    .nav-buttons,
+    .section-nav {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .nav-button,
+    .section-link {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Info boxes */
+    .info-box,
+    .note-box,
+    .tip-box {
+        padding: 15px 10px !important;
+        margin: 15px 0 !important;
+    }
+    
+    /* Audio players */
+    .audio-player,
+    audio {
+        width: 100% !important;
+    }
+    
+    /* Practice sections */
+    .practice-section {
+        padding: 15px 10px !important;
+    }
+    
+    .practice-input {
+        width: 100% !important;
+        font-size: 1rem !important;
+        padding: 10px !important;
+    }
+    
+    /* Alphabet cards */
+    .alphabet-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    .letter-card {
+        padding: 15px 10px !important;
+        font-size: 1.5rem !important;
+    }
+    
+    /* Verb conjugation sections */
+    .tense-section {
+        margin-bottom: 20px !important;
+    }
+    
+    .tense-title {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Grammar rules */
+    .rule-box {
+        padding: 15px 10px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .rule-title {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Culture pages */
+    .culture-content {
+        padding: 15px 10px !important;
+    }
+    
+    .culture-image {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: cover !important;
+    }
+    
+    /* Contact/Partner/Donation forms */
+    .form-container {
+        padding: 20px 15px !important;
+    }
+    
+    .form-group {
+        margin-bottom: 15px !important;
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+        width: 100% !important;
+        font-size: 1rem !important;
+        padding: 10px !important;
+    }
+    
+    .form-button,
+    .submit-button {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .page-title,
+    .section-main-title {
+        font-size: 1.3rem !important;
+    }
+    
+    .category-card,
+    .vocab-card,
+    .grammar-card {
+        padding: 15px 10px !important;
+    }
+    
+    .category-title {
+        font-size: 1.1rem !important;
+    }
+    
+    .word-kurdish {
+        font-size: 1rem !important;
+    }
+    
+    .word-translation {
+        font-size: 0.85rem !important;
+    }
+    
+    table td, table th {
+        padding: 6px 4px !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .alphabet-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .letter-card {
+        font-size: 1.3rem !important;
+    }
+    
+    .culture-image {
+        max-height: 250px !important;
+    }
+}
