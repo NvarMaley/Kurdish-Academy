@@ -1,168 +1,406 @@
-<!-- Déclaration du type de document (HTML5) -->
 <!DOCTYPE html>
-<!-- Début du document HTML avec la langue anglaise définie -->
 <html lang="en">
-<!-- En-tête du document contenant les métadonnées et liens vers les ressources -->
 <head>
-    <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères internationaux -->
     <meta charset="UTF-8">
-    <!-- Configure la vue pour les appareils mobiles (responsive design) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
-    <title>Academy - Kurdish Academy</title>
-    <!-- Lien vers la feuille de style CSS externe -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mobile-navigation.css">
-    <script src="scripts.js"></script>
+    <title>Kurdish Academy - Select Language</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #4caf50 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            overflow: hidden;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            width: 100%;
+            gap: 60px;
+        }
+
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right-mascot {
+            flex: 0 0 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+        }
+
+        .title {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .mascot-container {
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .mascot {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.5));
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin: 40px 0;
+            animation: fadeIn 1s ease-in-out 0.3s both;
+        }
+
+        .welcome-title {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .language-texts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .language-text {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.3rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.6s ease-out backwards;
+        }
+
+        .language-text:nth-child(1) { animation-delay: 0.4s; }
+        .language-text:nth-child(2) { animation-delay: 0.5s; }
+        .language-text:nth-child(3) { animation-delay: 0.6s; }
+        .language-text:nth-child(4) { animation-delay: 0.7s; }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .language-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out 0.8s both;
+        }
+
+        .language-menu::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .language-menu::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .language-menu::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        .language-menu::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateX(10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .language-btn.disabled {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .language-btn.disabled:hover {
+            transform: none;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .language-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .flag-icon {
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        .language-name {
+            font-size: 1.4rem;
+        }
+
+        .coming-soon {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @media (max-width: 1024px) {
+            .main-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .right-mascot {
+                flex: 0 0 auto;
+            }
+
+            .mascot {
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .logo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .mascot {
+                max-width: 280px;
+            }
+
+            .welcome-title {
+                font-size: 1.5rem;
+            }
+
+            .language-menu {
+                max-height: 350px;
+                padding: 15px;
+            }
+
+            .language-btn {
+                padding: 20px 20px;
+                font-size: 1.1rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .language-left {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .flag-icon {
+                font-size: 2.5rem;
+            }
+
+            .language-name {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .title {
+                font-size: 1.8rem;
+            }
+
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .mascot {
+                max-width: 180px;
+            }
+
+            .welcome-title {
+                font-size: 1.3rem;
+            }
+
+            .language-text {
+                font-size: 1rem;
+            }
+
+            .language-menu {
+                max-height: 300px;
+                gap: 15px;
+            }
+
+            .language-btn {
+                padding: 18px 15px;
+            }
+
+            .flag-icon {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
-<!-- Corps du document contenant tout le contenu visible -->
 <body>
-    <!-- En-tête du site avec bande verte foncée (#2e7d32) -->
-    <header>
-        <!-- Conteneur pour le logo situé à gauche de l'en-tête -->
-        <div class="logo-left">
-            <!-- Image du logo gauche (à placer dans le dossier 'images') -->
-            <!-- Si l'image n'est pas trouvée, un texte alternatif 'Logo gauche' s'affiche -->
-            <img src="images/logo-left.png" alt="Logo gauche" class="logo">
+    <div class="main-container">
+        <div class="left-content">
+            <div class="logo-container">
+                <img src="images/logo-left.png" alt="Kurdish Academy Logo" class="logo">
+                <h1 class="title">Kurdish Academy</h1>
+                <img src="images/logo-right.png" alt="Kurdish Academy Logo" class="logo">
+            </div>
+
+            <div class="welcome-section">
+                <h2 class="welcome-title">🌍 Choose Your Language</h2>
+            </div>
+
+            <div class="language-menu">
+                <a href="index-en.html" class="language-btn">
+                    <div class="language-left">
+                        <span class="flag-icon">🇬🇧</span>
+                        <span class="language-name">English</span>
+                    </div>
+                </a>
+
+                <button class="language-btn disabled" onclick="showComingSoon('Deutsch')">
+                    <div class="language-left">
+                        <span class="flag-icon">🇩🇪</span>
+                        <span class="language-name">Deutsch</span>
+                    </div>
+                    <span class="coming-soon">Bald verfügbar</span>
+                </button>
+
+                <button class="language-btn disabled" onclick="showComingSoon('Français')">
+                    <div class="language-left">
+                        <span class="flag-icon">🇫🇷</span>
+                        <span class="language-name">Français</span>
+                    </div>
+                    <span class="coming-soon">Bientôt disponible</span>
+                </button>
+
+                <button class="language-btn disabled" onclick="showComingSoon('Türkçe')">
+                    <div class="language-left">
+                        <span class="flag-icon">🇹🇷</span>
+                        <span class="language-name">Türkçe</span>
+                    </div>
+                    <span class="coming-soon">Yakında</span>
+                </button>
+            </div>
         </div>
-        
-        <!-- Conteneur pour le titre centré -->
-        <div class="title">
-            <!-- Titre principal du site en grande taille (3.5rem) -->
-            <h1>Kurdish Academy</h1>
+
+        <div class="right-mascot">
+            <div class="mascot-container">
+                <img src="macotte .png" alt="Kurdish Academy Mascot" class="mascot">
+            </div>
         </div>
-        
-        <!-- Conteneur pour le logo situé à droite de l'en-tête -->
-        <div class="logo-right">
-            <!-- Image du logo droit (à placer dans le dossier 'images') -->
-            <!-- Si l'image n'est pas trouvée, un texte alternatif 'Logo droite' s'affiche -->
-            <img src="images/logo-right.png" alt="Logo droite" class="logo">
-        </div>
-    </header>
-    
-    <!-- Barre de navigation principale avec les sections demandées -->
-    <nav class="main-nav">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="documents/documents.html">Document</a></li>
-            <li><a href="#" id="kurmanci-link">Kurmancî</a></li>
-            <li><a href="#" id="sorani-link">Sorani</a></li>
-            <li><a href="#" id="culture-link">Culture</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Deuxième barre de navigation pour les sous-sections de Home -->
-    <nav class="sub-nav" id="home-subnav">
-        <ul>
-            <li><a href="index.html" class="active">Academy</a></li>
-            <li><a href="home/event/event.html">Event</a></li>
-            <li><a href="home/partner/partner.html">Partner</a></li>
-            <li><a href="home/contact/contact.html">Contact</a></li>
-            <li><a href="home/donation/donation.html">Donation</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Barre de navigation spécifique pour Kurmancîî (masquée par défaut) -->
-    <nav class="sub-nav" id="kurmanci-subnav" style="display: none;">
-        <ul>
-            <li><a href="kurmancu00ee/dersen/dersen.html">Dersên (Course)</a></li>
-            <li><a href="kurmancu00ee/alfabe/alfabe.html">Alfabê (Alphabet)</a></li>
-            <li><a href="kurmancu00ee/peyven/peyven.html">Peyvên (Vocabulary)</a></li>
-            <li><a href="kurmancu00ee/leker/leker.html">Lêker (Verbs)</a></li>
-            <li><a href="kurmancu00ee/reziman/reziman.html">Rêziman (Grammar)</a></li>
-            <li><a href="kurmancu00ee/guhdarikirn/guhdarikirn.html">Guhdarîkirin (Listening)</a></li>
-            <li><a href="kurmancu00ee/xwendin/xwendin.html">Xwendin (Reading)</a></li>
-            <li><a href="kurmancu00ee/nivisandin/nivisandin.html">Nivîsandin (Writing)</a></li>
-            <li><a href="kurmancu00ee/axaftin/axaftin.html">Axaftin (Speaking)</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Barre de navigation spécifique pour Sorani (masquée par défaut) -->
-    <nav class="sub-nav" id="sorani-subnav" style="display: none;">
-        <ul>
-            <li><a href="sorani/dersen/dersen.html">دەرسەکان (Course)</a></li>
-            <li><a href="sorani/elifbe/elifbe.html">ئەلفبێ (Alphabet)</a></li>
-            <li><a href="sorani/wushakan/wushakan.html">وشەکان (Vocabulary)</a></li>
-            <li><a href="sorani/kirdar/kirdar.html">کردار (Verbs)</a></li>
-            <li><a href="sorani/rezman/rezman.html">ڕێزمان (Grammar)</a></li>
-            <li><a href="sorani/gwedari/gwedari.html">گوێداری (Listening)</a></li>
-            <li><a href="sorani/xwendin/xwendin.html">خوێندن (Reading)</a></li>
-            <li><a href="sorani/nwsin/nwsin.html">نووسین (Writing)</a></li>
-            <li><a href="sorani/qsakirdin/qsakirdin.html">قسەکردن (Speaking)</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Barre de navigation spécifique pour Culture (masquée par défaut) -->
-    <nav class="sub-nav" id="culture-subnav" style="display: none;">
-        <ul>
-            <li><a href="culture/history/history.html">History</a></li>
-            <li><a href="culture/geography/geography.html">Geography</a></li>
-            <li><a href="culture/politics/politics.html">Politics</a></li>
-            <li><a href="culture/literature/literature.html">Literature</a></li>
-            <li><a href="culture/music/music.html">Music</a></li>
-            <li><a href="culture/dance/dance.html">Dance</a></li>
-            <li><a href="culture/food/food.html">Food</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Contenu principal du site (fond blanc sur arrière-plan beige clair) -->
-    <main>
-        <div class="big-quote">
-            <p>"Education is the only key to a free society."</p>
-            <p class="quote-author">Nvar M.</p>
-        </div>
-        
-        <h2 class="main-title-left">Welcome to Kurdish Academy</h2>
-        
-        <!-- First white rectangle -->
-        <section class="white-rectangle">
-            <h3 class="rectangle-title">History and dialects of the Kurdish language</h3>
-            <p>The Kurdish language has existed for more than 2000 years. Originating from the Indo-European language family, it has traversed centuries through poetry, songs, oral narratives, and writings of great Kurdish figures. Despite repeated attempts at erasure, it remains today one of the fundamental pillars of Kurdish identity.</p>
-            
-            <p>It primarily exists in two major dialects: Kurmanji, spoken in the regions of Northern and Southern Kurdistan (Bakur, Bashur) and Western Kurdistan (Rojava), currently controlled by Turkey, Iraq, and Syria; and Sorani, spoken in the regions of Southern Kurdistan (Bashur) and Eastern Kurdistan (Rojhelat), under the control of Iraq and Iran. These two forms are now the most widely used in education, media, and written production.</p>
-            
-            <p>But the Kurdish language doesn't stop there. It also includes other important variants such as Zazaki (Dimilkî), Hawrami, Kelhuri, Lekî, and Gurani. Each form carries a unique richness, bearing witness to a deep and centuries-old culture. Today, survival is not enough: we must rebuild, transmit, and bring our language to life.</p>
-        </section>
-        
-        <!-- Second white rectangle -->
-        <section class="white-rectangle">
-            <h3 class="rectangle-title">Importance of learning and transmission</h3>
-            <p>Learning and teaching Kurdish is not just about speaking a language. It's about recognizing its history, defending its identity, and preparing for the future. A strong language is the foundation of a solid society. It enables creation, documentation, education, and free thinking.</p>
-            
-            <p>Teaching Kurdish to children gives them direct access to their heritage, their roots, their writers, philosophers, and ancestors. A Kurdish society that aspires to freedom, emancipation, and justice must be able to produce knowledge in its own language. This requires a living, structured, and transmitted language.</p>
-            
-            <p>At Kurdish Academy, we offer a clear, structured, and accessible space to learn Kurdish step by step. The site is divided into several sections:</p>
-            <ul>
-                <li>Alphabet: to learn sounds and letters.</li>
-                <li>Vocabulary: illustrated, by theme.</li>
-                <li>Grammar and verbs: to build solid sentences.</li>
-                <li>Oral comprehension, writing, and listening: to master all skills.</li>
-            </ul>
-            <p>Each section is organized into levels (beginner, intermediate, advanced), with assessment tests to track your progress.</p>
-        </section>
-        
-        <!-- Third white rectangle -->
-        <section class="white-rectangle">
-            <h3 class="rectangle-title">Our mission and commitment</h3>
-            
-            <p>This project is an initiative of the Kurdish Youth Association, based in Lausanne, which works for a cultural, linguistic, and educational renaissance of the Kurdish people.</p>
-            
-            <p>We believe it is time to take back control of our intellectual future, to pass on our language to new generations, and to build a free, strong, and united Kurdish society.</p>
-            
-            <p>Despite prohibitions, despite censorship, despite imposed divisions:<br>it is time to change history.</p>
-            
-            <p>Share this platform, follow us on social media, and join the movement.<br>
-            <strong>Language is our strength, knowledge our weapon.</strong></p>
-        </section>
-    </main>
-    
-    <!-- Pied de page du site (fond gris foncé avec texte blanc) -->
-    <footer>
-        <!-- Mention de copyright avec l'année actuelle -->
-        <p>&copy; 2025 Kurdish Academy. Tous droits réservés.</p>
-    </footer>
-<!-- Fin du corps du document -->
-    <script src="mobile-navigation.js"></script>
+    </div>
+
+    <script>
+        function showComingSoon(language) {
+            const messages = {
+                'Deutsch': 'Die deutsche Version kommt bald!',
+                'Français': 'La version française arrive bientôt!',
+                'Türkçe': 'Türkçe sürüm yakında geliyor!'
+            };
+            alert(messages[language] || 'Coming soon!');
+        }
+    </script>
 </body>
-<!-- Fin du document HTML -->
 </html>
