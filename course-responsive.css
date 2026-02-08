@@ -1,0 +1,188 @@
+/* ========== RESPONSIVE STYLES FOR COURSE PAGES ========== */
+
+@media (max-width: 768px) {
+    /* Course container adjustments */
+    .course-container {
+        padding: 15px 10px !important;
+        margin: 10px auto !important;
+    }
+    
+    /* Course header */
+    .course-header {
+        padding: 15px 10px !important;
+    }
+    
+    .course-header h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .course-header p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Section titles */
+    .section-title {
+        font-size: 1.3rem !important;
+        padding: 12px 15px !important;
+    }
+    
+    /* Content sections */
+    .section-content {
+        padding: 15px 10px !important;
+    }
+    
+    /* Vocabulary cards */
+    .vocab-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .vocab-card {
+        padding: 15px !important;
+    }
+    
+    /* Exercise sections */
+    .exercise {
+        padding: 15px 10px !important;
+    }
+    
+    .exercise input[type="text"] {
+        width: 100% !important;
+        font-size: 1rem !important;
+        padding: 10px !important;
+    }
+    
+    .exercise textarea {
+        width: 100% !important;
+        font-size: 1rem !important;
+        padding: 10px !important;
+    }
+    
+    /* Buttons */
+    .check-btn, .next-btn, .prev-btn, button {
+        width: 100% !important;
+        margin: 10px 0 !important;
+        padding: 12px !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Tables */
+    table {
+        font-size: 0.85rem !important;
+        display: block !important;
+        overflow-x: auto !important;
+    }
+    
+    /* Letter cards */
+    .letter-card {
+        padding: 15px 10px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    /* Word lists */
+    .word-list {
+        padding: 10px !important;
+    }
+    
+    .word-item {
+        padding: 10px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Audio players */
+    audio {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Feedback messages */
+    .feedback {
+        font-size: 0.9rem !important;
+        padding: 10px !important;
+    }
+    
+    /* Progress indicators */
+    .progress-bar {
+        height: 8px !important;
+    }
+    
+    /* Level bubbles */
+    .levels-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .level-bubble {
+        padding: 20px !important;
+    }
+    
+    .level-name {
+        font-size: 1.2rem !important;
+    }
+    
+    .level-code {
+        font-size: 2rem !important;
+    }
+    
+    /* Course bubbles */
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .course-bubble {
+        padding: 15px !important;
+    }
+    
+    .course-number {
+        font-size: 1.5rem !important;
+    }
+    
+    .course-title {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .course-header h1 {
+        font-size: 1.2rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.1rem !important;
+        padding: 10px !important;
+    }
+    
+    .vocab-card {
+        padding: 12px !important;
+    }
+    
+    .vocab-word {
+        font-size: 1.1rem !important;
+    }
+    
+    .vocab-translation {
+        font-size: 0.85rem !important;
+    }
+    
+    table {
+        font-size: 0.75rem !important;
+    }
+    
+    .courses-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .level-code {
+        font-size: 1.5rem !important;
+    }
+    
+    .level-name {
+        font-size: 1rem !important;
+    }
+    
+    .course-number {
+        font-size: 1.2rem !important;
+    }
+}
