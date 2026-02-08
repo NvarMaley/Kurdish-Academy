@@ -287,3 +287,132 @@ footer {
     color: white;             /* Texte en blanc pour lisibilité sur fond foncé */
     margin-top: 20px;         /* Espace au-dessus du pied de page */
 }
+
+/* ========== RESPONSIVE MOBILE ========== */
+/* Media queries pour l'affichage mobile et tablette */
+
+@media (max-width: 768px) {
+    /* Header responsive */
+    header {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+    
+    .title h1 {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+    
+    .logo-left, .logo-right {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo {
+        max-width: 60px;
+        max-height: 60px;
+    }
+    
+    /* Navigation principale responsive */
+    .main-nav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .main-nav li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .main-nav a {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+        padding: 12px 15px;
+    }
+    
+    /* Sous-navigation responsive */
+    .sub-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .sub-nav a {
+        padding: 8px 10px;
+        margin: 3px 5px;
+        font-size: 0.9rem;
+    }
+    
+    /* Contenu principal responsive */
+    main {
+        padding: 15px 10px;
+        margin: 10px auto;
+    }
+    
+    .main-title-left {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .rectangle-title {
+        font-size: 1.2rem;
+    }
+    
+    .white-rectangle {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .big-quote p:first-child {
+        font-size: 1.3rem;
+    }
+    
+    .quote-author {
+        font-size: 1rem;
+    }
+    
+    .quote {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustements pour très petits écrans */
+    .title h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo-left, .logo-right {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    
+    .main-nav a {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .sub-nav a {
+        padding: 6px 8px;
+        margin: 2px 3px;
+        font-size: 0.85rem;
+    }
+    
+    .white-rectangle {
+        padding: 15px 10px;
+    }
+    
+    .big-quote p:first-child {
+        font-size: 1.1rem;
+    }
+}
