@@ -62,6 +62,7 @@
     <nav class="main-nav">
         <ul>
             <li><a href="../../index.html" class="active">Home</a></li>
+            <li><a href="../../documents/documents.html">Document</a></li>
             <li><a href="#" id="kurmanci-link">Kurmancî</a></li>
             <li><a href="#" id="sorani-link">Sorani</a></li>
             <li><a href="#" id="culture-link">Culture</a></li>

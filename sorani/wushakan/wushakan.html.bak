@@ -92,6 +92,7 @@
 
     <nav class="main-nav">
         <a href="../../index.html" id="home-link">Home</a>
+        <a href="../../documents/documents.html">Document</a>
         <a href="#" id="kurmanci-link">Kurmancî</a>
         <a href="#" id="sorani-link">Soranî</a>
         <a href="#" id="culture-link">Culture</a>
